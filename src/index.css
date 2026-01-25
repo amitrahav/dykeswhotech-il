@@ -114,3 +114,55 @@
 .bg-pink-white-purple {
   background: linear-gradient(180deg, #FFE0F5 0%, #FFFFFF 50%, #8D6BE4 100%);
 }
+
+.image-glow-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+}
+
+.glow-bg {
+  position: absolute;
+  inset: 0;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  /* shift glow */
+  top: -20%;
+
+  /* background: radial-gradient(circle at 60% 40%,
+      #85F2AA 0%,
+      rgba(133, 242, 170, 0.9) 40%,
+      rgba(133, 242, 170, 0.4) 70%,
+      transparent 100%); */
+  background: radial-gradient(circle at 30% 30%,
+      rgba(133, 242, 170, 0.95) 0%,
+      rgba(133, 242, 170, 0.75) 25%,
+      rgba(133, 242, 170, 0.45) 45%,
+      rgba(133, 242, 170, 0.15) 65%,
+      transparent 70%);
+  filter: blur(166px);
+
+  border-radius: 50%;
+
+  z-index: 0;
+
+}
+
+/* 
+.image-glow-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  /* controls glow spread */
+/* background: #85F2AA;
+  filter: blur(236.57455444335938px);
+  z-index: -1;
+  border-radius: 50%;
+} */
+
+.image-glow-wrap img {
+  position: relative;
+  z-index: 1;
+}
