@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -83,6 +85,15 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 45px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
 }
 
 
@@ -98,4 +109,8 @@
 .stroke-text {
   -webkit-text-stroke: 1px black;
   color: transparent;
+}
+
+.bg-pink-white-purple {
+  background: linear-gradient(180deg, #FFE0F5 0%, #FFFFFF 50%, #8D6BE4 100%);
 }

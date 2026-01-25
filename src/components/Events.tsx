@@ -15,10 +15,10 @@ export function Events() {
     ];
 
     return (
-        <section className="py-20 px-4 bg-rainbow">
+        <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-5xl font-extrabold mb-4 text-gray-900">Events & Spaces</h2>
-                <p className="max-w-2xl text-gray-700 mb-12 text-lg">
+                <h2 className="text-5xl font-extrabold mb-4 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900 }}>Events & Spaces</h2>
+                <p className="max-w-2xl text-gray-700 mb-12 text-lg" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                     Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home.
                 </p>
 
