@@ -4,7 +4,7 @@ export function Navigation() {
             className="w-full h-[55px] flex items-center justify-center text-xs font-medium text-gray-500"
             style={{ background: 'linear-gradient(-90deg, #FEECFF 0%, #FECAFF 11.71%, #FEB5FF 26.8%, #FFDBE7 40.18%, #FFF4D6 49.22%, #F3FCD7 58.71%, #D2F5EE 71.29%, #C3EFFF 84.44%, #FBEFFF 100%)' }}
         >
-            <span>Privacy • Policies • Contact Us</span>
+            <span>Contact Us on <a href="mailto:info@dykeathon.com">info@dykeathon.com</a></span>
         </nav>
     );
 }

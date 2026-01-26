@@ -10,9 +10,20 @@ export function Jobs() {
                 </p>
 
                 <div className="flex flex-col gap-4 mb-12">
-                    {/* Skeleton/Placeholder Job Items */}
-                    {[1, 2, 3].map((_, i) => (
-                        <div key={i} className="w-full h-14 bg-pink-100/60 rounded-xl hover:bg-pink-200 transition-colors cursor-pointer border border-pink-200/50"></div>
+                    {[
+                        { company: "IronSource", role: "Senior Backend Engineer", category: "Tech" },
+                        { company: "HourOne", role: "Machine Learning Researcher", category: "Tech" },
+                        { company: "IronSource", role: "Marketing Operations Manager", category: "Non-Tech" }
+                    ].map((job, i) => (
+                        <div key={i} className="w-full p-4 flex flex-col md:flex-row md:items-center justify-between bg-pink-50/50 rounded-xl hover:bg-pink-100/60 transition-colors cursor-pointer border border-pink-200/30 group">
+                            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-12">
+                                <span className="text-sm font-black text-pink-600 uppercase tracking-tighter w-24">{job.company}</span>
+                                <span className="text-lg font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>{job.role}</span>
+                            </div>
+                            <span className="mt-2 md:mt-0 self-start md:self-center text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-white text-gray-400 rounded-full border border-gray-100 group-hover:border-pink-200 group-hover:text-pink-500 transition-colors">
+                                {job.category}
+                            </span>
+                        </div>
                     ))}
                 </div>
 

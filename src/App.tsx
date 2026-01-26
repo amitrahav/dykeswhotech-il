@@ -4,6 +4,8 @@ import { About } from "./components/About";
 import { Events } from "./components/Events";
 import { Jobs } from "./components/Jobs";
 import { Support } from "./components/Support";
+import { Sponsors } from "./components/Sponsors";
+import { ContactUs } from "./components/ContactUs";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       </div>
       <Jobs />
       <Support />
+      <Sponsors />
+      <ContactUs />
     </main>
   );
 }
