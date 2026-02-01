@@ -1,0 +1,72 @@
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
+
+export function PageHero() {
+    const [bounds, setBounds] = useState({ top: 0, height: 0 });
+    const [offset, setOffset] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setOffset(window.pageYOffset);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useLayoutEffect(() => {
+        const updateBounds = () => {
+            // Proportional height logic: 
+            // Based on an aspect ratio where the full word (12 chars) fits in 100vw
+            // with a height that is roughly 1/10th of the width (like in Hero.tsx viewBox 1000:100)
+            const height = window.innerWidth / 9;
+            setBounds(prev => ({ ...prev, height }));
+        };
+
+        updateBounds();
+        window.addEventListener('resize', updateBounds);
+        const timeoutId = setTimeout(updateBounds, 100);
+
+        return () => {
+            window.removeEventListener('resize', updateBounds);
+            clearTimeout(timeoutId);
+        };
+    }, []);
+
+    return (
+        <div
+            ref={containerRef}
+            className="absolute top-0 left-0 w-full pointer-events-none z-1 overflow-hidden"
+            style={{
+                height: `${bounds.height}px`,
+                display: 'flex',
+                alignItems: 'center'
+            }}
+        >
+            <div
+                className="w-full h-full flex items-center"
+                style={{
+                    transform: `translateX(${-offset * 0.1}px)`,
+                    width: '120%'
+                }}
+            >
+                <svg className="w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <text
+                        x="0"
+                        y="75%"
+                        textAnchor="start"
+                        className="fill-white opacity-70 uppercase"
+                        style={{
+                            fontFamily: '"Tel Aviv", sans-serif',
+                            fontWeight: 400,
+                            fontSize: '115px',
+                        }}
+                        textLength="100%"
+                        lengthAdjust="spacingAndGlyphs"
+                    >
+                        DYKESWHOTECH
+                    </text>
+                </svg>
+            </div>
+        </div>
+    );
+}

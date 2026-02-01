@@ -72,6 +72,11 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+        telaviv: ["Tel Aviv", "sans-serif"],
+      },
     },
   },
   plugins: [animate],

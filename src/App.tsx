@@ -1,24 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Events } from "./components/Events";
-import { Jobs } from "./components/Jobs";
-import { Support } from "./components/Support";
-import { Sponsors } from "./components/Sponsors";
 import { ContactUs } from "./components/ContactUs";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
 
 function App() {
   return (
     <main className="min-h-screen bg-pink-white">
       <Navigation />
-      <Hero />
-      <div className="bg-pink-white-purple">
-        <About />
-        <Events />
-      </div>
-      <Jobs />
-      <Support />
-      <Sponsors />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
       <ContactUs />
     </main>
   );

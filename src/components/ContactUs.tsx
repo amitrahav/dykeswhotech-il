@@ -18,9 +18,8 @@ export function ContactUs() {
                     {/* Left Column: Text + Form */}
                     <div className="flex flex-col justify-between text-left py-8 md:py-16">
                         <p
-                            className="text-2xl md:text-4xl leading-tight m-0 p-0 mb-8 md:mb-0"
+                            className="text-2xl md:text-4xl leading-tight m-0 p-0 mb-8 md:mb-0 font-telaviv"
                             style={{
-                                fontFamily: '"Tel Aviv", sans-serif',
                                 fontWeight: 300,
                                 textTransform: 'none'
                             }}
@@ -35,7 +34,7 @@ export function ContactUs() {
                                     placeholder="Name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    className="w-full px-6 py-4 md:py-5 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-['Poppins'] text-lg md:text-xl"
+                                    className="w-full px-6 py-4 md:py-5 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all text-lg md:text-xl"
                                     style={{ borderRadius: '18px' }}
                                     required
                                 />
@@ -47,7 +46,7 @@ export function ContactUs() {
                                     placeholder="mail@outlook.com"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-6 py-4 md:py-5 pr-28 md:pr-32 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-['Poppins'] text-lg md:text-xl"
+                                    className="w-full px-6 py-4 md:py-5 pr-28 md:pr-32 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all text-lg md:text-xl"
                                     style={{ borderRadius: '18px' }}
                                     required
                                 />

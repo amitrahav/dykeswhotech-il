@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Poppins:wght@300;400;500;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -83,16 +83,20 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 
   p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 45px;
-    letter-spacing: 0%;
-    vertical-align: middle;
+    @apply font-sans;
   }
 }
 
@@ -148,21 +152,4 @@
 
   z-index: 0;
 
-}
-
-/* 
-.image-glow-wrap::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  /* controls glow spread */
-/* background: #85F2AA;
-  filter: blur(236.57455444335938px);
-  z-index: -1;
-  border-radius: 50%;
-} */
-
-.image-glow-wrap img {
-  position: relative;
-  z-index: 1;
 }
