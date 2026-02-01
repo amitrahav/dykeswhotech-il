@@ -1,62 +1,105 @@
 
+import { useRef, useLayoutEffect, useState } from "react";
 import greekStatue from "../assets/greek.png";
 
-const HeroBackgroundText = () => (
-    <div className="w-full flex flex-col items-center justify-center select-none relative z-0 pt-10 gap-[42px]" aria-hidden="true">
-        {[1, 2, 3].map((_, i) => (
-            <div key={i} className="text-[#383838] text-center uppercase"
-                style={{
-                    fontFamily: '"Tel Aviv", sans-serif',
-                    fontWeight: 400,
-                    fontSize: '190px',
-                    lineHeight: '88px',
-                    letterSpacing: '0.01em',
-                    textAlign: 'center',
-                    verticalAlign: 'middle'
-                }}>
-                DYKESWHOTECH
-            </div>
-        ))}
-    </div>
-);
+
+const HeroBackgroundText = ({ height }: { height: number }) => {
+    const lineHeight = (height - 20) / 3; // Account for two 10px gaps
+
+    return (
+        <div className="w-screen h-full flex flex-col items-center select-none gap-[10px]" aria-hidden="true" style={{ height: `${height}px` }}>
+            {[1, 2, 3].map((_, i) => (
+                <div key={i} className="w-full flex items-center" style={{ height: `${lineHeight}px` }}>
+                    <svg className="w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                        <text
+                            x="0"
+                            y="75%"
+                            textAnchor="start"
+                            className="fill-[#383838] uppercase"
+                            style={{
+                                fontFamily: '"Tel Aviv", sans-serif',
+                                fontWeight: 400,
+                                fontSize: '115px',
+                            }}
+                            textLength="99%"
+                            lengthAdjust="spacingAndGlyphs"
+                        >
+                            DYKESWHOTECH
+                        </text>
+                    </svg>
+                </div>
+            ))}
+        </div>
+    );
+};
 
 export function Hero() {
-    return (
-        <section className="relative w-full z-20 pb-32 bg-background">
-            {/* Background text positioned absolutely to avoid clipping */}
-            <div className="absolute top-[200px] left-0 w-full overflow-hidden pointer-events-none z-[1] h-full">
-                <HeroBackgroundText />
-            </div>
+    const sectionRef = useRef<HTMLElement>(null);
+    const topRef = useRef<HTMLDivElement>(null);
+    const bottomRef = useRef<HTMLDivElement>(null);
+    const [bounds, setBounds] = useState({ top: 0, height: 0 });
 
+    useLayoutEffect(() => {
+        const updateBounds = () => {
+            if (sectionRef.current && topRef.current && bottomRef.current) {
+                const sectionRect = sectionRef.current.getBoundingClientRect();
+                const topRect = topRef.current.getBoundingClientRect();
+                const bottomRect = bottomRef.current.getBoundingClientRect();
+
+                const top = topRect.bottom - sectionRect.top;
+                const height = bottomRect.top - topRect.bottom;
+
+                setBounds({ top, height });
+            }
+        };
+
+        updateBounds();
+        window.addEventListener('resize', updateBounds);
+        return () => window.removeEventListener('resize', updateBounds);
+    }, []);
+
+    return (
+        <section ref={sectionRef} className="relative w-full z-20 pb-32 bg-background">
             {/* Top Banner Stripes - Matches the provided design image */}
             <div className="w-full flex flex-col relative z-10">
                 {/* Top thick purple bar */}
-                <div className="h-[50px] w-full bg-[#8D6BE4]"></div>
+                <div className="h-[30px] md:h-[50px] w-full bg-primary"></div>
                 {/* White spacing - transparent to show background text */}
-                <div className="h-[100px] w-full"></div>
+                <div className="h-[60px] md:h-[100px] w-full bg-background"></div>
                 {/* Second purple bar */}
-                <div className="h-[50px] w-full bg-[#8D6BE4]"></div>
+                <div ref={topRef} className="h-[30px] md:h-[50px] w-full bg-primary purple-boundery"></div>
             </div>
 
-            <div className="relative z-10 flex flex-col items-center text-center pt-64 mt-8">
+            {/* Background text positioned absolutely between purple 2nd bar and pink 1st bar */}
+            <div
+                className="absolute w-full overflow-hidden pointer-events-none z-[1]"
+                style={{
+                    top: `${bounds.top}px`,
+                    height: `${bounds.height}px`
+                }}
+            >
+                <HeroBackgroundText height={bounds.height} />
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center text-center pt-32 md:pt-64 mt-8">
                 {/* Central Image - Greek Statue Pop-out */}
                 {/* Container for circle and statue */}
 
-                <div className="relative w-[35rem] h-[35rem] flex items-end justify-center mt-[-9rem]">
+                <div className="relative w-full md:max-w-[35rem] max-w-[100vw] h-[18rem] md:h-[35rem] flex items-end justify-center mt-[-3rem] md:mt-[-9rem]">
                     {/* The Gradient Circle - Linear Gradient 180deg */}
                     {/* Centered in the container */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[23rem] h-[23rem] rounded-full ml-[-1.5rem]"
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[12rem] h-[12rem] md:w-[23rem] md:h-[23rem] rounded-full md:ml-[-1.5rem]"
                         style={{ background: 'linear-gradient(180deg, #C8AEF4 0%, #7349C2 50%, #55368F 100%)' }}>
                     </div>
 
                     {/* The Statue - Overflows up */}
                     <img src={greekStatue} alt="Greek Statue"
-                        className="relative z-10  max-w-none object-cover object-top mb-40 ml-[1rem]" />
+                        className="relative z-10 w-auto h-[22rem] md:h-[45rem] max-w-none object-cover object-top mb-16 md:mb-40 ml-[2rem] md:ml-[1rem]" />
                 </div>
 
-                <div className="w-full flex flex-col mt-[-18rem] ml-[-2rem] mr-[-2rem]">
+                <div className="w-full flex flex-col mt-[-8rem] md:mt-[-18rem]">
                     {/* Bottom thick pink bar */}
-                    <div className="h-[50px] w-full bg-[#FFE0F5]"></div>
+                    <div ref={bottomRef} className="h-[25px] md:h-[50px] w-full bg-[#FFE0F5] pink-boundery"></div>
 
                 </div>
 

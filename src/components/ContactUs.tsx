@@ -13,12 +13,12 @@ export function ContactUs() {
     return (
         <section className="w-full text-white overflow-hidden" style={{ background: '#FF66E0' }}>
             <div className="max-w-7xl mx-auto py-24 px-8 lg:px-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-16 lg:gap-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-12 md:gap-16 lg:gap-24">
 
                     {/* Left Column: Text + Form */}
-                    <div className="flex flex-col justify-between text-left py-16">
+                    <div className="flex flex-col justify-between text-left py-8 md:py-16">
                         <p
-                            className="text-4xl leading-tight m-0 p-0"
+                            className="text-2xl md:text-4xl leading-tight m-0 p-0 mb-8 md:mb-0"
                             style={{
                                 fontFamily: '"Tel Aviv", sans-serif',
                                 fontWeight: 300,
@@ -28,14 +28,14 @@ export function ContactUs() {
                             Join DykesWhoTech &  shape the future of Tech!
                         </p>
 
-                        <form onSubmit={handleSubmit} className="w-full flex flex-col items-start gap-6">
+                        <form onSubmit={handleSubmit} className="w-full flex flex-col items-start gap-4 md:gap-6">
                             <div className="w-full flex-1">
                                 <input
                                     type="text"
                                     placeholder="Name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    className="w-full  px-6 py-5 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-['Poppins'] text-xl"
+                                    className="w-full px-6 py-4 md:py-5 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-['Poppins'] text-lg md:text-xl"
                                     style={{ borderRadius: '18px' }}
                                     required
                                 />
@@ -47,38 +47,37 @@ export function ContactUs() {
                                     placeholder="mail@outlook.com"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-6 py-5 pr-32 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-['Poppins'] text-xl"
+                                    className="w-full px-6 py-4 md:py-5 pr-28 md:pr-32 rounded-2xl bg-white/40 border-none placeholder-white/80 text-black focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-['Poppins'] text-lg md:text-xl"
                                     style={{ borderRadius: '18px' }}
                                     required
                                 />
                                 <button
                                     type="submit"
-                                    className="absolute bg-[#8D6BE4] hover:bg-[#7a59d1] text-white font-semibold text-lg flex items-center justify-center transition-all z-20"
+                                    className="absolute bg-[#8D6BE4] hover:bg-[#7a59d1] text-white font-semibold text-base md:text-lg flex items-center justify-center transition-all z-20"
                                     style={{
                                         position: 'absolute',
                                         right: '8px',
                                         top: '8px',
                                         bottom: '8px',
-                                        padding: '0 24px',
+                                        padding: '0 16px md:0 24px',
                                         borderRadius: '12px',
                                         border: 'none',
                                         cursor: 'pointer'
                                     }}
                                 >
-                                    Send <span className="ml-2">→</span>
+                                    Send <span className="ml-1 md:ml-2">→</span>
                                 </button>
                             </div>
                         </form>
                     </div>
 
                     {/* Right Column: Lips image */}
-                    <div className="w-full flex justify-end overflow-visible">
-                        <div className="w-96 flex-shrink-0 transform scale-150">
+                    <div className="w-full flex justify-center md:justify-end overflow-visible">
+                        <div className="w-64 md:w-96 flex-shrink-0 transform scale-125 md:scale-150">
                             <img
                                 src={lips}
                                 alt="Lips"
-                                className="w-full h-auto object-contain"
-                                style={{ transformOrigin: 'center right' }}
+                                className="w-full h-auto object-contain origin-center md:origin-right"
                             />
                         </div>
                     </div>

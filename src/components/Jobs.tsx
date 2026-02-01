@@ -4,12 +4,12 @@ export function Jobs() {
     return (
         <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto text-center md:text-left">
-                <h2 className="text-5xl font-extrabold mb-4 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900 }}>Jobs</h2>
-                <p className="max-w-2xl text-gray-600 mb-12 text-lg" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 900 }}>Jobs</h2>
+                <p className="max-w-2xl text-gray-600 mb-12 text-base md:text-lg" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                     Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home.
                 </p>
 
-                <div className="flex flex-col gap-4 mb-12">
+                <div className="flex flex-col gap-4 mb-12 w-full">
                     {[
                         { company: "IronSource", role: "Senior Backend Engineer", category: "Tech" },
                         { company: "HourOne", role: "Machine Learning Researcher", category: "Tech" },
