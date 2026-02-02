@@ -1,0 +1,53 @@
+{
+    "hero": {
+        "badge": "About",
+        "title": "DYKESWHOTECH",
+        "description": [
+            "Home for lesbians queer women & trans people in the tech industry. We are here to create a professional network, advance careers, and build a safe space where technology meets pride.",
+            "We believe that a strong community is the key to professional resilience; beyond code and development, we are building a space where you don't have to choose between your identity and excellence.",
+            "We're here for those already leading the industry, for those taking their first steps in the tech world, and for those simply looking for a sense of belonging. At DykesWhoTech, we're building a network where one person's experience is another's inspiration, and everyone finds their place to grow. Together, we are making the tech industry a more inclusive space, where our unique voices are the power driving the next wave of innovation."
+        ]
+    },
+    "mission": {
+        "badge": "Our Mission",
+        "title": "WHAT WE ACTUALLY DO",
+        "description": "\"We are here to make sure we have each other's backs.\" \nOur mission is simple: to create a network that actually works for us. We don't wait for an invite to the table; we're building our own. This means:",
+        "items": [
+            {
+                "title": "Being the first point of contact",
+                "text": "Whether you need a job referral, help prepping for an interview, or just want to talk through a professional dilemma with someone who truly gets it."
+            },
+            {
+                "title": "Opening the door",
+                "text": "Helping anyone who wants to break into tech realize it's possible, and showing them the best way to get there."
+            },
+            {
+                "title": "No explanations needed",
+                "text": "Creating events and meetups where our identity is the default, not something we have to justify or explain."
+            }
+        ]
+    },
+    "vision": {
+        "badge": "Our Vision",
+        "title": "WHERE WE'RE HEADED",
+        "description": "\"We want to reach the day where being a lesbian or queer in tech is the most natural thing in the world.\" \nOur vision is for every one of us to walk into the office or hop on a Zoom call, bring 100% of who we are, and focus on what we do best. We strive for:",
+        "items": [
+            {
+                "title": "An industry that sees us",
+                "text": "Workplaces that genuinely understand the value and innovation that our diversity brings to the table."
+            },
+            {
+                "title": "Community power",
+                "text": "A strong network where queer women are at every influential junction, from junior developers to CEOs and investors."
+            },
+            {
+                "title": "A professional home",
+                "text": "Knowing that you have a massive community behind you, pushing you forward and holding your hand when needed."
+            }
+        ]
+    },
+    "team": {
+        "badge": "Meet the team",
+        "title": "THE DYKES WHO TECH"
+    }
+}

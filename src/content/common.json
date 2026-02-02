@@ -1,0 +1,10 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact Us on"
+    },
+    "footer": {
+        "email": "info@dykeathon.com"
+    }
+}

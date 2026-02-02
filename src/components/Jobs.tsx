@@ -1,12 +1,16 @@
 import { Button } from "./ui/button";
+import { useContent } from "../contexts/ContentContext";
 
 export function Jobs() {
+    const { content } = useContent();
+    const { jobs } = content.home;
+
     return (
         <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto text-center md:text-left">
-                <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">Jobs</h2>
+                <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">{jobs.title}</h2>
                 <p className="max-w-2xl text-gray-600 mb-12 text-base md:text-lg font-light">
-                    Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home.
+                    {jobs.description}
                 </p>
 
                 <div className="flex flex-col gap-4 mb-12 w-full">
@@ -28,7 +32,7 @@ export function Jobs() {
                 </div>
 
                 <Button variant="secondary" className="px-8 py-5 rounded-full text-base font-semibold bg-gray-100 hover:bg-gray-200 text-black shadow-sm">
-                    Read more &rarr;
+                    {jobs.button} &rarr;
                 </Button>
             </div>
         </section>

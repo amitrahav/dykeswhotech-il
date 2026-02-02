@@ -5,11 +5,13 @@ import classics from "../assets/classics.png";
 import omg from "../assets/omg.png";
 import queen from "../assets/queen.png";
 import { PageHero } from "../components/PageHero";
+import { useContent } from "../contexts/ContentContext";
 
 export function About() {
+  const { content } = useContent();
+  const { hero, mission, vision, team } = content.about;
   const [offset, setOffset] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,31 +49,15 @@ export function About() {
         <PageHero />
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-start justify-between pt-40 pb-20 px-6 md:px-16 lg:px-24">
           <div className="w-full md:w-3/5 mt-10">
-            <span className="font-light tracking-widest text-sm mb-0 block">About</span>
+            <span className="font-light tracking-widest text-sm mb-0 block">{hero.badge}</span>
             <h1 className="text-3xl md:text-5xl font-bold mb-8 font-telaviv leading-tight">
-              DYKESWHOTECH
+              {hero.title}
             </h1>
 
             <div className="space-y-8 text-lg md:text-xl font-light text-gray-800 leading-relaxed md:pr-12">
-              <p>
-                Home for lesbians queer women & trans people in the tech industry.
-                We are here to create a professional network, advance careers, and
-                build a safe space where technology meets pride.
-              </p>
-              <p>
-                We believe that a strong community is the key to professional resilience;
-                beyond code and development, we are building a space where you
-                don't have to choose between your identity and excellence.
-              </p>
-              <p>
-                We're here for those already leading the industry, for those taking their
-                first steps in the tech world, and for those simply looking for a sense of
-                belonging. At DykesWhoTech, we're building a network where one
-                person's experience is another's inspiration, and everyone finds their
-                place to grow. Together, we are making the tech industry a more
-                inclusive space, where our unique voices are the power driving the next
-                wave of innovation.
-              </p>
+              {hero.description.map((text, i) => (
+                <p key={i}>{text}</p>
+              ))}
             </div>
           </div>
 
@@ -130,21 +116,15 @@ export function About() {
             </div>
             <div className="w-full md:w-2/3">
 
-              <span className="font-light tracking-widest text-sm mb-0 block">Our Mission</span>
+              <span className="font-light tracking-widest text-sm mb-0 block">{mission.badge}</span>
               <h2 className="text-3xl md:text-5xl font-bold mb-8 font-telaviv leading-tight">
-                WHAT WE ACTUALLY DO
+                {mission.title}
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 font-light">
-                "We are here to make sure we have each other's backs." <br />
-                Our mission is simple: to create a network that actually works for us. We
-                don't wait for an invite to the table; we're building our own. This means:
-              </p>
+              <div className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 font-light whitespace-pre-line">
+                {mission.description}
+              </div>
               <ul className="space-y-6">
-                {[
-                  { title: "Being the first point of contact", text: "Whether you need a job referral, help prepping for an interview, or just want to talk through a professional dilemma with someone who truly gets it." },
-                  { title: "Opening the door", text: "Helping anyone who wants to break into tech realize it's possible, and showing them the best way to get there." },
-                  { title: "No explanations needed", text: "Creating events and meetups where our identity is the default, not something we have to justify or explain." }
-                ].map((item, i) => (
+                {mission.items.map((item, i) => (
                   <li key={i} className="flex items-start">
                     <div className="w-2 h-2 mt-2.5 rounded-full bg-purple-400 mr-4 flex-shrink-0"></div>
                     <div>
@@ -162,23 +142,15 @@ export function About() {
             <div className="hidden md:block md:w-1/3"></div>
             <div className="w-full md:w-2/3">
 
-              <span className="font-light tracking-widest text-sm mb-0 block ">Our Vision</span>
+              <span className="font-light tracking-widest text-sm mb-0 block ">{vision.badge}</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-telaviv leading-tight">
-                WHERE WE'RE HEADED
+                {vision.title}
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 font-light">
-                "We want to reach the day where being a lesbian or queer in tech is the
-                most natural thing in the world." <br />
-                Our vision is for every one of us to walk into the office
-                or hop on a Zoom call, bring 100% of who we are, and focus on what we
-                do best. We strive for:
-              </p>
+              <div className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 font-light whitespace-pre-line">
+                {vision.description}
+              </div>
               <ul className="space-y-6">
-                {[
-                  { title: "An industry that sees us", text: "Workplaces that genuinely understand the value and innovation that our diversity brings to the table." },
-                  { title: "Community power", text: "A strong network where queer women are at every influential junction, from junior developers to CEOs and investors." },
-                  { title: "A professional home", text: "Knowing that you have a massive community behind you, pushing you forward and holding your hand when needed." }
-                ].map((item, i) => (
+                {vision.items.map((item, i) => (
                   <li key={i} className="flex items-start">
                     <div className="w-2 h-2 mt-2.5 rounded-full bg-purple-400 mr-4 flex-shrink-0"></div>
                     <div>
@@ -204,9 +176,9 @@ export function About() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-left mb-20">
-            <span className="font-light tracking-widest text-sm mb-0 block">Meet the team</span>
+            <span className="font-light tracking-widest text-sm mb-0 block">{team.badge}</span>
             <h2 className="text-4xl md:text-6xl font-bold font-regular font-telaviv leading-tight">
-              THE DYKES WHO TECH
+              {team.title}
             </h2>
           </div>
 
@@ -223,8 +195,6 @@ export function About() {
     </div>
   );
 }
-
-
 
 const NotebookGrid = ({ delay = 0, opacity = 0.2 }: { delay?: number; opacity?: number }) => {
   const squareSize = 40;

@@ -2,6 +2,7 @@ import { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useSpring } from 'framer-motion';
+import { useContent } from '../contexts/ContentContext';
 
 const vertexShader = `
   varying vec2 vUv;
@@ -100,6 +101,8 @@ const LiquidPlane = ({ texture, width, height }: { texture: THREE.Texture, width
 };
 
 export const LiquidText = ({ height }: { height: number }) => {
+    const { content } = useContent();
+    const { hero } = content.home;
     const [texture, setTexture] = useState<THREE.Texture | null>(null);
     const [fontLoaded, setFontLoaded] = useState(false);
     const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1000);
@@ -133,7 +136,7 @@ export const LiquidText = ({ height }: { height: number }) => {
             ctx.scale(dpr, dpr);
             ctx.clearRect(0, 0, width, height);
 
-            const text = "DYKESWHOTECH";
+            const text = hero.title;
             ctx.fillStyle = "#383838";
 
             // Match SVG layout: 3 rows with 10px gaps
@@ -170,7 +173,7 @@ export const LiquidText = ({ height }: { height: number }) => {
             tex.needsUpdate = true;
             setTexture(tex);
         }
-    }, [height, width, fontLoaded]);
+    }, [height, width, fontLoaded, hero.title]);
 
     if (!texture) return <div style={{ height: `${height}px` }} />;
 

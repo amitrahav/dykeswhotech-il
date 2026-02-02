@@ -3,6 +3,7 @@ import { Card, CardFooter, CardTitle } from "./ui/card";
 import hestia1 from "../assets/Hestia01.png";
 import hestia2 from "../assets/Hestia02.png";
 import demeter from "../assets/Demeter.png";
+import { useContent } from "../contexts/ContentContext";
 
 const eventImages = [hestia1, hestia2, demeter, hestia1];
 
@@ -77,10 +78,13 @@ const NotebookGrid = ({ delay = 0 }: { delay?: number }) => {
 };
 
 export function Events() {
+    const { content } = useContent();
+    const { events: eventsContent } = content.home;
+
     const events = [
         { title: "Dykeathon", date: "12/09/2023", type: "Hackathon", image: eventImages[0], status: "Upcoming" },
         { title: "Meetups", date: "24/10/2023", type: "Guest Event", image: eventImages[1], status: "Past" },
-        { title: "Drink & Dyke", date: "15/11/2023", type: "Social", image: eventImages[2], status: "Past" },
+        { title: "Drink & Dyke", "date": "15/11/2023", "type": "Social", image: eventImages[2], status: "Past" },
         { title: "Meetups", date: "12/12/2023", type: "Guest Event", image: eventImages[3], status: "Past" },
     ];
 
@@ -94,9 +98,9 @@ export function Events() {
                 }
             `}</style>
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">Events & Spaces</h2>
+                <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">{eventsContent.title}</h2>
                 <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
-                    Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home.
+                    {eventsContent.description}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:mx-[-10rem]">
@@ -117,11 +121,11 @@ export function Events() {
                             </div>
                             <CardFooter className="px-4 py-2 absolute bottom-0 h-full" style={{ zIndex: 1 }}>
                                 <div className="flex flex-col h-full justify-between">
-                                    <p className="text-[10px] uppercase tracking-wider mb-1" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, color: event.status === "Upcoming" ? "#90EE90" : "#4DE3ED" }}>{event.status} Event</p>
+                                    <p className="text-[10px] uppercase tracking-wider mb-1" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, color: event.status === "Upcoming" ? "#90EE90" : "#4DE3ED" }}>{event.status === "Upcoming" ? eventsContent.statusUpcoming : eventsContent.statusPast} Event</p>
                                     <CardTitle className="text-2xl font-normal leading-tight ">{event.title}</CardTitle>
                                     <p className="text-xs  mb-4">{event.type} <br /> {event.date}</p>
                                     <Button className="rounded-full bg-[#90EE90] hover:bg-[#7CDC7C] text-black font-bold text-xs h-8 mb-10">
-                                        Read Details &rarr;
+                                        {eventsContent.button}
                                     </Button>
                                 </div>
                             </CardFooter>
