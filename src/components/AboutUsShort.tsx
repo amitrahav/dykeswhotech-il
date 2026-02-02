@@ -5,15 +5,15 @@ export function AboutUsShort() {
     return (
         <section className="w-full pt-10 pb-20 px-8 md:px-16 lg:px-24">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl text-black mb-4">
-                    Dykes Who Tech
+                <h2 className="text-3xl mb-4">
+                    DykesWhoTech
                 </h2>
 
-                <h3 className="text-2xl md:text-3xl font-extrabold mb-6 text-black">
+                <h3 className="text-2xl md:text-3xl font-extrabold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
                     Home for lesbians queer women & trans people in the tech industry
                 </h3>
 
-                <p className="text-base font-light text-gray-700 mb-8 max-w-2xl leading-relaxed">
+                <p className="text-base font-light text-gray-700 mb-8 leading-relaxed">
                     We are here to create a professional network, advance careers, and build a safe space where technology meets pride.
                 </p>
                 <Link to="/about">

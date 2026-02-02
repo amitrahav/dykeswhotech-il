@@ -14,13 +14,14 @@
 
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 209 25% 21%;
+    --heading: 0 0% 22%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 209 25% 21%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 209 25% 21%;
 
     /* Primary Purple #8D6BE4 -> HSL approx 257 66% 65% */
     --primary: 257 66% 65%;
@@ -93,6 +94,7 @@
   h5,
   h6 {
     @apply font-heading;
+    color: hsl(var(--heading));
   }
 
   p {
@@ -134,12 +136,6 @@
   left: -10%;
   /* shift glow */
   top: -20%;
-
-  /* background: radial-gradient(circle at 60% 40%,
-      #85F2AA 0%,
-      rgba(133, 242, 170, 0.9) 40%,
-      rgba(133, 242, 170, 0.4) 70%,
-      transparent 100%); */
   background: radial-gradient(circle at 30% 30%,
       rgba(133, 242, 170, 0.95) 0%,
       rgba(133, 242, 170, 0.75) 25%,

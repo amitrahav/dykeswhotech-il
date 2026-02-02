@@ -1,37 +1,6 @@
-
 import { useRef, useLayoutEffect, useState } from "react";
 import greekStatue from "../assets/greek.png";
-
-
-const HeroBackgroundText = ({ height }: { height: number }) => {
-    const lineHeight = (height - 20) / 3; // Account for two 10px gaps
-
-    return (
-        <div className="w-screen h-full flex flex-col items-center select-none gap-[10px]" aria-hidden="true" style={{ height: `${height}px` }}>
-            {[1, 2, 3].map((_, i) => (
-                <div key={i} className="w-full flex items-center" style={{ height: `${lineHeight}px` }}>
-                    <svg className="w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
-                        <text
-                            x="0"
-                            y="75%"
-                            textAnchor="start"
-                            className="fill-[#383838] uppercase"
-                            style={{
-                                fontFamily: '"Tel Aviv", sans-serif',
-                                fontWeight: 400,
-                                fontSize: '115px',
-                            }}
-                            textLength="99%"
-                            lengthAdjust="spacingAndGlyphs"
-                        >
-                            DYKESWHOTECH
-                        </text>
-                    </svg>
-                </div>
-            ))}
-        </div>
-    );
-};
+import { LiquidText } from "./LiquidText";
 
 export function Hero() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -72,16 +41,16 @@ export function Hero() {
 
             {/* Background text positioned absolutely between purple 2nd bar and pink 1st bar */}
             <div
-                className="absolute w-full overflow-hidden pointer-events-none z-[1]"
+                className="absolute w-full overflow-hidden pointer-events-auto z-[1]"
                 style={{
                     top: `${bounds.top}px`,
                     height: `${bounds.height}px`
                 }}
             >
-                <HeroBackgroundText height={bounds.height} />
+                <LiquidText height={bounds.height} />
             </div>
 
-            <div className="relative z-10 flex flex-col items-center text-center pt-32 md:pt-64 mt-8">
+            <div className="relative z-10 flex flex-col items-center text-center pt-32 md:pt-64 mt-8 pointer-events-none">
                 {/* Central Image - Greek Statue Pop-out */}
                 {/* Container for circle and statue */}
 

@@ -205,7 +205,7 @@ export function About() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-left mb-20">
             <span className="font-light tracking-widest text-sm mb-0 block">Meet the team</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-black font-regular font-telaviv leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold font-regular font-telaviv leading-tight">
               THE DYKES WHO TECH
             </h2>
           </div>

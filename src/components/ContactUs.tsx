@@ -58,7 +58,7 @@ export function ContactUs() {
                                         right: '8px',
                                         top: '8px',
                                         bottom: '8px',
-                                        padding: '0 16px md:0 24px',
+                                        padding: '0 16px 0 24px',
                                         borderRadius: '12px',
                                         border: 'none',
                                         cursor: 'pointer'
