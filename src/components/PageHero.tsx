@@ -1,9 +1,9 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { useContent } from "../contexts/ContentContext";
 
-export function PageHero() {
+export function PageHero({ title }: { title?: string }) {
     const { content } = useContent();
-    const { hero } = content.about;
+    const displayTitle = title || content.about.hero.title;
     const [bounds, setBounds] = useState({ top: 0, height: 0 });
     const [offset, setOffset] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -66,7 +66,7 @@ export function PageHero() {
                         textLength="100%"
                         lengthAdjust="spacingAndGlyphs"
                     >
-                        {hero.title}
+                        {displayTitle}
                     </text>
                 </svg>
             </div>

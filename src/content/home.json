@@ -6,19 +6,19 @@
         "title": "DykesWhoTech",
         "subtitle": "Home for lesbians queer women & trans people in the tech industry",
         "description": "We are here to create a professional network, advance careers, and build a safe space where technology meets pride.",
-        "button": "Read more →"
+        "button": "Read more"
     },
     "events": {
-        "title": "Events & Spaces",
-        "description": "Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home.",
+        "title": "What more we do",
+        "description": "Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home. Whether you're looking for an intense tech challenge or a chill evening of bar-side talks, we have a place for you.",
         "statusUpcoming": "Upcoming",
         "statusPast": "Past",
-        "button": "Read Details →"
+        "button": "Read Details"
     },
     "jobs": {
         "title": "Jobs",
         "description": "Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home.",
-        "button": "Read more →"
+        "button": "Read more"
     },
     "support": {
         "title": "Become a sponsor",

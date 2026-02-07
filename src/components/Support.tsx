@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { StarIcon } from "lucide-react"; // Examples for logos
 import { useContent } from "../contexts/ContentContext";
+import { Link } from "react-router-dom";
 
 export function Support() {
     const { content } = useContent();
@@ -18,10 +19,12 @@ export function Support() {
                 <p className="max-w-2xl mx-auto mb-12 text-base md:text-lg opacity-90 leading-relaxed font-medium">
                     {support.description}
                 </p>
+                <Link to="/sponsorship">
+                    <Button className="bg-[#E3FCEF] hover:bg-[#E3FCEF] text-[#0B4F2B] rounded-full px-8 py-6 text-xl font-light mb-16 shadow-lg">
+                        <span className="mr-2"><StarIcon /></span> {support.button}
+                    </Button>
+                </Link>
 
-                <Button className="bg-[#E3FCEF] hover:bg-[#E3FCEF] text-[#0B4F2B] rounded-full px-8 py-6 text-xl font-light mb-16 shadow-lg">
-                    <span className="mr-2"><StarIcon /></span> {support.button}
-                </Button>
             </div>
         </section>
     );

@@ -12,6 +12,7 @@ export function Navigation() {
         >
             <Link to="/" className="hover:text-gray-900 transition-colors">{navigation.home}</Link>
             <Link to="/about" className="hover:text-gray-900 transition-colors">{navigation.about}</Link>
+            <Link to="/sponsorship" className="hover:text-gray-900 transition-colors">{navigation.sponsorship}</Link>
             <span>{navigation.contact} <a href={`mailto:${footer.email}`} className="hover:text-gray-900 transition-colors">{footer.email}</a></span>
         </nav>
     );

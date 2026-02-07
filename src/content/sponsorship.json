@@ -1,0 +1,27 @@
+{
+    "hero": {
+        "badge": "Support Us",
+        "title": "DYKESWHOTECH",
+        "description": [
+            "Our community grows thanks to the passion and time of volunteers. However, to keep producing high-quality events, investing in great content, and creating meaningful connections, we need your support. Every donation helps us ensure our community remains independent, strong, and accessible to everyone."
+        ]
+    },
+    "allocation": {
+        "badge": "Support Us",
+        "title": "WHERE DOES THE MONEY GO?",
+        "items": [
+            {
+                "title": "Event Production",
+                "text": "Covering logistics for the Dykeathon, Drink & Dyke, and our meetups (venue, equipment, refreshments, and everything else we need to make it happen)."
+            },
+            {
+                "title": "A Safe & Inclusive Space",
+                "text": "Funding the tools and platforms that allow us to manage the community and keep it a safe, professional environment."
+            },
+            {
+                "title": "Community Growth",
+                "text": "Expanding our reach to connect more women and create more opportunities for professional and social impact."
+            }
+        ]
+    }
+}

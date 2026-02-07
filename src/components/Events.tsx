@@ -85,25 +85,17 @@ export function Events() {
         { title: "Dykeathon", date: "12/09/2023", type: "Hackathon", image: eventImages[0], status: "Upcoming" },
         { title: "Meetups", date: "24/10/2023", type: "Guest Event", image: eventImages[1], status: "Past" },
         { title: "Drink & Dyke", "date": "15/11/2023", "type": "Social", image: eventImages[2], status: "Past" },
-        { title: "Meetups", date: "12/12/2023", type: "Guest Event", image: eventImages[3], status: "Past" },
     ];
 
     return (
         <section className="py-20 px-4">
-            <style>{`
-                @keyframes drawLine {
-                    to {
-                        stroke-dashoffset: 0;
-                    }
-                }
-            `}</style>
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">{eventsContent.title}</h2>
+                <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{eventsContent.title}</h2>
                 <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
                     {eventsContent.description}
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:mx-[-10rem]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-10rem]">
                     {events.map((event, index) => (
                         <Card key={index} className="bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl relative"
                         >

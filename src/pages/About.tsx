@@ -182,13 +182,53 @@ export function About() {
             </h2>
           </div>
 
-          {/* Team Grid with blue card placeholders */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="group aspect-square p-2 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-full h-full bg-[#7389F4]/80 group-hover:bg-[#7389F4] rounded-lg transition-colors"></div>
-              </div>
-            ))}
+          {/* Team Grid with member cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            {team.members?.map((member: any, i: number) => {
+              // Priority: 1. Manual imageUrl, 2. UI-Avatars fallback
+              const avatarUrl = member.imageUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=7389F4&color=fff&size=512`;
+
+              return (
+                <a
+                  key={i}
+                  href={member.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center"
+                >
+                  <div className="w-full aspect-square p-2 bg-white rounded-2xl shadow-sm group-hover:shadow-xl transition-all duration-500 transform group-hover:-translate-y-2 overflow-hidden mb-6">
+                    <div className="w-full h-full bg-[#f8faff] rounded-xl overflow-hidden flex items-center justify-center relative">
+                      {/* Placeholder background while loading */}
+                      <div className="absolute inset-0 bg-[#7389F4]/10 animate-pulse"></div>
+
+                      <img
+                        src={avatarUrl}
+                        alt={member.name}
+                        className="relative z-10 w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 scale-100 group-hover:scale-110"
+                        loading="lazy"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          // Show fallback initials if everything fails
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.classList.add('bg-[#7389F4]');
+                            const fallback = document.createElement('div');
+                            fallback.className = 'absolute inset-0 flex items-center justify-center text-white font-bold text-2xl';
+                            fallback.innerText = member.name.charAt(0);
+                            parent.appendChild(fallback);
+                          }
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="font-bold text-[#293744] text-lg mb-1 group-hover:text-[#7389F4] transition-colors">{member.name}</h3>
+                    <p className="text-[#383838]/60 text-sm font-medium uppercase tracking-wider">{member.role}</p>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
