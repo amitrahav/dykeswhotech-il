@@ -7,6 +7,7 @@ export function PageHero({ title }: { title?: string }) {
     const displayTitle = title || content.about.hero.title;
     const [bounds, setBounds] = useState({ top: 0, height: 0 });
     const [offset, setOffset] = useState(0);
+    const [isMdOrSmaller, setIsMdOrSmaller] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -24,6 +25,7 @@ export function PageHero({ title }: { title?: string }) {
             // with a height that is roughly 1/10th of the width (like in Hero.tsx viewBox 1000:100)
             const height = window.innerWidth / 9;
             setBounds(prev => ({ ...prev, height }));
+            setIsMdOrSmaller(window.innerWidth < 1024);
         };
 
         updateBounds();
@@ -74,10 +76,10 @@ export function PageHero({ title }: { title?: string }) {
                 </div>
             </div>
             <div
-                className="w-auto flex items-end absolute right-5 z-20 opacity-80"
+                className="w-auto flex items-end absolute right-2 lg:right-5 z-20 opacity-80"
                 style={{
                     transform: `translateY(${offset * 0.1}px)`,
-                    top: bounds.height - 50,
+                    top: bounds.height - (isMdOrSmaller ? 30 : 50),
                 }}
             >
                 <Navigation variant="transparent" text="bright" />
