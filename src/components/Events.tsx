@@ -131,10 +131,10 @@ function UpcommingEvent() {
     }, []);
 
     return (
-        <div className="flex flex-col justify-center bg-[#293744] rounded-[23px] mt-16 px-40 py-20 relative overflow-hidden">
+        <div className="flex flex-col justify-center bg-[#293744] rounded-[23px] md:mt-16 mt-4 md:px-40 px-10 py-10 md:py-20 relative overflow-hidden">
             <NotebookGrid color="rgba(96, 118, 132, 0.2)" />
 
-            <div className="flex flex-row w-full justify-between text-white mb-20 relative z-10">
+            <div className="flex md:flex-row md:gap-0 gap-4 flex-col w-full justify-between text-white mb-10 md:mb-20 relative z-10">
                 <div><p>What:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.title}</h3></div>
                 <div><p>When:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.date}</h3></div>
                 <div><p>Where:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.location}</h3></div>
@@ -159,8 +159,8 @@ export function Events() {
     }));
 
     return (
-        <section className="py-20 px-32">
-            <div className="max-w-6xl mx-auto mb-10">
+        <section className="w-full pt-10 pb-20 px-8 md:px-16 lg:px-24">
+            <div className="max-w-6xl mx-auto">
                 <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{eventsContent.title}</h2>
                 <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
                     {eventsContent.description}
@@ -178,7 +178,7 @@ export function Events() {
                                     background: 'radial-gradient(circle at 70% 80%, rgba(133, 242, 170, 0.5) 0%, rgba(133, 242, 170, 0.4) 25%, rgba(133, 242, 170, 0.2) 45%, rgba(133, 242, 170, 0.05) 65%, transparent 80%)'
                                 }}
                             >
-                                <div className="image-glow-wrap absolute translate-x-[80%] translate-y-[20%]">
+                                <div className="image-glow-wrap absolute lg:translate-x-[80%] translate-x-[40%] translate-y-[20%]">
                                     <img src={event.image} alt={event.title} className="h-full object-cover" />
                                 </div>
                             </div>
@@ -195,7 +195,7 @@ export function Events() {
                 </div>
             </div>
             {eventsContent.displayUpcoming && new Date(eventsContent.displayUpcomingUntil) > new Date() && (
-                <div className="max-w-6xl mx-auto pt-6">
+                <div className="max-w-6xl mx-auto mt-10">
                     <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{eventsContent.upcomingTitle}</h2>
                     {eventsContent.upcomingDescription && eventsContent.upcomingDescription.length > 0 && (
                         <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">

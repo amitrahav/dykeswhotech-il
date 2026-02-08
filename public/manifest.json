@@ -1,0 +1,22 @@
+{
+    "name": "Dykeathon - Dykes Who Tech",
+    "short_name": "Dykeathon",
+    "description": "Join the Dykeathon by Dykes Who Tech. A hackathon and community event for LGBTQ+ women and non-binary techies.",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "scope": "/"
+}
