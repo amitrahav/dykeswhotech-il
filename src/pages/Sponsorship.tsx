@@ -40,20 +40,6 @@ export function Sponsorship() {
 
     return (
         <div className="w-full bg-[#8D6BE4] relative overflow-hidden flex flex-col min-h-screen">
-            <style>{`
-        @keyframes float {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(20px, -30px) scale(1.1); }
-        }
-        .animate-pink-haze {
-          animation: float 20s ease-in-out infinite;
-        }
-        .hero-text-outline {
-          -webkit-text-stroke: 1px #8D6BE4;
-          color: transparent;
-        }
-      `}</style>
-
             {/* Hero Section & Content Wrapper */}
             <section className="relative w-full overflow-hidden flex-grow flex flex-col pt-12">
                 {/* Large Background Text */}
@@ -68,7 +54,7 @@ export function Sponsorship() {
                     }}
                 >
                     <svg
-                        className="absolute top-[0%] right-[-20%] w-[100%] h-auto opacity-80 animate-pink-haze"
+                        className="absolute top-[0%] right-[-20%] w-[100%] h-auto opacity-80"
                         viewBox="0 0 2873 3097"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
