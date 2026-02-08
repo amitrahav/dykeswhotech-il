@@ -2,10 +2,6 @@
     "navigation": {
         "home": "Home",
         "about": "About",
-        "sponsorship": "Sponsorship",
-        "contact": "Contact Us on"
-    },
-    "footer": {
-        "email": "info@dykeathon.com"
+        "sponsorship": "Sponsorship"
     }
 }
