@@ -3,25 +3,54 @@
         "badge": "Support Us",
         "title": "DYKESWHOTECH",
         "description": [
-            "Our community grows thanks to the passion and time of volunteers. However, to keep producing high-quality events, investing in great content, and creating meaningful connections, we need your support. Every donation helps us ensure our community remains independent, strong, and accessible to everyone."
+            "Partnering with DykesWhoTech is more than a strategic investment—it’s a direct commitment to a thriving ecosystem of over 400 LGBTQ+ women professionals in tech. With dozens of successful projects already under our belt, we are the only community providing a dedicated, high-impact space where top-tier talent meets radical inclusion.",
+            "When you support us, you aren't just sponsoring an organization; you are directly fueling a grassroots movement that builds real-world tools, fosters leadership, and creates a more representative future for the industry."
         ]
     },
-    "allocation": {
-        "badge": "Support Us",
-        "title": "WHERE DOES THE MONEY GO?",
+    "whyPartner": {
+        "title": "Why Partner With Us?",
         "items": [
             {
-                "title": "Event Production",
-                "text": "Covering logistics for the Dykeathon, Drink & Dyke, and our meetups (venue, equipment, refreshments, and everything else we need to make it happen)."
+                "title": "Brand Visibility & Awareness",
+                "text": "Feature your logo across our digital platforms, monthly newsletters, and marketing materials for flagship events like the Dykeathon and Drink & Dyke."
             },
             {
-                "title": "A Safe & Inclusive Space",
-                "text": "Funding the tools and platforms that allow us to manage the community and keep it a safe, professional environment."
+                "title": "Direct Access to Top Talent",
+                "text": "Reach a highly skilled, niche audience of developers, product managers, designers, and entrepreneurs."
             },
             {
-                "title": "Community Growth",
-                "text": "Expanding our reach to connect more women and create more opportunities for professional and social impact."
+                "title": "Demonstrate Your Commitment to DEI",
+                "text": "Move beyond slogans. A partnership with us provides a tangible way to act on your Diversity, Equity, and Inclusion goals."
+            },
+            {
+                "title": "Exclusive Event Engagement",
+                "text": "Get a seat at the table. Host professional workshops, join panel discussions, or have a branded presence at our high-energy meetups."
             }
+        ]
+    },
+    "collaboration": {
+        "title": "Ways to Collaborate",
+        "subtitle": "All engagement options include job postings on our official website and community platforms.",
+        "items": [
+            {
+                "title": "Professional Workshop | $2,500",
+                "text": "Host a technical or product-focused session led by our experts, designed for either your internal teams or our broader community."
+            },
+            {
+                "title": "LGBTQ+ Diversity Talk | $2,500",
+                "text": "An engaging and educational session for your organization on LGBTQ+ inclusion and the unique power of diverse tech teams."
+            },
+            {
+                "title": "Full Event Experience | $7,500",
+                "text": "A high-energy corporate event featuring a professional DJ from our community, bringing the unmistakable DykesWhoTech vibe to your company."
+            }
+        ]
+    },
+    "customImpact": {
+        "title": "Custom Impact: Let’s Build the Future Together",
+        "text": [
+            "Don’t see exactly what you’re looking for? The options above are just the starting point.",
+            "We believe the most effective partnerships are built on shared goals. Whether you want to focus on high-volume recruitment, long-term brand positioning, or a unique community initiative, we are ready to tailor a package that fits your specific budget and vision."
         ]
     }
 }

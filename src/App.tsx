@@ -10,19 +10,19 @@ import { ContentProvider } from "./contexts/ContentContext";
 
 function App() {
   const location = useLocation();
-  const isSponsorshipPage = location.pathname === "/sponsorship";
+  const isHomePage = location.pathname === "/";
 
   return (
     <ContentProvider>
       <ScrollToTop />
       <main className="min-h-screen bg-pink-white">
-        <Navigation />
+        {isHomePage && <Navigation empty />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
         </Routes>
-        {!isSponsorshipPage && <ContactUs />}
+        <ContactUs />
       </main>
     </ContentProvider>
   );

@@ -8,22 +8,16 @@
         "description": "We are here to create a professional network, advance careers, and build a safe space where technology meets pride.",
         "button": "Read more"
     },
-    "events": {
-        "title": "What more we do",
-        "description": "Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home. Whether you're looking for an intense tech challenge or a chill evening of bar-side talks, we have a place for you.",
-        "statusUpcoming": "Upcoming",
-        "statusPast": "Past",
-        "button": "Read Details"
-    },
     "jobs": {
         "title": "Jobs",
         "description": "Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home.",
-        "button": "Read more"
+        "button": "Read more",
+        "items": []
     },
     "support": {
-        "title": "Become a sponsor",
-        "subtitle": "Join our proud partners",
-        "description": "Our community grows thanks to the passion and time of volunteers. However, to keep producing high-quality events, investing in great content, and creating meaningful connections, we need your support. Every donation helps us ensure our community remains independent, strong, and accessible to everyone.",
+        "title": "Build the Future ",
+        "subtitle": "With Us",
+        "description": "Join DykesWhoTech as a strategic partner and put your brand at the heart of the LGBTQ+ tech community. Connect directly with top-tier developers, designers, and entrepreneurs while demonstrating a tangible commitment to DEI. Whether through exclusive event engagement or recruitment-focused sessions, let’s collaborate to make tech more representative and innovative.",
         "button": "Read More"
     }
 }

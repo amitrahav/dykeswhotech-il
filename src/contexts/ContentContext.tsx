@@ -2,17 +2,20 @@ import React, { createContext, useContext, type ReactNode } from 'react';
 import homeContent from '../content/home.json';
 import aboutContent from '../content/about.json';
 import sponsorshipContent from '../content/sponsorship.json';
+import eventsContent from '../content/events.json';
 import commonContent from '../content/common.json';
 
 type HomeContent = typeof homeContent;
 type AboutContent = typeof aboutContent;
 type SponsorshipContent = typeof sponsorshipContent;
+type EventsContent = typeof eventsContent;
 type CommonContent = typeof commonContent;
 
 interface Content {
     home: HomeContent;
     about: AboutContent;
     sponsorship: SponsorshipContent;
+    events: EventsContent;
     common: CommonContent;
 }
 
@@ -20,6 +23,7 @@ const content: Content = {
     home: homeContent,
     about: aboutContent,
     sponsorship: sponsorshipContent,
+    events: eventsContent,
     common: commonContent,
 };
 

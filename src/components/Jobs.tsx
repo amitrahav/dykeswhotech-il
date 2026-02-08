@@ -5,6 +5,8 @@ export function Jobs() {
     const { content } = useContent();
     const { jobs } = content.home;
 
+    if (!jobs || jobs.items.length === 0) return null;
+
     return (
         <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto text-center md:text-left">
@@ -14,11 +16,7 @@ export function Jobs() {
                 </p>
 
                 <div className="flex flex-col gap-4 mb-12 w-full">
-                    {[
-                        { company: "IronSource", role: "Senior Backend Engineer", category: "Tech" },
-                        { company: "HourOne", role: "Machine Learning Researcher", category: "Tech" },
-                        { company: "IronSource", role: "Marketing Operations Manager", category: "Non-Tech" }
-                    ].map((job, i) => (
+                    {jobs.items.map((job: { company: string, role: string, category: string }, i: number) => (
                         <div key={i} className="w-full p-4 flex flex-col md:flex-row md:items-center justify-between bg-pink-50/50 rounded-xl hover:bg-pink-100/60 transition-colors cursor-pointer border border-pink-200/30 group">
                             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-12">
                                 <span className="text-sm font-black text-pink-600 uppercase tracking-tighter w-24">{job.company}</span>

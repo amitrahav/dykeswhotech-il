@@ -1,5 +1,6 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { useContent } from "../contexts/ContentContext";
+import { Navigation } from "../components/Navigation";
 
 export function PageHero({ title }: { title?: string }) {
     const { content } = useContent();
@@ -36,39 +37,50 @@ export function PageHero({ title }: { title?: string }) {
     }, []);
 
     return (
-        <div
-            ref={containerRef}
-            className="absolute top-0 left-0 w-full pointer-events-none z-1 overflow-hidden"
-            style={{
-                height: `${bounds.height}px`,
-                display: 'flex',
-                alignItems: 'center'
-            }}
-        >
+        <div className="relative top-0">
             <div
-                className="w-full h-full flex items-center"
+                ref={containerRef}
+                className="relative top-0 left-0 w-full pointer-events-none z-1 overflow-hidden"
                 style={{
-                    transform: `translateX(${-offset * 0.1}px)`,
-                    width: '120%'
+                    height: `${bounds.height}px`,
+                    display: 'flex',
+                    alignItems: 'center'
                 }}
             >
-                <svg className="w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
-                    <text
-                        x="0"
-                        y="75%"
-                        textAnchor="start"
-                        className="fill-white opacity-70 uppercase"
-                        style={{
-                            fontFamily: '"Tel Aviv", sans-serif',
-                            fontWeight: 400,
-                            fontSize: '115px',
-                        }}
-                        textLength="100%"
-                        lengthAdjust="spacingAndGlyphs"
-                    >
-                        {displayTitle}
-                    </text>
-                </svg>
+                <div
+                    className="w-full h-full flex items-center"
+                    style={{
+                        transform: `translateX(${-offset * 0.1}px)`,
+                        width: '120%'
+                    }}
+                >
+                    <svg className="w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                        <text
+                            x="0"
+                            y="75%"
+                            textAnchor="start"
+                            className="fill-white opacity-70 uppercase"
+                            style={{
+                                fontFamily: '"Tel Aviv", sans-serif',
+                                fontWeight: 400,
+                                fontSize: '115px',
+                            }}
+                            textLength="100%"
+                            lengthAdjust="spacingAndGlyphs"
+                        >
+                            {displayTitle}
+                        </text>
+                    </svg>
+                </div>
+            </div>
+            <div
+                className="w-auto flex items-end absolute right-5 z-20 opacity-80"
+                style={{
+                    transform: `translateY(${offset * 0.1}px)`,
+                    top: bounds.height - 50,
+                }}
+            >
+                <Navigation variant="transparent" text="bright" />
             </div>
         </div>
     );

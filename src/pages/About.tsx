@@ -44,11 +44,11 @@ export function About() {
             `}</style>
 
       {/* Hero Section */}
-      <section className="relative w-full bg-pink overflow-hidden min-h-[600px] md:min-h-[800px]">
+      <section className="relative w-full bg-pink overflow-hidden min-h-[600px] md:min-h-[800px] pt-0">
         {/* Large Background Text extracted to component */}
         <PageHero />
-        <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-start justify-between pt-40 pb-20 px-6 md:px-16 lg:px-24">
-          <div className="w-full md:w-3/5 mt-10">
+        <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-start justify-between pb-20">
+          <div className="w-full md:w-3/5">
             <span className="font-light tracking-widest text-sm mb-0 block">{hero.badge}</span>
             <h1 className="text-3xl md:text-5xl font-bold mb-8 font-telaviv leading-tight">
               {hero.title}

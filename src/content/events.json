@@ -1,0 +1,52 @@
+{
+    "title": "What more we do",
+    "description": "Our events are where it all happens. We meet to learn, create, consult, and sometimes just to have a drink and feel at home. Whether you're looking for an intense tech challenge or a chill evening of bar-side talks, we have a place for you.",
+    "displayUpcoming": true,
+    "displayUpcomingUntil": "2026-04-10",
+    "upcomingTitle": "Upcoming",
+    "upcomingDescription": "",
+    "upCommingDetails": {
+        "tallyId": "xXrRG5",
+        "title": "Dykeathon 2026",
+        "date": "30/04/2026",
+        "location": "LGBTQ+ Center, TLV"
+    },
+    "pastEvents": [
+        {
+            "title": "Dykeathon 2022",
+            "date": "12/09/2022",
+            "location": "",
+            "eventType": "Dykeathon"
+        },
+        {
+            "title": "Meetup",
+            "date": "24/10/2023",
+            "location": "",
+            "eventType": "Meetups"
+        },
+        {
+            "title": "Drink & Dyke",
+            "date": "15/11/2023",
+            "location": "",
+            "eventType": "Drink & Dyke"
+        }
+    ],
+    "eventTypes": [
+        {
+            "title": "Dykeathon",
+            "image": "/assets/Hestia01.png",
+            "description": "Our massive annual event. 24 hours of creation, coding, and innovation in a strictly queer-female space. This isn't just another hackathon; it's where we build tech solutions for real-world problems, learn from one another, and prove that when queer women lead development – magic happens."
+        },
+        {
+            "title": "Meetups",
+            "image": "/assets/Hestia02.png",
+            "description": "Regular gatherings that keep our community connected. These are informal, low-pressure events where you can just show up, chat with other queer women in tech, share what you're working on, or just hang out. They’re the perfect low-stakes way to meet new people and feel the warmth of our community."
+        },
+        {
+            "title": "Drink & Dyke",
+            "image": "/assets/Demeter.png",
+            "description": "Our casual, no-agenda bar nights. These events are all about unwinding, making friends, and enjoying a relaxed evening together. It’s the perfect opportunity to decompress after a long week, catch up with familiar faces, and meet new queer women in a chill, social atmosphere."
+        }
+    ],
+    "button": "Events Detail"
+}

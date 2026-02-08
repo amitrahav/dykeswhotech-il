@@ -1,8 +1,9 @@
 import { useRef, useLayoutEffect, useState } from "react";
 import greekStatue from "../assets/greek.png";
 import { LiquidText } from "./LiquidText";
+import { Navigation } from "./Navigation";
 
-export function Hero() {
+export function HomeHero() {
     const sectionRef = useRef<HTMLElement>(null);
     const topRef = useRef<HTMLDivElement>(null);
     const bottomRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,9 @@ export function Hero() {
                 {/* Top thick purple bar */}
                 <div className="h-[30px] md:h-[50px] w-full bg-primary"></div>
                 {/* White spacing - transparent to show background text */}
-                <div className="h-[60px] md:h-[100px] w-full bg-background"></div>
+                <div className="h-[60px] md:h-[100px] w-full bg-background flex items-center justify-center">
+                    <Navigation variant="transparent" />
+                </div>
                 {/* Second purple bar */}
                 <div ref={topRef} className="h-[30px] md:h-[50px] w-full bg-primary purple-boundery"></div>
             </div>
@@ -63,7 +66,7 @@ export function Hero() {
 
                     {/* The Statue - Overflows up */}
                     <img src={greekStatue} alt="Greek Statue"
-                        className="relative z-10 w-auto h-[22rem] md:h-[45rem] max-w-none object-cover object-top mb-16 md:mb-40 ml-[2rem] md:ml-[1rem]" />
+                        className="relative z-10 w-[auto] h-[22rem] md:h-[35rem] max-w-none object-cover object-top mb-16 md:mb-40 ml-[2rem] md:ml-[1rem]" />
                 </div>
 
                 <div className="w-full flex flex-col mt-[-8rem] md:mt-[-18rem]">

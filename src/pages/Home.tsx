@@ -1,4 +1,4 @@
-import { Hero } from "../components/Hero";
+import { HomeHero } from "../components/HomeHero";
 import { AboutUsShort } from "../components/AboutUsShort";
 import { Events } from "../components/Events";
 import { Jobs } from "../components/Jobs";
@@ -8,7 +8,7 @@ import { Sponsors } from "../components/Sponsors";
 export function Home() {
   return (
     <>
-      <Hero />
+      <HomeHero />
       <div className="bg-pink-white-purple">
         <AboutUsShort />
         <Events />

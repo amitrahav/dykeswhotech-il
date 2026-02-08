@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 
 export function Support() {
     const { content } = useContent();
-    const { support } = content.home;
+    const { support, jobs } = content.home;
+
+    const hasJobs = jobs?.items?.length > 0;
 
     return (
-        <section className="py-20 md:py-32 px-4 bg-[#8D6BE4] text-white text-center relative overflow-hidden rounded-[23px] rounded-b-[0px]">
+        <section className={`py-20 md:py-32 px-4 bg-[#8D49FF] text-white text-center relative overflow-hidden ${hasJobs ? "rounded-[23px] rounded-b-[0px]" : ""}`}>
             {/* Background Gradient Effect */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#8D6BE4] to-[#9F7AEA] opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#8D49FF] to-[#9F7AEA] opacity-50"></div>
 
             <div className="max-w-4xl mx-auto relative z-10">
                 <h2 className="text-3xl md:text-4xl font-black mb-2">{support.title}</h2>

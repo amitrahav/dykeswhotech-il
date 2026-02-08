@@ -5,7 +5,7 @@ import { useContent } from "../contexts/ContentContext";
 
 export function Sponsorship() {
     const { content } = useContent();
-    const { hero, allocation } = content.sponsorship;
+    const { hero } = content.sponsorship;
     const [offset, setOffset] = useState(0);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [isMobile, setIsMobile] = useState(false);
@@ -41,7 +41,7 @@ export function Sponsorship() {
     return (
         <div className="w-full bg-[#8D6BE4] relative overflow-hidden flex flex-col min-h-screen">
             {/* Hero Section & Content Wrapper */}
-            <section className="relative w-full overflow-hidden flex-grow flex flex-col pt-12">
+            <section className="relative w-full overflow-hidden flex-grow flex flex-col">
                 {/* Large Background Text */}
                 <PageHero title={hero.title} />
 
@@ -68,7 +68,7 @@ export function Sponsorship() {
                 </div>
 
                 {/* Main Content */}
-                <div className="max-w-6xl mx-auto relative z-10 flex flex-col pt-40 pb-32 px-6 md:px-16 lg:px-24">
+                <div className="max-w-6xl mx-auto relative z-10 flex flex-col pb-32 px-6 md:px-16 lg:px-24">
 
                     {/* Join Our Proud Partners */}
                     <div className="w-full mb-24">
@@ -80,32 +80,62 @@ export function Sponsorship() {
                         </h1>
 
                         <div className="space-y-8 text-lg md:text-xl font-light text-white leading-relaxed">
-                            {hero.description.map((text, i) => (
+                            {hero.description.map((text: string, i: number) => (
                                 <p key={i}>{text}</p>
                             ))}
                         </div>
                     </div>
 
-                    {/* Allocation Section */}
-                    <div className="w-full">
-                        <span className="font-light tracking-widest text-white/70 text-sm mb-2 block uppercase font-montserrat">
-                            {allocation.badge}
-                        </span>
+                    {/* Why Partner With Us */}
+                    <div className="w-full mb-24">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 font-telaviv leading-tight uppercase text-white">
-                            {allocation.title}
+                            {content.sponsorship.whyPartner.title}
                         </h2>
 
                         <ul className="space-y-8">
-                            {allocation.items.map((item, i) => (
+                            {content.sponsorship.whyPartner.items.map((item: any, i: number) => (
                                 <li key={i} className="flex items-start">
                                     <div className="w-2.5 h-2.5 mt-2 rounded-full bg-white/40 mr-6 flex-shrink-0"></div>
                                     <div className="flex flex-col text-white">
-                                        <span className="font-bold text-white text-xl mb-1">{item.title}:</span>
+                                        <span className="font-bold text-white text-xl mb-1">{item.title}</span>
                                         <span className="text-white/90 text-lg font-light leading-relaxed">{item.text}</span>
                                     </div>
                                 </li>
                             ))}
                         </ul>
+                    </div>
+
+                    {/* Ways to Collaborate */}
+                    <div className="w-full mb-24">
+                        <div className="mb-10">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-telaviv leading-tight uppercase text-white">
+                                {content.sponsorship.collaboration.title}
+                            </h2>
+                            <p className="text-white/80 text-lg font-light font-montserrat">
+                                {content.sponsorship.collaboration.subtitle}
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            {content.sponsorship.collaboration.items.map((item: any, i: number) => (
+                                <div key={i} className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 transition hover:bg-white/20 flex flex-col h-full">
+                                    <h3 className="text-2xl font-bold text-white mb-3 font-telaviv uppercase">{item.title}</h3>
+                                    <p className="text-white/90 text-lg font-light leading-relaxed">{item.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Custom Impact */}
+                    <div className="w-full">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-telaviv leading-tight uppercase text-white">
+                            {content.sponsorship.customImpact.title}
+                        </h2>
+                        <div className="space-y-6 text-lg md:text-xl font-light text-white leading-relaxed">
+                            {content.sponsorship.customImpact.text.map((paragraph: string, i: number) => (
+                                <p key={i}>{paragraph}</p>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
