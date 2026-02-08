@@ -68,7 +68,7 @@ export function Sponsorship() {
                 </div>
 
                 {/* Main Content */}
-                <div className="max-w-6xl mx-auto relative z-10 flex flex-col pb-32 px-6 md:px-16 lg:px-24">
+                <div className="max-w-6xl mx-auto relative z-10 flex flex-col pb-32 px-6 md:px-16 lg:px-24 pt-12 md:pt-0">
 
                     {/* Join Our Proud Partners */}
                     <div className="w-full mb-24">

@@ -10,7 +10,7 @@ export function Support() {
     const hasJobs = jobs?.items?.length > 0;
 
     return (
-        <section className={`py-20 md:py-32 px-4 bg-[#8D49FF] text-white text-center relative overflow-hidden ${hasJobs ? "rounded-[23px] rounded-b-[0px]" : ""}`}>
+        <section className={`py-20 md:py-32 px-4 bg-[#8D49FF] text-white text-center relative overflow-hidden ${hasJobs ? "rounded-[23px] rounded-b-[0px]" : "border-0"}`}>
 
             <div className="max-w-4xl mx-auto relative z-10">
                 <h2 className="text-3xl md:text-4xl font-black mb-2">{support.title}</h2>
