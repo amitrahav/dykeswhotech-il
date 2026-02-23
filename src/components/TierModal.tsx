@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { ArrowUpRight } from "lucide-react";
-import scribImg from "../assets/xoxo.png";
-import statueImg from "../assets/queen.png";
+import heartBackground from "../assets/xoxo.png";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -88,20 +87,12 @@ export function TierModal({ tier, onClose }: TierModalProps) {
             >
                 {/* ── FORM STATE decorations ── */}
 
-                {/* Heart / scribble ring — left side, fully contained */}
+                {/* Heart-shaped background — left side */}
                 <img
-                    src={scribImg}
+                    src={heartBackground}
                     alt=""
                     className="absolute top-1/2 left-0 -translate-y-1/2 h-[90%] w-auto object-contain object-left pointer-events-none mix-blend-plus-lighter"
                     style={{ opacity: sent ? 0 : 0.5, transition: "opacity 0.6s ease" }}
-                />
-
-                {/* Statue — bottom-right, cropped naturally by overflow-hidden */}
-                <img
-                    src={statueImg}
-                    alt=""
-                    className="absolute bottom-0 right-0 h-[65%] w-auto object-contain object-right-bottom pointer-events-none select-none"
-                    style={{ opacity: sent ? 0 : 1, transition: "opacity 0.6s ease" }}
                 />
 
                 {/* ── SUCCESS STATE decorations ── */}
@@ -203,13 +194,12 @@ export function TierModal({ tier, onClose }: TierModalProps) {
                                 alt=""
                                 className="w-32 h-32 object-contain"
                             />
-                            <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-3 text-center">
                                 <p className="font-heading font-extrabold text-white text-2xl md:text-4xl leading-tight">
                                     You're in - Let's build impact
                                 </p>
                                 <p className="font-heading font-light text-white/90 text-base md:text-xl max-w-xl mx-auto">
-                                    Check your inbox — a confirmation email is on its way to{" "}
-                                    <span className="font-semibold">{form.email}</span>
+                                    Leave your details below and our team will reach out shortly to activate your partnership
                                 </p>
                             </div>
                             <button
