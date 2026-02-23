@@ -5,10 +5,30 @@ import lips from "../assets/lips.png";
 export function ContactUs() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        alert("SOON");
+        setLoading(true);
+        setStatus("idle");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email }),
+            });
+
+            if (!res.ok) throw new Error("Failed");
+            setStatus("success");
+            setName("");
+            setEmail("");
+        } catch {
+            setStatus("error");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -53,7 +73,8 @@ export function ContactUs() {
                                 />
                                 <button
                                     type="submit"
-                                    className="absolute bg-[#8D6BE4] hover:bg-[#7a59d1] text-white font-semibold text-base md:text-lg flex items-center justify-center transition-all z-20"
+                                    disabled={loading}
+                                    className="absolute bg-[#8D6BE4] hover:bg-[#7a59d1] disabled:opacity-60 text-white font-semibold text-base md:text-lg flex items-center justify-center transition-all z-20"
                                     style={{
                                         position: 'absolute',
                                         right: '8px',
@@ -62,13 +83,23 @@ export function ContactUs() {
                                         padding: '0 16px 0 24px',
                                         borderRadius: '12px',
                                         border: 'none',
-                                        cursor: 'pointer'
+                                        cursor: loading ? 'not-allowed' : 'pointer'
                                     }}
                                 >
-                                    Send <SendHorizontal className="ml-1 md:ml-2 w-5 h-5" />
+                                    {loading ? "Sending…" : <><span>Send</span> <SendHorizontal className="ml-1 md:ml-2 w-5 h-5" /></>}
                                 </button>
                             </div>
                         </form>
+                        {status === "success" && (
+                            <p className="mt-4 text-white font-semibold text-base">
+                                You're in! Check your inbox for a confirmation.
+                            </p>
+                        )}
+                        {status === "error" && (
+                            <p className="mt-4 text-white/80 text-base">
+                                Something went wrong. Please try again.
+                            </p>
+                        )}
                     </div>
 
                     {/* Right Column: Lips image */}
