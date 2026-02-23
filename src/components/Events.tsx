@@ -169,7 +169,7 @@ export function Events() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-2rem] xl:mx-[-6rem] 2xl:mx-[-10rem]">
                     {eventTypes.map((event, index) => (
-                        <Card key={index} className="relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex flex-col"
+                        <Card key={index} className={`relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex flex-col ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
                         >
                             {/* Animated notebook grid - lowest z-index */}
                             <NotebookGrid delay={index * 0.3} />
