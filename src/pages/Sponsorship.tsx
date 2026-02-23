@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import queen from "../assets/queen.png";
+import queenGlitch from "../assets/queen-glitch.png";
 import { PageHero } from "../components/PageHero";
 import { useContent } from "../contexts/ContentContext";
 import { TierModal } from "../components/TierModal";
@@ -19,10 +20,46 @@ export function Sponsorship() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [isMobile, setIsMobile] = useState(false);
     const [selectedTier, setSelectedTier] = useState<{ name: string; price: string } | null>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const crownRef = useRef<HTMLImageElement>(null);
+    const [crownHeight, setCrownHeight] = useState(0);
+    const [isGlitching, setIsGlitching] = useState(false);
+
+    // Random glitch effect logic
+    useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
+
+        const scheduleGlitch = () => {
+            // Random time between 2 to 6 seconds until next glitch
+            const nextGlitchTime = Math.random() * 4000 + 2000;
+
+            timeoutId = setTimeout(() => {
+                setIsGlitching(true);
+
+                // Glitch lasts between 50ms and 150ms
+                const glitchDuration = Math.random() * 100 + 50;
+
+                setTimeout(() => {
+                    setIsGlitching(false);
+                    scheduleGlitch(); // Schedule the next one after returning to normal
+                }, glitchDuration);
+
+            }, nextGlitchTime);
+        };
+
+        scheduleGlitch(); // Start the loop
+
+        return () => clearTimeout(timeoutId); // Cleanup on unmount
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => setOffset(window.pageYOffset);
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+            if (crownRef.current) {
+                setCrownHeight(crownRef.current.clientHeight);
+            }
+        };
         const handleMouseMove = (e: MouseEvent) => {
             if (!isMobile) {
                 setMousePos({
@@ -44,9 +81,28 @@ export function Sponsorship() {
         };
     }, [isMobile]);
 
+    // Calculate parallax movement
+    const containerHeight = containerRef.current?.clientHeight || 0;
+    const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
+
+    // The total distance the page can scroll
+    const maxScroll = Math.max(0, document.body.scrollHeight - windowHeight);
+
+    // Progress from 0 (top) to 1 (bottom)
+    const scrollProgress = maxScroll > 0 ? Math.min(1, Math.max(0, offset / maxScroll)) : 0;
+
+    // Start at windowHeight * 0.9 (bottom view - 10%)
+    const startY = windowHeight * 0.9;
+
+    // End at bottom of container
+    const endY = containerHeight - crownHeight;
+
+    // Interpolate
+    const currentY = startY + (endY - startY) * scrollProgress;
+
     return (
         <div className="w-full bg-[#8D6BE4] relative overflow-hidden flex flex-col min-h-screen">
-            <section className="relative w-full overflow-hidden flex-grow flex flex-col">
+            <section ref={containerRef} className="relative w-full overflow-hidden flex-grow flex flex-col">
 
                 {/* Large Background Title */}
                 <PageHero title={hero.title} />
@@ -249,20 +305,27 @@ export function Sponsorship() {
                     <TierModal tier={selectedTier} onClose={() => setSelectedTier(null)} />
                 )}
 
-                {/* Queen background image */}
+                {/* Queen parallax image wrapper */}
                 <div
-                    className="absolute inset-x-0 bottom-0 w-full h-[100%] pointer-events-none z-0 mix-blend-screen"
+                    className="absolute inset-x-0 top-0 w-full pointer-events-none mix-blend-screen flex justify-center"
                     style={{
-                        filter: "brightness(100)",
-                        opacity: 0.5,
-                        backgroundImage: `url(${queen})`,
-                        backgroundPosition: isMobile ? "center center" : "center bottom",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "100% auto",
-                        backgroundBlendMode: "screen",
-                        transform: isMobile ? "none" : `translateY(${offset * 0.15}px)`,
+                        zIndex: 0,
+                        transform: `translateY(${currentY}px)`,
+                        willChange: "transform",
                     }}
-                />
+                >
+                    <img
+                        ref={crownRef}
+                        src={isGlitching ? queenGlitch : queen}
+                        alt="Crown Background"
+                        onLoad={(e) => setCrownHeight(e.currentTarget.clientHeight)}
+                        className="w-[90%] md:w-[calc(100vw-120px)] h-auto"
+                        style={{
+                            filter: "brightness(100)",
+                            opacity: 0.5,
+                        }}
+                    />
+                </div>
             </section>
         </div>
     );
