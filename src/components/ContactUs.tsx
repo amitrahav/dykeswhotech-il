@@ -74,6 +74,8 @@ export function ContactUs() {
                                 <button
                                     type="submit"
                                     disabled={loading}
+                                    aria-busy={loading}
+                                    aria-label={loading ? "Sending message" : "Send message"}
                                     className="absolute bg-[#8D6BE4] hover:bg-[#7a59d1] disabled:opacity-60 text-white font-semibold text-base md:text-lg flex items-center justify-center transition-all z-20"
                                     style={{
                                         position: 'absolute',
@@ -90,16 +92,18 @@ export function ContactUs() {
                                 </button>
                             </div>
                         </form>
-                        {status === "success" && (
-                            <p className="mt-4 text-white font-semibold text-base">
-                                You're in! Check your inbox for a confirmation.
-                            </p>
-                        )}
-                        {status === "error" && (
-                            <p className="mt-4 text-white/80 text-base">
-                                Something went wrong. Please try again.
-                            </p>
-                        )}
+                        <div aria-live="polite" aria-atomic="true">
+                            {status === "success" && (
+                                <p className="mt-4 text-white font-semibold text-base">
+                                    You're in! Check your inbox for a confirmation.
+                                </p>
+                            )}
+                            {status === "error" && (
+                                <p className="mt-4 text-white/80 text-base">
+                                    Something went wrong. Please try again.
+                                </p>
+                            )}
+                        </div>
                     </div>
 
                     {/* Right Column: Lips image */}
