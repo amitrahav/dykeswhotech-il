@@ -92,7 +92,7 @@ function internalHtml(data: ContactBody) {
                 <tr>
                   <td style="font-size:13px;font-weight:700;color:#582c99;padding:10px 12px;">Email</td>
                   <td style="font-size:14px;color:#1a1a2e;padding:10px 12px;">
-                    <a href="mailto:${data.email}" style="color:#8a5cf5;">${esc(data.email)}</a>
+                    <a href="mailto:${esc(data.email)}" style="color:#8a5cf5;">${esc(data.email)}</a>
                   </td>
                 </tr>
                 <tr style="background:#f5f0ff;">
@@ -131,6 +131,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    const safeName = data.name.trim().replace(/[\r\n]+/g, " ");
     const transporter = createTransport();
 
     await Promise.all([
@@ -144,7 +145,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         from: `"DykesWhoTech Website" <${process.env.GMAIL_USER}>`,
         to: process.env.GMAIL_USER,
         replyTo: data.email,
-        subject: `[New Contact] ${data.name}`,
+        subject: `[New Contact] ${safeName}`,
         html: internalHtml(data),
       }),
     ]);
