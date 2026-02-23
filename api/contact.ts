@@ -6,6 +6,9 @@ interface ContactBody {
   email: string;
 }
 
+const esc = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
 function createTransport() {
   return nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -39,7 +42,7 @@ function submitterHtml(data: ContactBody) {
                 You're in! 🎉
               </h1>
               <p style="margin:0 0 24px;font-size:16px;color:#e8d9ff;line-height:1.6;">
-                Hey ${data.name}, thanks for joining DykesWhoTech. We'll be in touch soon with updates on our next event.
+                Hey ${esc(data.name)}, thanks for joining DykesWhoTech. We'll be in touch soon with updates on our next event.
               </p>
               <p style="margin:0;font-size:15px;color:#e8d9ff;line-height:1.7;">
                 With love &amp; power,<br/>
@@ -84,12 +87,12 @@ function internalHtml(data: ContactBody) {
               <table width="100%" cellpadding="6" cellspacing="0" style="border-collapse:collapse;">
                 <tr style="background:#f5f0ff;">
                   <td style="font-size:13px;font-weight:700;color:#582c99;padding:10px 12px;width:100px;">Name</td>
-                  <td style="font-size:14px;color:#1a1a2e;padding:10px 12px;">${data.name}</td>
+                  <td style="font-size:14px;color:#1a1a2e;padding:10px 12px;">${esc(data.name)}</td>
                 </tr>
                 <tr>
                   <td style="font-size:13px;font-weight:700;color:#582c99;padding:10px 12px;">Email</td>
                   <td style="font-size:14px;color:#1a1a2e;padding:10px 12px;">
-                    <a href="mailto:${data.email}" style="color:#8a5cf5;">${data.email}</a>
+                    <a href="mailto:${data.email}" style="color:#8a5cf5;">${esc(data.email)}</a>
                   </td>
                 </tr>
                 <tr style="background:#f5f0ff;">
@@ -118,8 +121,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const data = req.body as ContactBody;
 
-  if (!data?.name || !data?.email) {
+  if (!data?.name?.trim() || !data?.email) {
     return res.status(400).json({ error: "Missing required fields" });
+  }
+
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRe.test(data.email)) {
+    return res.status(400).json({ error: "Invalid email address" });
   }
 
   try {
