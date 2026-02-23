@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { usePostHog } from "posthog-js/react";
 import { Navigation } from "./components/Navigation";
 import { ContactUs } from "./components/ContactUs";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -13,6 +15,11 @@ import { EventArchive } from "./pages/Events/[event]";
 function App() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const posthog = usePostHog();
+
+  useEffect(() => {
+    posthog?.capture("$pageview");
+  }, [location, posthog]);
 
   return (
     <ContentProvider>
