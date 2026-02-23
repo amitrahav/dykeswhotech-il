@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-
-const scribImg  = "http://localhost:3845/assets/6639b8bc8fec81a5dcaeea962acdf5c0f7fe5090.png";
-const statueImg = "http://localhost:3845/assets/ea98951fb62cf75524f28d36769a9a994ddaa936.png";
-const arrowSvg  = "http://localhost:3845/assets/dd9024b51a48c6fe39757e01797134b6c1bf5c4a.svg";
+import { ArrowUpRight } from "lucide-react";
+import scribImg from "../assets/xoxo.png";
+import statueImg from "../assets/queen.png";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -190,9 +189,7 @@ export function TierModal({ tier, onClose }: TierModalProps) {
                                     >
                                         {isSubmitting ? "Sending…" : "SEND"}
                                         {!isSubmitting && (
-                                            <span className="flex items-center justify-center w-5 h-5">
-                                                <img src={arrowSvg} alt="" className="w-full h-full rotate-45" />
-                                            </span>
+                                            <ArrowUpRight className="w-5 h-5" />
                                         )}
                                     </button>
                                 </div>
