@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SendHorizontal } from "lucide-react";
 import lips from "../assets/lips.png";
 
 export function ContactUs() {
@@ -64,7 +65,7 @@ export function ContactUs() {
                                         cursor: 'pointer'
                                     }}
                                 >
-                                    Send <span className="ml-1 md:ml-2">→</span>
+                                    Send <SendHorizontal className="ml-1 md:ml-2 w-5 h-5" />
                                 </button>
                             </div>
                         </form>
