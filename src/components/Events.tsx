@@ -181,15 +181,26 @@ export function Events() {
                                 }}
                             />
 
-                            <div className="absolute bottom-0 right-[0%] w-[90%] md:w-[85%] lg:w-[95%] h-[80%] sm:h-[85%] translate-x-[5%] pointer-events-none" style={{ zIndex: 1 }}>
+                            <div className="absolute bottom-0 right-0 w-[90%] md:w-[85%] lg:w-[95%] h-2/3 translate-x-[5%] pointer-events-none" style={{ zIndex: 1 }}>
                                 <img src={event.image} alt={event.title} className="w-full h-full object-contain object-right-bottom drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" />
                             </div>
 
                             <CardFooter className="relative px-4 py-6 h-full flex flex-col justify-between items-start pointer-events-auto" style={{ zIndex: 2 }}>
                                 <CardTitle className="text-2xl font-normal leading-tight w-full">{event.title}</CardTitle>
                                 <Link to={`/events/${event.id}`}>
-                                    <Button className="rounded-full bg-[#90EE90] hover:bg-[#7CDC7C] text-black font-bold text-xs h-8">
-                                        {eventsContent.button} <span className="ml-1">→</span>
+                                    <Button
+                                        className="rounded-full bg-[#85F2AA] hover:bg-[#7AE39B] text-[#0B4F2B] flex items-center justify-center gap-[4px] px-[16px] py-[8px] h-[36px] w-[133px] transition-colors"
+                                        style={{
+                                            fontFamily: "'General Sans Variable', sans-serif",
+                                            fontWeight: 400,
+                                            fontSize: '13px',
+                                            lineHeight: '20px'
+                                        }}
+                                    >
+                                        Event details
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
+                                            <path d="M2.5 9.5L9.5 2.5M9.5 2.5H3.5M9.5 2.5V8.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
                                     </Button>
                                 </Link>
                             </CardFooter>
