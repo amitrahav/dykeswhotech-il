@@ -2,21 +2,27 @@ import { useEffect, useState } from "react";
 import queen from "../assets/queen.png";
 import { PageHero } from "../components/PageHero";
 import { useContent } from "../contexts/ContentContext";
+import { TierModal } from "../components/TierModal";
+
+// Tier card glassmorphism style (matching Figma exactly)
+const glassBg: React.CSSProperties = {
+    backgroundImage:
+        "linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 100%), linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%)",
+    backdropFilter: "blur(2px)",
+    WebkitBackdropFilter: "blur(2px)",
+};
 
 export function Sponsorship() {
     const { content } = useContent();
-    const { hero } = content.sponsorship;
+    const { hero, whyJoin, engagementOpportunities, customImpact } = content.sponsorship;
     const [offset, setOffset] = useState(0);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [isMobile, setIsMobile] = useState(false);
+    const [selectedTier, setSelectedTier] = useState<{ name: string; price: string } | null>(null);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setOffset(window.pageYOffset);
-        };
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
+        const handleScroll = () => setOffset(window.pageYOffset);
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
         const handleMouseMove = (e: MouseEvent) => {
             if (!isMobile) {
                 setMousePos({
@@ -40,17 +46,17 @@ export function Sponsorship() {
 
     return (
         <div className="w-full bg-[#8D6BE4] relative overflow-hidden flex flex-col min-h-screen">
-            {/* Hero Section & Content Wrapper */}
             <section className="relative w-full overflow-hidden flex-grow flex flex-col">
-                {/* Large Background Text */}
+
+                {/* Large Background Title */}
                 <PageHero title={hero.title} />
 
-                {/* Pink Haze Animated Background - Reactive and gentle */}
+                {/* Pink Haze Animated Background */}
                 <div
-                    className="absolute inset-0 z-5 pointer-events-none"
+                    className="absolute inset-0 z-[5] pointer-events-none"
                     style={{
-                        transform: isMobile ? 'none' : `translate(${mousePos.x}px, ${mousePos.y}px)`,
-                        transition: 'transform 0.4s ease-out'
+                        transform: isMobile ? "none" : `translate(${mousePos.x}px, ${mousePos.y}px)`,
+                        transition: "transform 0.4s ease-out",
                     }}
                 >
                     <svg
@@ -58,7 +64,7 @@ export function Sponsorship() {
                         viewBox="0 0 2873 3097"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        style={{ filter: 'blur(100px)' }}
+                        style={{ filter: "blur(100px)" }}
                     >
                         <path
                             d="M930.071 1238.36C93.7699 1411.76 276.589 2228.42 287.335 2328.24C1114.35 2752.21 2797.22 1995.84 2593.5 792.643C2389.79 -410.558 1526.38 -213.889 1544.79 173.319C1563.2 560.528 1766.37 1064.96 930.071 1238.36Z"
@@ -68,91 +74,195 @@ export function Sponsorship() {
                 </div>
 
                 {/* Main Content */}
-                <div className="max-w-6xl mx-auto relative z-10 flex flex-col pb-32 px-6 md:px-16 lg:px-24 pt-12 md:pt-0">
+                <div className="w-full max-w-[1920px] mx-auto relative z-10 flex flex-col pb-32 px-6 md:px-16 lg:px-24 xl:px-[calc(8.33%+79px)] pt-4 md:pt-0">
 
-                    {/* Join Our Proud Partners */}
-                    <div className="w-full mb-24">
-                        <span className="font-light tracking-widest text-white/70 text-sm mb-2 block uppercase font-montserrat">
+                    {/* ── Hero Content ── */}
+                    <div className="w-full mb-20 max-w-[1160px]">
+                        {/* Badge */}
+                        <span className="font-heading font-normal tracking-widest text-white/90 text-sm md:text-base mb-3 block uppercase">
                             {hero.badge}
                         </span>
-                        <h1 className="text-3xl md:text-5xl font-bold mb-10 font-telaviv leading-tight uppercase text-white">
-                            {hero.title}
+
+                        {/* Main Heading */}
+                        <h1 className="font-telaviv font-normal text-[clamp(2rem,4.5vw,3.25rem)] uppercase text-white leading-[1.05] mb-8 whitespace-pre-line">
+                            {hero.heading.replace(/ (?=CONNECT|DRIVE)/g, "\n")}
                         </h1>
 
-                        <div className="space-y-8 text-lg md:text-xl font-light text-white leading-relaxed">
-                            {hero.description.map((text: string, i: number) => (
-                                <p key={i}>{text}</p>
-                            ))}
-                        </div>
+                        {/* Description — matches Figma mixed-weight paragraph */}
+                        <p className="text-white text-[clamp(1rem,1.8vw,1.3rem)] font-light font-sans leading-[1.55] mb-10">
+                            <span className="font-bold">DykesWhoTech</span>
+                            {" is a premier professional ecosystem of "}
+                            <span className="font-black">over 400 </span>
+                            <span className="font-bold">LGBTQ+ women in tech</span>
+                            <span className="font-black">.</span>
+                            {" We bridge the gap between top-tier talent and the industry's leading organizations. With dozens of successful high-impact projects, we are more than a community, we are a grassroots movement building real-world tools and fostering the next generation of tech leadership."}
+                        </p>
+
+                        {/* CTA — scrolls smoothly to tiers section */}
+                        <button
+                            className="bg-[#c8aef4] text-white font-heading font-extrabold px-8 py-3 rounded-full text-sm uppercase tracking-wider hover:bg-[#b99af0] transition-colors cursor-pointer"
+                            onClick={() => document.getElementById("partnership-tiers")?.scrollIntoView({ behavior: "smooth" })}
+                        >
+                            {hero.cta}
+                        </button>
                     </div>
 
-                    {/* Why Partner With Us */}
-                    <div className="w-full mb-24">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 font-telaviv leading-tight uppercase text-white">
-                            {content.sponsorship.whyPartner.title}
+                    {/* ── Why Join Our Mission ── */}
+                    <div className="w-full mb-20 max-w-[1160px]">
+                        <h2 className="font-telaviv font-normal text-[clamp(2rem,4vw,3.25rem)] uppercase text-white leading-[1.1] mb-6">
+                            {whyJoin.title}
                         </h2>
-
+                        <p className="text-white/90 text-[clamp(1rem,1.8vw,1.3rem)] font-light font-sans leading-[1.55] mb-10">
+                            {whyJoin.intro}
+                        </p>
                         <ul className="space-y-8">
-                            {content.sponsorship.whyPartner.items.map((item: any, i: number) => (
-                                <li key={i} className="flex items-start">
-                                    <div className="w-2.5 h-2.5 mt-2 rounded-full bg-white/40 mr-6 flex-shrink-0"></div>
-                                    <div className="flex flex-col text-white">
-                                        <span className="font-bold text-white text-xl mb-1">{item.title}</span>
-                                        <span className="text-white/90 text-lg font-light leading-relaxed">{item.text}</span>
+                            {whyJoin.items.map((item: any, i: number) => (
+                                <li key={i} className="flex items-start font-sans text-white text-[clamp(1rem,1.8vw,1.3rem)] leading-[1.55]">
+                                    <span className="mt-2 mr-4 flex-shrink-0 w-2 h-2 rounded-full bg-white/60 inline-block" />
+                                    <div>
+                                        <span className="font-bold">{item.title} :</span>
+                                        <br />
+                                        <span className="font-light text-white/90">{item.text}</span>
                                     </div>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Ways to Collaborate */}
-                    <div className="w-full mb-24">
-                        <div className="mb-10">
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-telaviv leading-tight uppercase text-white">
-                                {content.sponsorship.collaboration.title}
-                            </h2>
-                            <p className="text-white/80 text-lg font-light font-montserrat">
-                                {content.sponsorship.collaboration.subtitle}
-                            </p>
-                        </div>
+                    {/* ── Engagement Opportunities ── */}
+                    <div className="w-full mb-8 max-w-[1320px]">
+                        {/* Badge + Title */}
+                        <span className="font-heading font-normal tracking-widest text-white/90 text-sm md:text-base mb-3 block uppercase">
+                            {engagementOpportunities.badge}
+                        </span>
+                        <h2 className="font-telaviv font-normal text-[clamp(2rem,4vw,3.25rem)] uppercase text-white leading-[1.1] mb-8 max-w-[1160px]">
+                            {engagementOpportunities.title}
+                        </h2>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                            {content.sponsorship.collaboration.items.map((item: any, i: number) => (
-                                <div key={i} className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20 transition hover:bg-white/20 flex flex-col h-full">
-                                    <h3 className="text-2xl font-bold text-white mb-3 font-telaviv uppercase">{item.title}</h3>
-                                    <p className="text-white/90 text-lg font-light leading-relaxed">{item.text}</p>
+                        {/* Subtitle */}
+                        <p className="text-white/90 text-[clamp(1rem,1.8vw,1.3rem)] font-heading font-normal mb-6">
+                            {engagementOpportunities.subtitle}
+                        </p>
+
+                        {/* Included items (bullet list) */}
+                        <ul className="space-y-6 mb-14 max-w-[1160px]">
+                            {engagementOpportunities.includedItems.map((item: any, i: number) => (
+                                <li key={i} className="flex items-start font-sans text-white text-[clamp(1rem,1.8vw,1.3rem)] leading-[1.55]">
+                                    <span className="mt-2 mr-4 flex-shrink-0 w-2 h-2 rounded-full bg-white/60 inline-block" />
+                                    <div>
+                                        <span className="font-bold">{item.title} :</span>
+                                        <br />
+                                        <span className="font-light text-white/90">{item.text}</span>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+
+                        {/* ── Tier Cards ── */}
+                        <div id="partnership-tiers" className="grid grid-cols-1 lg:grid-cols-3 gap-7 mb-7">
+                            {engagementOpportunities.tiers.map((tier: any, i: number) => (
+                                <div
+                                    key={i}
+                                    className="border-4 border-white rounded-[40px] flex flex-col items-center px-10 py-10"
+                                    style={glassBg}
+                                >
+                                    {/* Content grows to fill card height, keeping button at a fixed distance from bottom */}
+                                    <div className="flex flex-col gap-7 items-start w-full flex-grow">
+                                        {/* Price + Name */}
+                                        <div className="flex flex-col gap-5 w-full">
+                                            <p className="font-heading font-black text-[clamp(1.8rem,3vw,2.6rem)] text-[#8a5cf5] leading-[1.3]">
+                                                {tier.price}
+                                            </p>
+                                            <p className="font-heading font-bold text-[clamp(1.1rem,1.6vw,1.4rem)] text-[#8a5cf5] leading-snug">
+                                                {tier.name}
+                                            </p>
+                                        </div>
+
+                                        {/* The Value */}
+                                        <div className="text-[#8a5cf5] text-sm w-full">
+                                            <p>
+                                                <span className="font-heading font-bold">The Value:</span>
+                                                <br />
+                                                <span className="font-heading font-medium">{tier.value}</span>
+                                            </p>
+                                        </div>
+
+                                        {/* Features */}
+                                        <div className="flex flex-col gap-4 w-full text-[#8a5cf5] text-sm">
+                                            {tier.features.map((feature: any, j: number) => (
+                                                <p key={j}>
+                                                    <span className="font-heading font-bold">{feature.title}:</span>
+                                                    <br />
+                                                    <span className="font-heading font-medium">{feature.text}</span>
+                                                </p>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* CTA Button — fixed pt-10 gap, content above absorbs extra height */}
+                                    <div className="pt-10 w-full flex justify-center flex-shrink-0">
+                                        <button
+                                            className="bg-[#8a5cf5] text-white font-heading font-bold px-12 py-3 rounded-full text-sm hover:bg-[#7c4ef0] transition-colors cursor-pointer"
+                                            onClick={() => setSelectedTier({ name: tier.name, price: tier.price })}
+                                        >
+                                            {tier.cta}
+                                        </button>
+                                    </div>
                                 </div>
                             ))}
                         </div>
-                    </div>
 
-                    {/* Custom Impact */}
-                    <div className="w-full">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-telaviv leading-tight uppercase text-white">
-                            {content.sponsorship.customImpact.title}
-                        </h2>
-                        <div className="space-y-6 text-lg md:text-xl font-light text-white leading-relaxed">
-                            {content.sponsorship.customImpact.text.map((paragraph: string, i: number) => (
-                                <p key={i}>{paragraph}</p>
-                            ))}
+                        {/* ── Custom Impact Wide Card ── */}
+                        <div
+                            className="border-4 border-white rounded-[40px] flex flex-col md:flex-row items-start md:items-center justify-between gap-8 px-10 md:px-16 py-10"
+                            style={glassBg}
+                        >
+                            <div className="flex-1 flex flex-col gap-4">
+                                <p className="font-heading font-black text-[clamp(1.4rem,2.5vw,2rem)] text-[#8a5cf5] leading-[1.3]">
+                                    {customImpact.title}
+                                </p>
+                                <div className="text-[#8a5cf5] text-sm">
+                                    <p className="font-heading font-bold text-[clamp(1rem,1.5vw,1.2rem)] mb-2">
+                                        {customImpact.subtitle}
+                                    </p>
+                                    {customImpact.text.map((paragraph: string, i: number) => (
+                                        <p key={i} className="font-heading font-medium max-w-[636px] leading-relaxed text-sm md:text-[0.95rem]">
+                                            {paragraph}
+                                        </p>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="flex-shrink-0">
+                                <button
+                                    className="bg-[#8a5cf5] text-white font-heading font-bold px-12 py-3 rounded-full text-sm hover:bg-[#7c4ef0] transition-colors cursor-pointer whitespace-nowrap"
+                                    onClick={() => setSelectedTier({ name: customImpact.title, price: "Custom" })}
+                                >
+                                    {customImpact.cta}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Queen background image - handled like omg.png on About section */}
+                {/* Tier modal */}
+                {selectedTier && (
+                    <TierModal tier={selectedTier} onClose={() => setSelectedTier(null)} />
+                )}
+
+                {/* Queen background image */}
                 <div
                     className="absolute inset-x-0 bottom-0 w-full h-[100%] pointer-events-none z-0 mix-blend-screen"
                     style={{
-                        filter: 'brightness(100)',
+                        filter: "brightness(100)",
                         opacity: 0.5,
                         backgroundImage: `url(${queen})`,
-                        backgroundPosition: isMobile ? 'center center' : 'center bottom',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundSize: '100% auto',
-                        backgroundBlendMode: 'screen',
-                        transform: isMobile ? 'none' : `translateY(${offset * 0.15}px)`
+                        backgroundPosition: isMobile ? "center center" : "center bottom",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "100% auto",
+                        backgroundBlendMode: "screen",
+                        transform: isMobile ? "none" : `translateY(${offset * 0.15}px)`,
                     }}
-                ></div>
+                />
             </section>
         </div>
     );

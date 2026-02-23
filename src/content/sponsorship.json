@@ -1,56 +1,106 @@
 {
     "hero": {
-        "badge": "Support Us",
+        "badge": "Partner With Us",
         "title": "DYKESWHOTECH",
+        "heading": "EMPOWER DIVERSITY CONNECT WITH TALENTS DRIVE IMPACT",
         "description": [
-            "Partnering with DykesWhoTech is more than a strategic investment—it’s a direct commitment to a thriving ecosystem of over 400 LGBTQ+ women professionals in tech. With dozens of successful projects already under our belt, we are the only community providing a dedicated, high-impact space where top-tier talent meets radical inclusion.",
-            "When you support us, you aren't just sponsoring an organization; you are directly fueling a grassroots movement that builds real-world tools, fosters leadership, and creates a more representative future for the industry."
-        ]
+            "DykesWhoTech is a premier professional ecosystem of over 400 LGBTQ+ women in tech. We bridge the gap between top-tier talent and the industry's leading organizations. With dozens of successful high-impact projects, we are more than a community; we are a grassroots movement building real-world tools and fostering the next generation of tech leadership."
+        ],
+        "cta": "Our partnership tiers"
     },
-    "whyPartner": {
-        "title": "Why Partner With Us?",
+    "whyJoin": {
+        "title": "WHY JOIN OUR MISSION?",
+        "intro": "Partnering with us translates into tangible growth for your organisation:",
         "items": [
             {
-                "title": "Brand Visibility & Awareness",
-                "text": "Feature your logo across our digital platforms, monthly newsletters, and marketing materials for flagship events like the Dykeathon and Drink & Dyke."
+                "title": "Access Elite Talent",
+                "text": "Reach a highly skilled, niche audience of developers, product managers, and designers that are often missed by traditional recruiting."
             },
             {
-                "title": "Direct Access to Top Talent",
-                "text": "Reach a highly skilled, niche audience of developers, product managers, designers, and entrepreneurs."
+                "title": "Boost Brand Authority",
+                "text": "Position your organization at the heart of the LGBTQ+ tech space through our flagship events."
             },
             {
-                "title": "Demonstrate Your Commitment to DEI",
-                "text": "Move beyond slogans. A partnership with us provides a tangible way to act on your Diversity, Equity, and Inclusion goals."
-            },
-            {
-                "title": "Exclusive Event Engagement",
-                "text": "Get a seat at the table. Host professional workshops, join panel discussions, or have a branded presence at our high-energy meetups."
+                "title": "Lead with DEI",
+                "text": "Move beyond slogans. Act on your Diversity, Equity, and inclusion goals with a partner that delivers real representation and results."
             }
         ]
     },
-    "collaboration": {
-        "title": "Ways to Collaborate",
-        "subtitle": "All engagement options include job postings on our official website and community platforms.",
-        "items": [
+    "engagementOpportunities": {
+        "badge": "Engagement Opportunities",
+        "title": "CHOOSE THE LEVEL OF ENGAGEMENT THAT BEST FITS YOUR ORGANIZATIONAL GOALS:",
+        "subtitle": "What in it for you? - In every partnership tier:",
+        "includedItems": [
             {
-                "title": "Professional Workshop | $2,500",
-                "text": "Host a technical or product-focused session led by our experts, designed for either your internal teams or our broader community."
+                "title": "Recruitment Boost",
+                "text": "Strategic placement of your open roles across our official website and community platforms."
             },
             {
-                "title": "LGBTQ+ Diversity Talk | $2,500",
-                "text": "An engaging and educational session for your organization on LGBTQ+ inclusion and the unique power of diverse tech teams."
+                "title": "Direct Talent Access",
+                "text": "Unfiltered connection to our specialized professional talent pool."
             },
             {
-                "title": "Full Event Experience | $7,500",
-                "text": "A high-energy corporate event featuring a professional DJ from our community, bringing the unmistakable DykesWhoTech vibe to your company."
+                "title": "Brand Recognition",
+                "text": "Featured logo on our partner wall and in our monthly professional newsletter."
+            }
+        ],
+        "tiers": [
+            {
+                "price": "$2,500",
+                "name": "Professional Knowledge Exchange",
+                "value": "We provide the expertise; you gain the engagement.",
+                "features": [
+                    {
+                        "title": "Expert-Led Workshop",
+                        "text": "We bring top industry leaders to host a technical or product-focused session for your team or our community."
+                    },
+                    {
+                        "title": "Skill Sharing",
+                        "text": "Position your company as a place of professional growth and technical excellence."
+                    }
+                ],
+                "cta": "Choose tier"
+            },
+            {
+                "price": "$5,000",
+                "name": "LGBTQ+ Leadership Talk",
+                "value": "Cultural transformation led by community experts.",
+                "features": [
+                    {
+                        "title": "Educational Keynote",
+                        "text": "A high-impact session for your organization on LGBTQ+ inclusion and building diverse tech teams."
+                    },
+                    {
+                        "title": "DEI Roadmap",
+                        "text": "Gain practical insights on fostering a truly inclusive environment within your company."
+                    }
+                ],
+                "cta": "Choose tier"
+            },
+            {
+                "price": "$7,500",
+                "name": "The Full Experience \"DykesWhoTech\"",
+                "value": "Turn your office into a community hub.",
+                "features": [
+                    {
+                        "title": "Signature Event",
+                        "text": "A high-energy corporate event produced by us, featuring a professional DJ from our community."
+                    },
+                    {
+                        "title": "Atmosphere & Branding",
+                        "text": "Bring the unmistakable DykesWhoTech vibe to your company, creating lasting impressions with top talent."
+                    }
+                ],
+                "cta": "Choose tier"
             }
         ]
     },
     "customImpact": {
-        "title": "Custom Impact: Let’s Build the Future Together",
+        "title": "Custom Impact: Let's Build the Future Together",
+        "subtitle": "Looking for a tailored approach?",
         "text": [
-            "Don’t see exactly what you’re looking for? The options above are just the starting point.",
-            "We believe the most effective partnerships are built on shared goals. Whether you want to focus on high-volume recruitment, long-term brand positioning, or a unique community initiative, we are ready to tailor a package that fits your specific budget and vision."
-        ]
+            "The options above are our most popular engagement routes, but we believe the best partnerships are bespoke. Whether you need high-volume recruitment, long-term brand positioning, or a unique community initiative, we will tailor a package to fit your specific vision and budget."
+        ],
+        "cta": "Custom tier"
     }
 }

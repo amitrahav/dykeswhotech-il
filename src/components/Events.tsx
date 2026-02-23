@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Card, CardFooter, CardTitle } from "./ui/card";
 
@@ -185,9 +186,11 @@ export function Events() {
                             <CardFooter className="px-4 py-6 absolute bottom-0 h-full" style={{ zIndex: 1 }}>
                                 <div className="flex flex-col h-full justify-between">
                                     <CardTitle className="text-2xl font-normal leading-tight">{event.title}</CardTitle>
-                                    <Button className="rounded-full bg-[#90EE90] hover:bg-[#7CDC7C] text-black font-bold text-xs h-8">
-                                        {eventsContent.button} <span className="ml-1">→</span>
-                                    </Button>
+                                    <Link to={`/events/${event.id}`}>
+                                        <Button className="rounded-full bg-[#90EE90] hover:bg-[#7CDC7C] text-black font-bold text-xs h-8">
+                                            {eventsContent.button} <span className="ml-1">→</span>
+                                        </Button>
+                                    </Link>
                                 </div>
                             </CardFooter>
                         </Card>

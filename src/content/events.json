@@ -8,25 +8,83 @@
     "upCommingDetails": {
         "tallyId": "xXrRG5",
         "title": "Dykeathon 2026",
-        "date": "30/04/2026",
-        "location": "LGBTQ+ Center, TLV"
+        "date": "01/05/2026",
+        "location": "LGBTQ+ CENTER",
+        "collaboration": "LGBTQ",
+        "typeId": "dykeathon"
     },
     "eventTypes": [
         {
-            "title": "Dykeathon",
+            "id": "dykeathon",
+            "title": "DYKEATHON",
             "image": "/assets/Hestia01.png",
-            "description": "Our massive annual event. 24 hours of creation, coding, and innovation in a strictly queer-female space. This isn't just another hackathon; it's where we build tech solutions for real-world problems, learn from one another, and prove that when queer women lead development – magic happens."
+            "description": "'We are here to make sure we have each other's backs.' Our mission is simple: to create a network that actually works for us. We don't wait for an invite to the table; we're building our own. This means:",
+            "features": [
+                "Being the first point of contact: Whether you need a job referral, help prepping for an interview, or just want to talk through a professional dilemma with someone who truly gets it.",
+                "Opening the door: Helping anyone who wants to break into tech realize it's possible, and showing them the best way to get there.",
+                "No explanations needed: Creating events and meetups where our identity is the default, not something we have to justify or explain."
+            ]
         },
         {
-            "title": "Meetups",
+            "id": "meetups",
+            "title": "MEETUPS",
             "image": "/assets/Hestia02.png",
-            "description": "Regular gatherings that keep our community connected. These are informal, low-pressure events where you can just show up, chat with other queer women in tech, share what you're working on, or just hang out. They’re the perfect low-stakes way to meet new people and feel the warmth of our community."
+            "description": "Regular gatherings that keep our community connected. These are informal, low-pressure events where you can just show up, chat with other queer women in tech, share what you're working on, or just hang out.",
+            "features": [
+                "Networking events",
+                "Tech talks",
+                "Community support"
+            ]
         },
         {
-            "title": "Drink & Dyke",
+            "id": "drink-and-dyke",
+            "title": "DRINK & DYKE",
             "image": "/assets/Demeter.png",
-            "description": "Our casual, no-agenda bar nights. These events are all about unwinding, making friends, and enjoying a relaxed evening together. It’s the perfect opportunity to decompress after a long week, catch up with familiar faces, and meet new queer women in a chill, social atmosphere."
+            "description": "Our casual, no-agenda bar nights. These events are all about unwinding, making friends, and enjoying a relaxed evening together.",
+            "features": [
+                "Social gatherings",
+                "Relaxed atmosphere",
+                "Queer-friendly spaces"
+            ]
         }
     ],
-    "button": "Events Detail"
+    "button": "Register",
+    "pastEvents": [
+        {
+            "typeId": "dykeathon",
+            "title": "Dykeathon name",
+            "host": "Host name / place",
+            "date": "2022-06-15",
+            "location": "Tel Aviv",
+            "image": "/assets/Hestia01.png",
+            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+        },
+        {
+            "typeId": "dykeathon",
+            "title": "Dykeathon name",
+            "host": "Host name / place",
+            "date": "2022-06-15",
+            "location": "Tel Aviv",
+            "image": "/assets/Hestia01.png",
+            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+        },
+        {
+            "typeId": "dykeathon",
+            "title": "Dykeathon name",
+            "host": "Host name / place",
+            "date": "2022-06-15",
+            "location": "Tel Aviv",
+            "image": "/assets/Hestia01.png",
+            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+        },
+        {
+            "typeId": "dykeathon",
+            "title": "Dykeathon name",
+            "host": "Host name / place",
+            "date": "2022-06-15",
+            "location": "Tel Aviv",
+            "image": "/assets/Hestia01.png",
+            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+        }
+    ]
 }

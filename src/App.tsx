@@ -8,6 +8,8 @@ import { Sponsorship } from "./pages/Sponsorship";
 
 import { ContentProvider } from "./contexts/ContentContext";
 
+import { EventArchive } from "./pages/Events/[event]";
+
 function App() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -21,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
+          <Route path="/events/:event" element={<EventArchive />} />
         </Routes>
         <ContactUs />
       </main>
