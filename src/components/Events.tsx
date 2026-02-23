@@ -160,38 +160,38 @@ export function Events() {
     }));
 
     return (
-        <section className="w-full pt-10 pb-20 px-8 md:px-16 lg:px-24">
+        <section className="w-full pt-10 pb-20 px-8 md:px-12 lg:px-16 xl:px-24">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{eventsContent.title}</h2>
                 <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
                     {eventsContent.description}
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-10rem]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-2rem] xl:mx-[-6rem] 2xl:mx-[-10rem]">
                     {eventTypes.map((event, index) => (
-                        <Card key={index} className="relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl relative"
+                        <Card key={index} className="relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex flex-col"
                         >
                             {/* Animated notebook grid - lowest z-index */}
                             <NotebookGrid delay={index * 0.3} />
 
-                            <div className="relative h-full w-full"
+                            <div className="absolute inset-0 w-full h-full pointer-events-none"
                                 style={{
-                                    background: 'radial-gradient(circle at 70% 80%, rgba(133, 242, 170, 0.5) 0%, rgba(133, 242, 170, 0.4) 25%, rgba(133, 242, 170, 0.2) 45%, rgba(133, 242, 170, 0.05) 65%, transparent 80%)'
+                                    background: 'radial-gradient(circle at 70% 80%, rgba(133, 242, 170, 0.5) 0%, rgba(133, 242, 170, 0.4) 25%, rgba(133, 242, 170, 0.2) 45%, rgba(133, 242, 170, 0.05) 65%, transparent 80%)',
+                                    zIndex: 0
                                 }}
-                            >
-                                <div className="image-glow-wrap absolute lg:translate-x-[80%] translate-x-[40%] translate-y-[20%]">
-                                    <img src={event.image} alt={event.title} className="h-full object-cover" />
-                                </div>
+                            />
+
+                            <div className="absolute bottom-0 right-[0%] w-[90%] md:w-[85%] lg:w-[95%] h-[80%] sm:h-[85%] translate-x-[5%] pointer-events-none" style={{ zIndex: 1 }}>
+                                <img src={event.image} alt={event.title} className="w-full h-full object-contain object-right-bottom drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" />
                             </div>
-                            <CardFooter className="px-4 py-6 absolute bottom-0 h-full" style={{ zIndex: 1 }}>
-                                <div className="flex flex-col h-full justify-between">
-                                    <CardTitle className="text-2xl font-normal leading-tight">{event.title}</CardTitle>
-                                    <Link to={`/events/${event.id}`}>
-                                        <Button className="rounded-full bg-[#90EE90] hover:bg-[#7CDC7C] text-black font-bold text-xs h-8">
-                                            {eventsContent.button} <span className="ml-1">→</span>
-                                        </Button>
-                                    </Link>
-                                </div>
+
+                            <CardFooter className="relative px-4 py-6 h-full flex flex-col justify-between items-start pointer-events-auto" style={{ zIndex: 2 }}>
+                                <CardTitle className="text-2xl font-normal leading-tight w-full">{event.title}</CardTitle>
+                                <Link to={`/events/${event.id}`}>
+                                    <Button className="rounded-full bg-[#90EE90] hover:bg-[#7CDC7C] text-black font-bold text-xs h-8">
+                                        {eventsContent.button} <span className="ml-1">→</span>
+                                    </Button>
+                                </Link>
                             </CardFooter>
                         </Card>
                     ))}

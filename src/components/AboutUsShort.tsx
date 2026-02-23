@@ -7,7 +7,7 @@ export function AboutUsShort() {
     const { aboutShort } = content.home;
 
     return (
-        <section className="w-full pt-10 pb-20 px-8 md:px-16 lg:px-24">
+        <section className="w-full pt-10 pb-20 px-8 md:px-12 lg:px-16 xl:px-24">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl mb-8 font-extrabold">
                     {aboutShort.title}
