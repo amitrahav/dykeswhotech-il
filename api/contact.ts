@@ -21,7 +21,7 @@ function createTransport() {
   });
 }
 
-function submitterHtml(data: ContactBody) {
+function submitterHtml(data: ContactBody, safeName: string) {
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@ function submitterHtml(data: ContactBody) {
                 You're in! 🎉
               </h1>
               <p style="margin:0 0 24px;font-size:16px;color:#e8d9ff;line-height:1.6;">
-                Hey ${esc(data.name)}, thanks for joining DykesWhoTech. We'll be in touch soon with updates on our next event.
+                Hey ${esc(safeName)}, thanks for joining DykesWhoTech. We'll be in touch soon with updates on our next event.
               </p>
               <p style="margin:0;font-size:15px;color:#e8d9ff;line-height:1.7;">
                 With love &amp; power,<br/>
@@ -66,7 +66,7 @@ function submitterHtml(data: ContactBody) {
   `.trim();
 }
 
-function internalHtml(data: ContactBody) {
+function internalHtml(data: ContactBody, safeName: string) {
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -87,7 +87,7 @@ function internalHtml(data: ContactBody) {
               <table width="100%" cellpadding="6" cellspacing="0" style="border-collapse:collapse;">
                 <tr style="background:#f5f0ff;">
                   <td style="font-size:13px;font-weight:700;color:#582c99;padding:10px 12px;width:100px;">Name</td>
-                  <td style="font-size:14px;color:#1a1a2e;padding:10px 12px;">${esc(data.name)}</td>
+                  <td style="font-size:14px;color:#1a1a2e;padding:10px 12px;">${esc(safeName)}</td>
                 </tr>
                 <tr>
                   <td style="font-size:13px;font-weight:700;color:#582c99;padding:10px 12px;">Email</td>
@@ -112,7 +112,7 @@ function internalHtml(data: ContactBody) {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://dykeathon.com");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -130,6 +130,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: "Invalid email address" });
   }
 
+  if (data.name.trim().length > 200) {
+    return res.status(400).json({ error: "Name must be 200 characters or fewer" });
+  }
+  if (data.email.length > 320) {
+    return res.status(400).json({ error: "Email must be 320 characters or fewer" });
+  }
+
   try {
     const safeName = data.name.trim().replace(/[\r\n]+/g, " ");
     const transporter = createTransport();
@@ -139,14 +146,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         from: `"DykesWhoTech" <${process.env.GMAIL_USER}>`,
         to: data.email,
         subject: `Welcome to DykesWhoTech! 🎉`,
-        html: submitterHtml(data),
+        html: submitterHtml(data, safeName),
       }),
       transporter.sendMail({
         from: `"DykesWhoTech Website" <${process.env.GMAIL_USER}>`,
         to: process.env.GMAIL_USER,
         replyTo: data.email,
         subject: `[New Contact] ${safeName}`,
-        html: internalHtml(data),
+        html: internalHtml(data, safeName),
       }),
     ]);
 
