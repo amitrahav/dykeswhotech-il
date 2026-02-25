@@ -52,39 +52,39 @@
     "pastEvents": [
         {
             "typeId": "dykeathon",
-            "title": "Dykeathon name",
-            "host": "Host name / place",
+            "title": "Dykeathon 2022",
+            "host": "Tel Aviv",
             "date": "2022-06-15",
             "location": "Tel Aviv",
-            "image": "/assets/Hestia01.png",
-            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+            "image": "/assets/events/dykeathon-2022.jpg",
+            "description": ""
         },
         {
             "typeId": "dykeathon",
-            "title": "Dykeathon name",
-            "host": "Host name / place",
-            "date": "2022-06-15",
+            "title": "Dykeathon 2023",
+            "host": "Tel Aviv",
+            "date": "2023-06-15",
             "location": "Tel Aviv",
-            "image": "/assets/Hestia01.png",
-            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+            "image": "/assets/events/dykeathon-2023.jpg",
+            "description": ""
         },
         {
             "typeId": "dykeathon",
-            "title": "Dykeathon name",
-            "host": "Host name / place",
-            "date": "2022-06-15",
+            "title": "Dykeathon 2024",
+            "host": "Tel Aviv",
+            "date": "2024-06-15",
             "location": "Tel Aviv",
-            "image": "/assets/Hestia01.png",
-            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+            "image": "/assets/events/dykeathon-2024.jpg",
+            "description": ""
         },
         {
             "typeId": "dykeathon",
-            "title": "Dykeathon name",
-            "host": "Host name / place",
-            "date": "2022-06-15",
+            "title": "Dykeathon 2025",
+            "host": "Tel Aviv",
+            "date": "2025-06-15",
             "location": "Tel Aviv",
-            "image": "/assets/Hestia01.png",
-            "description": "Extra details about the organisations we help through the event - not more 3 three lines."
+            "image": "/assets/events/dykeathon-2025.jpg",
+            "description": ""
         }
     ]
 }
