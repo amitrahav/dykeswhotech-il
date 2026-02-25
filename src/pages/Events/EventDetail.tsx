@@ -1,10 +1,11 @@
 import { useParams, Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 import { useContent } from "../../contexts/ContentContext";
 import { PageHero } from "../../components/PageHero";
 import { Button } from "../../components/ui/button";
-import { useEffect, useRef, useState } from "react";
 import xoxo from "../../assets/xoxo.png";
 import queenGlitch from "../../assets/queen-glitch.png";
+import { RegisterModal } from "../../components/RegisterModal";
 
 // ────────────────────────────────────────────────────────────────
 // Notebook grid lines (reused from other pages)
@@ -82,6 +83,7 @@ export function EventDetail() {
     const { event, eventId } = useParams<{ event: string; eventId: string }>();
     const { content } = useContent();
     const { events: eventsContent } = content;
+    const [registerOpen, setRegisterOpen] = useState(false);
 
     // Find the single event from JSON
     const singleEvent = (eventsContent as any).singleEvents?.find(
@@ -188,11 +190,12 @@ export function EventDetail() {
                             {/* CTA */}
                             {singleEvent.registrationOpen && (
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <a href="#register">
-                                        <Button className="bg-[#1DFF87] hover:bg-[#15e076] text-[#293744] font-black px-10 py-7 rounded-3xl text-xl shadow-xl transition-all hover:scale-105 active:scale-95 uppercase tracking-widest border-b-4 border-black/10">
-                                            Register now
-                                        </Button>
-                                    </a>
+                                    <Button
+                                        onClick={() => setRegisterOpen(true)}
+                                        className="bg-[#1DFF87] hover:bg-[#15e076] text-[#293744] font-black px-10 py-7 rounded-3xl text-xl shadow-xl transition-all hover:scale-105 active:scale-95 uppercase tracking-widest border-b-4 border-black/10 cursor-pointer"
+                                    >
+                                        Register now
+                                    </Button>
                                     <a href="#program">
                                         <Button variant="outline" className="border-2 border-[#293744] text-[#293744] font-black px-10 py-7 rounded-3xl text-xl hover:bg-[#293744] hover:text-white transition-all uppercase tracking-widest">
                                             See program
@@ -224,7 +227,7 @@ export function EventDetail() {
                         <div className="lg:w-1/3">
                             <span className="text-xs font-black uppercase tracking-widest text-[#85F2AA] mb-4 block">About the event</span>
                             <h2 className="text-4xl md:text-6xl font-telaviv text-white uppercase leading-tight">
-                                What is the Dykeathon?
+                                {singleEvent.aboutTitle || "About this event"}
                             </h2>
                         </div>
                         <div className="lg:w-2/3 space-y-6">
@@ -369,6 +372,20 @@ export function EventDetail() {
                     </Button>
                 </Link>
             </div>
+
+            {/* Registration popup */}
+            {registerOpen && singleEvent?.registrationOpen && (
+                <RegisterModal
+                    event={{
+                        title: singleEvent.title,
+                        date: singleEvent.date,
+                        location: singleEvent.location,
+                        collaboration: singleEvent.collaboration,
+                        tallyId: singleEvent.tallyId,
+                    }}
+                    onClose={() => setRegisterOpen(false)}
+                />
+            )}
         </div>
     );
 }

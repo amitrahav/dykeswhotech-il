@@ -29,11 +29,11 @@
             "id": "meetups",
             "title": "MEETUPS",
             "image": "/assets/Hestia02.png",
-            "description": "Regular gatherings that keep our community connected. These are informal, low-pressure events where you can just show up, chat with other queer women in tech, share what you're working on, or just hang out.",
+            "description": "Regular gatherings that keep our community connected. Panel talks, tech demos, community updates, and space to just show up as yourself — no explanations needed.",
             "features": [
-                "Networking events",
-                "Tech talks",
-                "Community support"
+                "Panel talks: Hear from queer women leading tech, building companies, and making change.",
+                "Community updates: Stay in the loop on what's happening across the LGBTQ+ tech space.",
+                "Low-pressure networking: Meet people, find your people, and leave with a warmer heart."
             ]
         },
         {
@@ -60,67 +60,475 @@
             "collaboration": "LGBTQ+ Center",
             "image": "/assets/Hestia01.png",
             "tagline": "Building our own table",
+            "aboutTitle": "What is the Dykeathon?",
             "about": [
                 "The Dykeathon is a 24-hour hackathon for queer women and non-binary people in tech. We come together to build, create, and make lasting connections — because we don't wait for an invite to the table; we build our own.",
                 "This year we're partnering with the LGBTQ+ Center in Tel Aviv to bring the community together for a day of innovation, challenge, and solidarity. Whether you're a developer, designer, product manager, or just curious about tech — there's a place for you here.",
                 "All skill levels are welcome. All we ask is that you show up ready to connect and create."
             ],
             "program": [
-                { "time": "09:00", "title": "Doors Open & Registration", "description": "Coffee, breakfast, and mingling. Come early, meet your teammates." },
-                { "time": "10:00", "title": "Opening Ceremony", "description": "Welcome from the organizers, introduction to the challenge themes, and team formation." },
-                { "time": "11:00", "title": "Hacking Begins", "description": "Teams get to work. Mentors and experts available for consultation throughout the day." },
-                { "time": "13:00", "title": "Lunch Break", "description": "Shared lunch provided. Workshops and talks running in parallel." },
-                { "time": "14:00", "title": "Afternoon Sprint", "description": "Back to building. Mentorship continues, energy drinks provided." },
-                { "time": "17:00", "title": "Project Presentations", "description": "Each team presents their project to the judges and the community. 5 minutes per team." },
-                { "time": "18:30", "title": "Judging & Awards", "description": "Judges deliberate. Winners announced across multiple categories." },
-                { "time": "19:00", "title": "Closing Party", "description": "We celebrate together. Drinks, dancing, and the dyke network growing stronger." }
+                {
+                    "time": "09:00",
+                    "title": "Doors Open & Registration",
+                    "description": "Coffee, breakfast, and mingling. Come early, meet your teammates."
+                },
+                {
+                    "time": "10:00",
+                    "title": "Opening Ceremony",
+                    "description": "Welcome from the organizers, introduction to the challenge themes, and team formation."
+                },
+                {
+                    "time": "11:00",
+                    "title": "Hacking Begins",
+                    "description": "Teams get to work. Mentors and experts available for consultation throughout the day."
+                },
+                {
+                    "time": "13:00",
+                    "title": "Lunch Break",
+                    "description": "Shared lunch provided. Workshops and talks running in parallel."
+                },
+                {
+                    "time": "14:00",
+                    "title": "Afternoon Sprint",
+                    "description": "Back to building. Mentorship continues, energy drinks provided."
+                },
+                {
+                    "time": "17:00",
+                    "title": "Project Presentations",
+                    "description": "Each team presents their project to the judges and the community. 5 minutes per team."
+                },
+                {
+                    "time": "18:30",
+                    "title": "Judging & Awards",
+                    "description": "Judges deliberate. Winners announced across multiple categories."
+                },
+                {
+                    "time": "19:00",
+                    "title": "Closing Party",
+                    "description": "We celebrate together. Drinks, dancing, and the dyke network growing stronger."
+                }
             ],
             "tracks": [
-                { "title": "Community Tech", "description": "Build tools that serve the LGBTQ+ community — apps, platforms, or services that address real needs." },
-                { "title": "Career & Mentorship", "description": "Create resources for queer women breaking into tech — job boards, peer support systems, mentorship platforms." },
-                { "title": "Open Challenge", "description": "Build anything that excites your team. We're here for creativity and ambition." }
+                {
+                    "title": "Community Tech",
+                    "description": "Build tools that serve the LGBTQ+ community — apps, platforms, or services that address real needs."
+                },
+                {
+                    "title": "Career & Mentorship",
+                    "description": "Create resources for queer women breaking into tech — job boards, peer support systems, mentorship platforms."
+                },
+                {
+                    "title": "Open Challenge",
+                    "description": "Build anything that excites your team. We're here for creativity and ambition."
+                }
             ],
             "tallyId": "xXrRG5",
             "notionUrl": "https://www.notion.so/9114484e1b67414c90e1895d26262234",
             "registrationOpen": true
+        },
+        {
+            "id": "2024",
+            "typeId": "dykeathon",
+            "title": "Dykeathon 3.0",
+            "date": "April 2024",
+            "location": "LGBTQ+ TLV Center",
+            "address": "Tel Aviv",
+            "collaboration": "10 LGBTQ+ Organizations",
+            "image": "/assets/Hestia01.png",
+            "tagline": "Tech for those who fight for us",
+            "aboutTitle": "What happened at Dykeathon 3.0?",
+            "about": [
+                "Dykeathon 3.0 was hosted in the building of the LGBTQ+ TLV center — bringing together queer women in product and tech to build real solutions for 10 LGBTQ+ and community organizations.",
+                "Teams worked directly with organizations including Beit El-Mim, Achva, the TLV LGBTQ+ Center, Rakafot, and community groups responding to the events of October 7th — building tools that ranged from digital archives and volunteer management platforms to WhatsApp bots and housing portals.",
+                "Projects like the Gay Media Archive, SeniorVIP, and the Shared Parenting Portal showed just how much is possible when queer women in tech show up for their community."
+            ],
+            "tracks": [
+                {
+                    "title": "Beit El-Mim",
+                    "description": "Website upgrade for the Arab LGBTQ+ community organization."
+                },
+                {
+                    "title": "Achva",
+                    "description": "WhatsApp/Telegram bot, volunteer management platform, and alumni community tools."
+                },
+                {
+                    "title": "TLV LGBTQ+ Center",
+                    "description": "SeniorVIP support platform, Gay Media Archive, Shared Parenting Portal, and Rainbow Root community hub."
+                },
+                {
+                    "title": "Rakafot & Community Response",
+                    "description": "Over the Rainbow project plus war-response tools including SafeYouth (Sderot), Community Activist Management, and Locate Residents (Mevo'ot Hermon)."
+                }
+            ],
+            "program": [],
+            "registrationOpen": false
+        },
+        {
+            "id": "2023",
+            "typeId": "dykeathon",
+            "title": "Dykeathon 2.0",
+            "date": "27-28/04/2023",
+            "location": "Microsoft Reactor",
+            "address": "Tel Aviv",
+            "collaboration": "8 LGBTQ+ Organizations",
+            "image": "/assets/Hestia01.png",
+            "tagline": "24 hours. Real orgs. Real impact.",
+            "aboutTitle": "What happened at Dykeathon 2.0?",
+            "about": [
+                "Hosted in the Microsoft Reactor space, Dykeathon 2.0 had 200 participants on board to solve the biggest problems of LGBTQ+ non-profit organizations — creating production-ready tools for organizations to implement in their day-to-day activities.",
+                "8 organizations participated: Bet El-Mem (Arab LGBTQ+), Maavarim (trans advocacy), Haguda, the TLV LGBTQ+ Center, Hoshen, LGBTech, Achva, and the Gila Project for Trans Empowerment. Each org came with a C-level leader and a real challenge.",
+                "This edition leaned heavily into GenAI and LLMs, with teams building faster and smarter than ever before. Bet El-Mem took first place, Maavarim second, and Haguda third."
+            ],
+            "tracks": [
+                {
+                    "title": "🥇 Bet El-Mem",
+                    "description": "First place — tech solutions for the Arab LGBTQ+ community organization."
+                },
+                {
+                    "title": "🥈 Maavarim",
+                    "description": "Second place — digital tools for trans advocacy and support."
+                },
+                {
+                    "title": "🥉 Haguda",
+                    "description": "Third place — platform work for LGBTQ+ community organizing."
+                }
+            ],
+            "program": [
+                {
+                    "time": "10:00",
+                    "title": "Day 1 — Kickoff & Team Formation",
+                    "description": "Introductions, challenge briefings, and matching PMs with organizations."
+                },
+                {
+                    "time": "12:00",
+                    "title": "Hacking Begins",
+                    "description": "24-hour build sprint starts. Teams work directly with org representatives."
+                },
+                {
+                    "time": "13:00",
+                    "title": "Lunch",
+                    "description": "Food, mentors, and energy drinks to keep everyone going."
+                },
+                {
+                    "time": "22:00",
+                    "title": "Late-Night Checkpoint",
+                    "description": "Mentors circulate, teams share progress and blockers."
+                },
+                {
+                    "time": "09:00",
+                    "title": "Day 2 — Final Push",
+                    "description": "Morning of the final day — wrapping up builds, preparing presentations."
+                },
+                {
+                    "time": "11:00",
+                    "title": "Project Presentations",
+                    "description": "Each team presents to judges and the full community."
+                },
+                {
+                    "time": "12:00",
+                    "title": "Awards & Closing",
+                    "description": "Winners announced. Community celebration."
+                }
+            ],
+            "registrationOpen": false
+        },
+        {
+            "id": "2022",
+            "typeId": "dykeathon",
+            "title": "Dykeathon 1.0",
+            "date": "13/04/2022",
+            "location": "Unity (formally IronSource)",
+            "address": "Menachem Begin 121, 12th Floor, Tel Aviv",
+            "collaboration": "TLV LGBTQ+ Center",
+            "image": "/assets/Hestia01.png",
+            "tagline": "The first one.",
+            "aboutTitle": "Where it all started",
+            "about": [
+                "The very first Dykeathon was hosted in Unity (formally IronSource) offices — 100 participants got to know 4 major issues of the LGBTQ community: Safety, Legal, Community IRL, and Health, and created MVPs for products addressing those problems.",
+                "Teams were guided by domain experts: Dr. Ruth Gofen (Health), Adv. Michal Eden (Legal), Ayala Azulay (Safety), and Noa Dagan (Community).",
+                "Standout MVPs included LesBMe in Health (🥇), BigSister in Community (🥈), Standart in Safety (🥉), and HelpMeSue in Legal. The night ended with an after-party at Shpagat — and the knowledge that we'd do it all again, bigger."
+            ],
+            "tracks": [
+                {
+                    "title": "🥇 Health — LesBMe",
+                    "description": "First place: a platform addressing healthcare gaps for queer women."
+                },
+                {
+                    "title": "🥈 Community — BigSister",
+                    "description": "Second place: a peer support and mentorship network for LGBTQ+ women in tech."
+                },
+                {
+                    "title": "🥉 Safety — Standart",
+                    "description": "Third place: safety tools and resources for the LGBTQ+ community."
+                },
+                {
+                    "title": "Legal — HelpMeSue",
+                    "description": "Tools to help community members understand and exercise their legal rights."
+                }
+            ],
+            "program": [
+                {
+                    "time": "10:00",
+                    "title": "Doors Open & Registration",
+                    "description": "Coffee, food, and meeting your teammates."
+                },
+                {
+                    "time": "10:30",
+                    "title": "Opening Ceremony",
+                    "description": "Welcome, challenge briefings, and team formation across 4 domains."
+                },
+                {
+                    "time": "11:00",
+                    "title": "Hacking Begins",
+                    "description": "Teams get to work with domain experts available for consultation."
+                },
+                {
+                    "time": "13:00",
+                    "title": "Lunch Break",
+                    "description": "Shared lunch. Domain experts host office hours."
+                },
+                {
+                    "time": "14:00",
+                    "title": "Afternoon Sprint",
+                    "description": "Final build push. Mentors in the room."
+                },
+                {
+                    "time": "18:00",
+                    "title": "Project Presentations",
+                    "description": "Each team presents to judges and the community."
+                },
+                {
+                    "time": "20:00",
+                    "title": "Awards Ceremony",
+                    "description": "Winners announced in Health, Safety, Community, and Legal categories."
+                },
+                {
+                    "time": "22:00",
+                    "title": "After Party — Shpagat",
+                    "description": "The celebration continues until 02:00."
+                }
+            ],
+            "registrationOpen": false
+        },
+        {
+            "id": "hanukkah-2023",
+            "typeId": "meetups",
+            "title": "Hanukkah Meetup",
+            "date": "13/12/2023",
+            "location": "Pagaya Office",
+            "address": "Tel Aviv",
+            "collaboration": "Dykeathon Community",
+            "image": "/assets/Hestia02.png",
+            "tagline": "Light, tech, and community.",
+            "aboutTitle": "What was this meetup about?",
+            "about": [
+                "Hosted at the Pagaya office, 150 participants were thrilled to hear our four speakers talking about women innovation at war times.",
+                "The evening also served as a teaser for Dykeathon 3.0, coming in April 2024 — with a first look at the challenge tracks and organizations we'd be working with.",
+                "Beer, pizza, and sufganiyot provided. Spots were limited, community was full."
+            ],
+            "program": [
+                {
+                    "time": "18:30",
+                    "title": "Doors Open",
+                    "description": "Food, drinks, and catching up with the community."
+                },
+                {
+                    "time": "19:00",
+                    "title": "Panel — Women Innovation at War Times",
+                    "description": "Hear from 4 speakers talking about women innovation at war times — projects that made a difference."
+                },
+                {
+                    "time": "20:00",
+                    "title": "Dykeathon 3.0 Teaser",
+                    "description": "A first look at what's coming in April 2024 — the organizations, the challenges, the vision."
+                },
+                {
+                    "time": "20:30",
+                    "title": "Open Networking",
+                    "description": "Mingle, connect, and eat sufganiyot. Happy Hanukkah."
+                }
+            ],
+            "tracks": [],
+            "registrationOpen": false
+        },
+        {
+            "id": "nov-2024",
+            "typeId": "meetups",
+            "title": "Meetup Nov 2024",
+            "date": "November 2024",
+            "location": "Island Office",
+            "address": "Tel Aviv",
+            "collaboration": "Dykeathon Community",
+            "image": "/assets/Hestia02.png",
+            "tagline": "Where therapy meets technology.",
+            "aboutTitle": "What was this meetup about?",
+            "about": [
+                "Hosted at the Island office, 200 participants were thrilled to hear our 3 amazing women share about psychological and medical therapy alongside high-tech.",
+                "A workshop was held on a coding software that integrates a language model — hands-on, practical, and energizing.",
+                "One of our biggest meetups yet. The community keeps growing."
+            ],
+            "program": [
+                {
+                    "time": "18:30",
+                    "title": "Doors Open",
+                    "description": "Food, drinks, and mingling."
+                },
+                {
+                    "time": "19:00",
+                    "title": "Speakers — Therapy Meets Tech",
+                    "description": "3 speakers sharing about psychological and medical therapy alongside high-tech innovation."
+                },
+                {
+                    "time": "20:00",
+                    "title": "Workshop — AI-Integrated Coding",
+                    "description": "Hands-on workshop on a coding software that integrates a language model."
+                },
+                {
+                    "time": "21:00",
+                    "title": "Open Networking",
+                    "description": "Connect, collaborate, and keep the conversation going."
+                }
+            ],
+            "tracks": [],
+            "registrationOpen": false
+        },
+        {
+            "id": "2025",
+            "typeId": "dykeathon",
+            "title": "Dykeathon 4.0",
+            "date": "2025",
+            "location": "Tel Aviv",
+            "collaboration": "14 LGBTQ+ Organizations",
+            "image": "/assets/Hestia01.png",
+            "tagline": "Bigger every year.",
+            "aboutTitle": "What happened at Dykeathon 4.0?",
+            "about": [
+                "Dykeathon 4.0 was our biggest edition yet — 14 LGBTQ+ organizations, each matched with a dedicated team of queer women in tech to build real tools for their day-to-day work.",
+                "Organizations spanned community, health, mental health, sports, legal, and advocacy — from grassroots groups to established centers. Teams brought fullstack engineers, frontend developers, data specialists, designers, and automation experts.",
+                "From WhatsApp bots to scraping tools, Monday integrations to custom web platforms — every project shipped with a real organization behind it."
+            ],
+            "tracks": [
+                {
+                    "title": "אותות",
+                    "description": "Medium-sized group. Low on tech connections, with some automation scope."
+                },
+                {
+                    "title": "UnityLens — הרשות לחוסן",
+                    "description": "Resilience authority org. Platform and tooling work."
+                },
+                {
+                    "title": "המרכז הגאה — מיגור איידס",
+                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
+                },
+                {
+                    "title": "Monday HQ",
+                    "description": "Monday.com-powered workflows and integrations."
+                },
+                {
+                    "title": "SportyPride",
+                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
+                },
+                {
+                    "title": "Project Gila",
+                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
+                },
+                {
+                    "title": "MindMates",
+                    "description": "Large group. Fullstack focus."
+                },
+                {
+                    "title": "בת קול",
+                    "description": "Small group. Automation-focused."
+                },
+                {
+                    "title": "תהלה",
+                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
+                },
+                {
+                    "title": "2050",
+                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
+                },
+                {
+                    "title": "לסבי-בוט",
+                    "description": "Bot development — building smart tools for the community."
+                },
+                {
+                    "title": "Top Surgery",
+                    "description": "Small group. Designers, junior frontend developers, and automation."
+                },
+                {
+                    "title": "SafeYouth",
+                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
+                },
+                {
+                    "title": "תוצרת הארץ",
+                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
+                }
+            ],
+            "program": [],
+            "registrationOpen": false
         }
     ],
     "pastEvents": [
         {
+            "id": "2022",
             "typeId": "dykeathon",
-            "title": "Dykeathon 2022",
-            "host": "Tel Aviv",
-            "date": "2022-06-15",
+            "title": "Dykeathon 1.0",
+            "host": "Unity (formally IronSource)",
+            "date": "2022-04-13",
             "location": "Tel Aviv",
-            "image": "/assets/events/dykeathon-2022.jpg",
-            "description": ""
+            "description": "Was hosted in Unity (formally IronSource) offices and 100 participants got to know 4 major issues of the LGBTQ community: Safety \\ Legal \\ Community IRL \\ Health, and created MVPs for products that facing those problems.",
+            "image": "/assets/events/dykeathon-2022.jpg"
         },
         {
+            "id": "2023",
             "typeId": "dykeathon",
-            "title": "Dykeathon 2023",
-            "host": "Tel Aviv",
-            "date": "2023-06-15",
+            "title": "Dykeathon 2.0",
+            "host": "Microsoft Reactor Tel Aviv",
+            "date": "2023-04-27",
             "location": "Tel Aviv",
-            "image": "/assets/events/dykeathon-2023.jpg",
-            "description": ""
+            "description": "Was hosted in Microsoft reactor space, and had 200 participants on board to solve the biggest problems of LGBTQ+ non-profit organizations, and create production-ready tools for the organizations to implement in their day-to-day activities to make it more effective.",
+            "image": "/assets/events/dykeathon-2023.jpg"
         },
         {
-            "typeId": "dykeathon",
-            "title": "Dykeathon 2024",
-            "host": "Tel Aviv",
-            "date": "2024-06-15",
+            "id": "hanukkah-2023",
+            "typeId": "meetups",
+            "title": "Hanukkah Meetup",
+            "host": "Pagaya Office, Tel Aviv",
+            "date": "2023-12-13",
             "location": "Tel Aviv",
-            "image": "/assets/events/dykeathon-2024.jpg",
-            "description": ""
+            "description": "Was hosted at the Pagaya office and 150 participants were thrilled to hear our four speakers talking about women innovation at war times.",
+            "image": "/assets/events/dykeathon-2023.jpg"
         },
         {
+            "id": "2024",
             "typeId": "dykeathon",
-            "title": "Dykeathon 2025",
-            "host": "Tel Aviv",
-            "date": "2025-06-15",
+            "title": "Dykeathon 3.0",
+            "host": "LGBTQ+ TLV Center",
+            "date": "2024-04-01",
             "location": "Tel Aviv",
-            "image": "/assets/events/dykeathon-2025.jpg",
-            "description": ""
+            "image": "/assets/Hestia01.png",
+            "description": "Was hosted in the building of the LGBTQ+ TLV center."
+        },
+        {
+            "id": "2025",
+            "typeId": "dykeathon",
+            "title": "Dykeathon 4.0",
+            "host": "Tel Aviv",
+            "date": "2025",
+            "location": "Tel Aviv",
+            "image": "/assets/Hestia01.png",
+            "description": "Dykeathon 4.0 — our biggest hackathon yet. 14 LGBTQ+ organizations matched with teams of queer women in tech to build production-ready tools: automation, fullstack apps, LLM integrations, bots, and more."
+        },
+        {
+            "id": "nov-2024",
+            "typeId": "meetups",
+            "title": "Meetup Nov 2024",
+            "host": "Island Office, Tel Aviv",
+            "date": "2024-11-01",
+            "location": "Tel Aviv",
+            "image": "/assets/Hestia02.png",
+            "description": "Was hosted at the Island office and 200 participants were thrilled to hear our 3 amazing women shared about psychological and medical therapy alongside high-tech, and a workshop was held on a coding software that integrates a language model."
         }
     ]
 }
