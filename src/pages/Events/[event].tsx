@@ -5,20 +5,23 @@ import { Card, CardTitle } from "../../components/ui/card";
 import demeterSwag from "../../assets/Demeter-swag.png";
 import xoxo from "../../assets/xoxo.png";
 import { Button } from "../../components/ui/button";
+import { useState } from "react";
+import { RegisterModal } from "../../components/RegisterModal";
 
 
 export function EventArchive() {
     const { event } = useParams<{ event: string }>();
     const { content } = useContent();
     const { events: eventsContent } = content;
+    const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
-    const eventType = eventsContent.eventTypes.find(t => t.id === event);
+    const eventType = eventsContent.eventTypes.find((t: any) => t.id === event);
 
     if (!eventType) {
         return <div className="min-h-screen flex items-center justify-center text-white">Event type not found</div>;
     }
 
-    const pastEvents = eventsContent.pastEvents.filter(e => e.typeId === event);
+    const pastEvents = eventsContent.pastEvents.filter((e: any) => e.typeId === event);
     const upcomingEvent = eventsContent.upCommingDetails.typeId === event ? eventsContent.upCommingDetails : null;
 
 
@@ -135,16 +138,28 @@ export function EventArchive() {
                         </div>
 
                         {/* Register button */}
-                        <Link to={`/events/${event}/${upcomingEvent.date?.split('/')[2] || 'upcoming'}`}>
-                            <Button
-                                className="bg-[#85F2AA] hover:bg-[#7AE39B] text-[#0B4F2B] font-bold rounded-full h-[48px] px-8 text-base tracking-wide transition-all hover:scale-105 active:scale-95 uppercase"
-                                style={{ fontFamily: 'Montserrat, sans-serif' }}
-                            >
-                                Register
-                            </Button>
-                        </Link>
+                        <Button
+                            onClick={() => setIsRegisterModalOpen(true)}
+                            className="bg-[#85F2AA] hover:bg-[#7AE39B] text-[#0B4F2B] font-bold rounded-full h-[48px] px-8 text-base tracking-wide transition-all hover:scale-105 active:scale-95 uppercase"
+                            style={{ fontFamily: 'Montserrat, sans-serif' }}
+                        >
+                            Register
+                        </Button>
                     </div>
                 </div>
+            )}
+
+            {isRegisterModalOpen && upcomingEvent && (
+                <RegisterModal
+                    event={{
+                        title: upcomingEvent.title,
+                        date: upcomingEvent.date,
+                        location: upcomingEvent.location,
+                        collaboration: upcomingEvent.collaboration,
+                        tallyId: upcomingEvent.tallyId
+                    }}
+                    onClose={() => setIsRegisterModalOpen(false)}
+                />
             )}
 
             {pastEvents.length > 0 && (
@@ -158,39 +173,41 @@ export function EventArchive() {
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                            {pastEvents.map((event: any, index: number) => (
-                                <Card key={index} className="bg-white border-0 text-black overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.1)] rounded-[2.5rem] flex flex-col h-full hover:translate-y-[-12px] transition-all duration-500 group">
-                                    <div className="p-8 pb-5 flex flex-col gap-2">
-                                        <div className="inline-block w-fit px-3 py-1 bg-[#1DFF87] text-[#293744] text-[12px] font-black rounded-lg uppercase tracking-widest mb-2 shadow-sm">
-                                            {new Date(event.date).getFullYear()}
+                            {pastEvents.map((pastEvent: any, index: number) => (
+                                <Link key={index} to={`/events/${event}/${pastEvent.id}`} className="h-full">
+                                    <Card className="bg-white border-0 text-black overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.1)] rounded-[2.5rem] flex flex-col h-full hover:translate-y-[-12px] transition-all duration-500 group">
+                                        <div className="p-8 pb-5 flex flex-col gap-2">
+                                            <div className="inline-block w-fit px-3 py-1 bg-[#1DFF87] text-[#293744] text-[12px] font-black rounded-lg uppercase tracking-widest mb-2 shadow-sm">
+                                                {new Date(pastEvent.date).getFullYear()}
+                                            </div>
+                                            <CardTitle className="text-2xl font-black leading-none mb-1 group-hover:text-primary transition-colors">{pastEvent.title}</CardTitle>
+                                            <p className="text-gray-500 text-base font-bold tracking-tight">{pastEvent.host || "Host name / place"}</p>
                                         </div>
-                                        <CardTitle className="text-2xl font-black leading-none mb-1 group-hover:text-primary transition-colors">{event.title}</CardTitle>
-                                        <p className="text-gray-500 text-base font-bold tracking-tight">{event.host || "Host name / place"}</p>
-                                    </div>
 
-                                    <div className="relative aspect-[16/11] w-full overflow-hidden border-y border-gray-50">
-                                        {event.image && (
-                                            <img
-                                                src={event.image}
-                                                alt={event.title}
-                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                        )}
-                                    </div>
-
-                                    <div className="p-8 flex-grow flex flex-col justify-between bg-white">
-                                        <div className="flex gap-4 mb-8">
-                                            {[1, 2, 3].map(i => (
-                                                <div key={i} className="w-14 h-14 bg-[#F8F9FA] border border-gray-100 rounded-2xl flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 p-2">
-                                                    <img src={`/assets/Hestia0${i % 2 === 0 ? '2' : '1'}.png`} className="w-full h-full object-contain" alt="partner" />
-                                                </div>
-                                            ))}
+                                        <div className="relative aspect-[16/11] w-full overflow-hidden border-y border-gray-50">
+                                            {pastEvent.image && (
+                                                <img
+                                                    src={pastEvent.image}
+                                                    alt={pastEvent.title}
+                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                                />
+                                            )}
                                         </div>
-                                        <p className="text-sm text-gray-500 leading-relaxed pt-6 border-t border-gray-100 font-semibold italic">
-                                            {event.description}
-                                        </p>
-                                    </div>
-                                </Card>
+
+                                        <div className="p-8 flex-grow flex flex-col justify-between bg-white">
+                                            <div className="flex gap-4 mb-8">
+                                                {[1, 2, 3].map(i => (
+                                                    <div key={i} className="w-14 h-14 bg-[#F8F9FA] border border-gray-100 rounded-2xl flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 p-2">
+                                                        <img src={`/assets/Hestia0${i % 2 === 0 ? '2' : '1'}.png`} className="w-full h-full object-contain" alt="partner" />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <p className="text-sm text-gray-500 leading-relaxed pt-6 border-t border-gray-100 font-semibold italic">
+                                                {pastEvent.description}
+                                            </p>
+                                        </div>
+                                    </Card>
+                                </Link>
                             ))}
                         </div>
                     </div>
