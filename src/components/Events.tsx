@@ -135,10 +135,10 @@ function UpcommingEvent() {
         <div className="flex flex-col justify-center bg-[#293744] rounded-[23px] md:mt-16 mt-4 md:px-40 px-10 py-10 md:py-20 relative overflow-hidden">
             <NotebookGrid color="rgba(96, 118, 132, 0.2)" />
 
-            <div className="flex md:flex-row md:gap-0 gap-4 flex-col w-full justify-between text-white mb-10 md:mb-20 relative z-10">
-                <div><p>What:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.title}</h3></div>
-                <div><p>When:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.date}</h3></div>
-                <div><p>Where:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.location}</h3></div>
+            <div className="flex flex-col md:flex-row md:gap-0 gap-4 flex-wrap w-full justify-between text-white mb-10 md:mb-20 relative z-10">
+                <div className="md:w-1/3"><p>What:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.title}</h3></div>
+                <div className="md:w-1/3"><p>When:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.date}</h3></div>
+                <div className="md:w-1/3"><p>Where:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.location}</h3></div>
             </div>
             <div className="w-full relative z-10">
                 <iframe

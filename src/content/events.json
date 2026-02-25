@@ -49,6 +49,42 @@
         }
     ],
     "button": "Register",
+    "singleEvents": [
+        {
+            "id": "2026",
+            "typeId": "dykeathon",
+            "title": "Dykeathon 2026",
+            "date": "01/05/2026",
+            "location": "LGBTQ+ CENTER",
+            "address": "Nahmani 36, Tel Aviv",
+            "collaboration": "LGBTQ+ Center",
+            "image": "/assets/Hestia01.png",
+            "tagline": "Building our own table",
+            "about": [
+                "The Dykeathon is a 24-hour hackathon for queer women and non-binary people in tech. We come together to build, create, and make lasting connections — because we don't wait for an invite to the table; we build our own.",
+                "This year we're partnering with the LGBTQ+ Center in Tel Aviv to bring the community together for a day of innovation, challenge, and solidarity. Whether you're a developer, designer, product manager, or just curious about tech — there's a place for you here.",
+                "All skill levels are welcome. All we ask is that you show up ready to connect and create."
+            ],
+            "program": [
+                { "time": "09:00", "title": "Doors Open & Registration", "description": "Coffee, breakfast, and mingling. Come early, meet your teammates." },
+                { "time": "10:00", "title": "Opening Ceremony", "description": "Welcome from the organizers, introduction to the challenge themes, and team formation." },
+                { "time": "11:00", "title": "Hacking Begins", "description": "Teams get to work. Mentors and experts available for consultation throughout the day." },
+                { "time": "13:00", "title": "Lunch Break", "description": "Shared lunch provided. Workshops and talks running in parallel." },
+                { "time": "14:00", "title": "Afternoon Sprint", "description": "Back to building. Mentorship continues, energy drinks provided." },
+                { "time": "17:00", "title": "Project Presentations", "description": "Each team presents their project to the judges and the community. 5 minutes per team." },
+                { "time": "18:30", "title": "Judging & Awards", "description": "Judges deliberate. Winners announced across multiple categories." },
+                { "time": "19:00", "title": "Closing Party", "description": "We celebrate together. Drinks, dancing, and the dyke network growing stronger." }
+            ],
+            "tracks": [
+                { "title": "Community Tech", "description": "Build tools that serve the LGBTQ+ community — apps, platforms, or services that address real needs." },
+                { "title": "Career & Mentorship", "description": "Create resources for queer women breaking into tech — job boards, peer support systems, mentorship platforms." },
+                { "title": "Open Challenge", "description": "Build anything that excites your team. We're here for creativity and ambition." }
+            ],
+            "tallyId": "xXrRG5",
+            "notionUrl": "https://www.notion.so/9114484e1b67414c90e1895d26262234",
+            "registrationOpen": true
+        }
+    ],
     "pastEvents": [
         {
             "typeId": "dykeathon",

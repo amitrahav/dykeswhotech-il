@@ -24,6 +24,7 @@ export function Sponsorship() {
     const crownRef = useRef<HTMLImageElement>(null);
     const [crownHeight, setCrownHeight] = useState(0);
     const [isGlitching, setIsGlitching] = useState(false);
+    const glitchEnabaled = useRef(false);
 
     // Random glitch effect logic
     useEffect(() => {
@@ -46,8 +47,10 @@ export function Sponsorship() {
 
             }, nextGlitchTime);
         };
-
-        scheduleGlitch(); // Start the loop
+        console.log(glitchEnabaled.current)
+        if (glitchEnabaled.current) {
+            scheduleGlitch(); // Start the loop
+        }
 
         return () => clearTimeout(timeoutId); // Cleanup on unmount
     }, []);
@@ -322,7 +325,7 @@ export function Sponsorship() {
                         className="w-[90%] md:w-[calc(100vw-120px)] h-auto"
                         style={{
                             filter: "brightness(100)",
-                            opacity: 0.5,
+                            opacity: isGlitching ? 0.02 : 0.05,
                         }}
                     />
                 </div>

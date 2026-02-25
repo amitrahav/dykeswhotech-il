@@ -1,8 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useContent } from "../../contexts/ContentContext";
 import { PageHero } from "../../components/PageHero";
 import { Card, CardTitle } from "../../components/ui/card";
-import { useEffect } from "react";
 import demeterSwag from "../../assets/Demeter-swag.png";
 import xoxo from "../../assets/xoxo.png";
 import { Button } from "../../components/ui/button";
@@ -22,33 +21,6 @@ export function EventArchive() {
     const pastEvents = eventsContent.pastEvents.filter(e => e.typeId === event);
     const upcomingEvent = eventsContent.upCommingDetails.typeId === event ? eventsContent.upCommingDetails : null;
 
-    useEffect(() => {
-        // Tally embed script loading
-        const d = document;
-        const w = "https://tally.so/widgets/embed.js";
-        const v = () => {
-            // @ts-ignore
-            if (typeof Tally !== "undefined") {
-                // @ts-ignore
-                Tally.loadEmbeds();
-            } else {
-                d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e) => {
-                    // @ts-ignore
-                    e.src = e.dataset.tallySrc;
-                });
-            }
-        };
-        // @ts-ignore
-        if (typeof Tally !== "undefined") {
-            v();
-        } else if (d.querySelector(`script[src="${w}"]`) === null) {
-            const s = d.createElement("script");
-            s.src = w;
-            s.onload = v;
-            s.onerror = v;
-            d.body.appendChild(s);
-        }
-    }, [upcomingEvent]);
 
     return (
         <div className="bg-[#FFE0F5] min-h-screen pb-40 relative overflow-hidden">
@@ -131,39 +103,46 @@ export function EventArchive() {
             </div>
 
             {upcomingEvent && eventsContent.displayUpcoming && (
-                <div className="px-6 md:px-12 lg:px-20 mb-40 relative z-10">
-                    <div className="max-w-7xl mx-auto">
-                        <h2 className="text-5xl md:text-7xl font-bold mb-16 text-[#293744] font-montserrat tracking-tighter">
+                <div className="relative z-10 w-full bg-[#8A5CF5] mb-32 py-[60px]">
+                    <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+
+                        {/* Title */}
+                        <h2
+                            className="text-4xl md:text-5xl lg:text-[64px] font-bold leading-tight mb-[60px] tracking-tight"
+                            style={{ fontFamily: 'Montserrat, sans-serif', color: '#F5F1FD' }}
+                        >
                             Upcoming - {upcomingEvent.title}
                         </h2>
 
-                        <div className="flex flex-col justify-center bg-transparent rounded-[40px] px-8 md:px-16 py-16 md:py-24 relative overflow-hidden border-2 border-primary/10">
-
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-[#293744] mb-20 relative z-10">
-                                <div className="flex flex-col">
-                                    <p className="text-gray-500 text-lg mb-3">What:</p>
-                                    <h3 className="text-2xl md:text-4xl font-telaviv uppercase tracking-tighter">{upcomingEvent.title}</h3>
-                                </div>
-                                <div className="flex flex-col">
-                                    <p className="text-gray-500 text-lg mb-3">When:</p>
-                                    <h3 className="text-2xl md:text-4xl font-telaviv uppercase tracking-tighter">{upcomingEvent.date}</h3>
-                                </div>
-                                <div className="flex flex-col">
-                                    <p className="text-gray-500 text-lg mb-3">Where:</p>
-                                    <h3 className="text-2xl md:text-4xl font-telaviv uppercase tracking-tighter">{upcomingEvent.location}</h3>
-                                </div>
-                                <div className="flex flex-col">
-                                    <p className="text-gray-500 text-lg mb-3">Collaboration:</p>
-                                    <h3 className="text-2xl md:text-4xl font-telaviv uppercase tracking-tighter">{upcomingEvent.collaboration || "LGBTQ"}</h3>
-                                </div>
+                        {/* Metadata columns */}
+                        <div className="flex flex-wrap gap-y-8 gap-x-[86px] mb-[60px]">
+                            <div className="flex flex-col gap-0 min-w-[140px]">
+                                <p className="font-montserrat font-normal text-xl md:text-[28px] leading-[48px]" style={{ color: 'rgba(245,241,253,0.7)' }}>What:</p>
+                                <h3 className="font-telaviv font-normal text-3xl md:text-[40px] leading-[48px] uppercase" style={{ color: '#F5F1FD' }}>{upcomingEvent.title}</h3>
                             </div>
-
-                            <div className="flex justify-start relative z-10">
-                                <Button className="bg-[#1DFF87] hover:bg-[#15e076] text-[#293744] font-black px-12 md:px-16 py-10 md:py-12 rounded-3xl text-3xl shadow-xl transition-all hover:scale-105 active:scale-95 uppercase tracking-widest border-b-8 border-black/10">
-                                    Register
-                                </Button>
+                            <div className="flex flex-col gap-0 min-w-[140px]">
+                                <p className="font-montserrat font-normal text-xl md:text-[28px] leading-[48px]" style={{ color: 'rgba(245,241,253,0.7)' }}>When:</p>
+                                <h3 className="font-telaviv font-normal text-3xl md:text-[40px] leading-[48px] uppercase" style={{ color: '#F5F1FD' }}>{upcomingEvent.date}</h3>
+                            </div>
+                            <div className="flex flex-col gap-0 min-w-[160px]">
+                                <p className="font-montserrat font-normal text-xl md:text-[28px] leading-[48px]" style={{ color: 'rgba(245,241,253,0.7)' }}>Where:</p>
+                                <h3 className="font-telaviv font-normal text-3xl md:text-[40px] leading-[48px] uppercase" style={{ color: '#F5F1FD' }}>{upcomingEvent.location}</h3>
+                            </div>
+                            <div className="flex flex-col gap-0 min-w-[160px]">
+                                <p className="font-montserrat font-normal text-xl md:text-[28px] leading-[48px]" style={{ color: 'rgba(245,241,253,0.7)' }}>Collaboration:</p>
+                                <h3 className="font-telaviv font-normal text-3xl md:text-[40px] leading-[48px] uppercase" style={{ color: '#F5F1FD' }}>{upcomingEvent.collaboration || "LGBTQ"}</h3>
                             </div>
                         </div>
+
+                        {/* Register button */}
+                        <Link to={`/events/${event}/${upcomingEvent.date?.split('/')[2] || 'upcoming'}`}>
+                            <Button
+                                className="bg-[#85F2AA] hover:bg-[#7AE39B] text-[#0B4F2B] font-bold rounded-full h-[48px] px-8 text-base tracking-wide transition-all hover:scale-105 active:scale-95 uppercase"
+                                style={{ fontFamily: 'Montserrat, sans-serif' }}
+                            >
+                                Register
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             )}

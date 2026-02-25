@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { ArrowUpRight } from "lucide-react";
-import heartBackground from "../assets/xoxo.png";
+import heartBackground from "../assets/heart.png";
+import statueImg from "../assets/greek.png";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -95,11 +96,19 @@ export function TierModal({ tier, onClose }: TierModalProps) {
                     style={{ opacity: sent ? 0 : 0.5, transition: "opacity 0.6s ease" }}
                 />
 
+                {/* Statue — bottom-right */}
+                <img
+                    src={statueImg}
+                    alt=""
+                    className="absolute bottom-0 right-0 h-[65%] w-auto object-contain object-right-bottom pointer-events-none select-none"
+                    style={{ opacity: sent ? 0 : 1, transition: "opacity 0.6s ease" }}
+                />
+
                 {/* ── SUCCESS STATE decorations ── */}
 
                 {/* Vi checkmark — large, fills card background */}
                 <img
-                    src="/assets/vi"
+                    src="/assets/vi.png"
                     alt=""
                     className="absolute inset-0 w-full h-full object-contain pointer-events-none mix-blend-plus-lighter"
                     style={{ opacity: sent ? 0.4 : 0, transition: "opacity 0.6s ease" }}
