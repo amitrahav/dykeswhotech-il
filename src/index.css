@@ -13,6 +13,7 @@
   }
 
   :root {
+    scroll-behavior: smooth;
     --background: 0 0% 100%;
     --foreground: 209 25% 21%;
     --heading: 0 0% 22%;

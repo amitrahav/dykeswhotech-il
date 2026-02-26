@@ -119,7 +119,7 @@ export function Sponsorship() {
                     }}
                 >
                     <svg
-                        className="absolute top-[0%] right-[-20%] w-[100%] h-auto opacity-80"
+                        className="absolute top-[0%] right-[-50%] w-[100%] h-auto opacity-80"
                         viewBox="0 0 2873 3097"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -133,22 +133,22 @@ export function Sponsorship() {
                 </div>
 
                 {/* Main Content */}
-                <div className="w-full max-w-[1920px] mx-auto relative z-10 flex flex-col pb-32 px-6 md:px-16 lg:px-24 xl:px-[calc(8.33%+79px)] pt-4 md:pt-0">
+                <div className="w-full max-w-[1920px] mx-auto relative z-10 flex flex-col pb-32 px-6 md:px-16 lg:px-24 xl:px-[calc(8.33%+79px)] pt-12 md:pt-0">
 
                     {/* ── Hero Content ── */}
                     <div className="w-full mb-20 max-w-[1160px]">
                         {/* Badge */}
-                        <span className="font-heading font-normal tracking-widest text-white/90 text-sm md:text-base mb-3 block uppercase">
+                        <span className="font-heading font-normal tracking-widest text-white/90 text-sm mb-3 block uppercase">
                             {hero.badge}
                         </span>
 
                         {/* Main Heading */}
-                        <h1 className="font-telaviv font-normal text-[clamp(2rem,4.5vw,3.25rem)] uppercase text-white leading-[1.05] mb-8 whitespace-pre-line">
+                        <h1 className="font-telaviv font-normal text-3xl md:text-5xl uppercase text-white leading-[1.05] mb-8 whitespace-pre-line">
                             {hero.heading.replace(/ (?=CONNECT|DRIVE)/g, "\n")}
                         </h1>
 
                         {/* Description — matches Figma mixed-weight paragraph */}
-                        <p className="text-white text-[clamp(1rem,1.8vw,1.3rem)] font-light font-sans leading-[1.55] mb-10">
+                        <p className="text-white text-lg md:text-xl font-light font-sans leading-[1.55] mb-10">
                             <span className="font-bold">DykesWhoTech</span>
                             {" is a premier professional ecosystem of "}
                             <span className="font-black">over 400 </span>
@@ -168,15 +168,15 @@ export function Sponsorship() {
 
                     {/* ── Why Join Our Mission ── */}
                     <div className="w-full mb-20 max-w-[1160px]">
-                        <h2 className="font-telaviv font-normal text-[clamp(2rem,4vw,3.25rem)] uppercase text-white leading-[1.1] mb-6">
+                        <h2 className="font-telaviv font-normal text-3xl md:text-5xl uppercase text-white leading-[1.1] mb-6">
                             {whyJoin.title}
                         </h2>
-                        <p className="text-white/90 text-[clamp(1rem,1.8vw,1.3rem)] font-light font-sans leading-[1.55] mb-10">
+                        <p className="text-white/90 text-lg md:text-xl font-light font-sans leading-[1.55] mb-10">
                             {whyJoin.intro}
                         </p>
                         <ul className="space-y-8">
                             {whyJoin.items.map((item: any, i: number) => (
-                                <li key={i} className="flex items-start font-sans text-white text-[clamp(1rem,1.8vw,1.3rem)] leading-[1.55]">
+                                <li key={i} className="flex items-start font-sans text-white text-base leading-[1.55]">
                                     <span className="mt-2 mr-4 flex-shrink-0 w-2 h-2 rounded-full bg-white/60 inline-block" />
                                     <div>
                                         <span className="font-bold">{item.title} :</span>
@@ -191,22 +191,22 @@ export function Sponsorship() {
                     {/* ── Engagement Opportunities ── */}
                     <div className="w-full mb-8 max-w-[1320px]">
                         {/* Badge + Title */}
-                        <span className="font-heading font-normal tracking-widest text-white/90 text-sm md:text-base mb-3 block uppercase">
+                        <span className="font-heading font-normal tracking-widest text-white/90 text-sm mb-3 block uppercase">
                             {engagementOpportunities.badge}
                         </span>
-                        <h2 className="font-telaviv font-normal text-[clamp(2rem,4vw,3.25rem)] uppercase text-white leading-[1.1] mb-8 max-w-[1160px]">
+                        <h2 className="font-telaviv font-normal text-3xl md:text-5xl uppercase text-white leading-[1.1] mb-8 max-w-[1160px]">
                             {engagementOpportunities.title}
                         </h2>
 
                         {/* Subtitle */}
-                        <p className="text-white/90 text-[clamp(1rem,1.8vw,1.3rem)] font-heading font-normal mb-6">
+                        <p className="text-white/90 text-lg md:text-xl font-heading font-normal mb-6">
                             {engagementOpportunities.subtitle}
                         </p>
 
                         {/* Included items (bullet list) */}
                         <ul className="space-y-6 mb-14 max-w-[1160px]">
                             {engagementOpportunities.includedItems.map((item: any, i: number) => (
-                                <li key={i} className="flex items-start font-sans text-white text-[clamp(1rem,1.8vw,1.3rem)] leading-[1.55]">
+                                <li key={i} className="flex items-start font-sans text-white text-base leading-[1.55]">
                                     <span className="mt-2 mr-4 flex-shrink-0 w-2 h-2 rounded-full bg-white/60 inline-block" />
                                     <div>
                                         <span className="font-bold">{item.title} :</span>

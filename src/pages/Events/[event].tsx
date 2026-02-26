@@ -51,7 +51,8 @@ export function EventArchive() {
                 style={{
                     filter: 'brightness(100)',
                     backgroundImage: `url(${xoxo})`,
-                    backgroundPosition: 'center 0',
+                    backgroundPosition: 'center bottom',
+                    backgroundSize: '100% auto',
                     backgroundRepeat: 'no-repeat',
                     backgroundBlendMode: 'screen'
                 }}

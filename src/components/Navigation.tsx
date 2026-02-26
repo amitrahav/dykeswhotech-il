@@ -23,10 +23,12 @@ export function Navigation({ variant = 'gradient', empty = false, text = 'dark' 
             {!empty && (
                 <>
                     <Link to="/" className={`hover:text-primary hover:border-b-[2px] hover:pb-0 transition-colors ${text === 'bright' ? 'text-white' : 'text-primary pb-1 border-b-[1px] border-black'}`}>{navigation.home}</Link>
-                    <span className={`w-[3px] h-[3px] rounded-full ${text === 'bright' ? 'bg-white' : 'bg-primary'}`}></span>
+                    <span className={`hidden sm:inline-block w-[3px] h-[3px] rounded-full ${text === 'bright' ? 'bg-white' : 'bg-primary'}`}></span>
                     <Link to="/about" className={`hover:text-primary hover:border-b-[2px] hover:pb-0 transition-colors ${text === 'bright' ? 'text-white' : 'text-primary pb-1 border-b-[1px] border-black'}`}>{navigation.about}</Link>
-                    <span className={`w-[3px] h-[3px] rounded-full ${text === 'bright' ? 'bg-white' : 'bg-primary'}`}></span>
+                    <span className={`hidden sm:inline-block w-[3px] h-[3px] rounded-full ${text === 'bright' ? 'bg-white' : 'bg-primary'}`}></span>
                     <Link to="/sponsorship" className={`hover:text-primary hover:border-b-[2px] hover:pb-0 transition-colors ${text === 'bright' ? 'text-white' : 'text-primary pb-1 border-b-[1px] border-black'}`}>{navigation.sponsorship}</Link>
+                    <span className={`hidden sm:inline-block w-[3px] h-[3px] rounded-full ${text === 'bright' ? 'bg-white' : 'bg-primary'}`}></span>
+                    <Link to="/#events" className={`hover:text-primary hover:border-b-[2px] hover:pb-0 transition-colors ${text === 'bright' ? 'text-white' : 'text-primary pb-1 border-b-[1px] border-black'}`}>{navigation.eventsandspaces}</Link>
                 </>
             )}
         </nav>

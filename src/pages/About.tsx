@@ -106,7 +106,7 @@ export function About() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Mission Section */}
-          <div className="flex flex-col md:flex-row items-center mb-40 gap-16 md:gap-24">
+          <div className="flex flex-col-reverse md:flex-row items-center mb-40 gap-16 md:gap-24">
             <div className="w-full md:w-1/3 flex justify-center">
               {/* Plus icon made of squares - Matches the purple-gradient squares in the design */}
               {/* Pink squares image refined */}

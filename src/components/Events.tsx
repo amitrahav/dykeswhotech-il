@@ -152,6 +152,7 @@ function UpcommingEvent() {
 }
 
 export function Events() {
+    const displayEventsArchive = useRef(false);
     const { content } = useContent();
     const { events: eventsContent } = content;
 
@@ -160,57 +161,58 @@ export function Events() {
     }));
 
     return (
-        <section className="w-full pt-10 pb-20 px-8 md:px-12 lg:px-16 xl:px-24">
+        <section className="w-full pt-10 pb-20 px-8 md:px-12 lg:px-16 xl:px-24" id="events">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{eventsContent.title}</h2>
                 <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
                     {eventsContent.description}
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-2rem] xl:mx-[-6rem] 2xl:mx-[-10rem]">
-                    {eventTypes.map((event, index) => (
-                        <Card key={index} className={`relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex flex-col ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
-                        >
-                            {/* Animated notebook grid - lowest z-index */}
-                            <NotebookGrid delay={index * 0.3} />
+                {displayEventsArchive.current && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-2rem] xl:mx-[-6rem] 2xl:mx-[-10rem]">
+                        {eventTypes.map((event, index) => (
+                            <Link to={`/events/${event.id}`}>
+                                <Card key={index} className={`relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex flex-col ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
+                                >
+                                    {/* Animated notebook grid - lowest z-index */}
+                                    <NotebookGrid delay={index * 0.3} />
 
-                            <div className="absolute inset-0 w-full h-full pointer-events-none"
-                                style={{
-                                    background: 'radial-gradient(circle at 70% 80%, rgba(133, 242, 170, 0.5) 0%, rgba(133, 242, 170, 0.4) 25%, rgba(133, 242, 170, 0.2) 45%, rgba(133, 242, 170, 0.05) 65%, transparent 80%)',
-                                    zIndex: 0
-                                }}
-                            />
-
-                            <div className="absolute bottom-0 right-0 w-[90%] md:w-[85%] lg:w-[95%] h-2/3 translate-x-[5%] pointer-events-none" style={{ zIndex: 1 }}>
-                                <img src={event.image} alt={event.title} className="w-full h-full object-contain object-right-bottom drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" />
-                            </div>
-
-                            <CardFooter className="relative px-4 py-6 h-full flex flex-col justify-between items-start pointer-events-auto" style={{ zIndex: 2 }}>
-                                <CardTitle className="text-2xl font-normal leading-tight w-full">{event.title}</CardTitle>
-                                <Link to={`/events/${event.id}`}>
-                                    <Button
-                                        className="rounded-full bg-[#85F2AA] hover:bg-[#7AE39B] text-[#0B4F2B] flex items-center justify-center gap-[4px] px-[16px] py-[8px] h-[36px] w-[133px] transition-colors"
+                                    <div className="absolute inset-0 w-full h-full pointer-events-none"
                                         style={{
-                                            fontFamily: "'General Sans Variable', sans-serif",
-                                            fontWeight: 400,
-                                            fontSize: '13px',
-                                            lineHeight: '20px'
+                                            background: 'radial-gradient(circle at 70% 80%, rgba(133, 242, 170, 0.5) 0%, rgba(133, 242, 170, 0.4) 25%, rgba(133, 242, 170, 0.2) 45%, rgba(133, 242, 170, 0.05) 65%, transparent 80%)',
+                                            zIndex: 0
                                         }}
-                                    >
-                                        Event details
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
-                                            <path d="M2.5 9.5L9.5 2.5M9.5 2.5H3.5M9.5 2.5V8.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </Button>
-                                </Link>
-                            </CardFooter>
-                        </Card>
-                    ))}
-                </div>
+                                    />
+
+                                    <div className="absolute bottom-0 right-0 w-[90%] md:w-[85%] lg:w-[95%] h-2/3 translate-x-[5%] pointer-events-none" style={{ zIndex: 1 }}>
+                                        <img src={event.image} alt={event.title} className="w-full h-full object-contain object-right-bottom drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" />
+                                    </div>
+                                    <CardFooter className="absolute px-4 py-6 h-full flex flex-col justify-between items-start pointer-events-auto h-full" style={{ zIndex: 2 }}>
+                                        <CardTitle className="text-2xl font-normal leading-tight w-full">{event.title}</CardTitle>
+                                        <Button
+                                            className="rounded-full bg-[#85F2AA] hover:bg-[#7AE39B] text-[#0B4F2B] flex items-center justify-center gap-[4px] px-[16px] py-[8px] h-[36px] w-[133px] transition-colors"
+                                            style={{
+                                                fontFamily: "'General Sans Variable', sans-serif",
+                                                fontWeight: 400,
+                                                fontSize: '13px',
+                                                lineHeight: '20px'
+                                            }}
+                                        >
+                                            Event details
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
+                                                <path d="M2.5 9.5L9.5 2.5M9.5 2.5H3.5M9.5 2.5V8.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </Button>
+                                    </CardFooter>
+                                </Card>
+                            </Link>
+                        ))}
+                    </div>
+                )}
             </div>
             {eventsContent.displayUpcoming && new Date(eventsContent.displayUpcomingUntil) > new Date() && (
                 <div className="max-w-6xl mx-auto mt-10">
-                    <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{eventsContent.upcomingTitle}</h2>
+                    <h2 className="text-2xl mb-8 font-extrabold">{eventsContent.upcomingTitle}</h2>
                     {eventsContent.upcomingDescription && eventsContent.upcomingDescription.length > 0 && (
                         <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
                             {eventsContent.upcomingDescription}

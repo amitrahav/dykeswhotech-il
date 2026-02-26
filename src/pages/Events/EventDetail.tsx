@@ -1,11 +1,10 @@
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, type JSXElementConstructor, type Key, type ReactElement, type ReactNode, type ReactPortal } from "react";
 import { useContent } from "../../contexts/ContentContext";
-import { PageHero } from "../../components/PageHero";
 import { Button } from "../../components/ui/button";
-import xoxo from "../../assets/xoxo.png";
-import queenGlitch from "../../assets/queen-glitch.png";
 import { RegisterModal } from "../../components/RegisterModal";
+import { PageHero } from "../../components/PageHero";
+
 
 // ────────────────────────────────────────────────────────────────
 // Notebook grid lines (reused from other pages)
@@ -94,7 +93,7 @@ export function EventDetail() {
 
     if (!singleEvent) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-[#FFE0F5] gap-6">
+            <div className="min-h-screen flex flex-col items-center justify-center bg-[#F5F5F5] gap-6">
                 <h1 className="text-4xl font-telaviv text-[#293744]">Event not found</h1>
                 <Link to={`/events/${event}`}>
                     <Button className="bg-primary text-white px-8 py-4 rounded-2xl text-lg">← Back to events</Button>
@@ -104,225 +103,113 @@ export function EventDetail() {
     }
 
     return (
-        <div className="bg-[#FFE0F5] min-h-screen relative overflow-hidden">
-
-            {/* ── Purple haze background blob ── */}
-            <div className="absolute top-[-10%] left-[-10%] w-full h-[120%] pointer-events-none z-0">
-                <svg width="100%" height="100%" viewBox="0 0 1902 1402" fill="none" className="opacity-30">
-                    <g filter="url(#phBlur)">
-                        <path d="M898.032 630.059C1442.67 810.035 1610.58 273.655 1637.85 211.986C1299.21 -312.317 66.4157 -437.506 -219.134 330.715C-504.684 1098.94 63.5348 1274.48 182.852 1043.09C302.17 811.695 353.39 450.082 898.032 630.059Z" fill="#8A5CF5" />
-                    </g>
-                    <defs>
-                        <filter id="phBlur" x="-561.637" y="-476.534" width="2462.67" height="1877.59" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                            <feGaussianBlur stdDeviation="131.593" result="effect1_foregroundBlur" />
-                        </filter>
-                    </defs>
-                </svg>
-            </div>
-
-            {/* ── XOXO texture overlay ── */}
-            <div
-                className="absolute inset-x-0 bottom-0 w-full h-[120%] pointer-events-none z-0 mix-blend-screen opacity-30"
-                style={{ filter: 'brightness(100)', backgroundImage: `url(${xoxo})`, backgroundPosition: 'center 0', backgroundRepeat: 'no-repeat' }}
-            />
+        <div className="bg-[#F5F5F5] min-h-screen">
 
             {/* ═══════════════════════════════════════
-                HERO SECTION
+                TOP LOGO HEADER — rainbow gradient background
             ═══════════════════════════════════════ */}
-            <section className="relative z-10">
-                <PageHero title={singleEvent.title} />
+            <div
+                className="w-full"
+                style={{
+                    background: 'linear-gradient(90deg, #FEECFF 0%, #FECAFF 11.71%, #FEB5FF 26.8%, #FFDBE7 40.18%, #FFF4D6 49.22%, #F3FCD7 58.71%, #D2F5EE 71.29%, #C3EFFF 84.44%, #FBEFFF 100%)',
+                }}
+            >
+                <PageHero />
+            </div>
 
-                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-8 pb-24">
-                    <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+            {/* ═══════════════════════════════════════
+                HERO / "WHAT" SECTION
+            ═══════════════════════════════════════ */}
+            <section className="relative z-10 px-6 md:px-12 lg:px-20 py-16 md:py-24">
+                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
 
-                        {/* Left: event image */}
-                        <div className="relative w-full lg:w-[42%] flex justify-center lg:justify-start pt-4 shrink-0">
-                            <div className="relative">
-                                {/* glow blob behind image */}
-                                <div className="absolute inset-0 -z-10 blur-3xl opacity-40 rounded-full"
-                                    style={{ background: 'radial-gradient(circle, #D8B4FE 0%, #FFE0F5 100%)', transform: 'scale(1.3)' }} />
-                                <img
-                                    src={singleEvent.image}
-                                    alt={singleEvent.title}
-                                    className="h-[20rem] md:h-[30rem] max-w-none object-contain drop-shadow-2xl"
-                                />
-                            </div>
-                        </div>
+                    {/* Left: Info */}
+                    <div className="lg:w-3/5">
+                        <div className="text-sm font-medium text-gray-400 mb-3 font-poppins tracking-wide">what</div>
+                        <h2 className="text-5xl md:text-7xl font-telaviv text-[#293744] uppercase leading-[0.9] tracking-tight mb-8">
+                            {singleEvent.title}
+                        </h2>
 
-                        {/* Right: event metadata + CTA */}
-                        <div className="w-full lg:w-[58%] flex flex-col justify-center pt-4 lg:pt-16">
-
-                            {/* Back breadcrumb */}
-                            <Link to={`/events/${event}`} className="inline-flex items-center gap-2 text-gray-500 hover:text-primary transition-colors text-sm font-semibold mb-8 w-fit">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                                Back to {event}
-                            </Link>
-
-                            {/* Type label */}
-                            <span className="inline-block text-xs font-black uppercase tracking-widest text-primary mb-3">
-                                {(singleEvent.typeId as string).replace(/-/g, ' ')}
-                            </span>
-
-                            {/* Title */}
-                            <h1 className="text-5xl md:text-7xl font-telaviv text-[#293744] uppercase leading-[0.9] tracking-tight mb-6">
-                                {singleEvent.title}
-                            </h1>
-
-                            {/* Tagline */}
+                        <div className="space-y-6 max-w-2xl">
                             {singleEvent.tagline && (
-                                <p className="text-xl md:text-2xl text-gray-700 italic font-medium mb-10 border-l-4 border-primary/30 pl-5">
+                                <p className="text-xl text-gray-700 italic font-medium">
                                     "{singleEvent.tagline}"
                                 </p>
                             )}
 
-                            {/* Quick-info grid */}
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-                                <MetaBlock label="When" value={singleEvent.date} />
-                                <MetaBlock label="Where" value={singleEvent.location} />
-                                {singleEvent.address && <MetaBlock label="Address" value={singleEvent.address} />}
-                                {singleEvent.collaboration && <MetaBlock label="With" value={singleEvent.collaboration} />}
+                            <div className="space-y-4 text-gray-700 font-poppins leading-relaxed text-lg">
+                                {Array.isArray(singleEvent.about) && singleEvent.about.length > 0 ? (
+                                    singleEvent.about.map((paragraph: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, i: Key | null | undefined) => (
+                                        <p key={i}>{paragraph}</p>
+                                    ))
+                                ) : (
+                                    <p>Our mission is simple: to create a network that actually works for us. We don't wait for an invite to the table; we're building our own.</p>
+                                )}
                             </div>
+                        </div>
+                    </div>
 
-                            {/* CTA */}
-                            {singleEvent.registrationOpen && (
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    <Button
-                                        onClick={() => setRegisterOpen(true)}
-                                        className="bg-[#1DFF87] hover:bg-[#15e076] text-[#293744] font-black px-10 py-7 rounded-3xl text-xl shadow-xl transition-all hover:scale-105 active:scale-95 uppercase tracking-widest border-b-4 border-black/10 cursor-pointer"
-                                    >
-                                        Register now
-                                    </Button>
-                                    <a href="#program">
-                                        <Button variant="outline" className="border-2 border-[#293744] text-[#293744] font-black px-10 py-7 rounded-3xl text-xl hover:bg-[#293744] hover:text-white transition-all uppercase tracking-widest">
-                                            See program
-                                        </Button>
-                                    </a>
-                                </div>
+                    {/* Right: Illustration */}
+                    <div className="lg:w-2/5 w-full flex justify-center lg:justify-end">
+                        <div className="w-full aspect-square bg-[#C4C4C4] max-w-[414px] flex items-center justify-center overflow-hidden hover:scale-[1.02] transition-transform duration-500">
+                            {singleEvent.image ? (
+                                <img src={singleEvent.image} alt={singleEvent.title} className="w-full h-full object-cover" />
+                            ) : (
+                                <div className="text-gray-400 font-bold">IMAGE</div>
                             )}
                         </div>
                     </div>
                 </div>
+
+                {/* Registration CTA if open */}
+                {singleEvent.registrationOpen && (
+                    <div className="max-w-7xl mx-auto mt-12 px-0">
+                        <Button
+                            onClick={() => setRegisterOpen(true)}
+                            className="bg-[#FF00E5] hover:bg-[#e000cc] text-white font-black px-12 py-8 rounded-full text-xl shadow-xl transition-all hover:scale-105 active:scale-95 uppercase tracking-widest cursor-pointer"
+                        >
+                            Register now
+                        </Button>
+                    </div>
+                )}
             </section>
 
             {/* ═══════════════════════════════════════
-                ABOUT SECTION  (dark)
+                 PARTNERS SECTION
             ═══════════════════════════════════════ */}
-            <section className="relative z-10 bg-[#293744] px-6 md:px-12 lg:px-20 py-24 md:py-32 overflow-hidden">
-                <NotebookGrid color="rgba(96, 118, 132, 0.25)" />
+            <section className="relative z-10 py-10 border-t border-gray-200">
+                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex flex-wrap justify-start items-center gap-x-12 gap-y-4">
+                    {[
+                        { src: "/assets/unity-logo.png", name: "Unity" },
+                        { src: "/assets/hourone-logo.png", name: "Hour One" },
+                        { src: "/assets/microsoft-logo.png", name: "Microsoft" },
+                        { src: "/assets/riskified-logo.png", name: "Riskified" },
+                    ].map(({ src, name }) => (
+                        <PartnerLogo key={name} src={src} name={name} />
+                    ))}
+                </div>
+            </section>
 
-                {/* Decorative glitch queen */}
-                <img
-                    src={queenGlitch}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute right-0 bottom-0 h-[80%] max-h-[600px] object-contain opacity-5 pointer-events-none select-none"
-                />
 
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-16 items-start">
-                        <div className="lg:w-1/3">
-                            <span className="text-xs font-black uppercase tracking-widest text-[#85F2AA] mb-4 block">About the event</span>
-                            <h2 className="text-4xl md:text-6xl font-telaviv text-white uppercase leading-tight">
-                                {singleEvent.aboutTitle || "About this event"}
-                            </h2>
-                        </div>
-                        <div className="lg:w-2/3 space-y-6">
-                            {(singleEvent.about as string[]).map((paragraph, i) => (
-                                <p key={i} className="text-gray-300 text-lg md:text-xl leading-relaxed font-light">
-                                    {paragraph}
-                                </p>
-                            ))}
-                        </div>
+            {/* ═══════════════════════════════════════
+                 GALLERY SECTION
+            ═══════════════════════════════════════ */}
+            <section className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 md:py-20">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
+                        {Array.from({ length: 25 }).map((_, i) => (
+                            <div key={i} className="aspect-square bg-[#C4C4C4]" />
+                        ))}
+                    </div>
+
+                    <div className="flex justify-center">
+                        <Button className="bg-[#FF00E5] hover:bg-[#e000cc] text-white font-black px-10 py-5 rounded-full text-base tracking-widest uppercase cursor-pointer transition-all hover:scale-105 active:scale-95">
+                            View gallery
+                        </Button>
                     </div>
                 </div>
             </section>
 
-            {/* ═══════════════════════════════════════
-                TRACKS  (white)
-            ═══════════════════════════════════════ */}
-            {singleEvent.tracks && singleEvent.tracks.length > 0 && (
-                <section className="relative z-10 bg-white px-6 md:px-12 lg:px-20 py-24 md:py-32">
-                    <div className="max-w-7xl mx-auto">
-                        <span className="text-xs font-black uppercase tracking-widest text-primary mb-4 block">Challenge tracks</span>
-                        <h2 className="text-4xl md:text-6xl font-telaviv text-[#293744] uppercase leading-tight mb-16">
-                            What will you build?
-                        </h2>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {(singleEvent.tracks as { title: string; description: string }[]).map((track, i) => (
-                                <div key={i}
-                                    className="group relative bg-[#FFE0F5] rounded-[2rem] p-8 hover:bg-primary hover:text-white transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                                    <div className="absolute top-4 right-4 text-6xl font-telaviv text-primary/20 group-hover:text-white/20 transition-colors leading-none select-none">
-                                        0{i + 1}
-                                    </div>
-                                    <h3 className="text-2xl font-black text-[#293744] group-hover:text-white transition-colors mb-4 uppercase font-montserrat tracking-tight">
-                                        {track.title}
-                                    </h3>
-                                    <p className="text-gray-600 group-hover:text-white/80 transition-colors leading-relaxed font-light">
-                                        {track.description}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
-
-            {/* ═══════════════════════════════════════
-                PROGRAM / SCHEDULE  (pink)
-            ═══════════════════════════════════════ */}
-            {singleEvent.program && singleEvent.program.length > 0 && (
-                <section id="program" className="relative z-10 bg-[#FFE0F5] px-6 md:px-12 lg:px-20 py-24 md:py-32 overflow-hidden scroll-mt-8">
-
-                    {/* Faint purple blob */}
-                    <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none"
-                        style={{ background: 'radial-gradient(circle at 80% 50%, rgba(141,75,255,0.08) 0%, transparent 70%)' }} />
-
-                    <div className="max-w-7xl mx-auto relative z-10">
-                        <span className="text-xs font-black uppercase tracking-widest text-primary mb-4 block">Day of the event</span>
-                        <h2 className="text-4xl md:text-6xl font-telaviv text-[#293744] uppercase leading-tight mb-16">
-                            Program
-                        </h2>
-
-                        <div className="relative">
-                            {/* Vertical timeline line */}
-                            <div className="absolute left-[3.5rem] md:left-[4.5rem] top-0 bottom-0 w-[2px] bg-primary/20 hidden sm:block" />
-
-                            <div className="space-y-4">
-                                {(singleEvent.program as { time: string; title: string; description: string }[]).map((item, i) => (
-                                    <div key={i} className="flex gap-6 md:gap-10 items-start group">
-                                        {/* Time bubble */}
-                                        <div className="shrink-0 w-24 md:w-28 text-right">
-                                            <span className="inline-block bg-[#293744] text-white text-sm font-black px-3 py-1.5 rounded-xl font-mono tracking-wide">
-                                                {item.time}
-                                            </span>
-                                        </div>
-
-                                        {/* Dot on the timeline */}
-                                        <div className="shrink-0 hidden sm:flex items-start pt-1.5 -ml-2">
-                                            <div className="w-4 h-4 rounded-full border-2 border-primary bg-[#FFE0F5] group-hover:bg-primary transition-colors" />
-                                        </div>
-
-                                        {/* Content card */}
-                                        <div className="flex-1 bg-white rounded-2xl px-6 py-5 shadow-sm hover:shadow-md transition-shadow mb-0 group-hover:-translate-y-0.5 duration-300">
-                                            <h4 className="font-black text-[#293744] text-lg mb-1 uppercase tracking-tight font-montserrat">
-                                                {item.title}
-                                            </h4>
-                                            <p className="text-gray-500 text-base font-light leading-relaxed">
-                                                {item.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            )}
 
             {/* ═══════════════════════════════════════
                 REGISTRATION  (dark)
@@ -363,11 +250,83 @@ export function EventDetail() {
             )}
 
             {/* ═══════════════════════════════════════
+                FINAL OUTCOME SECTION
+            ═══════════════════════════════════════ */}
+            <section className="relative z-10 overflow-hidden bg-white">
+
+                {/* Hearts background — xoxo technique: screen blend, bottom-anchored */}
+                <div
+                    className="absolute inset-x-0 bottom-0 w-full h-[120%] pointer-events-none z-0 mix-blend-screen opacity-40"
+                    style={{
+                        filter: 'brightness(100)',
+                        backgroundImage: `url(/assets/hearts.png)`,
+                        backgroundPosition: 'center bottom',
+                        backgroundSize: '100% auto',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundBlendMode: 'screen',
+                    }}
+                />
+
+                {/* Pink shade — 80vw, screen blend */}
+                <div
+                    className="absolute left-0 top-0 h-full pointer-events-none z-0 mix-blend-screen"
+                    style={{
+                        width: '80vw',
+                        background: 'radial-gradient(ellipse at -5% 70%, rgba(255,0,229,0.55) 0%, rgba(255,0,229,0.18) 45%, transparent 70%)',
+                    }}
+                />
+
+                {/* Hestia — anchored to bottom-left */}
+                <div className="absolute bottom-0 left-0 z-10 pointer-events-none">
+                    <img
+                        src="/assets/Hestia-standing.png"
+                        alt="Hestia"
+                        className="h-[28rem] md:h-[42rem] object-contain object-bottom drop-shadow-2xl"
+                    />
+                </div>
+
+                {/* Content — padded left to clear the statue on md+ */}
+                <div className="relative z-20 px-6 md:px-12 lg:px-20 py-24 md:py-32">
+                    <div className="max-w-7xl mx-auto md:pl-[22rem] lg:pl-[28rem]">
+
+                        <span className="text-xs font-black uppercase tracking-widest text-primary mb-4 block">Results</span>
+                        <h2 className="text-4xl md:text-6xl font-telaviv text-[#293744] uppercase leading-tight mb-6">
+                            Final outcome
+                        </h2>
+                        <p className="text-gray-600 font-poppins text-lg leading-relaxed mb-14 max-w-2xl">
+                            {singleEvent.about?.[singleEvent.about.length - 1] || "An incredible day of building, connecting, and creating real impact for the community."}
+                        </p>
+
+                        {/* Top 3 project cards */}
+                        {singleEvent.tracks && singleEvent.tracks.length > 0 && (
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                {(singleEvent.tracks as { title: string; description: string }[]).slice(0, 3).map((track, i) => (
+                                    <div key={i}
+                                        className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-purple-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                                        <div className="absolute top-3 right-4 text-6xl font-telaviv text-primary/8 leading-none select-none italic">
+                                            {i + 1}
+                                        </div>
+                                        <div className="text-2xl mb-2">{["🥇", "🥈", "🥉"][i]}</div>
+                                        <h3 className="text-lg font-black text-[#293744] uppercase font-montserrat tracking-tight mb-2">
+                                            {track.title}
+                                        </h3>
+                                        <p className="text-gray-500 text-sm leading-relaxed font-light font-poppins">
+                                            {track.description}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════════════════════════════════
                 BOTTOM BACK LINK
             ═══════════════════════════════════════ */}
-            <div className="relative z-10 bg-[#FFE0F5] px-6 md:px-12 lg:px-20 py-16 text-center">
+            <div className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 text-center border-t border-gray-200">
                 <Link to={`/events/${event}`}>
-                    <Button variant="outline" className="border-2 border-[#293744] text-[#293744] font-black px-10 py-6 rounded-3xl text-lg hover:bg-[#293744] hover:text-white transition-all uppercase tracking-widest">
+                    <Button variant="outline" className="border-2 border-[#293744] text-[#293744] font-black px-10 py-6 rounded-3xl text-lg hover:bg-[#293744] hover:text-white transition-all uppercase tracking-widest font-montserrat">
                         ← All {(event as string).replace(/-/g, ' ')} events
                     </Button>
                 </Link>
@@ -393,20 +352,25 @@ export function EventDetail() {
 // ────────────────────────────────────────────────────────────────
 // Helper sub-components
 // ────────────────────────────────────────────────────────────────
-function MetaBlock({ label, value }: { label: string; value: string }) {
-    return (
-        <div className="flex flex-col gap-1">
-            <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">{label}:</span>
-            <span className="text-[#293744] text-xl md:text-2xl font-telaviv uppercase tracking-tight leading-tight">{value}</span>
-        </div>
-    );
-}
-
 function MetaBlockLight({ label, value }: { label: string; value: string }) {
     return (
         <div className="flex flex-col gap-1">
             <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">{label}:</span>
             <span className="text-white text-xl md:text-3xl font-telaviv uppercase tracking-tight leading-tight">{value}</span>
         </div>
+    );
+}
+
+function PartnerLogo({ src, name }: { src: string; name: string }) {
+    const [failed, setFailed] = useState(false);
+    return failed ? (
+        <span className="text-base font-bold text-gray-400 tracking-tight">{name}</span>
+    ) : (
+        <img
+            src={src}
+            alt={name}
+            className="h-7 object-contain grayscale opacity-60"
+            onError={() => setFailed(true)}
+        />
     );
 }

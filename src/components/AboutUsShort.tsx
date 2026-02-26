@@ -9,24 +9,19 @@ export function AboutUsShort() {
     return (
         <section className="w-full pt-10 pb-20 px-8 md:px-12 lg:px-16 xl:px-24">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl mb-8 font-extrabold">
-                    {aboutShort.title}
-                </h2>
+                <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{aboutShort.title}</h2>
+                <p className="font-bold">
+                    {aboutShort.subtitle}
+                </p>
+                <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
+                    {aboutShort.description}
+                </p>
 
-                <div className="max-w-2xl">
-                    <p className="font-bold mb-8">
-                        {aboutShort.subtitle}
-                    </p>
-
-                    <p className="text-base font-light text-gray-700 mb-8 leading-relaxed">
-                        {aboutShort.description}
-                    </p>
-                    <Link to="/about">
-                        <Button variant="secondary" className="px-6 py-8 rounded-md text-sm font-medium bg-pink-100 hover:bg-pink-200 text-primary shadow-sm hover:shadow-md transition-all">
-                            {aboutShort.button} →
-                        </Button>
-                    </Link>
-                </div>
+                <Link to="/about">
+                    <Button className="px-6 h-[48px] rounded-md text-sm font-regular text-secondary">
+                        {aboutShort.button} →
+                    </Button>
+                </Link>
 
             </div>
         </section>

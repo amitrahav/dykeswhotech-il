@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { usePostHog } from "posthog-js/react";
 import { Navigation } from "./components/Navigation";
 import { ContactUs } from "./components/ContactUs";
+import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -25,7 +26,7 @@ function App() {
   return (
     <ContentProvider>
       <ScrollToTop />
-      <main className="min-h-screen bg-pink-white">
+      <main className="min-h-screen">
         {isHomePage && <Navigation empty />}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,6 +36,7 @@ function App() {
           <Route path="/events/:event/:eventId" element={<EventDetail />} />
         </Routes>
         <ContactUs />
+        <Footer />
       </main>
     </ContentProvider>
   );
