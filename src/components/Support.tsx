@@ -1,5 +1,4 @@
 import { Button } from "./ui/button";
-import { StarIcon } from "lucide-react"; // Examples for logos
 import { useContent } from "../contexts/ContentContext";
 import { Link } from "react-router-dom";
 
