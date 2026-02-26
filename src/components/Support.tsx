@@ -20,7 +20,7 @@ export function Support() {
                     {support.description}
                 </p>
                 <Link to="/sponsorship">
-                    <Button className="bg-[#85F2AA] text-[#0B4F2B] px-8 py-6 text-xl font-light mb-16 shadow-lg">
+                    <Button className="rounded-full bg-[#85F2AA] text-[#0B4F2B] font-semibold px-8 py-3 hover:bg-[#6DDEA0] hover:scale-105 active:scale-95 transition-all mb-16">
                         {support.button}
                     </Button>
                 </Link>
