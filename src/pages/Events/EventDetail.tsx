@@ -96,7 +96,7 @@ export function EventDetail() {
             <div className="min-h-screen flex flex-col items-center justify-center bg-[#F5F5F5] gap-6">
                 <h1 className="text-4xl font-telaviv text-[#293744]">Event not found</h1>
                 <Link to={`/events/${event}`}>
-                    <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">← Back to events</Button>
+                    <Button className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all">← Back to events</Button>
                 </Link>
             </div>
         );
@@ -166,7 +166,7 @@ export function EventDetail() {
                     <div className="max-w-7xl mx-auto mt-12 px-0">
                         <Button
                             onClick={() => setRegisterOpen(true)}
-                            className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                            className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all cursor-pointer"
                         >
                             Register now
                         </Button>
@@ -203,7 +203,7 @@ export function EventDetail() {
                     </div>
 
                     <div className="flex justify-center">
-                        <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all cursor-pointer">
+                        <Button className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all cursor-pointer">
                             View gallery
                         </Button>
                     </div>
@@ -326,7 +326,7 @@ export function EventDetail() {
             ═══════════════════════════════════════ */}
             <div className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 text-center border-t border-gray-200">
                 <Link to={`/events/${event}`}>
-                    <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">
+                    <Button className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all">
                         ← All {(event as string).replace(/-/g, ' ')} events
                     </Button>
                 </Link>
