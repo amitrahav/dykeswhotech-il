@@ -185,7 +185,7 @@ export function TierModal({ tier, onClose }: TierModalProps) {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="flex items-center gap-3 bg-[#2ee66b] hover:bg-[#22d460] disabled:opacity-70 disabled:cursor-not-allowed text-white font-sans font-semibold text-lg px-10 py-4 rounded-full transition-colors cursor-pointer"
+                                        className="flex items-center gap-3 rounded-full bg-[#85F2AA] text-[#0B4F2B] font-semibold px-8 py-3 hover:bg-[#6DDEA0] hover:scale-105 active:scale-95 transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
                                     >
                                         {isSubmitting ? "Sending…" : "SEND"}
                                         {!isSubmitting && (
@@ -213,7 +213,7 @@ export function TierModal({ tier, onClose }: TierModalProps) {
                             </div>
                             <button
                                 onClick={onClose}
-                                className="bg-[#2ee66b] hover:bg-[#22d460] text-white font-heading font-bold px-12 py-4 rounded-full text-lg transition-colors cursor-pointer"
+                                className="rounded-full bg-[#85F2AA] text-[#0B4F2B] font-semibold px-8 py-3 hover:bg-[#6DDEA0] hover:scale-105 active:scale-95 transition-all cursor-pointer"
                             >
                                 Close
                             </button>
