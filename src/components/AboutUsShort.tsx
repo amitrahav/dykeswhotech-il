@@ -18,7 +18,7 @@ export function AboutUsShort() {
                 </p>
 
                 <Link to="/about">
-                    <Button className="px-6 h-[48px] rounded-md text-sm font-regular text-secondary">
+                    <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">
                         {aboutShort.button} →
                     </Button>
                 </Link>
