@@ -79,23 +79,24 @@ function useTallyEmbed(tallyId?: string) {
 // Cloudinary Product Gallery loader hook
 // ────────────────────────────────────────────────────────────────
 function useCloudinaryGallery(galleryTag?: string, containerId?: string) {
+    const galleryRef = useRef<any>(null);
+
     useEffect(() => {
         if (!galleryTag || !containerId) return;
 
         const SCRIPT_SRC = "https://product-gallery.cloudinary.com/all.js";
         const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-        let gallery: any = null;
+        let cancelled = false;
 
         const initGallery = () => {
-            // @ts-ignore
-            if (typeof window.cloudinary === "undefined") return;
-            // @ts-ignore
-            gallery = window.cloudinary.galleryWidget({
+            if (cancelled) return;
+            if (typeof (window as any).cloudinary === "undefined") return;
+            galleryRef.current = (window as any).cloudinary.galleryWidget({
                 container: `#${containerId}`,
                 cloudName,
                 mediaAssets: [{ tag: galleryTag }],
             });
-            gallery.render();
+            galleryRef.current.render();
         };
 
         if (!document.querySelector(`script[src="${SCRIPT_SRC}"]`)) {
@@ -108,7 +109,9 @@ function useCloudinaryGallery(galleryTag?: string, containerId?: string) {
         }
 
         return () => {
-            gallery?.destroy();
+            cancelled = true;
+            galleryRef.current?.destroy();
+            galleryRef.current = null;
         };
     }, [galleryTag, containerId]);
 }
@@ -130,7 +133,7 @@ export function EventDetail() {
     useTallyEmbed(singleEvent?.tallyId);
 
     const galleryContainerId = `cloudinary-gallery-${eventId}`;
-    useCloudinaryGallery(singleEvent?.galleryTag, singleEvent?.galleryTag ? galleryContainerId : undefined);
+    useCloudinaryGallery(singleEvent?.galleryTag, galleryContainerId);
 
     if (!singleEvent) {
         return (
