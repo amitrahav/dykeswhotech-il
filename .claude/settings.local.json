@@ -4,7 +4,13 @@
       "mcp__plugin_figma_figma__get_screenshot",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "mcp__plugin_figma_figma__get_design_context"
+      "mcp__plugin_figma_figma__get_design_context",
+      "Skill(using-superpowers)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "WebFetch(domain:cloudinary.com)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
