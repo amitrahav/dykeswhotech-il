@@ -1,41 +1,62 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
-const SCRIPT_SRC = "https://product-gallery.cloudinary.com/all.js";
+interface GalleryImage {
+    publicId: string;
+    url: string;
+    thumbUrl: string;
+    width: number;
+    height: number;
+}
 
 export function CloudinaryGallery({ galleryTag }: { galleryTag: string }) {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const galleryRef = useRef<any>(null);
+    const [images, setImages] = useState<GalleryImage[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-        let cancelled = false;
-
-        const initGallery = () => {
-            if (cancelled || !containerRef.current) return;
-            if (typeof (window as any).cloudinary === "undefined") return;
-            galleryRef.current = (window as any).cloudinary.galleryWidget({
-                container: containerRef.current,
-                cloudName,
-                mediaAssets: [{ tag: galleryTag }],
-            });
-            galleryRef.current.render();
-        };
-
-        if (!document.querySelector(`script[src="${SCRIPT_SRC}"]`)) {
-            const s = document.createElement("script");
-            s.src = SCRIPT_SRC;
-            s.onload = initGallery;
-            document.body.appendChild(s);
-        } else {
-            initGallery();
-        }
-
-        return () => {
-            cancelled = true;
-            galleryRef.current?.destroy();
-            galleryRef.current = null;
-        };
+        setLoading(true);
+        fetch(`/api/gallery?tag=${encodeURIComponent(galleryTag)}`)
+            .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+            .then((data) => setImages(data.images ?? []))
+            .catch(() => setImages([]))
+            .finally(() => setLoading(false));
     }, [galleryTag]);
 
-    return <div ref={containerRef} className="w-full" />;
+    if (loading) {
+        return (
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-3">
+                {Array.from({ length: 8 }).map((_, i) => (
+                    <div
+                        key={i}
+                        className="mb-3 break-inside-avoid bg-gray-200 animate-pulse rounded-lg"
+                        style={{ height: `${160 + (i % 3) * 60}px` }}
+                    />
+                ))}
+            </div>
+        );
+    }
+
+    if (images.length === 0) return null;
+
+    return (
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-3">
+            {images.map((img) => (
+                <a
+                    key={img.publicId}
+                    href={img.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-3 break-inside-avoid block overflow-hidden rounded-lg"
+                >
+                    <img
+                        src={img.thumbUrl}
+                        alt=""
+                        width={img.width}
+                        height={img.height}
+                        loading="lazy"
+                        className="w-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </a>
+            ))}
+        </div>
+    );
 }
