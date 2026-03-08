@@ -152,7 +152,7 @@ function UpcommingEvent() {
 }
 
 export function Events() {
-    const displayEventsArchive = useRef(false);
+    const displayEventsArchive = useRef(true);
     const { content } = useContent();
     const { events: eventsContent } = content;
 
