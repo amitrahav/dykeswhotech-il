@@ -4,6 +4,7 @@ import { useContent } from "../../contexts/ContentContext";
 import { Button } from "../../components/ui/button";
 import { RegisterModal } from "../../components/RegisterModal";
 import { PageHero } from "../../components/PageHero";
+import { CloudinaryGallery } from "../../components/CloudinaryGallery";
 
 
 // ────────────────────────────────────────────────────────────────
@@ -75,46 +76,6 @@ function useTallyEmbed(tallyId?: string) {
     }, [tallyId]);
 }
 
-// ────────────────────────────────────────────────────────────────
-// Cloudinary Product Gallery loader hook
-// ────────────────────────────────────────────────────────────────
-function useCloudinaryGallery(galleryTag?: string, containerId?: string) {
-    const galleryRef = useRef<any>(null);
-
-    useEffect(() => {
-        if (!galleryTag || !containerId) return;
-
-        const SCRIPT_SRC = "https://product-gallery.cloudinary.com/all.js";
-        const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-        let cancelled = false;
-
-        const initGallery = () => {
-            if (cancelled) return;
-            if (typeof (window as any).cloudinary === "undefined") return;
-            galleryRef.current = (window as any).cloudinary.galleryWidget({
-                container: `#${containerId}`,
-                cloudName,
-                mediaAssets: [{ tag: galleryTag }],
-            });
-            galleryRef.current.render();
-        };
-
-        if (!document.querySelector(`script[src="${SCRIPT_SRC}"]`)) {
-            const s = document.createElement("script");
-            s.src = SCRIPT_SRC;
-            s.onload = initGallery;
-            document.body.appendChild(s);
-        } else {
-            initGallery();
-        }
-
-        return () => {
-            cancelled = true;
-            galleryRef.current?.destroy();
-            galleryRef.current = null;
-        };
-    }, [galleryTag, containerId]);
-}
 
 // ────────────────────────────────────────────────────────────────
 // Main component
@@ -131,9 +92,6 @@ export function EventDetail() {
     );
 
     useTallyEmbed(singleEvent?.tallyId);
-
-    const galleryContainerId = `cloudinary-gallery-${eventId}`;
-    useCloudinaryGallery(singleEvent?.galleryTag, galleryContainerId);
 
     if (!singleEvent) {
         return (
@@ -242,7 +200,7 @@ export function EventDetail() {
             {singleEvent.galleryTag && (
                 <section className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 md:py-20">
                     <div className="max-w-7xl mx-auto">
-                        <div id={galleryContainerId} className="w-full" />
+                        <CloudinaryGallery galleryTag={singleEvent.galleryTag} />
                     </div>
                 </section>
             )}
