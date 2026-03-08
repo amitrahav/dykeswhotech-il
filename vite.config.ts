@@ -48,11 +48,23 @@ function galleryDevPlugin(env: Record<string, string>) {
 
         try {
           const credentials = Buffer.from(`${apiKey}:${apiSecret}`).toString('base64')
+          console.log(`[gallery-dev] fetching tag="${tag}" cloud="${cloudName}"`)
           const cldRes = await fetch(
             `https://api.cloudinary.com/v1_1/${cloudName}/resources/by_tag/${encodeURIComponent(tag)}?resource_type=image&max_results=500`,
             { headers: { Authorization: `Basic ${credentials}` } }
           )
+          console.log(`[gallery-dev] Cloudinary responded ${cldRes.status}`)
+          if (!cldRes.ok) {
+            const body = await cldRes.text()
+            console.error(`[gallery-dev] Cloudinary error body:`, body)
+            res.setHeader('Content-Type', 'application/json')
+            // 404 = tag doesn't exist yet; return empty rather than error
+            res.statusCode = cldRes.status === 404 ? 200 : 502
+            res.end(JSON.stringify(cldRes.status === 404 ? { images: [] } : { error: body }))
+            return
+          }
           const data = await cldRes.json() as { resources?: Array<{ public_id: string; width: number; height: number }> }
+          console.log(`[gallery-dev] resources returned: ${data.resources?.length ?? 0}`)
           const images = (data.resources ?? []).map(r => ({
             publicId: r.public_id,
             url:      `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/${r.public_id}`,
@@ -62,7 +74,8 @@ function galleryDevPlugin(env: Record<string, string>) {
           }))
           res.setHeader('Content-Type', 'application/json')
           res.end(JSON.stringify({ images }))
-        } catch {
+        } catch (err) {
+          console.error('[gallery-dev] fetch error:', err)
           res.statusCode = 502
           res.setHeader('Content-Type', 'application/json')
           res.end(JSON.stringify({ error: 'Failed to fetch gallery' }))

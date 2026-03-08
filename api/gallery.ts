@@ -34,7 +34,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     );
 
     if (!cldRes.ok) {
-        console.error("Cloudinary Admin API error:", cldRes.status, await cldRes.text());
+        const body = await cldRes.text();
+        console.error("Cloudinary Admin API error:", cldRes.status, body);
+        // 404 = tag doesn't exist yet; return empty rather than error
+        if (cldRes.status === 404) {
+            res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=3600");
+            return res.status(200).json({ images: [] });
+        }
         return res.status(502).json({ error: "Failed to fetch gallery" });
     }
 
