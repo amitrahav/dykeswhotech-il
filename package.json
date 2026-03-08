@@ -8,7 +8,6 @@
   },
   "scripts": {
     "dev": "vite",
-    "dev:full": "bunx vercel dev",
     "build": "tsc && node scripts/check-unused-content.js && vite build",
     "lint": "eslint .",
     "lint:content": "node scripts/check-unused-content.js",
