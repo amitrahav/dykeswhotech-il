@@ -138,7 +138,7 @@
             "tagline": "Tech for those who fight for us",
             "aboutTitle": "What happened at Dykeathon 3.0?",
             "about": [
-                "Dykeathon 3.0 was hosted in the building of the LGBTQ+ TLV center — bringing together queer women in product and tech to build real solutions for 10 LGBTQ+ and community organizations.",
+                "Bringing together queer women in product and tech to build real solutions for 10 LGBTQ+ and community organizations.",
                 "Teams worked directly with organizations including Beit El-Mim, Achva, the TLV LGBTQ+ Center, Rakafot, and community groups responding to the events of October 7th — building tools that ranged from digital archives and volunteer management platforms to WhatsApp bots and housing portals.",
                 "Projects like the Gay Media Archive, SeniorVIP, and the Shared Parenting Portal showed just how much is possible when queer women in tech show up for their community."
             ],
@@ -175,7 +175,7 @@
             "tagline": "24 hours. Real orgs. Real impact.",
             "aboutTitle": "What happened at Dykeathon 2.0?",
             "about": [
-                "Hosted in the Microsoft Reactor space, Dykeathon 2.0 had 200 participants on board to solve the biggest problems of LGBTQ+ non-profit organizations — creating production-ready tools for organizations to implement in their day-to-day activities.",
+                "Over 200 participants on board to solve the biggest problems of LGBTQ+ non-profit organizations — creating production-ready tools for organizations to implement in their day-to-day activities.",
                 "8 organizations participated: Bet El-Mem (Arab LGBTQ+), Maavarim (trans advocacy), Haguda, the TLV LGBTQ+ Center, Hoshen, LGBTech, Achva, and the Gila Project for Trans Empowerment. Each org came with a C-level leader and a real challenge.",
                 "This edition leaned heavily into GenAI and LLMs, with teams building faster and smarter than ever before. Bet El-Mem took first place, Maavarim second, and Haguda third."
             ],
@@ -244,7 +244,7 @@
             "tagline": "The first one.",
             "aboutTitle": "Where it all started",
             "about": [
-                "The very first Dykeathon was hosted in Unity (formally IronSource) offices — 100 participants got to know 4 major issues of the LGBTQ community: Safety, Legal, Community IRL, and Health, and created MVPs for products addressing those problems.",
+                "The very first Dykeathon — 100 participants got to know 4 major issues of the LGBTQ community: Safety, Legal, Community IRL, and Health, and created MVPs for products addressing those problems.",
                 "Teams were guided by domain experts: Dr. Ruth Gofen (Health), Adv. Michal Eden (Legal), Ayala Azulay (Safety), and Noa Dagan (Community).",
                 "Standout MVPs included LesBMe in Health (🥇), BigSister in Community (🥈), Standart in Safety (🥉), and HelpMeSue in Legal. The night ended with an after-party at Shpagat — and the knowledge that we'd do it all again, bigger."
             ],
@@ -363,7 +363,7 @@
             "tagline": "Where therapy meets technology.",
             "aboutTitle": "What was this meetup about?",
             "about": [
-                "Hosted at the Island office, 200 participants were thrilled to hear our 3 amazing women share about psychological and medical therapy alongside high-tech.",
+                "200+ participants were thrilled to hear our 3 amazing women share about psychological and medical therapy alongside high-tech.",
                 "A workshop was held on a coding software that integrates a language model — hands-on, practical, and energizing.",
                 "One of our biggest meetups yet. The community keeps growing."
             ],
@@ -403,7 +403,7 @@
             "tagline": "Bigger every year.",
             "aboutTitle": "What happened at Dykeathon 4.0?",
             "about": [
-                "Dykeathon 4.0 was our biggest edition yet — 14 LGBTQ+ organizations, each matched with a dedicated team of queer women in tech to build real tools for their day-to-day work.",
+                "14 LGBTQ+ organizations, each matched with a dedicated team of queer women in tech to build real tools for their day-to-day work.",
                 "Organizations spanned community, health, mental health, sports, legal, and advocacy — from grassroots groups to established centers. Teams brought fullstack engineers, frontend developers, data specialists, designers, and automation experts.",
                 "From WhatsApp bots to scraping tools, Monday integrations to custom web platforms — every project shipped with a real organization behind it."
             ],
@@ -477,7 +477,7 @@
             "host": "Unity (formally IronSource)",
             "date": "2022-04-13",
             "location": "Tel Aviv",
-            "description": "Was hosted in Unity (formally IronSource) offices and 100 participants got to know 4 major issues of the LGBTQ community: Safety \\ Legal \\ Community IRL \\ Health, and created MVPs for products that facing those problems.",
+            "description": "100 participants got to know 4 major issues of the LGBTQ community: Safety \\ Legal \\ Community IRL \\ Health, and created MVPs for products that facing those problems.",
             "image": "/assets/events/dykeathon-2022.jpg"
         },
         {
@@ -487,7 +487,7 @@
             "host": "Microsoft Reactor Tel Aviv",
             "date": "2023-04-27",
             "location": "Tel Aviv",
-            "description": "Was hosted in Microsoft reactor space, and had 200 participants on board to solve the biggest problems of LGBTQ+ non-profit organizations, and create production-ready tools for the organizations to implement in their day-to-day activities to make it more effective.",
+            "description": "200 participants on board to solve the biggest problems of LGBTQ+ non-profit organizations, and create production-ready tools for the organizations to implement in their day-to-day activities to make it more effective.",
             "image": "/assets/events/dykeathon-2023.jpg"
         },
         {
@@ -497,7 +497,7 @@
             "host": "Pagaya Office, Tel Aviv",
             "date": "2023-12-13",
             "location": "Tel Aviv",
-            "description": "Was hosted at the Pagaya office and 150 participants were thrilled to hear our four speakers talking about women innovation at war times.",
+            "description": "150 participants were thrilled to hear our four speakers talking about women innovation at war times.",
             "image": "/assets/events/dykeathon-2023.jpg"
         },
         {
@@ -518,7 +518,7 @@
             "date": "2025",
             "location": "Tel Aviv",
             "image": "/assets/Hestia01.png",
-            "description": "Dykeathon 4.0 — our biggest hackathon yet. 14 LGBTQ+ organizations matched with teams of queer women in tech to build production-ready tools: automation, fullstack apps, LLM integrations, bots, and more."
+            "description": "14 LGBTQ+ organizations matched with teams of queer women in tech to build production-ready tools: automation, fullstack apps, LLM integrations, bots, and more."
         },
         {
             "id": "nov-2024",

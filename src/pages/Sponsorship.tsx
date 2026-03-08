@@ -261,7 +261,7 @@ export function Sponsorship() {
                                     {/* CTA Button — fixed pt-10 gap, content above absorbs extra height */}
                                     <div className="pt-10 w-full flex justify-center flex-shrink-0">
                                         <button
-                                            className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                                            className="rounded-full bg-[#85F2AA] text-[#0B4F2B] font-semibold px-8 py-3 hover:bg-[#6DDEA0] hover:scale-105 active:scale-95 transition-all cursor-pointer"
                                             onClick={() => setSelectedTier({ name: tier.name, price: tier.price })}
                                         >
                                             {tier.cta}
@@ -293,7 +293,7 @@ export function Sponsorship() {
                             </div>
                             <div className="flex-shrink-0">
                                 <button
-                                    className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all cursor-pointer whitespace-nowrap"
+                                    className="rounded-full bg-[#85F2AA] text-[#0B4F2B] font-semibold px-8 py-3 hover:bg-[#6DDEA0] hover:scale-105 active:scale-95 transition-all cursor-pointer whitespace-nowrap"
                                     onClick={() => setSelectedTier({ name: customImpact.title, price: "Custom" })}
                                 >
                                     {customImpact.cta}
