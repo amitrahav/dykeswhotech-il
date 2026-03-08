@@ -76,6 +76,44 @@ function useTallyEmbed(tallyId?: string) {
 }
 
 // ────────────────────────────────────────────────────────────────
+// Cloudinary Product Gallery loader hook
+// ────────────────────────────────────────────────────────────────
+function useCloudinaryGallery(galleryTag?: string, containerId?: string) {
+    useEffect(() => {
+        if (!galleryTag || !containerId) return;
+
+        const SCRIPT_SRC = "https://product-gallery.cloudinary.com/all.js";
+        const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+        let gallery: any = null;
+
+        const initGallery = () => {
+            // @ts-ignore
+            if (typeof window.cloudinary === "undefined") return;
+            // @ts-ignore
+            gallery = window.cloudinary.galleryWidget({
+                container: `#${containerId}`,
+                cloudName,
+                mediaAssets: [{ tag: galleryTag }],
+            });
+            gallery.render();
+        };
+
+        if (!document.querySelector(`script[src="${SCRIPT_SRC}"]`)) {
+            const s = document.createElement("script");
+            s.src = SCRIPT_SRC;
+            s.onload = initGallery;
+            document.body.appendChild(s);
+        } else {
+            initGallery();
+        }
+
+        return () => {
+            gallery?.destroy();
+        };
+    }, [galleryTag, containerId]);
+}
+
+// ────────────────────────────────────────────────────────────────
 // Main component
 // ────────────────────────────────────────────────────────────────
 export function EventDetail() {
@@ -91,12 +129,15 @@ export function EventDetail() {
 
     useTallyEmbed(singleEvent?.tallyId);
 
+    const galleryContainerId = `cloudinary-gallery-${eventId}`;
+    useCloudinaryGallery(singleEvent?.galleryTag, singleEvent?.galleryTag ? galleryContainerId : undefined);
+
     if (!singleEvent) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-[#F5F5F5] gap-6">
                 <h1 className="text-4xl font-telaviv text-[#293744]">Event not found</h1>
                 <Link to={`/events/${event}`}>
-                    <Button className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all">← Back to events</Button>
+                    <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">← Back to events</Button>
                 </Link>
             </div>
         );
@@ -143,7 +184,7 @@ export function EventDetail() {
                                         <p key={i}>{paragraph}</p>
                                     ))
                                 ) : (
-                                    <p>Our mission is simple: to create a network that actually works for us. We don't wait for an invite to the table; we're building our own.</p>
+                                    <p>{singleEvent.about}</p>
                                 )}
                             </div>
                         </div>
@@ -151,11 +192,15 @@ export function EventDetail() {
 
                     {/* Right: Illustration */}
                     <div className="lg:w-2/5 w-full flex justify-center lg:justify-end">
-                        <div className="w-full aspect-square bg-[#C4C4C4] max-w-[414px] flex items-center justify-center overflow-hidden hover:scale-[1.02] transition-transform duration-500">
+                        <div className="relative w-full max-w-[414px] aspect-square bg-[#293744] overflow-hidden hover:scale-[1.02] transition-transform duration-500 rounded-none">
                             {singleEvent.image ? (
-                                <img src={singleEvent.image} alt={singleEvent.title} className="w-full h-full object-cover" />
+                                <img
+                                    src={singleEvent.image}
+                                    alt={singleEvent.title}
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                />
                             ) : (
-                                <div className="text-gray-400 font-bold">IMAGE</div>
+                                <div className="text-gray-400 font-bold flex items-center justify-center h-full">IMAGE</div>
                             )}
                         </div>
                     </div>
@@ -166,7 +211,7 @@ export function EventDetail() {
                     <div className="max-w-7xl mx-auto mt-12 px-0">
                         <Button
                             onClick={() => setRegisterOpen(true)}
-                            className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                            className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all cursor-pointer"
                         >
                             Register now
                         </Button>
@@ -177,38 +222,27 @@ export function EventDetail() {
             {/* ═══════════════════════════════════════
                  PARTNERS SECTION
             ═══════════════════════════════════════ */}
-            <section className="relative z-10 py-10 border-t border-gray-200">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex flex-wrap justify-start items-center gap-x-12 gap-y-4">
-                    {[
-                        { src: "/assets/unity-logo.png", name: "Unity" },
-                        { src: "/assets/hourone-logo.png", name: "Hour One" },
-                        { src: "/assets/microsoft-logo.png", name: "Microsoft" },
-                        { src: "/assets/riskified-logo.png", name: "Riskified" },
-                    ].map(({ src, name }) => (
-                        <PartnerLogo key={name} src={src} name={name} />
-                    ))}
-                </div>
-            </section>
+            {singleEvent.partners && singleEvent.partners.length > 0 && (
+                <section className="relative z-10 py-10 border-t border-gray-200">
+                    <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex flex-wrap justify-center items-center gap-x-12 gap-y-4">
+                        {singleEvent.partners.map(({ logoUrl, name }: { logoUrl: string; name: string }) => (
+                            <PartnerLogo key={name} src={logoUrl} name={name} />
+                        ))}
+                    </div>
+                </section>
+            )}
 
 
             {/* ═══════════════════════════════════════
                  GALLERY SECTION
             ═══════════════════════════════════════ */}
-            <section className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 md:py-20">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
-                        {Array.from({ length: 25 }).map((_, i) => (
-                            <div key={i} className="aspect-square bg-[#C4C4C4]" />
-                        ))}
+            {singleEvent.galleryTag && (
+                <section className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 md:py-20">
+                    <div className="max-w-7xl mx-auto">
+                        <div id={galleryContainerId} className="w-full" />
                     </div>
-
-                    <div className="flex justify-center">
-                        <Button className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all cursor-pointer">
-                            View gallery
-                        </Button>
-                    </div>
-                </div>
-            </section>
+                </section>
+            )}
 
 
             {/* ═══════════════════════════════════════
@@ -326,7 +360,7 @@ export function EventDetail() {
             ═══════════════════════════════════════ */}
             <div className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 text-center border-t border-gray-200">
                 <Link to={`/events/${event}`}>
-                    <Button className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all">
+                    <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">
                         ← All {(event as string).replace(/-/g, ' ')} events
                     </Button>
                 </Link>
