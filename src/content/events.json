@@ -59,6 +59,7 @@
             "address": "Nahmani 36, Tel Aviv",
             "collaboration": "LGBTQ+ Center",
             "image": "/assets/Hestia01.png",
+            "galleryTag": "dykeathon-2026",
             "tagline": "Building our own table",
             "aboutTitle": "What is the Dykeathon?",
             "about": [
@@ -124,7 +125,13 @@
             ],
             "tallyId": "xXrRG5",
             "notionUrl": "https://www.notion.so/9114484e1b67414c90e1895d26262234",
-            "registrationOpen": true
+            "registrationOpen": true,
+            "partners": [
+                { "name": "Unity", "logoUrl": "https://logo.clearbit.com/unity.com" },
+                { "name": "Hour One", "logoUrl": "https://logo.clearbit.com/hourone.ai" },
+                { "name": "Microsoft", "logoUrl": "https://logo.clearbit.com/microsoft.com" },
+                { "name": "Riskified", "logoUrl": "https://logo.clearbit.com/riskified.com" }
+            ]
         },
         {
             "id": "2024",
@@ -134,7 +141,8 @@
             "location": "LGBTQ+ TLV Center",
             "address": "Tel Aviv",
             "collaboration": "10 LGBTQ+ Organizations",
-            "image": "/assets/Hestia01.png",
+            "image": "/assets/events/dykeathon-2024.jpg",
+            "galleryTag": "dykeathon-2024",
             "tagline": "Tech for those who fight for us",
             "aboutTitle": "What happened at Dykeathon 3.0?",
             "about": [
@@ -161,7 +169,8 @@
                 }
             ],
             "program": [],
-            "registrationOpen": false
+            "registrationOpen": false,
+            "partners": []
         },
         {
             "id": "2023",
@@ -171,7 +180,8 @@
             "location": "Microsoft Reactor",
             "address": "Tel Aviv",
             "collaboration": "8 LGBTQ+ Organizations",
-            "image": "/assets/Hestia01.png",
+            "image": "/assets/events/dykeathon-2023.jpg",
+            "galleryTag": "dykeathon-2023",
             "tagline": "24 hours. Real orgs. Real impact.",
             "aboutTitle": "What happened at Dykeathon 2.0?",
             "about": [
@@ -230,7 +240,8 @@
                     "description": "Winners announced. Community celebration."
                 }
             ],
-            "registrationOpen": false
+            "registrationOpen": false,
+            "partners": []
         },
         {
             "id": "2022",
@@ -240,7 +251,8 @@
             "location": "Unity (formally IronSource)",
             "address": "Menachem Begin 121, 12th Floor, Tel Aviv",
             "collaboration": "TLV LGBTQ+ Center",
-            "image": "/assets/Hestia01.png",
+            "image": "/assets/events/dykeathon-2022.jpg",
+            "galleryTag": "dykeathon-2022",
             "tagline": "The first one.",
             "aboutTitle": "Where it all started",
             "about": [
@@ -308,7 +320,8 @@
                     "description": "The celebration continues until 02:00."
                 }
             ],
-            "registrationOpen": false
+            "registrationOpen": false,
+            "partners": []
         },
         {
             "id": "hanukkah-2023",
@@ -349,7 +362,8 @@
                 }
             ],
             "tracks": [],
-            "registrationOpen": false
+            "registrationOpen": false,
+            "partners": []
         },
         {
             "id": "nov-2024",
@@ -390,7 +404,8 @@
                 }
             ],
             "tracks": [],
-            "registrationOpen": false
+            "registrationOpen": false,
+            "partners": []
         },
         {
             "id": "2025",
@@ -399,7 +414,7 @@
             "date": "2025",
             "location": "Tel Aviv",
             "collaboration": "14 LGBTQ+ Organizations",
-            "image": "/assets/Hestia01.png",
+            "image": "/assets/events/dykeathon-2025.jpg",
             "tagline": "Bigger every year.",
             "aboutTitle": "What happened at Dykeathon 4.0?",
             "about": [
@@ -466,7 +481,8 @@
                 }
             ],
             "program": [],
-            "registrationOpen": false
+            "registrationOpen": false,
+            "partners": []
         }
     ],
     "pastEvents": [
