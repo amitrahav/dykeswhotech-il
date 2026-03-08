@@ -29,7 +29,7 @@ export function Jobs() {
                     ))}
                 </div>
 
-                <Button className="rounded-full bg-[#8D6BE4] text-white font-semibold px-8 py-3 hover:bg-[#7a59d1] hover:scale-105 active:scale-95 transition-all">
+                <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">
                     {jobs.button} &rarr;
                 </Button>
             </div>

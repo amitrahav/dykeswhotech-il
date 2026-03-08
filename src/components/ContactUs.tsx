@@ -77,7 +77,7 @@ export function ContactUs() {
                                     disabled={loading}
                                     aria-busy={loading}
                                     aria-label={loading ? "Sending message" : "Send message"}
-                                    className="absolute bg-[#8D6BE4] hover:bg-[#7a59d1] disabled:opacity-60 text-white font-semibold text-base md:text-lg flex items-center justify-center transition-all z-20"
+                                    className="absolute bg-[#85F2AA] hover:bg-[#6DDEA0] disabled:opacity-60 text-[#0B4F2B] font-semibold text-base md:text-lg flex items-center justify-center transition-all z-20"
                                     style={{
                                         position: 'absolute',
                                         right: '8px',
