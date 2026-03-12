@@ -36,7 +36,7 @@ function galleryDevPlugin(env: Record<string, string>) {
         }
 
         const cloudName = env.VITE_CLOUDINARY_CLOUD_NAME
-        const apiKey    = env.CLOUDINARY_API_KEY
+        const apiKey = env.CLOUDINARY_API_KEY
         const apiSecret = env.CLOUDINARY_API_SECRET
 
         if (!cloudName || !apiKey || !apiSecret) {
@@ -48,12 +48,8 @@ function galleryDevPlugin(env: Record<string, string>) {
 
         try {
           const credentials = Buffer.from(`${apiKey}:${apiSecret}`).toString('base64')
-          console.log(`[gallery-dev] fetching tag="${tag}" cloud="${cloudName}"`)
-          const cldRes = await fetch(
-            `https://api.cloudinary.com/v1_1/${cloudName}/resources/by_tag/${encodeURIComponent(tag)}?resource_type=image&max_results=500`,
-            { headers: { Authorization: `Basic ${credentials}` } }
-          )
-          console.log(`[gallery-dev] Cloudinary responded ${cldRes.status}`)
+          const apiUrl = `https://api.cloudinary.com/v1_1/${cloudName}/resources/image/tags/${encodeURIComponent(tag)}?max_results=500`
+          const cldRes = await fetch(apiUrl, { headers: { Authorization: `Basic ${credentials}` } })
           if (!cldRes.ok) {
             const body = await cldRes.text()
             console.error(`[gallery-dev] Cloudinary error body:`, body)
@@ -67,10 +63,10 @@ function galleryDevPlugin(env: Record<string, string>) {
           console.log(`[gallery-dev] resources returned: ${data.resources?.length ?? 0}`)
           const images = (data.resources ?? []).map(r => ({
             publicId: r.public_id,
-            url:      `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/${r.public_id}`,
+            url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/${r.public_id}`,
             thumbUrl: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto,w_600/${r.public_id}`,
-            width:    r.width,
-            height:   r.height,
+            width: r.width,
+            height: r.height,
           }))
           res.setHeader('Content-Type', 'application/json')
           res.end(JSON.stringify({ images }))

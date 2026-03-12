@@ -12,7 +12,7 @@ interface CloudinaryResource {
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
 
-    const { tag } = req.query;
+    const { tag, next_cursor } = req.query;
     if (!tag || typeof tag !== "string" || !SAFE_TAG_RE.test(tag)) {
         return res.status(400).json({ error: "Invalid tag parameter" });
     }
@@ -28,10 +28,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const credentials = Buffer.from(`${apiKey}:${apiSecret}`).toString("base64");
 
-    const cldRes = await fetch(
-        `https://api.cloudinary.com/v1_1/${cloudName}/resources/by_tag/${encodeURIComponent(tag)}?resource_type=image&max_results=500`,
-        { headers: { Authorization: `Basic ${credentials}` } }
-    );
+    let apiUrl = `https://api.cloudinary.com/v1_1/${cloudName}/resources/image/tags/${encodeURIComponent(tag)}?max_results=20`;
+    if (next_cursor && typeof next_cursor === "string") {
+        apiUrl += `&next_cursor=${encodeURIComponent(next_cursor)}`;
+    }
+
+    const cldRes = await fetch(apiUrl, { headers: { Authorization: `Basic ${credentials}` } });
 
     if (!cldRes.ok) {
         const body = await cldRes.text();
@@ -44,7 +46,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(502).json({ error: "Failed to fetch gallery" });
     }
 
-    const data = await cldRes.json() as { resources?: CloudinaryResource[] };
+    const data = await cldRes.json() as { resources?: CloudinaryResource[], next_cursor?: string };
 
     const images = (data.resources ?? []).map((r) => ({
         publicId: r.public_id,
@@ -59,5 +61,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Served from Vercel edge cache for 1 h; stale-while-revalidate for 24 h.
     // Cloudinary's CDN caches the actual image delivery independently.
     res.setHeader("Cache-Control", "public, s-maxage=3600, stale-while-revalidate=86400");
-    return res.status(200).json({ images });
+    return res.status(200).json({ images, next_cursor: data.next_cursor });
 }

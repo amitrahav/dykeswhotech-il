@@ -249,30 +249,9 @@ export function EventDetail() {
             ═══════════════════════════════════════ */}
             <section className="relative z-10 overflow-hidden bg-white">
 
-                {/* Hearts background — xoxo technique: screen blend, bottom-anchored */}
-                <div
-                    className="absolute inset-x-0 bottom-0 w-full h-[120%] pointer-events-none z-0 mix-blend-screen opacity-40"
-                    style={{
-                        filter: 'brightness(100)',
-                        backgroundImage: `url(/assets/hearts.png)`,
-                        backgroundPosition: 'center bottom',
-                        backgroundSize: '100% auto',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundBlendMode: 'screen',
-                    }}
-                />
-
-                {/* Pink shade — 80vw, screen blend */}
-                <div
-                    className="absolute left-0 top-0 h-full pointer-events-none z-0 mix-blend-screen"
-                    style={{
-                        width: '80vw',
-                        background: 'radial-gradient(ellipse at -5% 70%, rgba(255,0,229,0.55) 0%, rgba(255,0,229,0.18) 45%, transparent 70%)',
-                    }}
-                />
 
                 {/* Hestia — anchored to bottom-left */}
-                <div className="absolute bottom-0 left-0 z-10 pointer-events-none">
+                <div className="absolute bottom-0 left-0 z-20 pointer-events-none">
                     <img
                         src="/assets/Hestia-standing.png"
                         alt="Hestia"
@@ -314,6 +293,24 @@ export function EventDetail() {
                         )}
                     </div>
                 </div>
+
+                {/* Hearts background — xoxo technique: screen blend, bottom-anchored */}
+                <div id="haze"
+                    className="absolute bottom-0 left-0 z-0 pointer-events-none rounded-full bg-[#FEB5FF] transform translate-y-1/2 -translate-x-1/3 h-[70rem] w-[70rem] blur-xl"></div>
+
+                <div
+                    className="absolute inset-x-0 bottom-0 w-full h-[20rem] pointer-events-none z-10 mix-blend-screen opacity-40"
+                    style={{
+                        filter: 'brightness(100)',
+                        backgroundImage: `url(/assets/hearts.png)`,
+                        backgroundPosition: 'center bottom',
+                        backgroundSize: 'auto auto',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundBlendMode: 'screen',
+                    }}
+                />
+
+
             </section>
 
             {/* ═══════════════════════════════════════
