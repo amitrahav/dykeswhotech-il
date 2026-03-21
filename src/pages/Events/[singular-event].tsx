@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect, useRef, type JSXElementConstructor, type Key, type ReactElement, type ReactNode, type ReactPortal } from "react";
+import { createPortal } from "react-dom";
 import { X, ExternalLink } from "lucide-react";
 import { useContent } from "../../contexts/ContentContext";
 import { Button } from "../../components/ui/button";
@@ -7,6 +8,7 @@ import { RegisterModal } from "../../components/RegisterModal";
 import { PageHero } from "../../components/PageHero";
 import { CloudinaryGallery } from "../../components/CloudinaryGallery";
 import demeterSwag from "../../assets/Demeter-swag.png";
+import { useOrgLogos } from "../../hooks/useOrgLogos";
 
 
 // ────────────────────────────────────────────────────────────────
@@ -95,12 +97,20 @@ export function EventDetail() {
     );
 
     // Resolve organizations for this event from root-level lookup
-    const eventOrgs: Organization[] = (singleEvent?.organizationIds ?? []).map((id: string) => {
+    const eventOrgsRaw: Organization[] = (singleEvent?.organizationIds ?? []).map((id: string) => {
         const org = allOrganizations.find((o: any) => o.id === id);
         if (!org) return null;
         const projects: OrgProject[] = allProjects.filter((p: any) => p.orgId === id);
         return { ...org, projects };
     }).filter(Boolean);
+
+    const logoIdsToFetch = Array.from(new Set(eventOrgsRaw.map((o) => o.logoId).filter(Boolean))) as string[];
+    const { logos: orgLogos } = useOrgLogos(logoIdsToFetch);
+
+    const eventOrgs = eventOrgsRaw.map(org => ({
+        ...org,
+        logoUrl: org.logoId ? orgLogos[org.logoId]?.url : undefined
+    }));
 
     useTallyEmbed(singleEvent?.tallyId);
 
@@ -389,12 +399,14 @@ interface OrgProject {
     description: string;
     links: { title: string; url: string }[];
     participants: { name: string; linkedin: string }[];
+    presentationUrl?: string;
 }
 
 interface Organization {
     id: string;
     name: string;
-    logoUrl: string;
+    logoId: string;
+    logoUrl?: string;
     about: string;
     website?: string;
     projects: OrgProject[];
@@ -456,16 +468,20 @@ function ProjectPopup({ project, org, onClose }: { project: OrgProject; org: Org
     useEffect(() => {
         const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
         document.addEventListener("keydown", handler);
-        return () => document.removeEventListener("keydown", handler);
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.removeEventListener("keydown", handler);
+            document.body.style.overflow = "";
+        };
     }, [onClose]);
 
-    const presentationUrl = project.links?.find(l => l.url)?.url ?? null;
+    const presentationUrl = project.presentationUrl || project.links?.find(l => l.url)?.url || null;
     const embedUrl = presentationUrl ? getEmbedUrl(presentationUrl) : null;
     const hasParticipants = project.participants?.some(p => p.name);
 
-    return (
+    return createPortal(
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 py-6"
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-md px-4 py-6"
             onClick={onClose}
         >
             <div
@@ -509,9 +525,17 @@ function ProjectPopup({ project, org, onClose }: { project: OrgProject; org: Org
                     </button>
                 </div>
 
+                {/* ── About the organization ── */}
+                {org.about && (
+                    <div className="px-6 pt-4">
+                        <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">About {org.name}</div>
+                        <p className="text-gray-600 font-poppins text-sm leading-relaxed">{org.about}</p>
+                    </div>
+                )}
+
                 {/* ── Embedded presentation ── */}
                 {embedUrl && (
-                    <div className="w-full bg-gray-100" style={{ aspectRatio: "16/9" }}>
+                    <div className="w-full bg-gray-100 mt-4" style={{ aspectRatio: "16/9" }}>
                         <iframe src={embedUrl} className="w-full h-full" allowFullScreen
                             title={project.title} allow="autoplay" />
                     </div>
@@ -519,15 +543,18 @@ function ProjectPopup({ project, org, onClose }: { project: OrgProject; org: Org
 
                 {/* ── Body ── */}
                 <div className="p-6 space-y-5">
-                    {project.description && (
-                        <p className="text-gray-600 font-poppins text-sm leading-relaxed">{project.description}</p>
-                    )}
-
                     {presentationUrl && !embedUrl && (
                         <a href={presentationUrl} target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 text-sm font-medium text-[#293744] hover:underline">
                             View presentation <ExternalLink size={13} />
                         </a>
+                    )}
+
+                    {project.description && (
+                        <div>
+                            <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">About the project</div>
+                            <p className="text-gray-600 font-poppins text-sm leading-relaxed">{project.description}</p>
+                        </div>
                     )}
 
                     {hasParticipants && (
@@ -543,7 +570,7 @@ function ProjectPopup({ project, org, onClose }: { project: OrgProject; org: Org
                 </div>
             </div>
         </div>
-    );
+        , document.body);
 }
 
 // ────────────────────────────────────────────────────────────────
@@ -579,46 +606,70 @@ function OrgCard({ org }: { org: Organization }) {
 
                 {/* Tooltip */}
                 {tooltipVisible && (
-                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 p-4 z-30 pointer-events-auto"
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-[520px] bg-white rounded-xl shadow-2xl border border-gray-100 p-4 z-30 pointer-events-auto flex flex-col gap-4"
                         onMouseEnter={() => setTooltipVisible(true)}
                         onMouseLeave={() => setTooltipVisible(false)}
                     >
+                        {org.logoUrl && !imgFailed ? (
+                            <img src={org.logoUrl} alt={org.name} onError={() => setImgFailed(true)}
+                                className="h-auto w-auto object-conatins align-center justify-center" />
+                        ) : null}
                         {/* Arrow */}
                         <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-r border-b border-gray-100 rotate-45" />
-
-                        <div className="text-xs font-black uppercase tracking-widest text-gray-400 mb-1">{org.name}</div>
-                        {org.about && (
-                            <p className="text-gray-600 text-xs leading-relaxed mb-3">{org.about}</p>
-                        )}
-
-                        {org.projects && org.projects.length > 0 && (
-                            <div>
-                                <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1.5">Projects</div>
-                                <ul className="space-y-1">
-                                    {org.projects.map((project, i) => (
-                                        <li key={i}>
-                                            <button
-                                                onClick={() => setActiveProject(project)}
-                                                className="text-sm text-[#293744] font-medium hover:text-purple-600 hover:underline text-left transition-colors w-full"
-                                            >
-                                                → {project.title}
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
+                        {/* Left: logo, name, about, website */}
+                        <div className="flex flex-row gap-4">
+                            <div className="flex-1 min-w-0 flex flex-col gap-2">
+                                <div className="text-xs font-black uppercase tracking-widest text-gray-400">{org.name}</div>
+                                {org.about && (
+                                    <p className="text-gray-600 text-xs leading-relaxed">{org.about}</p>
+                                )}
+                                {org.website && (
+                                    <a
+                                        href={org.website}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-gray-700 transition-colors mt-auto"
+                                    >
+                                        Visit website <ExternalLink size={10} />
+                                    </a>
+                                )}
                             </div>
-                        )}
 
-                        {org.website && (
-                            <a
-                                href={org.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 mt-3 text-xs text-gray-400 hover:text-gray-700 transition-colors"
-                            >
-                                Visit website <ExternalLink size={10} />
-                            </a>
-                        )}
+                            {/* Divider */}
+                            {org.projects && org.projects.length > 0 && (
+                                <div className="w-px bg-gray-100 self-stretch flex-shrink-0" />
+                            )}
+
+                            {/* Right: projects */}
+                            {org.projects && org.projects.length > 0 && (
+                                <div className="flex-1 min-w-0">
+                                    <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1.5">Projects</div>
+                                    <ul className="space-y-1">
+                                        {org.projects.map((project, i) => {
+                                            const hasPresentation = Boolean(project.presentationUrl || project.links?.some(l => l.url));
+                                            return (
+                                                <li key={i}>
+                                                    {hasPresentation ? (
+                                                        <button
+                                                            onClick={() => setActiveProject(project)}
+                                                            className="text-sm text-[#293744] font-medium hover:text-purple-600 hover:underline text-left transition-colors w-full"
+                                                        >
+                                                            → {project.title}
+                                                        </button>
+                                                    ) : (
+                                                        <div className="text-sm text-[#293744] font-medium text-left w-full cursor-default">
+                                                            → {project.title}
+                                                        </div>
+                                                    )}
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+
+
                     </div>
                 )}
             </div>

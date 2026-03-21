@@ -1,23 +1,109 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useContent } from "../../contexts/ContentContext";
 import { parseEventDate } from "../../lib/utils";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PageHero } from "../../components/PageHero";
 import { Card, CardTitle } from "../../components/ui/card";
 import xoxo from "../../assets/xoxo.png";
 import demeterSwag from "../../assets/Demeter-swag.png";
 import { Button } from "../../components/ui/button";
-import { useState } from "react";
 import { RegisterModal } from "../../components/RegisterModal";
+import { useOrgLogos } from "../../hooks/useOrgLogos";
+import { useState } from "react";
+
+
+function OrgLogoCarousel({ organizationIds = [], organizations = [], orgLogos = {} }: { organizationIds?: string[], organizations?: any[], orgLogos?: any }) {
+    const filteredIds = organizationIds.filter(id => {
+        const org = organizations?.find((o: any) => o.id === id);
+        return org && org.logoId && orgLogos[org.logoId];
+    });
+
+    const [currentPage, setCurrentPage] = useState(0);
+    const totalPages = filteredIds.length;
+
+    const scroll = (direction: 'left' | 'right') => {
+        let nextPage = direction === 'left' ? currentPage - 1 : currentPage + 1;
+        if (nextPage < 0) nextPage = 0;
+        if (nextPage >= totalPages) nextPage = totalPages - 1;
+        setCurrentPage(nextPage);
+    };
+
+    if (filteredIds.length === 0) return null;
+
+    const currentOrg = organizations?.find((o: any) => o.id === filteredIds[currentPage]);
+
+    return (
+        <div className="relative w-full mb-0 overflow-visible flex flex-col items-center">
+            <div className="relative group/carousel w-full flex items-center justify-center">
+                {currentPage > 0 && (
+                    <button
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); scroll('left'); }}
+                        className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg border border-gray-100 rounded-full p-2 hover:bg-primary hover:text-white transition-all duration-300 active:scale-95"
+                    >
+                        <ChevronLeft size={20} />
+                    </button>
+                )}
+
+                <div className="w-[150px] h-[120px] overflow-hidden flex items-center justify-start relative mx-auto">
+                    <div
+                        className="flex transition-transform duration-500 ease-out"
+                        style={{ transform: `translateX(-${currentPage * 150}px)` }}
+                    >
+                        {filteredIds.map((orgId: string) => {
+                            const org = organizations?.find((o: any) => o.id === orgId);
+                            const logo = org?.logoId ? orgLogos[org.logoId] : null;
+
+                            return (
+                                <div
+                                    key={orgId}
+                                    className="w-[150px] h-[120px] flex items-center justify-center shrink-0"
+                                >
+                                    <div className="w-24 h-24 bg-[#F8F9FA] border-2 border-gray-100 rounded-[2rem] flex items-center justify-center p-4 shadow-lg overflow-hidden">
+                                        <img src={logo.url} className="w-full h-full object-contain" alt={org.name} />
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                {currentPage < totalPages - 1 && (
+                    <button
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); scroll('right'); }}
+                        className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg border border-gray-100 rounded-full p-2 hover:bg-primary hover:text-white transition-all duration-300 active:scale-95"
+                    >
+                        <ChevronRight size={20} />
+                    </button>
+                )}
+            </div>
+
+            {/* Info Text */}
+            <div className="mt-2 flex flex-col items-center gap-1 w-full justify-center px-4">
+                <p className="text-[#293744] font-black text-[12px] uppercase tracking-tight leading-tight text-center w-full truncate" title={currentOrg?.name}>
+                    {currentOrg?.name}
+                </p>
+                {totalPages > 1 && (
+                    <p className="text-gray-400 font-bold text-[10px] mt-1">
+                        {currentPage + 1} of {totalPages}
+                    </p>
+                )}
+            </div>
+        </div>
+    );
+}
 
 
 export function EventArchive() {
     const { eventType: eventTypeSlug } = useParams<{ eventType: string }>();
     const { content } = useContent();
     const { events: eventsData } = content;
-    const { global: globalContent, categories, events } = eventsData as any;
+    const { global: globalContent, categories, events, organizations } = eventsData as any;
     const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
     const eventType = categories?.find((t: any) => t.id === eventTypeSlug);
+
+    const allOrgLogos = Array.from(new Set(organizations?.map((o: any) => o.logoId).filter(Boolean))) as string[];
+    const { logos: orgLogos } = useOrgLogos(allOrgLogos);
 
     if (!eventType) {
         return <div className="min-h-screen flex items-center justify-center text-white">Event type not found</div>;
@@ -165,7 +251,7 @@ export function EventArchive() {
                 <div className="px-6 md:px-12 lg:px-20 relative z-10">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-5xl md:text-8xl font-bold mb-8 text-[#293744] font-montserrat tracking-tighter">
-                            blessed from the past
+                            Blast from the past
                         </h2>
                         <p className="text-gray-600 max-w-5xl mb-24 text-xl md:text-2xl font-medium leading-relaxed">
                             No explanations needed: Creating events and meetups where our identity is the default, not something we have to justify or explain.
@@ -173,13 +259,13 @@ export function EventArchive() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                             {pastEvents.map((pastEvent: any, index: number) => (
-                                <Link key={index} to={`/events/${eventTypeSlug}/${pastEvent.id}`} className="h-full">
+                                <div key={index} className="h-full">
                                     <Card className="bg-white border-0 text-black overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.1)] rounded-[2.5rem] flex flex-col h-full hover:translate-y-[-12px] transition-all duration-500 group">
                                         <div className="p-8 pb-5 flex flex-col gap-2">
                                             <div className="inline-block w-fit px-3 py-1 bg-[#1DFF87] text-[#293744] text-[12px] font-black rounded-lg uppercase tracking-widest mb-2 shadow-sm">
                                                 {new Date(parseEventDate(pastEvent.date)).getFullYear()}
                                             </div>
-                                            <CardTitle className="text-2xl font-black leading-none mb-1 group-hover:text-primary transition-colors">{pastEvent.title}</CardTitle>
+                                            <CardTitle className="text-2xl font-black leading-none mb-1 transition-colors">{pastEvent.title}</CardTitle>
                                             <p className="text-gray-500 text-base font-bold tracking-tight">{pastEvent.location}</p>
                                         </div>
 
@@ -193,20 +279,18 @@ export function EventArchive() {
                                             )}
                                         </div>
 
-                                        <div className="p-8 flex-grow flex flex-col justify-between bg-white">
-                                            <div className="flex gap-4 mb-8">
-                                                {[1, 2, 3].map(i => (
-                                                    <div key={i} className="w-14 h-14 bg-[#F8F9FA] border border-gray-100 rounded-2xl flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90 p-2">
-                                                        <img src={`/assets/Hestia0${i % 2 === 0 ? '2' : '1'}.png`} className="w-full h-full object-contain" alt="partner" />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                            <p className="text-sm text-gray-500 leading-relaxed pt-6 border-t border-gray-100 font-semibold italic">
+                                        <div className="p-8 pb-0 flex-grow flex flex-col justify-between bg-white pt-2">
+                                            <OrgLogoCarousel
+                                                organizationIds={pastEvent.organizationIds}
+                                                organizations={organizations}
+                                                orgLogos={orgLogos}
+                                            />
+                                            <p className="text-sm text-gray-500 leading-relaxed pt-6 border-t border-gray-100 font-semibold italic truncate w-full" title={pastEvent.description}>
                                                 {pastEvent.description}
                                             </p>
                                         </div>
                                     </Card>
-                                </Link>
+                                </div>
                             ))}
                         </div>
                     </div>

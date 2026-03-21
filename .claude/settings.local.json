@@ -11,7 +11,10 @@
       "mcp__plugin_playwright_playwright__browser_run_code",
       "WebFetch(domain:cloudinary.com)",
       "Bash(npx tsc:*)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:www.notion.so)",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_hover"
     ]
   }
 }

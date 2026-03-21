@@ -2,14 +2,14 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "dykeathon-dev",
-      "runtimeExecutable": "bun",
+      "name": "dev",
+      "runtimeExecutable": "npx",
       "runtimeArgs": [
-        "run",
-        "dev"
+        "vite",
+        "--port",
+        "5173"
       ],
-      "port": 5173,
-      "autoPort": true
+      "port": 5173
     }
   ]
 }
