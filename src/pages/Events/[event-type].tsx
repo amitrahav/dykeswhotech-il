@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useContent } from "../../contexts/ContentContext";
 import { parseEventDate } from "../../lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -33,7 +33,10 @@ function OrgLogoCarousel({ organizationIds = [], organizations = [], orgLogos = 
     const currentOrg = organizations?.find((o: any) => o.id === filteredIds[currentPage]);
 
     return (
-        <div className="relative w-full mb-0 overflow-visible flex flex-col items-center">
+        <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full mb-0 overflow-visible flex flex-col items-center"
+        >
             <div className="relative group/carousel w-full flex items-center justify-center">
                 {currentPage > 0 && (
                     <button
@@ -255,17 +258,15 @@ export function EventArchive() {
                         </h2>
                         <p className="text-gray-600 max-w-5xl mb-24 text-xl md:text-2xl font-medium leading-relaxed">
                             No explanations needed: Creating events and meetups where our identity is the default, not something we have to justify or explain.
-                        </p>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                        </p>                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                             {pastEvents.map((pastEvent: any, index: number) => (
-                                <div key={index} className="h-full">
+                                <Link key={index} to={`/events/${eventTypeSlug}/${pastEvent.id}`} className="h-full block">
                                     <Card className="bg-white border-0 text-black overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.1)] rounded-[2.5rem] flex flex-col h-full hover:translate-y-[-12px] transition-all duration-500 group">
                                         <div className="p-8 pb-5 flex flex-col gap-2">
                                             <div className="inline-block w-fit px-3 py-1 bg-[#1DFF87] text-[#293744] text-[12px] font-black rounded-lg uppercase tracking-widest mb-2 shadow-sm">
                                                 {new Date(parseEventDate(pastEvent.date)).getFullYear()}
                                             </div>
-                                            <CardTitle className="text-2xl font-black leading-none mb-1 transition-colors">{pastEvent.title}</CardTitle>
+                                            <CardTitle className="text-2xl font-black leading-none mb-1 group-hover:text-primary transition-colors">{pastEvent.title}</CardTitle>
                                             <p className="text-gray-500 text-base font-bold tracking-tight">{pastEvent.location}</p>
                                         </div>
 
@@ -279,7 +280,7 @@ export function EventArchive() {
                                             )}
                                         </div>
 
-                                        <div className="p-8 pb-0 flex-grow flex flex-col justify-between bg-white pt-2">
+                                        <div className="p-8 pb-6 flex-grow flex flex-col justify-between bg-white pt-2">
                                             <OrgLogoCarousel
                                                 organizationIds={pastEvent.organizationIds}
                                                 organizations={organizations}
@@ -290,7 +291,7 @@ export function EventArchive() {
                                             </p>
                                         </div>
                                     </Card>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
