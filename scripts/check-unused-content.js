@@ -41,7 +41,8 @@ for (const file of jsonFiles) {
         for (const filePath of files) {
             if (filePath.includes('content') || filePath.includes('ContentContext')) continue;
             const fileText = fs.readFileSync(filePath, 'utf-8');
-            if (fileText.includes(key) || fileText.includes(`['${baseKey}']`) || fileText.includes(`["${baseKey}"]`) || fileText.includes(`.${baseKey}`)) {
+            const pattern = new RegExp("\\b" + baseKey + "\\b");
+            if (fileText.includes(key) || pattern.test(fileText)) {
                 isUsed = true;
                 break;
             }
