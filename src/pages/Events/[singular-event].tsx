@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect, useRef, type JSXElementConstructor, type Key, type ReactElement, type ReactNode, type ReactPortal } from "react";
+import { X, ExternalLink } from "lucide-react";
 import { useContent } from "../../contexts/ContentContext";
 import { Button } from "../../components/ui/button";
 import { RegisterModal } from "../../components/RegisterModal";
@@ -85,13 +86,21 @@ export function EventDetail() {
     const { eventType: eventTypeSlug, singularEvent: singularEventSlug } = useParams<{ eventType: string; singularEvent: string }>();
     const { content } = useContent();
     const { events: eventsData } = content;
-    const { events } = eventsData as any;
+    const { events, organizations: allOrganizations = [], projects: allProjects = [] } = eventsData as any;
     const [registerOpen, setRegisterOpen] = useState(false);
 
     // Find the single event from JSON
     const singleEvent = events?.find(
         (e: any) => e.typeId === eventTypeSlug && e.id === singularEventSlug
     );
+
+    // Resolve organizations for this event from root-level lookup
+    const eventOrgs: Organization[] = (singleEvent?.organizationIds ?? []).map((id: string) => {
+        const org = allOrganizations.find((o: any) => o.id === id);
+        if (!org) return null;
+        const projects: OrgProject[] = allProjects.filter((p: any) => p.orgId === id);
+        return { ...org, projects };
+    }).filter(Boolean);
 
     useTallyEmbed(singleEvent?.tallyId);
 
@@ -159,7 +168,7 @@ export function EventDetail() {
                             <img
                                 src={demeterSwag}
                                 alt="Demeter Swag Statue"
-                                className="w-full h-auto object-contain drop-shadow-2xl"
+                                className="w-full h-auto object-contain"
                             />
                         </div>
                     </div>
@@ -191,6 +200,13 @@ export function EventDetail() {
                 </section>
             )}
 
+
+            {/* ═══════════════════════════════════════
+                 ORGANIZATIONS SECTION
+            ═══════════════════════════════════════ */}
+            {eventOrgs.length > 0 && (
+                <OrganizationsSection organizations={eventOrgs} />
+            )}
 
             {/* ═══════════════════════════════════════
                  GALLERY SECTION
@@ -259,7 +275,7 @@ export function EventDetail() {
 
                 {/* Content — padded left to clear the statue on md+ */}
                 <div className="relative z-20 px-6 md:px-12 lg:px-20 py-24 md:py-32">
-                    <div className="max-w-7xl mx-auto md:pl-[22rem] lg:pl-[28rem]">
+                    <div className="max-w-7xl mx-auto md:pl-[22rem] lg:pl-[28rem] min-h-[50vh]">
 
                         <span className="text-xs font-black uppercase tracking-widest text-primary mb-4 block">Results</span>
                         <h2 className="text-4xl md:text-6xl font-telaviv text-[#293744] uppercase leading-tight mb-6">
@@ -362,5 +378,273 @@ function PartnerLogo({ src, name }: { src: string; name: string }) {
             className="h-7 object-contain grayscale opacity-60"
             onError={() => setFailed(true)}
         />
+    );
+}
+
+// ────────────────────────────────────────────────────────────────
+// Types
+// ────────────────────────────────────────────────────────────────
+interface OrgProject {
+    title: string;
+    description: string;
+    links: { title: string; url: string }[];
+    participants: { name: string; linkedin: string }[];
+}
+
+interface Organization {
+    id: string;
+    name: string;
+    logoUrl: string;
+    about: string;
+    website?: string;
+    projects: OrgProject[];
+}
+
+// ────────────────────────────────────────────────────────────────
+// Embed URL helpers
+// ────────────────────────────────────────────────────────────────
+function getEmbedUrl(url: string): string | null {
+    // Google Slides: extract presentation ID and return embed URL
+    const slidesMatch = url.match(/\/presentation\/d\/([a-zA-Z0-9_-]+)/);
+    if (slidesMatch) {
+        return `https://docs.google.com/presentation/d/${slidesMatch[1]}/embed?start=false&loop=false&delayms=5000`;
+    }
+    // Canva: convert view URL to embed URL
+    const canvaMatch = url.match(/canva\.com\/design\/([a-zA-Z0-9_-]+)\/([a-zA-Z0-9_-]+)\//);
+    if (canvaMatch) {
+        return `https://www.canva.com/design/${canvaMatch[1]}/${canvaMatch[2]}/view?embed`;
+    }
+    return null;
+}
+
+// ────────────────────────────────────────────────────────────────
+// Project popup modal
+// ────────────────────────────────────────────────────────────────
+function ParticipantAvatar({ name, linkedin }: { name: string; linkedin?: string }) {
+    const initials = name.trim().split(/\s+/).map(w => w[0]).slice(0, 2).join("").toUpperCase();
+    const colors = ["bg-purple-100 text-purple-700", "bg-pink-100 text-pink-700", "bg-blue-100 text-blue-700",
+        "bg-green-100 text-green-700", "bg-yellow-100 text-yellow-700", "bg-orange-100 text-orange-700"];
+    const color = colors[name.charCodeAt(0) % colors.length];
+    const inner = (
+        <span className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${color}`}>
+            {initials}
+        </span>
+    );
+    if (linkedin) {
+        return (
+            <a href={linkedin} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 text-gray-700 text-sm hover:border-blue-400 hover:text-blue-700 transition-colors"
+                title={name}
+            >
+                {inner}
+                <span>{name}</span>
+                <ExternalLink size={11} className="opacity-50" />
+            </a>
+        );
+    }
+    return (
+        <span className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 text-gray-700 text-sm">
+            {inner}
+            <span>{name}</span>
+        </span>
+    );
+}
+
+function ProjectPopup({ project, org, onClose }: { project: OrgProject; org: Organization; onClose: () => void }) {
+    const [orgLogoFailed, setOrgLogoFailed] = useState(false);
+
+    useEffect(() => {
+        const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+        document.addEventListener("keydown", handler);
+        return () => document.removeEventListener("keydown", handler);
+    }, [onClose]);
+
+    const presentationUrl = project.links?.find(l => l.url)?.url ?? null;
+    const embedUrl = presentationUrl ? getEmbedUrl(presentationUrl) : null;
+    const hasParticipants = project.participants?.some(p => p.name);
+
+    return (
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 py-6"
+            onClick={onClose}
+        >
+            <div
+                className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative flex flex-col"
+                onClick={(e) => e.stopPropagation()}
+            >
+                {/* ── Header: org + project name ── */}
+                <div className="flex items-start justify-between p-6 pb-4 border-b border-gray-100">
+                    <div className="flex items-center gap-4 min-w-0">
+                        {/* Org logo → links to website */}
+                        {org.website ? (
+                            <a href={org.website} target="_blank" rel="noopener noreferrer"
+                                className="flex-shrink-0 hover:opacity-80 transition-opacity"
+                                title={org.name}
+                            >
+                                {org.logoUrl && !orgLogoFailed ? (
+                                    <img src={org.logoUrl} alt={org.name} onError={() => setOrgLogoFailed(true)}
+                                        className="h-10 max-w-[80px] object-contain" />
+                                ) : (
+                                    <span className="text-sm font-bold text-gray-600">{org.name}</span>
+                                )}
+                            </a>
+                        ) : (
+                            <div className="flex-shrink-0">
+                                {org.logoUrl && !orgLogoFailed ? (
+                                    <img src={org.logoUrl} alt={org.name} onError={() => setOrgLogoFailed(true)}
+                                        className="h-10 max-w-[80px] object-contain" />
+                                ) : (
+                                    <span className="text-sm font-bold text-gray-600">{org.name}</span>
+                                )}
+                            </div>
+                        )}
+                        <div className="min-w-0">
+                            <div className="text-xs text-gray-400 font-medium mb-0.5 truncate">{org.name}</div>
+                            <h3 className="text-xl font-telaviv text-[#293744] uppercase leading-tight">{project.title}</h3>
+                        </div>
+                    </div>
+                    <button onClick={onClose} aria-label="Close"
+                        className="text-gray-400 hover:text-gray-700 transition-colors ml-4 mt-1 flex-shrink-0">
+                        <X size={20} />
+                    </button>
+                </div>
+
+                {/* ── Embedded presentation ── */}
+                {embedUrl && (
+                    <div className="w-full bg-gray-100" style={{ aspectRatio: "16/9" }}>
+                        <iframe src={embedUrl} className="w-full h-full" allowFullScreen
+                            title={project.title} allow="autoplay" />
+                    </div>
+                )}
+
+                {/* ── Body ── */}
+                <div className="p-6 space-y-5">
+                    {project.description && (
+                        <p className="text-gray-600 font-poppins text-sm leading-relaxed">{project.description}</p>
+                    )}
+
+                    {presentationUrl && !embedUrl && (
+                        <a href={presentationUrl} target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-sm font-medium text-[#293744] hover:underline">
+                            View presentation <ExternalLink size={13} />
+                        </a>
+                    )}
+
+                    {hasParticipants && (
+                        <div>
+                            <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Team</div>
+                            <div className="flex flex-wrap gap-2">
+                                {project.participants.filter(p => p.name).map((p, i) => (
+                                    <ParticipantAvatar key={i} name={p.name} linkedin={p.linkedin} />
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+// ────────────────────────────────────────────────────────────────
+// Single org card with tooltip
+// ────────────────────────────────────────────────────────────────
+function OrgCard({ org }: { org: Organization }) {
+    const [tooltipVisible, setTooltipVisible] = useState(false);
+    const [activeProject, setActiveProject] = useState<OrgProject | null>(null);
+    const [imgFailed, setImgFailed] = useState(false);
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    return (
+        <>
+            <div
+                ref={cardRef}
+                className="relative flex flex-col items-center"
+                onMouseEnter={() => setTooltipVisible(true)}
+                onMouseLeave={() => setTooltipVisible(false)}
+            >
+                {/* Logo / name */}
+                <div className="flex items-center justify-center h-12 px-2 cursor-default">
+                    {org.logoUrl && !imgFailed ? (
+                        <img
+                            src={org.logoUrl}
+                            alt={org.name}
+                            className="h-24 max-h-[70px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+                            onError={() => setImgFailed(true)}
+                        />
+                    ) : (
+                        <span className="text-sm font-bold text-gray-500 tracking-tight hover:text-gray-800 transition-colors">{org.name}</span>
+                    )}
+                </div>
+
+                {/* Tooltip */}
+                {tooltipVisible && (
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 p-4 z-30 pointer-events-auto"
+                        onMouseEnter={() => setTooltipVisible(true)}
+                        onMouseLeave={() => setTooltipVisible(false)}
+                    >
+                        {/* Arrow */}
+                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-r border-b border-gray-100 rotate-45" />
+
+                        <div className="text-xs font-black uppercase tracking-widest text-gray-400 mb-1">{org.name}</div>
+                        {org.about && (
+                            <p className="text-gray-600 text-xs leading-relaxed mb-3">{org.about}</p>
+                        )}
+
+                        {org.projects && org.projects.length > 0 && (
+                            <div>
+                                <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1.5">Projects</div>
+                                <ul className="space-y-1">
+                                    {org.projects.map((project, i) => (
+                                        <li key={i}>
+                                            <button
+                                                onClick={() => setActiveProject(project)}
+                                                className="text-sm text-[#293744] font-medium hover:text-purple-600 hover:underline text-left transition-colors w-full"
+                                            >
+                                                → {project.title}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+
+                        {org.website && (
+                            <a
+                                href={org.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 mt-3 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+                            >
+                                Visit website <ExternalLink size={10} />
+                            </a>
+                        )}
+                    </div>
+                )}
+            </div>
+
+            {activeProject && (
+                <ProjectPopup
+                    project={activeProject}
+                    org={org}
+                    onClose={() => setActiveProject(null)}
+                />
+            )}
+        </>
+    );
+}
+
+// ────────────────────────────────────────────────────────────────
+// Organizations section
+// ────────────────────────────────────────────────────────────────
+function OrganizationsSection({ organizations }: { organizations: Organization[] }) {
+    return (
+        <section className="relative z-10 py-10">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex flex-wrap justify-center items-center gap-x-12 gap-y-4">
+                {organizations.map((org) => (
+                    <OrgCard key={org.id} org={org} />
+                ))}
+            </div>
+        </section>
     );
 }

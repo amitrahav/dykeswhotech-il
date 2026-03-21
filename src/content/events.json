@@ -63,67 +63,7 @@
             "tallyId": "xXrRG5",
             "notionUrl": "https://www.notion.so/9114484e1b67414c90e1895d26262234",
             "registrationOpen": true,
-            "program": [],
-            "organizations": [
-                {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
-                },
-                {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
-                },
-                {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
-                },
-                {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
-                },
-                {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
-                },
-                {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
-                },
-                {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
-                },
-                {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
-                },
-                {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
-                },
-                {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
-                },
-                {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
-                },
-                {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
-                },
-                {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
-                },
-                {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
-                }
-            ]
+            "program": []
         },
         {
             "id": "2025",
@@ -143,85 +83,17 @@
             ],
             "program": [],
             "registrationOpen": false,
-            "outcomes": [
-                {
-                    "links": [
-                        {
-                            "title": "",
-                            "url": ""
-                        }
-                    ],
-                    "participants": [
-                        {
-                            "name": "",
-                            "linkedin": ""
-                        }
-                    ],
-                    "organization": "הרשות לחוסן",
-                    "description": "",
-                    "title": "UnityLens",
-                    "winning": 3
-                }
-            ],
-            "organizations": [
-                {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
-                },
-                {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
-                },
-                {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
-                },
-                {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
-                },
-                {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
-                },
-                {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
-                },
-                {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
-                },
-                {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
-                },
-                {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
-                },
-                {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
-                },
-                {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
-                },
-                {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
-                },
-                {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
-                },
-                {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
-                }
+            "organizationIds": [
+                "בת-קול",
+                "פרוייקט-מנהיגות-גאה",
+                "הרשות-לחוסן",
+                "פרוייקט-גילה",
+                "ישראל-2050",
+                "תהלה",
+                "עמותת-אותות",
+                "lgbtq-tlv-center",
+                "תוצרת-הארץ",
+                "מחלקת-בטחון-קהילתי-שדרות"
             ]
         },
         {
@@ -233,67 +105,7 @@
             "location": "Tel Aviv",
             "image": "/assets/Hestia02.png",
             "description": "",
-            "galleryTag": "drink-n-dyke-fuckups-2025",
-            "organizations": [
-                {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
-                },
-                {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
-                },
-                {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
-                },
-                {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
-                },
-                {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
-                },
-                {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
-                },
-                {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
-                },
-                {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
-                },
-                {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
-                },
-                {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
-                },
-                {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
-                },
-                {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
-                },
-                {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
-                },
-                {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
-                }
-            ]
+            "galleryTag": "drink-n-dyke-fuckups-2025"
         },
         {
             "id": "psycho-tech-meetup-2024",
@@ -332,67 +144,7 @@
                     "description": "Connect, collaborate, and keep the conversation going."
                 }
             ],
-            "registrationOpen": false,
-            "organizations": [
-                {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
-                },
-                {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
-                },
-                {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
-                },
-                {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
-                },
-                {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
-                },
-                {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
-                },
-                {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
-                },
-                {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
-                },
-                {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
-                },
-                {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
-                },
-                {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
-                },
-                {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
-                },
-                {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
-                },
-                {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
-                }
-            ]
+            "registrationOpen": false
         },
         {
             "id": "2024",
@@ -412,71 +164,19 @@
             ],
             "program": [],
             "registrationOpen": false,
-            "organizations": [
-                {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
-                },
-                {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
-                },
-                {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
-                },
-                {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
-                },
-                {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
-                },
-                {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
-                },
-                {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
-                },
-                {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
-                },
-                {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
-                },
-                {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
-                },
-                {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
-                },
-                {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
-                },
-                {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
-                },
-                {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
-                }
+            "organizationIds": [
+                "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+                "lgbtq-tlv-center",
+                "beit-el-meem",
+                "מחלקת-בטחון-קהילתי-שדרות",
+                "האגודה-למען-הלהט-ב-בישראל",
+                "עמותת-זיכרון-710"
             ]
         },
         {
-            "id": "hanukkah-2023",
+            "id": "women-innovation-at-war-2023",
             "typeId": "meetups",
-            "title": "Hanukkah Meetup",
+            "title": "Women Innovation at War",
             "date": "13/12/2023",
             "location": "Pagaya Office",
             "address": "Tel Aviv",
@@ -510,67 +210,7 @@
                     "description": "Mingle, connect, and eat sufganiyot. Happy Hanukkah."
                 }
             ],
-            "registrationOpen": false,
-            "organizations": [
-                {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
-                },
-                {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
-                },
-                {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
-                },
-                {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
-                },
-                {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
-                },
-                {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
-                },
-                {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
-                },
-                {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
-                },
-                {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
-                },
-                {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
-                },
-                {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
-                },
-                {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
-                },
-                {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
-                },
-                {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
-                }
-            ]
+            "registrationOpen": false
         },
         {
             "id": "2023",
@@ -626,65 +266,15 @@
                 }
             ],
             "registrationOpen": false,
-            "organizations": [
-                {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
-                },
-                {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
-                },
-                {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
-                },
-                {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
-                },
-                {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
-                },
-                {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
-                },
-                {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
-                },
-                {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
-                },
-                {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
-                },
-                {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
-                },
-                {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
-                },
-                {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
-                },
-                {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
-                },
-                {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
-                }
+            "organizationIds": [
+                "פרוייקט-גילה",
+                "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+                "hoshen",
+                "lgbtech-ltd",
+                "lgbtq-tlv-center",
+                "beit-el-meem",
+                "האגודה-למען-הלהט-ב-בישראל",
+                "מעברים"
             ]
         },
         {
@@ -745,65 +335,3242 @@
                     "description": "The celebration continues until 02:00."
                 }
             ],
-            "registrationOpen": false,
-            "organizations": [
+            "registrationOpen": false
+        }
+    ],
+    "organizations": [
+        {
+            "id": "בת-קול",
+            "name": "בת קול",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/65cc0640-70f2-4222-b0dc-4036d8c90c24/bat-kol.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=b7b49a109b60c5de0a8b6560f033679d756f40a33b72f86e724e4bb1657e3beb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "ארגון לנשים דתיות גאות, המעניק מרחב בטוח לשיחות על אמונה, מגדר ונטייה מינית, ומאחד נשים מהקשת הלסבית, ביסקסואלית וטרנסית שומרות מסורת.",
+            "website": "https://www.bat-kol.org/",
+            "events": [
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "פרוייקט-מנהיגות-גאה",
+            "name": "פרוייקט מנהיגות גאה",
+            "logoUrl": "",
+            "about": "",
+            "website": "",
+            "events": [
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "הרשות-לחוסן",
+            "name": "הרשות לחוסן",
+            "logoUrl": "",
+            "about": "",
+            "website": "",
+            "events": [
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "פרוייקט-גילה",
+            "name": "פרוייקט גילה",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/a5786c04-e44e-46ed-ae76-b499e01c8e88/gila-proj.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=1bf5b1eab252066093b30525394811cc8314dfe8deafd2c6023e0ad2037e6c87&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "הארגון הטרנסי הראשון והוותיק ביותר לקידום זכויות והעצמת הקהילה הטרנסית בישראל, שהוקם בשנת 2010 מתוך הקהילה ולמענה",
+            "website": "https://www.gilaproject.org/",
+            "events": [
+                "Dykeathon 2023",
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "name": "האחווה הסטודנטיאלית הגאה - Achva - LGBTI Student's Association in Israel",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/c70d0bc0-d5c0-4d96-b9c3-a3c877e6378b/achva.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=7802573eebc9fa2bd57ce297247817fd2e370f38e47fb106f4d09e7408d4a2aa&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "האחווה הסטודנטיאלית הגאה היא התארגנות סטודנטיאלית להט\\\"בית הפועלת ביותר מ-30 קמפוסים ברחבי הארץ, יוצרת קהילות ומרחבי שייכות, ופועלת למען שינוי חברתי עבור הקהילה הגאה.",
+            "website": "https://www.achvalgbt.org.il/",
+            "events": [
+                "Dykeathon 2023",
+                "Dykeathon 2024"
+            ]
+        },
+        {
+            "id": "hoshen",
+            "name": "Hoshen",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/ea6914f1-6aeb-4bdc-8f70-5a7cad2fc38e/hoshen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=9ce126671aef7adf723f95a64be2d6928bdf888a8e4c490b1f28888484766ecd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "חוש\\\"ן — חינוך ושינוי הוא ארגון החינוך וההסברה של הקהילה הגאה, המוביל מדי שנה מעל 3,000 סדנאות ב-450 בתי ספר, ומגיע ל-100,000 תלמידים ואנשי מקצוע ברחבי ישראל.",
+            "website": "https://www.hoshen.org/",
+            "events": [
+                "Dykeathon 2023"
+            ]
+        },
+        {
+            "id": "ישראל-2050",
+            "name": "ישראל 2050",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/5d6722cc-f57c-4371-8dd8-bf2ce5555922/2050.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=10b9e599c8beff0ba9a242ce2f18f462963efa8aabb1e16d96ffd57a2cdef94e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "ישראל 2050 פועלת לשיפור המציאות הכלכלית-חברתית בישראל על ידי חיזוק ההשפעה האזרחית על המערכת הדמוקרטית, ויוצרת רשת אזרחית שתשנה את מאזן הכוחות לטובת האינטרס הציבורי הרחב.",
+            "website": "https://israel2050.co.il/",
+            "events": [
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "lgbtech-ltd",
+            "name": "LGBTech Ltd.",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/3157ceb8-b14d-4708-9cda-98e14fd9edf6/lgbtwork.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=215c02babfdce61a89aa5c4536b34416cdbf7d9e8a1b39da9d787c7f7e632190&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "LGBT WORK הוא ארגון ללא מטרות רווח מוביל בישראל, המתמחה בקידום גיוון והכללה של קהילת הלהט\\\"ב בשוק העבודה, ופועל ליצירת סביבות עבודה מכילות, שוויוניות ומגוונות.",
+            "website": "https://www.lgbtwork.org/",
+            "events": [
+                "Dykeathon 2023"
+            ]
+        },
+        {
+            "id": "בת-עמי",
+            "name": "בת עמי",
+            "logoUrl": "",
+            "about": "",
+            "website": "https://bat-ami.org.il/",
+            "events": []
+        },
+        {
+            "id": "תהלה",
+            "name": "תהלה",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/09b7d95c-41e0-4ba1-8181-f10ab706c9e9/tehela.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=3e96a214f99519c28efbb2e0bc3584598fbbab621c2a1562b969aaee666523f4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "עמותת תהל\"ה תומכת בהורים ובבני משפחה של לסביות, הומוסקסואלים, א.נשים על הקשת הטרנסית וביסקסואלים, דרך קו הקשב הטלפוני וקבוצות תמיכה.",
+            "website": "https://www.tehila.org.il/",
+            "events": [
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "עמותת-אותות",
+            "name": "עמותת אותות",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/60a9054d-9406-46ce-8f11-012299a511ff/otot.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=f8a1e6954cc9eb4cb18680322ad12a78a69652a1d2b5b30accf66b823a9308e9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "בית חם למעל 1,500 בני נוער במצבי סיכון ומשבר מידי שנה, עם דלת פתוחה וטיפול רגיש תרבות לכלל החברה הישראלית.",
+            "website": "https://otot.org/",
+            "events": [
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "lgbtq-tlv-center",
+            "name": "LGBTQ TLV center",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/941819f5-7191-498a-85aa-0d316c005071/lgbt-center.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=c85f78e9c1040d73b8ce53177c64c9ada97ed813b1f05a828dec131cdc00725a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "המרכז הגאה בתל אביב מציע מגוון רחב של שירותים לקהילה הלהט\\\"ב: תרבות ואירועים, חוגים וקורסים, מרכז למשפחה, קבוצות חברתיות ומענה קהילתי הכולל טיפול, עזרה סוציאלית ומיצוי זכויות.",
+            "website": "https://lgbtqcenter.org.il/",
+            "events": [
+                "Dykeathon 2023",
+                "Dykeathon 2024",
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "תוצרת-הארץ",
+            "name": "תוצרת הארץ",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/302b7bb0-e7c6-4228-8ef7-c6f425c5a35b/tozeret.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=2e380c2888db6432d8c3f3856e89bd34a868cb7302bf87a356bee1829519d257&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "תוצרת הארץ היא תנועת קהילות הצעירים של ישראל, המאמינה שחיים קהילתיים הם הדרך לשיקום ולחיזוק החברה הישראלית, ומקימה קהילות משימתיות ברחבי הארץ כבר למעלה מ-13 שנים.",
+            "website": "https://www.tozerethaarez.org.il/",
+            "events": [
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "beit-el-meem",
+            "name": "Beit El-Meem",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/ce5151a0-b07f-448d-ae0c-4702e5223a9b/beit-el-meem.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=f860533f0c844c028d0a3370a100593c4aa9637e95a0863d8ae6c77a465c569b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "Beit El-Meem is an open home for all sexual and gender identities, supporting and fighting against the oppression of the Arab LGBTQ+ community, offering a support line, legal services, and psychological and social support.",
+            "website": "https://www.beitelmeem.org.il",
+            "events": [
+                "Dykeathon 2023",
+                "Dykeathon 2024"
+            ]
+        },
+        {
+            "id": "מחלקת-בטחון-קהילתי-שדרות",
+            "name": "מחלקת בטחון קהילתי שדרות",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/932ec5ec-23a8-4a7b-b75d-819d9e9f9c57/sderot.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=14df82f801fc846596324c00f495479e5d5380207491e5dfc6d3acc12cbaa9e8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "",
+            "website": "",
+            "events": [
+                "Dykeathon 2024",
+                "Dykeathon 2025"
+            ]
+        },
+        {
+            "id": "מכללת-מרשה",
+            "name": "מכללת מרשה",
+            "logoUrl": "",
+            "about": "",
+            "website": "https://www.marshacollege.org.il/",
+            "events": []
+        },
+        {
+            "id": "האגודה-למען-הלהט-ב-בישראל",
+            "name": "האגודה למען הלהט\"ב בישראל",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/4852b04f-4ec6-40a7-b97c-71903086691a/aguda.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=9a3f346ab6861832c6f1f002ae71d08a8d1ecbbc223b126871b51b75a772a917&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "האגודה למען הלהט\"ב בישראל היא ארגון ארצי חלוצי המוביל את מאבקה הציבורי של הקהילה הגאה לזכויות, מלווה קהילות גאות מקומיות ברחבי הארץ, ומספק מענה לכל להט\"ב בכל צורך שהוא.",
+            "website": "https://www.lgbt.org.il/",
+            "events": [
+                "Dykeathon 2023",
+                "Dykeathon 2024"
+            ]
+        },
+        {
+            "id": "מעברים",
+            "name": "מעברים",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/815bdf02-52d2-43d5-a83e-1733b3622d27/maavarim.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=056418a2cd41c76c45fd2dd03d8b56e9375ce723367606d141e2ec02077a450f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "ארגון מעברים לקשת הטרנסית הוא מרכז הידע הטרנסי הגדול בישראל, הפועל להעצמת הקשת הטרנסית באמצעות ידע ומשאבים, ומנגיש מידע קריטי לאנשים על הקשת הטרנסית, לבני משפחתם ולאנשי מקצוע.",
+            "website": "https://www.maavarim.org/",
+            "events": [
+                "Dykeathon 2023"
+            ]
+        },
+        {
+            "id": "מטה-ההסברה",
+            "name": "מטה ההסברה",
+            "logoUrl": "",
+            "about": "",
+            "website": "https://www.israelispirit.org/",
+            "events": []
+        },
+        {
+            "id": "עמותת-זיכרון-710",
+            "name": "עמותת זיכרון 710",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/c2de07fb-2f90-4251-8e4d-c4e19dd6b03d/710.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=dd488642d98c2873e5d0b3ceb5f46fba492081610ecbf96e804a7d7d111fad86&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "זיכרון 710 הוקם כדי לאסוף ולשמר עדויות אירועי ה-7 באוקטובר בזמן אמת — הודעות ווטסאפ, תמונות וסרטונים — ולבנות ארכיון חי המספר את הסיפור האישי והקהילתי של אותו יום.",
+            "website": "https://www.710memorial.org/",
+            "events": [
+                "Dykeathon 2024"
+            ]
+        },
+        {
+            "id": "מועצה-איזורית-מבואות-חרמון",
+            "name": "מועצה איזורית מבואות חרמון",
+            "logoUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/5ce02132-bd0b-4c78-846d-7c4be3d7085c/12c56dec-70f0-4dbe-99e7-3621ffa36bd9/hermon.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VXTBR4A4%2F20260321%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260321T145422Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIHeIg6JAPOQGe9UCL7%2BqYCNTllm8MLcDj4n%2BMyThD%2BziAiEAjS2OhtJrKZvK8Yl%2FDtgiYLvYCOeTUAeGC9txDandg7Mq%2FwMIThAAGgw2Mzc0MjMxODM4MDUiDBWrmJ8zAZebkNOZKCrcA0PZxdj%2BdFw1ACUdPH0ofcbkrxuiY%2FmpUYuxCggAfOJFFnwVRIGb0DY%2B5tVlQdujyjcIREsrwcyy14WDwgBen%2BrO2uFbx9ZWO8GwVt2Jpw6jBhTXCgd4diLlCKsRNMA9ueoH81JEbofiMSgg586Dazqzu2RqbZzNOgVzXz9BjoeA4OEdylX68DjyQWzfIEXvzlTUJJ80Ma143oOVGHure3M7tLlL%2BE4HjdH8ow4HMOVIPVoo9dkbxYoopucD9tkyInqknK%2BpYMAA7%2Bb4BJp8%2B0awCnkLcVqZ0JbVf2VEf5kB1nIUYUhwrkyGkzJFSmdi%2Bbg%2FFiAwX28jQSV%2FV3pEbRnkUaOaeA2tjcdwEo9g1qcTQ%2FGKxqn1Qm3BpTf7HNmgPr%2FBO4NXMOHrJB1nPUHgO1mmvbG4%2B6Vef2OD6niAH9am9aFTQrKVhGoKSABsvjS3eEk6fq3KW5Aa9ixkmE1hfKQk1Zicfhvmxy16tArYRf1ziiRQmk7%2F6iyAAz%2BbOqWypE%2BmlSvrhJk0EnwAKqdP5JH6HAgmVsJjuwTCeoWWw4zaR8PtzYB%2FCu2f5Dki%2FpBL3YE3LIqXV36AwIHDVG8ba6s3LbXagFPN0qrQuOU3mQ6mwm5MJBSVpA0R%2BkRWMJ2y%2Bs0GOqUB5AtTh7Yncl4AY73GdzqxQYa2TfZ2sIbM8LVepDTsmV5ckGaj%2FVRPQ0j5%2F4w4g1NAPns19i1OUvU0coSZx2HZb1iDqDTgZ8YooWEZkX1sjJ0d5zEx094ib3hvyWnslA6E%2Fk0aYPHaj%2B5BOflPA%2FKPMqngoeCjkOHvLs38DiK7niT5cDuolWJLIKf1QlYL5l3iK%2BMoZRa7V%2Bb%2Byz154A%2B9dcqU7G3b&X-Amz-Signature=1aa7120d5ee2b60ace520da15e33ba9aa54ec36aa96035203c962901a318660e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+            "about": "",
+            "website": "https://www.mvhr.org.il/",
+            "events": []
+        }
+    ],
+    "projects": [
+        {
+            "id": "2f4949a289bd8008",
+            "orgId": "",
+            "title": "Safety 2",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
                 {
-                    "title": "אותות",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png",
-                    "description": ""
+                    "name": "Reut Sharabani",
+                    "linkedin": ""
                 },
                 {
-                    "title": "UnityLens — הרשות לחוסן",
-                    "description": "Resilience authority org. Platform and tooling work.",
-                    "logo": "https://res.cloudinary.com/dhhveerqs/image/upload/v1774092355/otot_d5v5ik.png"
+                    "name": "Yael Rabinuvitch",
+                    "linkedin": ""
                 },
                 {
-                    "title": "המרכז הגאה — מיגור איידס",
-                    "description": "The Gay Center & AIDS elimination program. Core focus: automation, backend work, LLM integration, or scraping."
+                    "name": "Shiri Gaber",
+                    "linkedin": ""
                 },
                 {
-                    "title": "Monday HQ",
-                    "description": "Monday.com-powered workflows and integrations."
+                    "name": "Sapir",
+                    "linkedin": ""
                 },
                 {
-                    "title": "SportyPride",
-                    "description": "Strong frontend team + 2 fullstack/backend engineers + UX/UI designer."
+                    "name": "Shahar Tsintsenet Gonda",
+                    "linkedin": "https://www.linkedin.com/in/shahar-gonda-14451272"
                 },
                 {
-                    "title": "Project Gila",
-                    "description": "Frontend-heavy team, strong data specialists, researchers, and LLM work."
+                    "name": "Maayan Messica",
+                    "linkedin": "https://www.linkedin.com/in/maayan-messica"
                 },
                 {
-                    "title": "MindMates",
-                    "description": "Large group. Fullstack focus."
+                    "name": "Ori lipstman",
+                    "linkedin": "https://www.linkedin.com/in/ori-lipstman-b2a206186"
                 },
                 {
-                    "title": "בת קול",
-                    "description": "Small group. Automation-focused."
+                    "name": "Rona",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8018",
+            "orgId": "",
+            "title": "Standart.",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": 3,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Lior Pozailov",
+                    "linkedin": "https://www.linkedin.com/in/lior-pozailov-1377a7a4/"
                 },
                 {
-                    "title": "תהלה",
-                    "description": "Medium group. No strong tech background — marketing-oriented, creative tools."
+                    "name": "Shiran Levy",
+                    "linkedin": "https://www.linkedin.com/in/shiranlevy/"
                 },
                 {
-                    "title": "2050",
-                    "description": "Small group. Mainly automation, UX, and WordPress-based work."
+                    "name": "Shiri Gaber",
+                    "linkedin": ""
                 },
                 {
-                    "title": "לסבי-בוט",
-                    "description": "Bot development — building smart tools for the community."
+                    "name": "Vika Benderski",
+                    "linkedin": "https://www.linkedin.com/in/vika-benderski/"
                 },
                 {
-                    "title": "Top Surgery",
-                    "description": "Small group. Designers, junior frontend developers, and automation."
+                    "name": "Shelly Bloch",
+                    "linkedin": "https://www.linkedin.com/in/shelly-bloch"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8039",
+            "orgId": "",
+            "title": "Safety 4",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Shiran Levy",
+                    "linkedin": "https://www.linkedin.com/in/shiranlevy/"
                 },
                 {
-                    "title": "SafeYouth",
-                    "description": "Large group. Backend engineers if available, mostly automation and Monday integrations."
+                    "name": "Danielle Firestone",
+                    "linkedin": "https://www.linkedin.com/in/danielle-firestone/"
                 },
                 {
-                    "title": "תוצרת הארץ",
-                    "description": "Medium group. Relatively junior but strong coders — mainly fullstack, some backend."
+                    "name": "Almog Gal",
+                    "linkedin": "https://www.linkedin.com/in/almog-gal/"
+                },
+                {
+                    "name": "Lior first-rabi",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Paz",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8046",
+            "orgId": "",
+            "title": "Community 4",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Nitzan Tal",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tzlil Swimmer",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Ori Nizri Tal",
+                    "linkedin": "https://www.linkedin.com/in/ori-nizri-tal/"
+                },
+                {
+                    "name": "michal binder",
+                    "linkedin": "https://www.linkedin.com/in/michalb19/"
+                },
+                {
+                    "name": "Limor Shenkar",
+                    "linkedin": "www.linkedin.com/in/limor-shenkar"
+                },
+                {
+                    "name": "May Barzilay",
+                    "linkedin": "https://www.linkedin.com/in/may-barzilay-878b1a235"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8047",
+            "orgId": "",
+            "title": "חוק ומשפט 4",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Patch Epstein",
+                    "linkedin": "Https://linkedin.com/in/patchepstein"
+                },
+                {
+                    "name": "Maayan Tropper-wachtel",
+                    "linkedin": "https://www.linkedin.com/in/ma-ayan-tropper-wachtel"
+                },
+                {
+                    "name": "Roni Zoller",
+                    "linkedin": "https://www.linkedin.com/in/roni-zoller-745941194/"
+                },
+                {
+                    "name": "Aliza Polansky",
+                    "linkedin": "https://www.linkedin.com/in/aliza-polansky-4a2780bb/"
+                },
+                {
+                    "name": "Neta Kirschenbaum",
+                    "linkedin": "https://www.linkedin.com/in/neta-kirschenbaum-b7b61964"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd805a",
+            "orgId": "",
+            "title": "חוק ומשפט 3",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Julia Cooper",
+                    "linkedin": "https://www.linkedin.com/in/julia-cooper-b5314414/"
+                },
+                {
+                    "name": "shiraz grinbaum",
+                    "linkedin": "https://www.linkedin.com/in/shiraz-grinbaum-78a304157/"
+                },
+                {
+                    "name": "Maya Dann",
+                    "linkedin": "www.linkedin.com/in/mayadann"
+                },
+                {
+                    "name": "Shinan Loubaton",
+                    "linkedin": "https://www.linkedin.com/"
+                },
+                {
+                    "name": "Shira dakar",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8065",
+            "orgId": "",
+            "title": "חוק ומשפט 1",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Hadar Kleinman",
+                    "linkedin": "https://www.linkedin.com/in/hadar-kleinman"
+                },
+                {
+                    "name": "Noa Cohen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Noam Gur",
+                    "linkedin": "https://www.linkedin.com/in/noam-gur"
+                },
+                {
+                    "name": "Lior Erenreich",
+                    "linkedin": "https://www.linkedin.com/in/lior-erenreich?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Shani Armon",
+                    "linkedin": "www.linkedin.com/in/shani-armon-808586117"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd806b",
+            "orgId": "",
+            "title": "LGBTQute",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "michael gilat",
+                    "linkedin": "https://www.linkedin.com/in/michael-gilat-65822a227/"
+                },
+                {
+                    "name": "Yddo loker",
+                    "linkedin": "https://www.linkedin.com/in/yddoloker"
+                },
+                {
+                    "name": "Noy Pearl",
+                    "linkedin": "https://www.linkedin.com/in/noy-pearl-419812188"
+                },
+                {
+                    "name": "Revital Zilonka",
+                    "linkedin": "LinkedIn.com/Revitalzilonka"
+                },
+                {
+                    "name": "Liron Yanay",
+                    "linkedin": "https://www.linkedin.com/in/liron-yanay-060374150/"
+                },
+                {
+                    "name": "Etty Haddad",
+                    "linkedin": "https://www.linkedin.com/in/ettyhaddad/"
+                },
+                {
+                    "name": "Liliane Assous",
+                    "linkedin": "https://www.linkedin.com/in/liliane-assous"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8074",
+            "orgId": "",
+            "title": "Speak out",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Noa Cohen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Dana Sultan",
+                    "linkedin": ""
+                },
+                {
+                    "name": "oren meiron",
+                    "linkedin": "https://www.linkedin.com/in/oren-meiron-1222b7140/"
+                },
+                {
+                    "name": "Shlomtzion Sherki",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd807b",
+            "orgId": "",
+            "title": "חוק ומשפט 2",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "noa even",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Hila Shapira",
+                    "linkedin": "https://www.linkedin.com/in/hila-shapira/"
+                },
+                {
+                    "name": "maya sagi",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Daria Yoeli",
+                    "linkedin": "https://www.linkedin.com/in/daria-yoeli-748875156/"
+                },
+                {
+                    "name": "Shlomit shemesh",
+                    "linkedin": "https://www.linkedin.com/in/shlomit-shemesh-aa3623173"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8086",
+            "orgId": "",
+            "title": "?",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Maya Rotbaum",
+                    "linkedin": "https://www.linkedin.com/in/mayarotbaum"
+                },
+                {
+                    "name": "Tal Ragouan",
+                    "linkedin": "https://www.linkedin.com/in/tal-rajwan"
+                },
+                {
+                    "name": "Shiraz",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yuval Poliak",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yael Afriat",
+                    "linkedin": "https://www.linkedin.com/in/yaelafriat/"
+                },
+                {
+                    "name": "Danel Arditi",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd8099",
+            "orgId": "",
+            "title": "Health 2",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Adi Klinger",
+                    "linkedin": "https://www.linkedin.com/in/adi-klinger"
+                },
+                {
+                    "name": "Noam Harel",
+                    "linkedin": "https://www.linkedin.com/in/noam-harel-532642218/"
+                },
+                {
+                    "name": "Nitsan Hasson",
+                    "linkedin": "https://www.linkedin.com/in/nitsan-hasson"
+                },
+                {
+                    "name": "Claudia Palierne",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Elin Greenberg",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd80c6",
+            "orgId": "",
+            "title": "BigSister",
+            "description": "",
+            "presentationUrl": "https://docs.google.com/presentation/d/15fmOfcmHDUH1KzgYf-ITlwmLkXZJeyYb/edit?usp=sharing&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": 2,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/15fmOfcmHDUH1KzgYf-ITlwmLkXZJeyYb/edit?usp=sharing&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Noa Shay",
+                    "linkedin": "https://www.linkedin.com/in/noa-shay-1750b0173"
+                },
+                {
+                    "name": "Neta Rot",
+                    "linkedin": "https://www.linkedin.com/in/neta-rot/"
+                },
+                {
+                    "name": "Maya Valentine",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Noa Dagan",
+                    "linkedin": "www.linkedin.com/in/noa-dagan-2005411a0"
+                },
+                {
+                    "name": "Noga Rosenberg",
+                    "linkedin": "https://www.linkedin.com/in/the-noga-rosenberg/"
+                },
+                {
+                    "name": "Yael Afriat",
+                    "linkedin": "https://www.linkedin.com/in/yaelafriat/"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd80da",
+            "orgId": "",
+            "title": "Avatar",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": 1,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Yakubov Inna",
+                    "linkedin": "https://www.linkedin.com/in/inna-yakubov"
+                },
+                {
+                    "name": "Maya Elazar",
+                    "linkedin": "https://www.linkedin.com/in/maya-elazar"
+                },
+                {
+                    "name": "Shoval Sadde",
+                    "linkedin": "https://www.linkedin.com/in/shoval-sadde-5575b91a/"
+                },
+                {
+                    "name": "Petel choen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Rotem Meyers",
+                    "linkedin": "https://www.linkedin.com/in/rotemmeyers/"
+                }
+            ]
+        },
+        {
+            "id": "2f4949a289bd80ea",
+            "orgId": "",
+            "title": "Health 4",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Iris Daitzchman",
+                    "linkedin": "https://www.linkedin.com/in/iris-daitzchman/"
+                },
+                {
+                    "name": "Tulie Amichal",
+                    "linkedin": "www.linkedin.com/in/tulie"
+                },
+                {
+                    "name": "Marina Brodsky",
+                    "linkedin": "https://www.linkedin.com/in/marina-brodsky-713b22195"
+                },
+                {
+                    "name": "Ella Avivi",
+                    "linkedin": "linkedin.com/in/ellaavivi/"
+                },
+                {
+                    "name": "Efrat Gabay",
+                    "linkedin": "https://www.linkedin.com/in/efrat-gabay-903728a0"
+                },
+                {
+                    "name": "Yuvi Cohen",
+                    "linkedin": "https://www.linkedin.com/in/yuvi-cohen/"
+                },
+                {
+                    "name": "Ronit Schloss",
+                    "linkedin": "https://www.linkedin.com/in/ronitschloss/"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8105",
+            "orgId": "lgbtq-tlv-center",
+            "title": "Events on a map",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Roni Zoller",
+                    "linkedin": "https://il.linkedin.com/in/roni-zoller-745941194"
+                },
+                {
+                    "name": "Reut Gabbay",
+                    "linkedin": "http://linkedin.com/in/reut-gabbay-b16271a1"
+                },
+                {
+                    "name": "Lior Dor",
+                    "linkedin": "https://www.linkedin.com/in/lior-dor"
+                },
+                {
+                    "name": "Daniel Yosef",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yddo Loker",
+                    "linkedin": "https://www.linkedin.com/in/yddoloker"
+                },
+                {
+                    "name": "Dana Katz Buchshtav",
+                    "linkedin": "https://www.linkedin.com/in/dkbuchshtav/"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8106",
+            "orgId": "פרוייקט-גילה",
+            "title": "Project Gila",
+            "description": "Effortless Allyship Against Transphobia Transphobic hate and misinformation are increasing online. 76% of trans respondents to a 2023 survey experienced online harassment in their lifetimes - the highest of any demographic surveyed.",
+            "presentationUrl": "https://docs.google.com/presentation/d/1TuCEiwhlEDSjuPC-TPvGibj2oyQ7qA-QjT82zh9tBRk/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1TuCEiwhlEDSjuPC-TPvGibj2oyQ7qA-QjT82zh9tBRk/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Lital Micher",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Inbal Bolshinsky",
+                    "linkedin": "https://www.linkedin.com/in/inbal-bolshinsky-software-developer"
+                },
+                {
+                    "name": "Dafna Assaf",
+                    "linkedin": "https://www.linkedin.com/in/dafna-assaf"
+                },
+                {
+                    "name": "Maya Elazar",
+                    "linkedin": "https://www.linkedin.com/in/maya-elazar"
+                },
+                {
+                    "name": "Liri Sokol",
+                    "linkedin": "https://www.linkedin.com/in/liri-sokol/"
+                },
+                {
+                    "name": "Becca Goffen",
+                    "linkedin": "https://www.linkedin.com/in/rebecca-emmetts"
+                },
+                {
+                    "name": "Masha Maller",
+                    "linkedin": "https://www.linkedin.com/in/masha-maller-17796799"
+                },
+                {
+                    "name": "Tair Tahar",
+                    "linkedin": "https://www.linkedin.com/in/tair-tahar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "שרי בליך",
+                    "linkedin": "www.linkedin.com/in/shery-blich"
+                },
+                {
+                    "name": "Daya Matok Gawi",
+                    "linkedin": "https://www.linkedin.com/in/dayamg/"
+                },
+                {
+                    "name": "Mor Oren",
+                    "linkedin": "www.linkedin.com/in/mor-oren"
+                },
+                {
+                    "name": "Gal Glaser",
+                    "linkedin": "https://www.linkedin.com/in/gal-glaser-184b58312/"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8111",
+            "orgId": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "title": "Achva - A&I - analytics and insights",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Lilach",
+                    "linkedin": "https://www.linkedin.com/in/lilach-david-938985ba"
+                },
+                {
+                    "name": "Hilla Shahrabani",
+                    "linkedin": "https://www.linkedin.com/in/hillash/"
+                },
+                {
+                    "name": "Johana",
+                    "linkedin": "https://il.linkedin.com/in/johanna-shalom-8a7a3a46"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8120",
+            "orgId": "beit-el-meem",
+            "title": "2FA Protected Site",
+            "description": "בית אל-מים  بيت الميم משתמשים נוכחיים סה\"כ כ- 1000 משתתפים.ות ב2022",
+            "presentationUrl": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": 1,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "areen matanes",
+                    "linkedin": "https://www.linkedin.com/in/areen-matanes-16549a191/"
+                },
+                {
+                    "name": "Shinan Loubaton",
+                    "linkedin": "https://www.linkedin.com/"
+                },
+                {
+                    "name": "Lior Dor",
+                    "linkedin": "https://www.linkedin.com/in/lior-dor"
+                },
+                {
+                    "name": "Liron Shalish",
+                    "linkedin": "https://il.linkedin.com/in/liron-shalish"
+                },
+                {
+                    "name": "Sharon Diskin",
+                    "linkedin": "https://linkedin.com/sharondiskin"
+                },
+                {
+                    "name": "Sofia",
+                    "linkedin": "https://www.linkedin.com/in/sofia-kosel-22a10059"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd812e",
+            "orgId": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "title": "Achva - Drive wizard",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": 2,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Lilach",
+                    "linkedin": "https://www.linkedin.com/in/lilach-david-938985ba"
+                },
+                {
+                    "name": "Hilla Shahrabani",
+                    "linkedin": "https://www.linkedin.com/in/hillash/"
+                },
+                {
+                    "name": "Johana",
+                    "linkedin": "https://il.linkedin.com/in/johanna-shalom-8a7a3a46"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8131",
+            "orgId": "מעברים",
+            "title": "Transphobic profile suggestions system",
+            "description": "מעברים לקשת הטרנסית קמה ב-2014 מתוך הצורך הבוער לארגון שייצג אנשים על הקשת הטרנסית מול מוסדות המדינה, הממסד הרפואי והחברה הכללית. הארגון הוקם בעקבות צורך לסייע לאנשים טרנסים לנווט בחברה סיסג'נדרית ולגשת למשאבים שלא מותאמים אלינו, והצורך להשמיע קול טרנסי סביב שולחנות קבלת החלטות שמשפיעות עלינו Hate…",
+            "presentationUrl": "https://docs.google.com/presentation/d/1FaFsmCa509oOckKywo7nMkbFvFoNU1m-DaDwl0bdiKg/edit?usp=drive_link",
+            "winningPlace": 2,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1FaFsmCa509oOckKywo7nMkbFvFoNU1m-DaDwl0bdiKg/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Gil",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tamar Kalir",
+                    "linkedin": "https://www.linkedin.com/in/tamar-kalir/"
+                },
+                {
+                    "name": "Hila",
+                    "linkedin": "https://www.linkedin.com/in/hila-gannot-57062a8b"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd813c",
+            "orgId": "מחלקת-בטחון-קהילתי-שדרות",
+            "title": "SafeYouth",
+            "description": "נתקלת באלימות? חווית אירוע לא נעים? עם אילו אתגרים בחרנו להתמודד? אלימות גואה בקרב בני הנוער בעיר (בעיקר שכבות ח׳)",
+            "presentationUrl": "https://docs.google.com/presentation/d/10vOaVgFtgVE9SnEhGvs4QhINcAQ_CQHQJXsQynpivjQ/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/10vOaVgFtgVE9SnEhGvs4QhINcAQ_CQHQJXsQynpivjQ/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "eden gur arie",
+                    "linkedin": "https://www.linkedin.com/in/eden-gur-arie-2334a022a"
+                },
+                {
+                    "name": "Gal Yishlach",
+                    "linkedin": "https://www.linkedin.com/in/gya-ish-b5b463a0"
+                },
+                {
+                    "name": "Meshi Hazan",
+                    "linkedin": "https://www.linkedin.com/in/meshi-hazan-306a921a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Bracha Barad",
+                    "linkedin": "https://www.linkedin.com/in/b-barad-data-analyst"
+                },
+                {
+                    "name": "Noa Macy",
+                    "linkedin": "https://www.linkedin.com/in/noa-macy"
+                },
+                {
+                    "name": "Inbar Didi",
+                    "linkedin": "https://www.linkedin.com/in/inbar-didi-950745171"
+                },
+                {
+                    "name": "Inbal rokah",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Pe'er Vered",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Ann Baram",
+                    "linkedin": "www.linkedin.com/in/ann-baram-ph-d-a298b718"
+                },
+                {
+                    "name": "Noa Halaly",
+                    "linkedin": "https://www.linkedin.com/in/noahalaly"
+                },
+                {
+                    "name": "Amit Horovitz",
+                    "linkedin": "https://www.linkedin.com/in/amit-horovitz-785a68220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Shani Armon",
+                    "linkedin": "www.linkedin.com/in/shani-armon-808586117"
+                },
+                {
+                    "name": "Yonat Ben-Ozer",
+                    "linkedin": "https://www.linkedin.com/in/yonat-ben-ozer"
+                },
+                {
+                    "name": "Tamar Hershenbaum",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
+                },
+                {
+                    "name": "Masha Robeen",
+                    "linkedin": "https://www.linkedin.com/in/masharobeen/"
+                },
+                {
+                    "name": "Chagit edri",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yamit Kaduri",
+                    "linkedin": "https://www.linkedin.com/in/yamit-kaduri"
+                },
+                {
+                    "name": "Olga Obodovskaya",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8141",
+            "orgId": "",
+            "title": "MindMates",
+            "description": "Your mind’s best mate What do you do when you feel...? Digital companion offers emotional, social, and practical support anytime & anywhere.",
+            "presentationUrl": "https://docs.google.com/presentation/d/13-i1dxUONrh7UexRr53ri75wxsXDbJtTBezmTfBRstk/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/13-i1dxUONrh7UexRr53ri75wxsXDbJtTBezmTfBRstk/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Kim Kestenboum",
+                    "linkedin": "https://www.linkedin.com/in/kim-kestenboum"
+                },
+                {
+                    "name": "Noa Twito",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tamar Gilinski",
+                    "linkedin": "https://www.linkedin.com/in/tamar-gilin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Danielle Akiva",
+                    "linkedin": "https://www.linkedin.com/in/avivdaniel/"
+                },
+                {
+                    "name": "רותם מילשטיין",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Almog",
+                    "linkedin": "http://linkedin.com/in/almog-gal"
+                },
+                {
+                    "name": "Hadar Mizrachi",
+                    "linkedin": "https://www.linkedin.com/in/hadar-mizr"
+                },
+                {
+                    "name": "Lilly Habashi",
+                    "linkedin": "linkedin.com/in/icecoldlilly"
+                },
+                {
+                    "name": "Arin Bitton",
+                    "linkedin": "https://www.linkedin.com/in/arin-bitton-267286132?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Hadar Bar Noy",
+                    "linkedin": ""
+                },
+                {
+                    "name": "נוייה בן יקר",
+                    "linkedin": "https://www.linkedin.com/in/noya-ben-yakar-329114160/"
+                },
+                {
+                    "name": "Mor Hananovitz",
+                    "linkedin": "https://www.linkedin.com/in/mor-hananovitz?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Rita Kagan",
+                    "linkedin": "https://www.linkedin.com/in/ritach-k/"
+                },
+                {
+                    "name": "Gai Shabtay",
+                    "linkedin": "https://www.linkedin.com/in/gai-shabtay-ba712217a/"
+                },
+                {
+                    "name": "Sharon Rosen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shaked Dunsky",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd814b",
+            "orgId": "lgbtq-tlv-center",
+            "title": "Increase events relevancy",
+            "description": "LGBTQ+ Center of TLV (Roni , Reut, Lior, Daniel, Ido, Dana, Michal) Event production and management : Problem",
+            "presentationUrl": "https://docs.google.com/presentation/d/14bYaGvNUACtRjHHQiGH1Ky8z18u2cHtBJVH9Z6wIVQg/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/14bYaGvNUACtRjHHQiGH1Ky8z18u2cHtBJVH9Z6wIVQg/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Roni Zoller",
+                    "linkedin": "https://il.linkedin.com/in/roni-zoller-745941194"
+                },
+                {
+                    "name": "Reut Gabbay",
+                    "linkedin": "http://linkedin.com/in/reut-gabbay-b16271a1"
+                },
+                {
+                    "name": "Lior Dor",
+                    "linkedin": "https://www.linkedin.com/in/lior-dor"
+                },
+                {
+                    "name": "Daniel Yosef",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yddo Loker",
+                    "linkedin": "https://www.linkedin.com/in/yddoloker"
+                },
+                {
+                    "name": "Dana Katz Buchshtav",
+                    "linkedin": "https://www.linkedin.com/in/dkbuchshtav/"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8150",
+            "orgId": "בת-קול",
+            "title": "בת קול",
+            "description": "Bat Kol Organization Accessibility. Support. Automation. Community DETAILED BACKGROUND ABOUT THE PROJECT",
+            "presentationUrl": "https://docs.google.com/presentation/d/1Zawn_3s6-UZSW5VIFXITaCtIhny1HYTre38MGfdDBNc/edit?slide=id.g354afc59ea2_0_12#slide=id.g354afc59ea2_0_12",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1Zawn_3s6-UZSW5VIFXITaCtIhny1HYTre38MGfdDBNc/edit?slide=id.g354afc59ea2_0_12#slide=id.g354afc59ea2_0_12"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Inbal frank veig",
+                    "linkedin": "https://il.linkedin.com/in/inbal-franko-veig-71b15116"
+                },
+                {
+                    "name": "Pola Hadad",
+                    "linkedin": "http://linkedin.com/in/pola-hadad"
+                },
+                {
+                    "name": "Hila",
+                    "linkedin": "https://www.linkedin.com/in/hilacohenlavi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Johanna Shalom",
+                    "linkedin": "https://il.linkedin.com/in/johanna-shalom-8a7a3a46"
+                },
+                {
+                    "name": "Zoe Karbe",
+                    "linkedin": "https://www.linkedin.com/in/zo%C3%AB-karbe-893730228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Einat Abramovitch",
+                    "linkedin": "https://www.linkedin.com/in/einata"
+                },
+                {
+                    "name": "Tatyana Davidovich",
+                    "linkedin": "https://www.linkedin.com/in/tatyana-davidovich-860ba9210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "אסי יעקב",
+                    "linkedin": "www.linkedin.com/in/asijacob"
+                },
+                {
+                    "name": "Heather Plumtree",
+                    "linkedin": "https://www.linkedin.com/in/heather-plumtree"
+                },
+                {
+                    "name": "Michal milstain",
+                    "linkedin": "https://www.linkedin.com/in/michal-wilman-b77b1292"
+                },
+                {
+                    "name": "gili porat",
+                    "linkedin": "https://www.linkedin.com/in/gilip"
+                },
+                {
+                    "name": "sharon cooper",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8156",
+            "orgId": "האגודה-למען-הלהט-ב-בישראל",
+            "title": "Campaign for Homophobic Behavior Report",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": 3,
+            "links": [],
+            "participants": [
+                {
+                    "name": "areen matanes",
+                    "linkedin": "https://www.linkedin.com/in/areen-matanes-16549a191/"
+                },
+                {
+                    "name": "Shinan Loubaton",
+                    "linkedin": "https://www.linkedin.com/"
+                },
+                {
+                    "name": "Lior Dor",
+                    "linkedin": "https://www.linkedin.com/in/lior-dor"
+                },
+                {
+                    "name": "Liron Shalish",
+                    "linkedin": "https://il.linkedin.com/in/liron-shalish"
+                },
+                {
+                    "name": "Sharon Diskin",
+                    "linkedin": "https://linkedin.com/sharondiskin"
+                },
+                {
+                    "name": "Sofia",
+                    "linkedin": "https://www.linkedin.com/in/sofia-kosel-22a10059"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8156",
+            "orgId": "beit-el-meem",
+            "title": "Multilingual Site",
+            "description": "בית אל-מים  بيت الميم משתמשים נוכחיים סה\"כ כ- 1000 משתתפים.ות ב2022",
+            "presentationUrl": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "areen matanes",
+                    "linkedin": "https://www.linkedin.com/in/areen-matanes-16549a191/"
+                },
+                {
+                    "name": "Shinan Loubaton",
+                    "linkedin": "https://www.linkedin.com/"
+                },
+                {
+                    "name": "Lior Dor",
+                    "linkedin": "https://www.linkedin.com/in/lior-dor"
+                },
+                {
+                    "name": "Liron Shalish",
+                    "linkedin": "https://il.linkedin.com/in/liron-shalish"
+                },
+                {
+                    "name": "Sharon Diskin",
+                    "linkedin": "https://linkedin.com/sharondiskin"
+                },
+                {
+                    "name": "Sofia",
+                    "linkedin": "https://www.linkedin.com/in/sofia-kosel-22a10059"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8161",
+            "orgId": "",
+            "title": "Freelance platform for transgenders",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Yael",
+                    "linkedin": "https://www.linkedin.com/in/yael-shpaizman"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd816c",
+            "orgId": "עמותת-אותות",
+            "title": "אותות -data center",
+            "description": "From pen and paper to 2025 Otot is a national network providing community-based emergency shelters and long-term residential facilities for at-risk youth. Annually, employees and volunteers working magic around the clock to make the lives of about 1,500 young people worth living.",
+            "presentationUrl": "https://docs.google.com/presentation/d/1Ktq4QmpVmOxZnegEtxL486LJNsuiWU1I/edit?slide=id.p1#slide=id.p1",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1Ktq4QmpVmOxZnegEtxL486LJNsuiWU1I/edit?slide=id.p1#slide=id.p1"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Zuf Goldenberg",
+                    "linkedin": "http://linkedin.com/in/zuf-goldenberg"
+                },
+                {
+                    "name": "Sivan Ben Shimol",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Ester Eda",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Maayan Messica",
+                    "linkedin": "https://www.linkedin.com/in/maayan-messica"
+                },
+                {
+                    "name": "Daniela Barak",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Emilie levenbach",
+                    "linkedin": "https://www.linkedin.com/in/emilie-levenbach-3ba1a3231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "‪Keren Swissa‬‏",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Dana meıdan",
+                    "linkedin": "https://www.linkedin.com/in/dana-me%C4%B1dan/"
+                },
+                {
+                    "name": "Maya-Michael Reitan",
+                    "linkedin": "https://www.linkedin.com/in/mayareitan"
+                },
+                {
+                    "name": "Hilda Weisthal",
+                    "linkedin": "https://www.linkedin.com/in/hilda-weisthal-5663ab93?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8172",
+            "orgId": "האגודה-למען-הלהט-ב-בישראל",
+            "title": "Automated Pride Index Process/System",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Tair Tahar",
+                    "linkedin": "https://www.linkedin.com/in/tair-tahar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Maayan Rabin",
+                    "linkedin": "https://www.linkedin.com/in/maayan-bachar-rabin-61293388/"
+                },
+                {
+                    "name": "Hadar Franco",
+                    "linkedin": "https://www.linkedin.com/in/hadar-franco/"
+                },
+                {
+                    "name": "Hen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shoval Sadde",
+                    "linkedin": "https://www.linkedin.com/in/shoval-sadde-5575b91a/"
+                },
+                {
+                    "name": "Avigail millatiner",
+                    "linkedin": "https://www.linkedin.com/in/avigail-millatiner-341471110"
+                },
+                {
+                    "name": "Gal ishlach",
+                    "linkedin": "https://www.linkedin.com/in/gya-ish-b5b463a0"
+                },
+                {
+                    "name": "Noa",
+                    "linkedin": "https://www.linkedin.com/in/noa-kasher-675655228"
+                },
+                {
+                    "name": "Ofir",
+                    "linkedin": "LinkedIn.com"
+                },
+                {
+                    "name": "Tehila Leiman",
+                    "linkedin": "https://www.linkedin.com/in/tehila-leiman-12120a26a"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8173",
+            "orgId": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "title": "Whatsapp Whisperer מהממ”ת",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Lilach",
+                    "linkedin": "https://www.linkedin.com/in/lilach-david-938985ba"
+                },
+                {
+                    "name": "Hilla Shahrabani",
+                    "linkedin": "https://www.linkedin.com/in/hillash/"
+                },
+                {
+                    "name": "Johana",
+                    "linkedin": "https://il.linkedin.com/in/johanna-shalom-8a7a3a46"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd817b",
+            "orgId": "ישראל-2050",
+            "title": "2050",
+            "description": "2050 Israel Movement Best  Volunteer Screening System Ever Once there was a not so friendly form and Q&A…",
+            "presentationUrl": "https://docs.google.com/presentation/d/11hqQduEOcfA2B5aPD0JfjqlzV0iWt56Fl-ufrvedmnw/edit?slide=id.g354afc59ea2_0_12#slide=id.g354afc59ea2_0_12",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/11hqQduEOcfA2B5aPD0JfjqlzV0iWt56Fl-ufrvedmnw/edit?slide=id.g354afc59ea2_0_12#slide=id.g354afc59ea2_0_12"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Ariel Shaked",
+                    "linkedin": "https://www.linkedin.com/in/arishak"
+                },
+                {
+                    "name": "Inbar meiroviz",
+                    "linkedin": "https://www.linkedin.com/in/meiroviz?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Liron Sofer",
+                    "linkedin": "https://www.linkedin.com/in/liron-sofer"
+                },
+                {
+                    "name": "Lee Gold",
+                    "linkedin": "https://www.linkedin.com/in/gold-lee"
+                },
+                {
+                    "name": "Leeor Berman",
+                    "linkedin": "https://www.linkedin.com/in/leeorb"
+                },
+                {
+                    "name": "Rebecca Schiller",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Simona Skuratovsky",
+                    "linkedin": ""
+                },
+                {
+                    "name": "‪Lital Bar Noy‬‏",
+                    "linkedin": "https://www.linkedin.com/in/lital-bar-noy-49b96492/"
+                },
+                {
+                    "name": "Etty Haddad",
+                    "linkedin": "https://www.linkedin.com/in/ettyhaddad/"
+                },
+                {
+                    "name": "Paloma Perlov",
+                    "linkedin": "www.linkedin.com/in/paloma-perlov"
+                },
+                {
+                    "name": "Sharon",
+                    "linkedin": "https://linkedin.com/sharondiskin"
+                },
+                {
+                    "name": "Kim Gazit",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tamar Kalir",
+                    "linkedin": "https://www.linkedin.com/in/tamar-kalir/"
+                },
+                {
+                    "name": "Carmel S",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8187",
+            "orgId": "",
+            "title": "SportyPride",
+            "description": "",
+            "presentationUrl": "https://docs.google.com/presentation/d/1fDFkAxtjrn4LOdPHAKrsnY3p_dyugWZ5/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1fDFkAxtjrn4LOdPHAKrsnY3p_dyugWZ5/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Nicole Nosovitsky",
+                    "linkedin": "https://www.linkedin.com/in/nicole-nosovitsky/"
+                },
+                {
+                    "name": "גלי רוזן",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tehila Leiman",
+                    "linkedin": "https://www.linkedin.com/in/tehila-leiman"
+                },
+                {
+                    "name": "Emily Matheys",
+                    "linkedin": "https://www.linkedin.com/in/emilymatheys/"
+                },
+                {
+                    "name": "Michal Rosenthal",
+                    "linkedin": "https://www.linkedin.com/in/michal-rosenthal-5495121a5"
+                },
+                {
+                    "name": "Roni Korem",
+                    "linkedin": "https://www.linkedin.com/in/roni-korem-a5b130201"
+                },
+                {
+                    "name": "Adi Marsiano",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shoval Omesi",
+                    "linkedin": "www.linkedin.com/in/shovalomesi"
+                },
+                {
+                    "name": "Tali Mahar",
+                    "linkedin": ""
+                },
+                {
+                    "name": "מעין זהבי",
+                    "linkedin": "https://www.linkedin.com/in/maayan-zehavi-7aa203116"
+                },
+                {
+                    "name": "רייצ׳ל חמו",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Anat Buhnik",
+                    "linkedin": "ww.@.com"
+                },
+                {
+                    "name": "Katya Nikitskaya",
+                    "linkedin": "https://www.linkedin.com/in/nikitsky"
+                },
+                {
+                    "name": "Anna Khiger",
+                    "linkedin": "https://www.linkedin.com/in/annakhiger"
+                },
+                {
+                    "name": "Daphne levy",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd8188",
+            "orgId": "מעברים",
+            "title": "Transphobic social detector",
+            "description": "מעברים לקשת הטרנסית קמה ב-2014 מתוך הצורך הבוער לארגון שייצג אנשים על הקשת הטרנסית מול מוסדות המדינה, הממסד הרפואי והחברה הכללית. הארגון הוקם בעקבות צורך לסייע לאנשים טרנסים לנווט בחברה סיסג'נדרית ולגשת למשאבים שלא מותאמים אלינו, והצורך להשמיע קול טרנסי סביב שולחנות קבלת החלטות שמשפיעות עלינו Hate…",
+            "presentationUrl": "https://docs.google.com/presentation/d/1FaFsmCa509oOckKywo7nMkbFvFoNU1m-DaDwl0bdiKg/edit?usp=drive_link",
+            "winningPlace": 2,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1FaFsmCa509oOckKywo7nMkbFvFoNU1m-DaDwl0bdiKg/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Gil",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tamar Kalir",
+                    "linkedin": "https://www.linkedin.com/in/tamar-kalir/"
+                },
+                {
+                    "name": "Hila",
+                    "linkedin": "https://www.linkedin.com/in/hila-gannot-57062a8b"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd818e",
+            "orgId": "תוצרת-הארץ",
+            "title": "בוצרת",
+            "description": "Connecting People to Purpose DETAILED BACKGROUND ABOUT THE PROJECT Totzeret Ha’Aretz:",
+            "presentationUrl": "https://docs.google.com/presentation/d/1NZvIWmluW951KDd2rwDDLn8c4gLe8bpi/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1NZvIWmluW951KDd2rwDDLn8c4gLe8bpi/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Sapir-Magali Libis",
+                    "linkedin": "https://www.instagram.com/sapir_magali_libis/"
+                },
+                {
+                    "name": "Inbal Zohar",
+                    "linkedin": "https://www.linkedin.com/in/inbal-zohar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Noy Pearl",
+                    "linkedin": "https://il.linkedin.com/in/noy-pearl-419812188"
+                },
+                {
+                    "name": "michelle granat",
+                    "linkedin": ""
+                },
+                {
+                    "name": "דפנה ליביס",
+                    "linkedin": "https://il.linkedin.com/in/dafna-libis-50b511142"
+                },
+                {
+                    "name": "Ada Sandman",
+                    "linkedin": "linkedin.com/in/ada-sandman"
+                },
+                {
+                    "name": "Shahar Mayzel",
+                    "linkedin": "https://www.linkedin.com/in/shahar-mayzel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Abie Revital",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Dina Mikhlina",
+                    "linkedin": "https://www.linkedin.com/in/dmikhlina?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd818f",
+            "orgId": "beit-el-meem",
+            "title": "LGBTQ+ Arabic Content Creation",
+            "description": "בית אל-מים  بيت الميم משתמשים נוכחיים סה\"כ כ- 1000 משתתפים.ות ב2022",
+            "presentationUrl": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": 1,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "sagit lilach Gueta",
+                    "linkedin": "https://www.linkedin.com/in/sagit-gueta"
+                },
+                {
+                    "name": "Adi Biran",
+                    "linkedin": "https://www.linkedin.com/in/adi-biran-18a316221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "נטע עלימה",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Hallel Marx",
+                    "linkedin": "https://www.linkedin.com/in/hallel-marx-446669b2"
+                },
+                {
+                    "name": "Neta Handlesman",
+                    "linkedin": "http://linkedin.com/in/neta-handelsman"
+                },
+                {
+                    "name": "Avigail Millatiner",
+                    "linkedin": "https://www.linkedin.com/in/avigail-millatiner?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "ענת לנדסברג",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Ayelet Cohen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "RONA MAYER",
+                    "linkedin": "www.linkedin.com/in/rona-mayer-60468a174"
+                },
+                {
+                    "name": "Shiran Shemesh",
+                    "linkedin": "https://www.linkedin.com/in/shiranlia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Inbar Azogui",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shira Noc",
+                    "linkedin": "https://www.linkedin.com/in/shira-noc-a30381131/"
+                },
+                {
+                    "name": "Shiff Lazewnik",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Keren Friedman",
+                    "linkedin": "www.linkedin.com/in/kerenfriedman"
+                },
+                {
+                    "name": "Katerina Gershgorn",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd818f",
+            "orgId": "תהלה",
+            "title": "הקמת נוכחות דיגיטלית",
+            "description": "",
+            "presentationUrl": "https://drive.google.com/file/d/1aOxy7AIdKetm9IoVxAE0R0xLsFeEuh5L/view?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://drive.google.com/file/d/1aOxy7AIdKetm9IoVxAE0R0xLsFeEuh5L/view?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "sagit lilach Gueta",
+                    "linkedin": "https://www.linkedin.com/in/sagit-gueta"
+                },
+                {
+                    "name": "Adi Biran",
+                    "linkedin": "https://www.linkedin.com/in/adi-biran-18a316221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "נטע עלימה",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Hallel Marx",
+                    "linkedin": "https://www.linkedin.com/in/hallel-marx-446669b2"
+                },
+                {
+                    "name": "Neta Handlesman",
+                    "linkedin": "http://linkedin.com/in/neta-handelsman"
+                },
+                {
+                    "name": "Avigail Millatiner",
+                    "linkedin": "https://www.linkedin.com/in/avigail-millatiner?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "ענת לנדסברג",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Ayelet Cohen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "RONA MAYER",
+                    "linkedin": "www.linkedin.com/in/rona-mayer-60468a174"
+                },
+                {
+                    "name": "Shiran Shemesh",
+                    "linkedin": "https://www.linkedin.com/in/shiranlia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Inbar Azogui",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shira Noc",
+                    "linkedin": "https://www.linkedin.com/in/shira-noc-a30381131/"
+                },
+                {
+                    "name": "Shiff Lazewnik",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Keren Friedman",
+                    "linkedin": "www.linkedin.com/in/kerenfriedman"
+                },
+                {
+                    "name": "Katerina Gershgorn",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd819e",
+            "orgId": "",
+            "title": "לסבי-בוט",
+            "description": "Lesbian cultural media database What’s missing in the world Savoring and sorting the content of the FB group יש לסביות",
+            "presentationUrl": "https://docs.google.com/presentation/d/1uO2GK3NYjNlZhbRdevjZY75pOOIw1R1SpCUjfv5xLkE/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1uO2GK3NYjNlZhbRdevjZY75pOOIw1R1SpCUjfv5xLkE/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "‪Nitzan Zisk‬‏",
+                    "linkedin": "https://www.linkedin.com/in/nitzan-zisk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Shahar Levy",
+                    "linkedin": "https://www.linkedin.com/in/shahar-levy-1530051a4/"
+                },
+                {
+                    "name": "Shani Rubovitch",
+                    "linkedin": "https://www.linkedin.com/in/shani-rubovitch/"
+                },
+                {
+                    "name": "Tamar yaron",
+                    "linkedin": "Linkedin.com/in/tamar-yaron"
+                },
+                {
+                    "name": "Ofir Siryus",
+                    "linkedin": "https://www.linkedin.com/in/ofir-siryus?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Yuval bar",
+                    "linkedin": "https://www.linkedin.com/in/yuval-bar-5a39a6123?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Hadar Franco",
+                    "linkedin": "https://il.linkedin.com/in/hadar-franco"
+                },
+                {
+                    "name": "Bar Horing",
+                    "linkedin": "https://www.linkedin.com/in/bar-horing-3370a3130?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Tamar sadeh",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shir Groisman",
+                    "linkedin": "https://www.linkedin.com/in/shir-groisman-859ab0198"
+                },
+                {
+                    "name": "Sabrina Benlolo",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_profile_view-secondary_nav"
+                },
+                {
+                    "name": "Iris Yablochnik",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
+                },
+                {
+                    "name": "Alice Ochakovsky",
+                    "linkedin": "https://www.linkedin.com/in/alice-ochakovsky-011363263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "hadas shorer",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd819f",
+            "orgId": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "title": "Achva cockpit",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Lilach",
+                    "linkedin": "https://www.linkedin.com/in/lilach-david-938985ba"
+                },
+                {
+                    "name": "Hilla Shahrabani",
+                    "linkedin": "https://www.linkedin.com/in/hillash/"
+                },
+                {
+                    "name": "Johana",
+                    "linkedin": "https://il.linkedin.com/in/johanna-shalom-8a7a3a46"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81a6",
+            "orgId": "פרוייקט-גילה",
+            "title": "Promotional video",
+            "description": "",
+            "presentationUrl": "https://drive.google.com/file/d/1nK7df7ozjuVzWm3J4cvt_ku5eLXVCiil/view?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://drive.google.com/file/d/1nK7df7ozjuVzWm3J4cvt_ku5eLXVCiil/view?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Maayan Schaal",
+                    "linkedin": "https://www.linkedin.com/in/maayan-schaal"
+                },
+                {
+                    "name": "Kerem Yael Landman",
+                    "linkedin": "https://www.linkedin.com/in/kerem-yael-landman-22574622"
+                },
+                {
+                    "name": "Roni Mirvis",
+                    "linkedin": "https://www.linkedin.com/in/ronimirvis?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Anastasia Gurevich",
+                    "linkedin": "https://www.linkedin.com/in/anastasia-gurevich-46a6b322b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Jesse Brandt",
+                    "linkedin": "https://www.linkedin.com/in/jessebrandt96/"
+                },
+                {
+                    "name": "Fanny Shtern",
+                    "linkedin": "http://linkedin.com/in/fanny-shtern-she-her-86073a1b0"
+                },
+                {
+                    "name": "Yarden Mezi",
+                    "linkedin": "https://www.linkedin.com/in/yarden-mezi/"
+                },
+                {
+                    "name": "Mikka Radzewsky",
+                    "linkedin": "https://www.linkedin.com/in/mikka-radzewsky-9a7716238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Daya Matok Gawi",
+                    "linkedin": "https://www.linkedin.com/in/dayamg/"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81a6",
+            "orgId": "פרוייקט-מנהיגות-גאה",
+            "title": "Top Surgery",
+            "description": "Top Surgery Website Revamp & Intake Automation DETAILED BACKGROUND ABOUT THE PROJECT",
+            "presentationUrl": "https://docs.google.com/presentation/d/1talAJMcMu9qItmiogwTcLQJhUpd1z87t9uduDIoIjXc/edit?slide=id.g354afc59ea2_0_12#slide=id.g354afc59ea2_0_12",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1talAJMcMu9qItmiogwTcLQJhUpd1z87t9uduDIoIjXc/edit?slide=id.g354afc59ea2_0_12#slide=id.g354afc59ea2_0_12"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Maayan Schaal",
+                    "linkedin": "https://www.linkedin.com/in/maayan-schaal"
+                },
+                {
+                    "name": "Kerem Yael Landman",
+                    "linkedin": "https://www.linkedin.com/in/kerem-yael-landman-22574622"
+                },
+                {
+                    "name": "Roni Mirvis",
+                    "linkedin": "https://www.linkedin.com/in/ronimirvis?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Anastasia Gurevich",
+                    "linkedin": "https://www.linkedin.com/in/anastasia-gurevich-46a6b322b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Jesse Brandt",
+                    "linkedin": "https://www.linkedin.com/in/jessebrandt96/"
+                },
+                {
+                    "name": "Fanny Shtern",
+                    "linkedin": "http://linkedin.com/in/fanny-shtern-she-her-86073a1b0"
+                },
+                {
+                    "name": "Yarden Mezi",
+                    "linkedin": "https://www.linkedin.com/in/yarden-mezi/"
+                },
+                {
+                    "name": "Mikka Radzewsky",
+                    "linkedin": "https://www.linkedin.com/in/mikka-radzewsky-9a7716238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Daya Matok Gawi",
+                    "linkedin": "https://www.linkedin.com/in/dayamg/"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81c7",
+            "orgId": "פרוייקט-גילה",
+            "title": "הכשרבוט (וואטסאפ בוט למערך ההכשרות)",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Gil",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tamar Kalir",
+                    "linkedin": "https://www.linkedin.com/in/tamar-kalir/"
+                },
+                {
+                    "name": "Hila",
+                    "linkedin": "https://www.linkedin.com/in/hila-gannot-57062a8b"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81c7",
+            "orgId": "מעברים",
+            "title": "Information Anonymization (Monday)",
+            "description": "מעברים לקשת הטרנסית קמה ב-2014 מתוך הצורך הבוער לארגון שייצג אנשים על הקשת הטרנסית מול מוסדות המדינה, הממסד הרפואי והחברה הכללית. הארגון הוקם בעקבות צורך לסייע לאנשים טרנסים לנווט בחברה סיסג'נדרית ולגשת למשאבים שלא מותאמים אלינו, והצורך להשמיע קול טרנסי סביב שולחנות קבלת החלטות שמשפיעות עלינו Hate…",
+            "presentationUrl": "https://docs.google.com/presentation/d/1FaFsmCa509oOckKywo7nMkbFvFoNU1m-DaDwl0bdiKg/edit?usp=drive_link",
+            "winningPlace": 2,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1FaFsmCa509oOckKywo7nMkbFvFoNU1m-DaDwl0bdiKg/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Gil",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Tamar Kalir",
+                    "linkedin": "https://www.linkedin.com/in/tamar-kalir/"
+                },
+                {
+                    "name": "Hila",
+                    "linkedin": "https://www.linkedin.com/in/hila-gannot-57062a8b"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81c8",
+            "orgId": "פרוייקט-גילה",
+            "title": "PR Website",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "rotem meyers",
+                    "linkedin": "https://www.linkedin.com/in/rotemmeyers/"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81c9",
+            "orgId": "lgbtech-ltd",
+            "title": "Survey Response Analysis Dashboard",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Mor Hananovitz",
+                    "linkedin": "https://www.linkedin.com/in/mor-hananovitz/"
+                },
+                {
+                    "name": "Dafna Libis",
+                    "linkedin": "https://www.linkedin.com/in/dafna-libis-50b511142"
+                },
+                {
+                    "name": "Hagar Choresh",
+                    "linkedin": "https://www.linkedin.com/in/hagarchoresh"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81d2",
+            "orgId": "hoshen",
+            "title": "HOSHEN - User Journey / Feedbacks Data Dashboard",
+            "description": "",
+            "presentationUrl": "https://www.canva.com/design/DAFhXZQ6nPs/etTi5yyEEjdx7TIiATbMpA/view?utm_content=DAFhXZQ6nPs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://www.canva.com/design/DAFhXZQ6nPs/etTi5yyEEjdx7TIiATbMpA/view?utm_content=DAFhXZQ6nPs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "noya ben yakar",
+                    "linkedin": "https://www.linkedin.com/in/noya-ben-yakar-329114160/"
+                },
+                {
+                    "name": "Elizabeth",
+                    "linkedin": "https://www.linkedin.com/in/elizabetta-kira-murov"
+                },
+                {
+                    "name": "Kim Kestenboum",
+                    "linkedin": "https://www.linkedin.com/in/kim-kestenboum"
+                },
+                {
+                    "name": "Maayan Rabin",
+                    "linkedin": "https://www.linkedin.com/in/maayan-bachar-rabin-61293388/"
+                },
+                {
+                    "name": "shahaf peleg",
+                    "linkedin": "https://www.linkedin.com/in/shahaf-peleg-a202081b2/"
+                },
+                {
+                    "name": "Lilach",
+                    "linkedin": "https://www.linkedin.com/in/lilach-david-938985ba"
+                },
+                {
+                    "name": "Shani",
+                    "linkedin": "https://www.linkedin.com/in/shani-herzinger"
+                },
+                {
+                    "name": "Carmel Reubinoff",
+                    "linkedin": "https://www.linkedin.com/in/carmel-reubinoff-b7213514b/"
+                },
+                {
+                    "name": "Limor Shenkar",
+                    "linkedin": "www.linkedin.com/in/limor-shenkar"
+                },
+                {
+                    "name": "Adi",
+                    "linkedin": "https://www.linkedin.com/in/adi-uzan-574b5b15a"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81d3",
+            "orgId": "hoshen",
+            "title": "HOSHEN - Let the AI write your personal story",
+            "description": "",
+            "presentationUrl": "https://www.canva.com/design/DAFhXZQ6nPs/etTi5yyEEjdx7TIiATbMpA/view?utm_content=DAFhXZQ6nPs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://www.canva.com/design/DAFhXZQ6nPs/etTi5yyEEjdx7TIiATbMpA/view?utm_content=DAFhXZQ6nPs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "noya ben yakar",
+                    "linkedin": "https://www.linkedin.com/in/noya-ben-yakar-329114160/"
+                },
+                {
+                    "name": "Elizabeth",
+                    "linkedin": "https://www.linkedin.com/in/elizabetta-kira-murov"
+                },
+                {
+                    "name": "Kim Kestenboum",
+                    "linkedin": "https://www.linkedin.com/in/kim-kestenboum"
+                },
+                {
+                    "name": "Maayan Rabin",
+                    "linkedin": "https://www.linkedin.com/in/maayan-bachar-rabin-61293388/"
+                },
+                {
+                    "name": "shahaf peleg",
+                    "linkedin": "https://www.linkedin.com/in/shahaf-peleg-a202081b2/"
+                },
+                {
+                    "name": "Lilach",
+                    "linkedin": "https://www.linkedin.com/in/lilach-david-938985ba"
+                },
+                {
+                    "name": "Shani",
+                    "linkedin": "https://www.linkedin.com/in/shani-herzinger"
+                },
+                {
+                    "name": "Carmel Reubinoff",
+                    "linkedin": "https://www.linkedin.com/in/carmel-reubinoff-b7213514b/"
+                },
+                {
+                    "name": "Limor Shenkar",
+                    "linkedin": "www.linkedin.com/in/limor-shenkar"
+                },
+                {
+                    "name": "Adi",
+                    "linkedin": "https://www.linkedin.com/in/adi-uzan-574b5b15a"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81d6",
+            "orgId": "lgbtq-tlv-center",
+            "title": "מפה לחיפוש רופא למרשם prep",
+            "description": "Easy access to PrEP- HIV Prevention DETAILED BACKGROUND ABOUT THE PROJECT Tel Aviv is part of the global Fast Track Cities initiative, aiming to eradicate HIV using the 95-95-95 model:",
+            "presentationUrl": "https://docs.google.com/presentation/d/1j9EwrpRAeu5asC9vR6KFgHOMlGTKLE3s/edit?slide=id.p1#slide=id.p1",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1j9EwrpRAeu5asC9vR6KFgHOMlGTKLE3s/edit?slide=id.p1#slide=id.p1"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "KAREL SERFATY",
+                    "linkedin": "https://www.linkedin.com/in/karel-serfaty"
+                },
+                {
+                    "name": "Adi klinger",
+                    "linkedin": "https://www.linkedin.com/in/adi-klinger?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Gili Lior",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Lior Erenreich",
+                    "linkedin": "https://www.linkedin.com/in/lior-erenreich?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Nofar Spalter",
+                    "linkedin": "https://www.linkedin.com/in/nofarspalter/"
+                },
+                {
+                    "name": "Etti Malca",
+                    "linkedin": "https://www.linkedin.com/in/etti-malca-%F0%9F%87%AE%F0%9F%87%B1%F0%9F%8E%97%EF%B8%8F-ab9274100?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Neta Handlesman",
+                    "linkedin": "http://linkedin.com/in/neta-handelsman"
+                },
+                {
+                    "name": "Oshrat Shtangel",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81d9",
+            "orgId": "",
+            "title": "Monday HQ",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Rotem Madar",
+                    "linkedin": "www.linkedin.com/in/rotem-madar"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81e4",
+            "orgId": "האגודה-למען-הלהט-ב-בישראל",
+            "title": "NLP - Segment Relevant Legislative Content or Updates",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": 3,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Tair Tahar",
+                    "linkedin": "https://www.linkedin.com/in/tair-tahar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Maayan Rabin",
+                    "linkedin": "https://www.linkedin.com/in/maayan-bachar-rabin-61293388/"
+                },
+                {
+                    "name": "Hadar Franco",
+                    "linkedin": "https://www.linkedin.com/in/hadar-franco/"
+                },
+                {
+                    "name": "Hen",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shoval Sadde",
+                    "linkedin": "https://www.linkedin.com/in/shoval-sadde-5575b91a/"
+                },
+                {
+                    "name": "Avigail millatiner",
+                    "linkedin": "https://www.linkedin.com/in/avigail-millatiner-341471110"
+                },
+                {
+                    "name": "Gal ishlach",
+                    "linkedin": "https://www.linkedin.com/in/gya-ish-b5b463a0"
+                },
+                {
+                    "name": "Noa",
+                    "linkedin": "https://www.linkedin.com/in/noa-kasher-675655228"
+                },
+                {
+                    "name": "Ofir",
+                    "linkedin": "LinkedIn.com"
+                },
+                {
+                    "name": "Tehila Leiman",
+                    "linkedin": "https://www.linkedin.com/in/tehila-leiman-12120a26a"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81e7",
+            "orgId": "הרשות-לחוסן",
+            "title": "Fair voice",
+            "description": "הרשות לחוסן ושוויון חברתי | עיריית ת״א האפליה שלא רואים: הצורך בפלטפורמת דיווח נגישה למה דרוש מנגנון דיווח נגיש?",
+            "presentationUrl": "https://docs.google.com/presentation/d/17I2lMMgWF04cVvDJ3EzNJof14Sz50KmUy0ntoFaR7o8/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/17I2lMMgWF04cVvDJ3EzNJof14Sz50KmUy0ntoFaR7o8/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Cody Bach",
+                    "linkedin": "https://www.linkedin.com/in/lcodybach"
+                },
+                {
+                    "name": "Natalie Bar",
+                    "linkedin": "https://www.linkedin.com/in/natalie-bar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Gali Sandler",
+                    "linkedin": "https://www.linkedin.com/in/gali-sandler-4a0725a4"
+                },
+                {
+                    "name": "Shahar Gotshtat Lahav",
+                    "linkedin": "https://www.linkedin.com/in/shahar-gotshtat/"
+                },
+                {
+                    "name": "Noga Peleg Pelc",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Maayan Lahav",
+                    "linkedin": "https://www.linkedin.com/in/maayan-lahav/"
+                },
+                {
+                    "name": "Michal Ifrach",
+                    "linkedin": "https://www.linkedin.com/in/michal-ifrach"
+                },
+                {
+                    "name": "Maya",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Kit Horvath",
+                    "linkedin": "http://linkedin.com/in/horvathkatalin"
+                },
+                {
+                    "name": "Libby Matsui",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81f2",
+            "orgId": "beit-el-meem",
+            "title": "LGBT keywords SEO Campaign",
+            "description": "בית אל-מים  بيت الميم משתמשים נוכחיים סה\"כ כ- 1000 משתתפים.ות ב2022",
+            "presentationUrl": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1AXvUSsaugzhECSe-tj25F4mJ28SaLEkS/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "areen matanes",
+                    "linkedin": "https://www.linkedin.com/in/areen-matanes-16549a191/"
+                },
+                {
+                    "name": "Shinan Loubaton",
+                    "linkedin": "https://www.linkedin.com/"
+                },
+                {
+                    "name": "Lior Dor",
+                    "linkedin": "https://www.linkedin.com/in/lior-dor"
+                },
+                {
+                    "name": "Liron Shalish",
+                    "linkedin": "https://il.linkedin.com/in/liron-shalish"
+                },
+                {
+                    "name": "Sharon Diskin",
+                    "linkedin": "https://linkedin.com/sharondiskin"
+                },
+                {
+                    "name": "Sofia",
+                    "linkedin": "https://www.linkedin.com/in/sofia-kosel-22a10059"
+                }
+            ]
+        },
+        {
+            "id": "30c949a289bd81fc",
+            "orgId": "lgbtq-tlv-center",
+            "title": "Improve work procedures for LGBTQ+ Center of Tel Aviv",
+            "description": "LGBTQ+ Center of TLV (Roni , Reut, Lior, Daniel, Ido, Dana, Michal) Event production and management : Problem",
+            "presentationUrl": "https://docs.google.com/presentation/d/14bYaGvNUACtRjHHQiGH1Ky8z18u2cHtBJVH9Z6wIVQg/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/14bYaGvNUACtRjHHQiGH1Ky8z18u2cHtBJVH9Z6wIVQg/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Roni Zoller",
+                    "linkedin": "https://il.linkedin.com/in/roni-zoller-745941194"
+                },
+                {
+                    "name": "Reut Gabbay",
+                    "linkedin": "http://linkedin.com/in/reut-gabbay-b16271a1"
+                },
+                {
+                    "name": "Lior Dor",
+                    "linkedin": "https://www.linkedin.com/in/lior-dor"
+                },
+                {
+                    "name": "Daniel Yosef",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yddo Loker",
+                    "linkedin": "https://www.linkedin.com/in/yddoloker"
+                },
+                {
+                    "name": "Dana Katz Buchshtav",
+                    "linkedin": "https://www.linkedin.com/in/dkbuchshtav/"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8102",
+            "orgId": "lgbtq-tlv-center",
+            "title": "Rainbow (O) Root",
+            "description": "The LGBTQ+ Fertility Navigator In response to the lack of resources for LGBTQ+ individuals on fertility journeys, the LGBTQ+ Fertility Navigator offers tailored guidance and support LGBTQ+ prospective parents face hurdles in accessing comprehensive fertility information, resulting in uncertainty…",
+            "presentationUrl": "https://docs.google.com/presentation/d/1ZE8hFHlugJyRZaLGRSf786DhQ50p5B7e/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1ZE8hFHlugJyRZaLGRSf786DhQ50p5B7e/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Esti Twito",
+                    "linkedin": "https://il.linkedin.com/in/esti-twito-16273821a?trk=public_profile_browsemap"
+                },
+                {
+                    "name": "sapir zvi",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Ortal Hanuna",
+                    "linkedin": "https://www.linkedin.com/in/ortalhanunaalgoengineering?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Hadar Burger",
+                    "linkedin": "https://www.linkedin.com/in/hadar-burger"
+                },
+                {
+                    "name": "Noa Shweky",
+                    "linkedin": "https://www.linkedin.com/in/noa-shay-1750b0173"
+                },
+                {
+                    "name": "Liron Sofer",
+                    "linkedin": "https://www.linkedin.com/in/liron-sofer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Yael",
+                    "linkedin": "https://www.linkedin.com/in/yael-shpaizman"
+                },
+                {
+                    "name": "Almog Gal",
+                    "linkedin": "https://www.linkedin.com/in/almog-gal/"
+                },
+                {
+                    "name": "Adi Marsiano",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Inbar",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Rotem madar",
+                    "linkedin": "http://linkedin.com/in/rotem-madar"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8113",
+            "orgId": "מחלקת-בטחון-קהילתי-שדרות",
+            "title": "SafeYouth",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Hadas Levav",
+                    "linkedin": "https://www.linkedin.com/in/hadas-levav-9b7960256/"
+                },
+                {
+                    "name": "Maayan Messica",
+                    "linkedin": "https://www.linkedin.com/in/maayan-messica"
+                },
+                {
+                    "name": "Tamar Gilinski",
+                    "linkedin": "https://www.linkedin.com/in/tamar-gilin"
+                },
+                {
+                    "name": "Liran Brenner",
+                    "linkedin": "https://www.linkedin.com/in/liran-brenner-25823559?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Inbar Didi",
+                    "linkedin": "https://www.linkedin.com/in/inbar-didi-950745171"
+                },
+                {
+                    "name": "Tahel Soto",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Lital Dinchman",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Noa Macy",
+                    "linkedin": "https://www.linkedin.com/in/noa-macy"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8125",
+            "orgId": "lgbtq-tlv-center",
+            "title": "Over the rainbow",
+            "description": "+ אדר, ניקול ומאיה חנה לפני 15 שנה היתה נשואה לגבר וכדי לעזור לה להתמודד עם השינוי היא פנתה לפורום תפוז ומצאה קבוצת תמיכה במרכז הגאה. היום היא רוצה לעזור לאחרים בתהליך שהם עוברים.",
+            "presentationUrl": "https://docs.google.com/presentation/d/16RuBwlF_QVu8OzfedCtNSN-EjxujxD3MWWJ7t9ziAdQ/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/16RuBwlF_QVu8OzfedCtNSN-EjxujxD3MWWJ7t9ziAdQ/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "tali kerpel",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Asya Roikhman",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Maya zweigel",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav"
+                },
+                {
+                    "name": "Shani Rubovitch",
+                    "linkedin": "https://www.linkedin.com/in/shani-rubovitch/"
+                },
+                {
+                    "name": "Maayan sheraizin",
+                    "linkedin": "https://www.linkedin.com/in/maayan-sheraizin-378585211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Gal David",
+                    "linkedin": "https://www.linkedin.com/in/gal-david"
+                },
+                {
+                    "name": "מאיה גנור",
+                    "linkedin": ""
+                },
+                {
+                    "name": "רונה",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shir Kedar Yurkevich",
+                    "linkedin": "https://www.linkedin.com/in/shir-kedar-yurkevich-94b598264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Daniella",
+                    "linkedin": "https://www.linkedin.com/in/daniella-geisler-4934474/"
+                },
+                {
+                    "name": "Tamar Hershenbaum",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8137",
+            "orgId": "מחלקת-בטחון-קהילתי-שדרות",
+            "title": "ניהול פעילים",
+            "description": "",
+            "presentationUrl": "https://www.canva.com/design/DAGCG0kxyaE/d5rfbeCBUkvMMMLO4CfIAQ/view?utm_content=DAGCG0kxyaE&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://www.canva.com/design/DAGCG0kxyaE/d5rfbeCBUkvMMMLO4CfIAQ/view?utm_content=DAGCG0kxyaE&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Meshi Hazan",
+                    "linkedin": "https://www.linkedin.com/in/meshi-hazan-306a921a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Asi Jacob",
+                    "linkedin": "http://linkedin.com/in/asijacob"
+                },
+                {
+                    "name": "אלה פוקס",
+                    "linkedin": "https://www.linkedin.com/in/ella-fuchs-48baa8105"
+                },
+                {
+                    "name": "Shir rotbard",
+                    "linkedin": "https://www.linkedin.com/in/shir-rotbard-a11086155?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Bracha Barad",
+                    "linkedin": "https://www.linkedin.com/in/b-barad-data-analyst"
+                },
+                {
+                    "name": "Tamar Moshe",
+                    "linkedin": "https://www.linkedin.com/in/tamar-moshe-62857b72?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Eden gur arie",
+                    "linkedin": "https://www.linkedin.com/in/eden-gur-arie-2334a022a"
+                },
+                {
+                    "name": "Gal Yishlah",
+                    "linkedin": "https://www.linkedin.com/in/gya-ish-b5b463a0"
+                },
+                {
+                    "name": "Adel Haham",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd813d",
+            "orgId": "האגודה-למען-הלהט-ב-בישראל",
+            "title": "Knesset LGBTQ+ protocol scanner",
+            "description": "AI classification on LGBTQ+ content Hadar Mizrachi, Tair Tahar, Roni Zoller, Maya Elazer, Hadas Suliman, Mor Hananovitz, Tamar Gilinski, Yael Bar Akiva, Shahar Levy and many more … AI classification on LGBTQ+ content",
+            "presentationUrl": "https://docs.google.com/presentation/d/10glO05Zz2dvxvhXnSAIgSbQyCkcq4rxC/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": 1,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/10glO05Zz2dvxvhXnSAIgSbQyCkcq4rxC/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Shahar Levy",
+                    "linkedin": "https://www.linkedin.com/in/shahar-levy-1530051a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Daya Matok Gawi",
+                    "linkedin": "https://www.linkedin.com/in/dayamg?trk=blended-typeahead"
+                },
+                {
+                    "name": "Raz Lev",
+                    "linkedin": "https://www.linkedin.com/in/raz-weinberger/"
+                },
+                {
+                    "name": "Mor Hananovitz",
+                    "linkedin": "https://www.linkedin.com/in/mor-hananovitz"
+                },
+                {
+                    "name": "tal wind",
+                    "linkedin": "https://www.linkedin.com/in/tal-wind/"
+                },
+                {
+                    "name": "Hadas Suliman",
+                    "linkedin": "https://www.linkedin.com/in/hadas-suliman"
+                },
+                {
+                    "name": "Alina Filimonov",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav"
+                },
+                {
+                    "name": "Chen Lior",
+                    "linkedin": "https://www.linkedin.com/in/chen-lior/"
+                },
+                {
+                    "name": "Tehila Leiman",
+                    "linkedin": "https://www.linkedin.com/in/tehila-leiman-12120a26a"
+                },
+                {
+                    "name": "Tamar Kalir",
+                    "linkedin": "https://www.linkedin.com/in/tamar-kalir/"
+                },
+                {
+                    "name": "Maya Gershovitz Bar",
+                    "linkedin": "https://www.linkedin.com/in/maya-gershovitz-bar?trk=contact-info"
+                },
+                {
+                    "name": "Tair Tahar",
+                    "linkedin": "https://www.linkedin.com/in/tair-tahar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Roni Zoller",
+                    "linkedin": "https://il.linkedin.com/in/roni-zoller-745941194"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8140",
+            "orgId": "מטה-ההסברה",
+            "title": "עשו בי כרצונכן",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": []
+        },
+        {
+            "id": "30e949a289bd814e",
+            "orgId": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "title": "WhatsaApp/Telegram Bot",
+            "description": "Chatbot for LGBT students לפתח וליצור אינטגרציה של צ'טבוט במטרה לעזור לסטודנטים מהקהילה שמעוניינים להתנדב, לקבל מידע ולדווח על אירועים. תפקיד הצ'טבוט לתת מענה מידי, אמין ומדויק לגבי הזדמנויות, משאבים, תמיכה דרך אתר הארגון. חוסר נגישות של מידע",
+            "presentationUrl": "https://docs.google.com/presentation/d/1he3jXwL4fl5Vx0WwgyYQTorwJ-v3P-tze4is-CqP5xo/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1he3jXwL4fl5Vx0WwgyYQTorwJ-v3P-tze4is-CqP5xo/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Hadar Franco",
+                    "linkedin": "https://www.linkedin.com/in/hadar-franco"
+                },
+                {
+                    "name": "Rita Kagan",
+                    "linkedin": "https://www.linkedin.com/in/ritach-k/"
+                },
+                {
+                    "name": "Liliane Assous",
+                    "linkedin": "https://il.linkedin.com/in/liliane-assous"
+                },
+                {
+                    "name": "Shay zucker",
+                    "linkedin": "www.linkedin.com/in/shayzucker"
+                },
+                {
+                    "name": "Yarden Mezi",
+                    "linkedin": "https://www.linkedin.com/in/yarden-mezi/"
+                },
+                {
+                    "name": "Paz Berenstein",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Efrat Gabay",
+                    "linkedin": "www.linkedin.com/in/efrat-gabay-903728a0"
+                },
+                {
+                    "name": "‪Tal Rajwan‬‏",
+                    "linkedin": "https://www.linkedin.com/in/tal-rajwan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Sivan Barak",
+                    "linkedin": "https://il.linkedin.com/in/sivan-barak"
+                },
+                {
+                    "name": "Yamit Kaduri",
+                    "linkedin": "https://www.linkedin.com/in/yamit-kaduri-01033710a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8151",
+            "orgId": "lgbtq-tlv-center",
+            "title": "ארכיון מדיה גאה",
+            "description": "המגזין הדיגיטלי של המרכז הגאה חשיפה לתכנים להט\"בקים ושיפור חווית זמן ההמתנה במרכז הגאה החדש המרכז הגאה מארח מבקרות ומבקרים רבים לצרכים שונים, אשר יבלו חלק מהזמן בלובי החדש בין האירועים.",
+            "presentationUrl": "https://docs.google.com/presentation/d/1GnYooUMEqYuVfE0mzRT7Cz8wpFx8iVpirWxdBbFls-E/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1GnYooUMEqYuVfE0mzRT7Cz8wpFx8iVpirWxdBbFls-E/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Adiya imri Orr",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Lior",
+                    "linkedin": "https://www.linkedin.com/in/lior-lila"
+                },
+                {
+                    "name": "Gili Porat",
+                    "linkedin": "https://www.linkedin.com/in/gilip"
+                },
+                {
+                    "name": "Daniel sher",
+                    "linkedin": ""
+                },
+                {
+                    "name": "אש רבי",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Ashley Lyn",
+                    "linkedin": "https://www.fucklinkedin.com"
+                },
+                {
+                    "name": "Tab mandler",
+                    "linkedin": "https://www.linkedin.com/in/tabmandler?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Shahar Mayzel",
+                    "linkedin": "https://www.linkedin.com/in/shahar-mayzel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Shaked Katzir",
+                    "linkedin": "https://www.linkedin.com/in/shaked-katsir-014a5b188?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Shinan Loubaton",
+                    "linkedin": "https://www.linkedin.com/"
+                },
+                {
+                    "name": "Ariel Shaked",
+                    "linkedin": "https://www.linkedin.com/in/arishak/"
+                },
+                {
+                    "name": "Noya Levi",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8153",
+            "orgId": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "title": "Volunteer Management",
+            "description": "Chatbot for LGBT students לפתח וליצור אינטגרציה של צ'טבוט במטרה לעזור לסטודנטים מהקהילה שמעוניינים להתנדב, לקבל מידע ולדווח על אירועים. תפקיד הצ'טבוט לתת מענה מידי, אמין ומדויק לגבי הזדמנויות, משאבים, תמיכה דרך אתר הארגון. חוסר נגישות של מידע",
+            "presentationUrl": "https://docs.google.com/presentation/d/1he3jXwL4fl5Vx0WwgyYQTorwJ-v3P-tze4is-CqP5xo/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1he3jXwL4fl5Vx0WwgyYQTorwJ-v3P-tze4is-CqP5xo/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "Razan jaber",
+                    "linkedin": "https://www.linkedin.com/in/razan-jaber-aa38b9177"
+                },
+                {
+                    "name": "Yuvi",
+                    "linkedin": "https://www.linkedin.com/in/yuvi-cohen/"
+                },
+                {
+                    "name": "Marina",
+                    "linkedin": "https://www.linkedin.com/in/marina-oberman-05474638?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Shani Armon",
+                    "linkedin": "www.linkedin.com/in/shani-armon-808586117"
+                },
+                {
+                    "name": "Kim Kestenboum",
+                    "linkedin": "https://www.linkedin.com/in/kim-kestenboum"
+                },
+                {
+                    "name": "Tatyana Davidovich",
+                    "linkedin": "https://www.linkedin.com/in/tatyana-davidovich-860ba9210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Limor Ziv",
+                    "linkedin": "https://www.linkedin.com/in/limorziv/"
+                },
+                {
+                    "name": "Emuna",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Lilach ofer",
+                    "linkedin": "https://www.facebook.com/lilach.ofer.3"
+                },
+                {
+                    "name": "Shenhav Lazarovich",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd815e",
+            "orgId": "lgbtq-tlv-center",
+            "title": "SeniorVIP",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Meytal Tzach",
+                    "linkedin": "https://www.linkedin.com/in/meytal-tzach/"
+                },
+                {
+                    "name": "Gai-a Shabtay",
+                    "linkedin": "https://www.linkedin.com/in/gai-shabtay-ba712217a/"
+                },
+                {
+                    "name": "Adi Biran",
+                    "linkedin": "https://www.linkedin.com/in/adi-biran-18a316221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Anastasia Gurevich",
+                    "linkedin": "https://www.linkedin.com/in/anastasia-gurevich-46a6b322b"
+                },
+                {
+                    "name": "Shaked Dounel",
+                    "linkedin": "https://www.linkedin.com/in/shaked-dounel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "inbal sofer",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yamit Sivak",
+                    "linkedin": "https://www.linkedin.com/in/yamitsivak"
+                },
+                {
+                    "name": "Naama Lemberg",
+                    "linkedin": "https://www.linkedin.com/in/naama-lemberg"
+                },
+                {
+                    "name": "marva noah",
+                    "linkedin": "https://www.linkedin.com/in/marva-noah?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Yael Spielmann",
+                    "linkedin": "https://www.linkedin.com/in/yael-spielmann-4171084?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Quinn Fox",
+                    "linkedin": ""
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd816e",
+            "orgId": "beit-el-meem",
+            "title": "Website + data management flow upgrade",
+            "description": "",
+            "presentationUrl": "",
+            "winningPlace": null,
+            "links": [],
+            "participants": [
+                {
+                    "name": "Nitzan Zisk",
+                    "linkedin": "https://www.linkedin.com/in/nitzan-zisk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Dafna libis",
+                    "linkedin": "https://il.linkedin.com/in/dafna-libis-50b511142"
+                },
+                {
+                    "name": "Shir Havron",
+                    "linkedin": "https://www.linkedin.com/in/shir-havron?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "ערין מטאניס",
+                    "linkedin": "https://www.linkedin.com/in/areen-matanes-16549a191/"
+                },
+                {
+                    "name": "ספיר אליאס",
+                    "linkedin": "https://www.linkedin.com/in/sapir-elias-1b497921a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Lina Msallam",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Emily Raicher",
+                    "linkedin": "https://www.linkedin.com/in/emily-raicher-b04204236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Yael Schechner",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Yael Bar-Akiva",
+                    "linkedin": "https://www.linkedin.com/in/yael-me/"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd8176",
+            "orgId": "האחווה-הסטודנטיאלית-הגאה-achva-lgbti-student-s-association-in-israel",
+            "title": "Alumni community platform",
+            "description": "Chatbot for LGBT students לפתח וליצור אינטגרציה של צ'טבוט במטרה לעזור לסטודנטים מהקהילה שמעוניינים להתנדב, לקבל מידע ולדווח על אירועים. תפקיד הצ'טבוט לתת מענה מידי, אמין ומדויק לגבי הזדמנויות, משאבים, תמיכה דרך אתר הארגון. חוסר נגישות של מידע",
+            "presentationUrl": "https://docs.google.com/presentation/d/1he3jXwL4fl5Vx0WwgyYQTorwJ-v3P-tze4is-CqP5xo/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1he3jXwL4fl5Vx0WwgyYQTorwJ-v3P-tze4is-CqP5xo/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "ענת לנדסברג",
+                    "linkedin": ""
+                },
+                {
+                    "name": "יעל שקדי",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Maya Elazar",
+                    "linkedin": "https://www.linkedin.com/in/maya-elazar"
+                },
+                {
+                    "name": "Roni k",
+                    "linkedin": "https://www.linkedin.com/in/roni-korem-a5b130201"
+                },
+                {
+                    "name": "Eden Zelivansky",
+                    "linkedin": "https://www.linkedin.com/in/edenzelivansky?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd81a1",
+            "orgId": "מועצה-איזורית-מבואות-חרמון",
+            "title": "Locate Residents - Collection and Insights",
+            "description": "Locate Residents Lee Gold (Full Stack Developer) Tab Mandler (Backend Developer)",
+            "presentationUrl": "https://docs.google.com/presentation/d/1oBfk8ZW5NDm2LS11txpwzH4_dMGEjj1iZg0jmk3MdDw/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1oBfk8ZW5NDm2LS11txpwzH4_dMGEjj1iZg0jmk3MdDw/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "shahaf peleg",
+                    "linkedin": "https://www.linkedin.com/in/shahaf-peleg-a202081b2/"
+                },
+                {
+                    "name": "Adi Yakir",
+                    "linkedin": "https://www.linkedin.com/in/yakiradi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Ruth chemla",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav"
+                },
+                {
+                    "name": "Nofar Eshel",
+                    "linkedin": "https://www.linkedin.com/in/nofar-eshel-76412910a"
+                },
+                {
+                    "name": "Hila Fish",
+                    "linkedin": "https://linkedin.com/in/hila-fish"
+                },
+                {
+                    "name": "Sabrina Benlolo",
+                    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav"
+                },
+                {
+                    "name": "Maayan Reuven",
+                    "linkedin": "https://www.linkedin.com/in/maayan-reuven-aa9a6a122?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Ronit Schloss",
+                    "linkedin": "https://www.linkedin.com/in/ronitschloss/"
+                },
+                {
+                    "name": "carmel reubinoff",
+                    "linkedin": "https://www.linkedin.com/in/carmel-reubinoff-b7213514b/"
+                },
+                {
+                    "name": "Tali Mahar",
+                    "linkedin": "https://www.linkedin.com/in/tali-mahar-80b57548/"
+                },
+                {
+                    "name": "Lee Gold",
+                    "linkedin": "https://www.linkedin.com/in/gold-lee/"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd81db",
+            "orgId": "עמותת-זיכרון-710",
+            "title": "Collecting 07/10 messaging",
+            "description": "Collect messages Collect, document and investigate massages from October 10th Complicated onboarding",
+            "presentationUrl": "https://docs.google.com/presentation/d/1XNtpsOi-ipmv11c0DIvQp8xcH11WBIVf/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1XNtpsOi-ipmv11c0DIvQp8xcH11WBIVf/edit?usp=drive_link&ouid=112576171082968824483&rtpof=true&sd=true"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "ניקול נוסוביצקי",
+                    "linkedin": "https://www.linkedin.com/in/nicole-nosovitsky"
+                },
+                {
+                    "name": "Shiran Levy",
+                    "linkedin": "https://www.linkedin.com/in/shiranlevy/"
+                },
+                {
+                    "name": "Mary Haddad",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Shery Blich",
+                    "linkedin": "https://www.linkedin.com/in/shery-blich"
+                },
+                {
+                    "name": "Pe'er Vered",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Adi klinger",
+                    "linkedin": "https://www.linkedin.com/in/adi-klinger?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "tali",
+                    "linkedin": ""
+                },
+                {
+                    "name": "Etti Malca",
+                    "linkedin": "https://www.linkedin.com/in/etti-malca"
+                },
+                {
+                    "name": "Zuf Goldenberg",
+                    "linkedin": "http://linkedin.com/in/zuf-goldenberg"
+                },
+                {
+                    "name": "Lior Ravkaie",
+                    "linkedin": "http://linkedin.com/in/lior-ravkaie-9806301b7"
+                }
+            ]
+        },
+        {
+            "id": "30e949a289bd81e9",
+            "orgId": "lgbtq-tlv-center",
+            "title": "פורטל הורות משותפות",
+            "description": "פורטל הורות משותפת פורטל הורות משותפת | המרכז הגאה גילת, לירי, שחר, שקד",
+            "presentationUrl": "https://docs.google.com/presentation/d/1GIq6msIjCTqqp7T93ivGlw5jimIcIvMYtl0FOCMkR6c/edit?usp=drive_link",
+            "winningPlace": null,
+            "links": [
+                {
+                    "title": "Presentation",
+                    "url": "https://docs.google.com/presentation/d/1GIq6msIjCTqqp7T93ivGlw5jimIcIvMYtl0FOCMkR6c/edit?usp=drive_link"
+                }
+            ],
+            "participants": [
+                {
+                    "name": "‫Michal Maor",
+                    "linkedin": ""
+                },
+                {
+                    "name": "מעין זהבי",
+                    "linkedin": "https://www.linkedin.com/in/maayan-zehavi-7aa203116/"
+                },
+                {
+                    "name": "אביגיל מילאטינר",
+                    "linkedin": "https://www.linkedin.com/in/avigail-millatiner?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                },
+                {
+                    "name": "Mia J",
+                    "linkedin": "https://www.linkedin.com/in/mia-josko/"
+                },
+                {
+                    "name": "Shira Forkosh",
+                    "linkedin": "https://www.linkedin.com/in/shira-forkosh-92b179116"
+                },
+                {
+                    "name": "Liri Sokol",
+                    "linkedin": "https://il.linkedin.com/in/liri-sokol"
+                },
+                {
+                    "name": "Neta Handelsman",
+                    "linkedin": "http://linkedin.com/in/neta-handelsman"
+                },
+                {
+                    "name": "Julia Cohen",
+                    "linkedin": "https://www.linkedin.com/in/julia-cohen-71361ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                },
+                {
+                    "name": "Yana ifraimov",
+                    "linkedin": "https://www.linkedin.com/in/yana-ifraimov"
+                },
+                {
+                    "name": "Osher shirazi",
+                    "linkedin": "https://www.linkedin.com/in/oshrat-shirazi"
+                },
+                {
+                    "name": "Dafna Assaf",
+                    "linkedin": "https://www.linkedin.com/in/dafna-assaf"
                 }
             ]
         }
