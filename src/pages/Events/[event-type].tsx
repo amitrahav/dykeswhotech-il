@@ -1,28 +1,30 @@
 import { useParams, Link } from "react-router-dom";
 import { useContent } from "../../contexts/ContentContext";
+import { parseEventDate } from "../../lib/utils";
 import { PageHero } from "../../components/PageHero";
 import { Card, CardTitle } from "../../components/ui/card";
-import demeterSwag from "../../assets/Demeter-swag.png";
 import xoxo from "../../assets/xoxo.png";
+import demeterSwag from "../../assets/Demeter-swag.png";
 import { Button } from "../../components/ui/button";
 import { useState } from "react";
 import { RegisterModal } from "../../components/RegisterModal";
 
 
 export function EventArchive() {
-    const { event } = useParams<{ event: string }>();
+    const { eventType: eventTypeSlug } = useParams<{ eventType: string }>();
     const { content } = useContent();
-    const { events: eventsContent } = content;
+    const { events: eventsData } = content;
+    const { global: globalContent, categories, events } = eventsData as any;
     const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
-    const eventType = eventsContent.eventTypes.find((t: any) => t.id === event);
+    const eventType = categories?.find((t: any) => t.id === eventTypeSlug);
 
     if (!eventType) {
         return <div className="min-h-screen flex items-center justify-center text-white">Event type not found</div>;
     }
 
-    const pastEvents = eventsContent.pastEvents.filter((e: any) => e.typeId === event);
-    const upcomingEvent = eventsContent.upCommingDetails.typeId === event ? eventsContent.upCommingDetails : null;
+    const pastEvents = events?.filter((e: any) => e.typeId === eventTypeSlug && parseEventDate(e.date) <= Date.now()) || [];
+    const upcomingEvent = events?.find((e: any) => e.typeId === eventTypeSlug && parseEventDate(e.date) > Date.now());
 
 
     return (
@@ -106,7 +108,7 @@ export function EventArchive() {
                 </div>
             </div>
 
-            {upcomingEvent && eventsContent.displayUpcoming && (
+            {upcomingEvent && globalContent?.displayUpcoming && (
                 <div className="relative z-10 w-full bg-[#8A5CF5] mb-32 py-[60px]">
                     <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
 
@@ -131,10 +133,6 @@ export function EventArchive() {
                             <div className="flex flex-col gap-0 min-w-[160px]">
                                 <p className="font-montserrat font-normal text-xl md:text-[28px] leading-[48px]" style={{ color: 'rgba(245,241,253,0.7)' }}>Where:</p>
                                 <h3 className="font-telaviv font-normal text-3xl md:text-[40px] leading-[48px] uppercase" style={{ color: '#F5F1FD' }}>{upcomingEvent.location}</h3>
-                            </div>
-                            <div className="flex flex-col gap-0 min-w-[160px]">
-                                <p className="font-montserrat font-normal text-xl md:text-[28px] leading-[48px]" style={{ color: 'rgba(245,241,253,0.7)' }}>Collaboration:</p>
-                                <h3 className="font-telaviv font-normal text-3xl md:text-[40px] leading-[48px] uppercase" style={{ color: '#F5F1FD' }}>{upcomingEvent.collaboration || "LGBTQ"}</h3>
                             </div>
                         </div>
 
@@ -175,14 +173,14 @@ export function EventArchive() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                             {pastEvents.map((pastEvent: any, index: number) => (
-                                <Link key={index} to={`/events/${event}/${pastEvent.id}`} className="h-full">
+                                <Link key={index} to={`/events/${eventTypeSlug}/${pastEvent.id}`} className="h-full">
                                     <Card className="bg-white border-0 text-black overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.1)] rounded-[2.5rem] flex flex-col h-full hover:translate-y-[-12px] transition-all duration-500 group">
                                         <div className="p-8 pb-5 flex flex-col gap-2">
                                             <div className="inline-block w-fit px-3 py-1 bg-[#1DFF87] text-[#293744] text-[12px] font-black rounded-lg uppercase tracking-widest mb-2 shadow-sm">
-                                                {new Date(pastEvent.date).getFullYear()}
+                                                {new Date(parseEventDate(pastEvent.date)).getFullYear()}
                                             </div>
                                             <CardTitle className="text-2xl font-black leading-none mb-1 group-hover:text-primary transition-colors">{pastEvent.title}</CardTitle>
-                                            <p className="text-gray-500 text-base font-bold tracking-tight">{pastEvent.host || "Host name / place"}</p>
+                                            <p className="text-gray-500 text-base font-bold tracking-tight">{pastEvent.location}</p>
                                         </div>
 
                                         <div className="relative aspect-[16/11] w-full overflow-hidden border-y border-gray-50">
@@ -217,4 +215,3 @@ export function EventArchive() {
         </div>
     );
 }
-

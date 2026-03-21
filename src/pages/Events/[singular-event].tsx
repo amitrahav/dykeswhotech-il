@@ -5,6 +5,7 @@ import { Button } from "../../components/ui/button";
 import { RegisterModal } from "../../components/RegisterModal";
 import { PageHero } from "../../components/PageHero";
 import { CloudinaryGallery } from "../../components/CloudinaryGallery";
+import demeterSwag from "../../assets/Demeter-swag.png";
 
 
 // ────────────────────────────────────────────────────────────────
@@ -81,14 +82,15 @@ function useTallyEmbed(tallyId?: string) {
 // Main component
 // ────────────────────────────────────────────────────────────────
 export function EventDetail() {
-    const { event, eventId } = useParams<{ event: string; eventId: string }>();
+    const { eventType: eventTypeSlug, singularEvent: singularEventSlug } = useParams<{ eventType: string; singularEvent: string }>();
     const { content } = useContent();
-    const { events: eventsContent } = content;
+    const { events: eventsData } = content;
+    const { events } = eventsData as any;
     const [registerOpen, setRegisterOpen] = useState(false);
 
     // Find the single event from JSON
-    const singleEvent = (eventsContent as any).singleEvents?.find(
-        (e: any) => e.typeId === event && e.id === eventId
+    const singleEvent = events?.find(
+        (e: any) => e.typeId === eventTypeSlug && e.id === singularEventSlug
     );
 
     useTallyEmbed(singleEvent?.tallyId);
@@ -97,7 +99,7 @@ export function EventDetail() {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-[#F5F5F5] gap-6">
                 <h1 className="text-4xl font-telaviv text-[#293744]">Event not found</h1>
-                <Link to={`/events/${event}`}>
+                <Link to={`/events/${eventTypeSlug}`}>
                     <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">← Back to events</Button>
                 </Link>
             </div>
@@ -153,16 +155,12 @@ export function EventDetail() {
 
                     {/* Right: Illustration */}
                     <div className="lg:w-2/5 w-full flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[414px] aspect-square bg-[#293744] overflow-hidden hover:scale-[1.02] transition-transform duration-500 rounded-none">
-                            {singleEvent.image ? (
-                                <img
-                                    src={singleEvent.image}
-                                    alt={singleEvent.title}
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                />
-                            ) : (
-                                <div className="text-gray-400 font-bold flex items-center justify-center h-full">IMAGE</div>
-                            )}
+                        <div className="relative w-full max-w-[414px] bg-transparent overflow-hidden hover:scale-[1.02] transition-transform duration-500 flex justify-center items-center">
+                            <img
+                                src={demeterSwag}
+                                alt="Demeter Swag Statue"
+                                className="w-full h-auto object-contain drop-shadow-2xl"
+                            />
                         </div>
                     </div>
                 </div>
@@ -317,9 +315,9 @@ export function EventDetail() {
                 BOTTOM BACK LINK
             ═══════════════════════════════════════ */}
             <div className="relative z-10 bg-[#F5F5F5] px-6 md:px-12 lg:px-20 py-16 text-center border-t border-gray-200">
-                <Link to={`/events/${event}`}>
+                <Link to={`/events/${eventTypeSlug}`}>
                     <Button className="rounded-full bg-[#293744] text-white font-semibold px-8 py-3 hover:bg-[#1e2a33] hover:scale-105 active:scale-95 transition-all">
-                        ← All {(event as string).replace(/-/g, ' ')} events
+                        ← All {(eventTypeSlug as string).replace(/-/g, ' ')} events
                     </Button>
                 </Link>
             </div>

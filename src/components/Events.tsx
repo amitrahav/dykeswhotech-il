@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Card, CardFooter, CardTitle } from "./ui/card";
 
 import { useContent } from "../contexts/ContentContext";
+import { parseEventDate } from "../lib/utils";
 
 
 
@@ -100,7 +101,12 @@ const NotebookGrid = ({ delay = 0, color = "rgba(144, 238, 144, 0.2)" }: { delay
 
 function UpcommingEvent() {
     const { content } = useContent();
-    const { events: eventsContent } = content;
+    const { events: eventsData } = content;
+    const { events } = eventsData as any;
+
+    const upcomingEvent = events?.find((e: any) => parseEventDate(e.date) > Date.now());
+
+    if (!upcomingEvent) return null;
 
     useEffect(() => {
         const d = document;
@@ -136,13 +142,13 @@ function UpcommingEvent() {
             <NotebookGrid color="rgba(96, 118, 132, 0.2)" />
 
             <div className="flex flex-col md:flex-row md:gap-0 gap-4 flex-wrap w-full justify-between text-white mb-10 md:mb-20 relative z-10">
-                <div className="md:w-1/3"><p>What:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.title}</h3></div>
-                <div className="md:w-1/3"><p>When:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.date}</h3></div>
-                <div className="md:w-1/3"><p>Where:</p><h3 className="text-2xl font-telaviv text-white">{eventsContent.upCommingDetails.location}</h3></div>
+                <div className="md:w-1/3"><p>What:</p><h3 className="text-2xl font-telaviv text-white">{upcomingEvent.title}</h3></div>
+                <div className="md:w-1/3"><p>When:</p><h3 className="text-2xl font-telaviv text-white">{upcomingEvent.date}</h3></div>
+                <div className="md:w-1/3"><p>Where:</p><h3 className="text-2xl font-telaviv text-white">{upcomingEvent.location}</h3></div>
             </div>
             <div className="w-full relative z-10">
                 <iframe
-                    data-tally-src={`https://tally.so/embed/${eventsContent.upCommingDetails.tallyId}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
+                    data-tally-src={`https://tally.so/embed/${upcomingEvent.tallyId}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
                     loading="lazy"
                     width="100%"
                 />
@@ -154,25 +160,28 @@ function UpcommingEvent() {
 export function Events() {
     const displayEventsArchive = useRef(true);
     const { content } = useContent();
-    const { events: eventsContent } = content;
+    const { events: eventsData } = content;
+    const { global: globalContent, categories: categoriesContent } = eventsData as any;
 
-    const eventTypes = eventsContent.eventTypes.map((item) => ({
+    const categories = categoriesContent?.map((item: any) => ({
         ...item
-    }));
+    })) || [];
+
+    console.log(new Date(globalContent.displayUpcomingUntil))
 
     return (
         <section className="w-full pt-10 pb-20 px-8 md:px-12 lg:px-16 xl:px-24" id="events">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{eventsContent.title}</h2>
+                <h2 className="text-2xl mb-8 font-extrabold" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>{globalContent?.title}</h2>
                 <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
-                    {eventsContent.description}
+                    {globalContent?.description}
                 </p>
 
                 {displayEventsArchive.current && (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-2rem] xl:mx-[-6rem] 2xl:mx-[-10rem]">
-                        {eventTypes.map((event, index) => (
-                            <Link to={`/events/${event.id}`}>
-                                <Card key={index} className={`relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex flex-col ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
+                        {categories.map((event: any, index: number) => (
+                            <Link to={`/events/${event.id}`} key={index}>
+                                <Card className={`relative bg-[#293744] border-2 border-[#293744] text-white overflow-hidden shadow-2xl hover:scale-105 transition-all duration-300 rounded-3xl min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] flex flex-col ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
                                 >
                                     {/* Animated notebook grid - lowest z-index */}
                                     <NotebookGrid delay={index * 0.3} />
@@ -185,7 +194,7 @@ export function Events() {
                                     />
 
                                     <div className="absolute bottom-0 right-0 w-[90%] md:w-[85%] lg:w-[95%] h-2/3 translate-x-[5%] pointer-events-none" style={{ zIndex: 1 }}>
-                                        <img src={event.image} alt={event.title} className="w-full h-full object-contain object-right-bottom drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" />
+                                        <img src={event.statue || event.image} alt={event.title} className="w-full h-full object-contain object-right-bottom drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" />
                                     </div>
                                     <CardFooter className="absolute px-4 py-6 h-full flex flex-col justify-between items-start pointer-events-auto h-full" style={{ zIndex: 2 }}>
                                         <CardTitle className="text-2xl font-normal leading-tight w-full">{event.title}</CardTitle>
@@ -210,12 +219,12 @@ export function Events() {
                     </div>
                 )}
             </div>
-            {eventsContent.displayUpcoming && new Date(eventsContent.displayUpcomingUntil) > new Date() && (
+            {globalContent?.displayUpcoming && new Date(globalContent.displayUpcomingUntil) > new Date() && (
                 <div className="max-w-6xl mx-auto mt-10">
-                    <h2 className="text-2xl mb-8 font-extrabold">{eventsContent.upcomingTitle}</h2>
-                    {eventsContent.upcomingDescription && eventsContent.upcomingDescription.length > 0 && (
+                    <h2 className="text-2xl mb-8 font-extrabold">{globalContent.upcomingTitle}</h2>
+                    {globalContent.upcomingDescription && globalContent.upcomingDescription.length > 0 && (
                         <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
-                            {eventsContent.upcomingDescription}
+                            {globalContent.upcomingDescription}
                         </p>
                     )}
                     <UpcommingEvent />
