@@ -33,7 +33,7 @@ function OrgLogoCarousel({ organizationIds = [], organizations = [], orgLogos = 
     const currentOrg = organizations?.find((o: any) => o.id === filteredIds[currentPage]);
 
     return (
-        <div 
+        <div
             onClick={(e) => e.stopPropagation()}
             className="relative w-full mb-0 overflow-visible flex flex-col items-center"
         >

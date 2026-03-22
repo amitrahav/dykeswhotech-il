@@ -1,12 +1,28 @@
 import { Link } from "react-router-dom";
 import { useContent } from "../contexts/ContentContext";
+import { useOrgLogos } from "../hooks/useOrgLogos";
 
 export function Footer() {
     const { content } = useContent();
     const { navigation } = content.common;
+    const { logos } = useOrgLogos(["lgbt-center_shbkge"]);
+    const lgbtCenterLogo = logos["lgbt-center_shbkge"]?.url;
 
     return (
         <footer className="w-full bg-white py-10 flex flex-col items-center gap-6">
+            {/* LGBT Center Logo */}
+            {lgbtCenterLogo && (
+                <div className="mb-4">
+                    <a href="https://lgbtqcenter.org.il/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                        <img
+                            src={lgbtCenterLogo}
+                            alt="LGBT Center"
+                            className="h-12 object-contain"
+                        />
+                    </a>
+                </div>
+            )}
+
             {/* Navigation */}
             <nav className="flex items-center gap-4 text-base font-medium flex-wrap justify-center">
                 <Link to="/" className="text-primary hover:opacity-70 transition-opacity">{navigation.home}</Link>

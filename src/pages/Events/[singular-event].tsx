@@ -273,19 +273,19 @@ export function EventDetail() {
             ═══════════════════════════════════════ */}
             <section className="relative z-10 overflow-hidden bg-white">
 
-
-                {/* Hestia — anchored to bottom-left */}
-                <div className="absolute bottom-0 left-0 z-20 pointer-events-none">
-                    <img
-                        src="/assets/Hestia-standing.png"
-                        alt="Hestia"
-                        className="h-[28rem] md:h-[42rem] object-contain object-bottom drop-shadow-2xl"
-                    />
-                </div>
-
-                {/* Content — padded left to clear the statue on md+ */}
                 <div className="relative z-20 px-6 md:px-12 lg:px-20 py-24 md:py-32">
-                    <div className="max-w-7xl mx-auto md:pl-[22rem] lg:pl-[28rem] min-h-[50vh]">
+                    <div className="max-w-7xl mx-auto min-h-[50vh] flex flex-row items-end gap-4 md:gap-0">
+                        {/* Hestia — Beside content */}
+                        <div className="w-1/3 md:w-[22rem] lg:w-[28rem] flex-shrink-0 pointer-events-none">
+                            <img
+                                src="/assets/Hestia-standing.png"
+                                alt="Hestia"
+                                className="h-[20rem] md:h-[42rem] object-contain object-bottom drop-shadow-2xl"
+                            />
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1">
 
                         <span className="text-xs font-black uppercase tracking-widest text-primary mb-4 block">Results</span>
                         <h2 className="text-4xl md:text-6xl font-telaviv text-[#293744] uppercase leading-tight mb-6">
@@ -297,7 +297,7 @@ export function EventDetail() {
 
                         {/* Top 3 project cards */}
                         {singleEvent.tracks && singleEvent.tracks.length > 0 && (
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                                 {(singleEvent.tracks as { title: string; description: string }[]).slice(0, 3).map((track, i) => (
                                     <div key={i}
                                         className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-purple-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
@@ -317,6 +317,7 @@ export function EventDetail() {
                         )}
                     </div>
                 </div>
+            </div>
 
                 {/* Hearts background — xoxo technique: screen blend, bottom-anchored */}
                 <div id="haze"
