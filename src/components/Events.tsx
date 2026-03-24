@@ -167,8 +167,6 @@ export function Events() {
         ...item
     })) || [];
 
-    console.log(new Date(globalContent.displayUpcomingUntil))
-
     return (
         <section className="w-full pt-10 pb-20 px-8 md:px-12 lg:px-16 xl:px-24" id="events">
             <div className="max-w-6xl mx-auto">
@@ -176,6 +174,18 @@ export function Events() {
                 <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
                     {globalContent?.description}
                 </p>
+
+                {globalContent?.displayUpcoming && new Date(globalContent.displayUpcomingUntil) > new Date() && (
+                    <div className="max-w-6xl mx-auto mt-10 mb-20" id="upcoming">
+                        <h2 className="text-2xl mb-8 font-extrabold">{globalContent.upcomingTitle}</h2>
+                        {globalContent.upcomingDescription && globalContent.upcomingDescription.length > 0 && (
+                            <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
+                                {globalContent.upcomingDescription}
+                            </p>
+                        )}
+                        <UpcommingEvent />
+                    </div>
+                )}
 
                 {displayEventsArchive.current && (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-[-2rem] xl:mx-[-6rem] 2xl:mx-[-10rem]">
@@ -219,17 +229,6 @@ export function Events() {
                     </div>
                 )}
             </div>
-            {globalContent?.displayUpcoming && new Date(globalContent.displayUpcomingUntil) > new Date() && (
-                <div className="max-w-6xl mx-auto mt-10">
-                    <h2 className="text-2xl mb-8 font-extrabold">{globalContent.upcomingTitle}</h2>
-                    {globalContent.upcomingDescription && globalContent.upcomingDescription.length > 0 && (
-                        <p className="max-w-2xl text-gray-700 mb-12 text-base md:text-lg font-light">
-                            {globalContent.upcomingDescription}
-                        </p>
-                    )}
-                    <UpcommingEvent />
-                </div>
-            )}
         </section>
     );
 }
