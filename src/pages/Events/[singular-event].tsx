@@ -271,73 +271,73 @@ export function EventDetail() {
             {/* ═══════════════════════════════════════
                 FINAL OUTCOME SECTION
             ═══════════════════════════════════════ */}
-            <section className="relative z-10 overflow-hidden bg-white">
-
-                <div className="relative z-20 px-6 md:px-12 lg:px-20 py-24 md:py-32">
-                    <div className="max-w-7xl mx-auto min-h-[50vh] flex flex-row items-end gap-4 md:gap-0">
-                        {/* Hestia — Beside content */}
-                        <div className="w-1/3 md:w-[22rem] lg:w-[28rem] flex-shrink-0 pointer-events-none">
-                            <img
-                                src="/assets/Hestia-standing.png"
-                                alt="Hestia"
-                                className="h-[20rem] md:h-[42rem] object-contain object-bottom drop-shadow-2xl"
-                            />
-                        </div>
-
-                        {/* Content */}
-                        <div className="flex-1">
-
-                        <span className="text-xs font-black uppercase tracking-widest text-primary mb-4 block">Results</span>
-                        <h2 className="text-4xl md:text-6xl font-telaviv text-[#293744] uppercase leading-tight mb-6">
-                            Final outcome
-                        </h2>
-                        <p className="text-gray-600 font-poppins text-lg leading-relaxed mb-14 max-w-2xl">
-                            {singleEvent.about?.[singleEvent.about.length - 1] || "An incredible day of building, connecting, and creating real impact for the community."}
-                        </p>
-
-                        {/* Top 3 project cards */}
-                        {singleEvent.tracks && singleEvent.tracks.length > 0 && (
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                                {(singleEvent.tracks as { title: string; description: string }[]).slice(0, 3).map((track, i) => (
-                                    <div key={i}
-                                        className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-purple-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                                        <div className="absolute top-3 right-4 text-6xl font-telaviv text-primary/8 leading-none select-none italic">
-                                            {i + 1}
-                                        </div>
-                                        <div className="text-2xl mb-2">{["🥇", "🥈", "🥉"][i]}</div>
-                                        <h3 className="text-lg font-black text-[#293744] uppercase font-montserrat tracking-tight mb-2">
-                                            {track.title}
-                                        </h3>
-                                        <p className="text-gray-500 text-sm leading-relaxed font-light font-poppins">
-                                            {track.description}
-                                        </p>
-                                    </div>
-                                ))}
+            {singleEvent.typeId === 'dykeathon' && (
+                <section className={`relative z-10 overflow-hidden ${singleEvent.typeId === 'dykeathon' ? 'bg-white' : 'bg-[#F5F5F5]'}`}>
+                    <div className={`relative z-20 ${singleEvent.typeId === 'dykeathon' ? 'px-6 md:px-12 lg:px-20 py-24 md:py-32' : ''}`}>
+                        <div className="max-w-7xl mx-auto min-h-[50vh] flex flex-row items-end gap-4 md:gap-0">
+                            {/* Hestia — Beside content */}
+                            <div className="w-1/3 md:w-[22rem] lg:w-[28rem] flex-shrink-0 pointer-events-none">
+                                <img
+                                    src="/assets/Hestia-standing.png"
+                                    alt="Hestia"
+                                    className="h-[20rem] md:h-[42rem] object-contain object-bottom drop-shadow-2xl"
+                                />
                             </div>
-                        )}
+
+                            {/* Content */}
+
+                            <div className="flex-1">
+                                <span className="text-xs font-black uppercase tracking-widest text-primary mb-4 block">Results</span>
+                                <h2 className="text-4xl md:text-6xl font-telaviv text-[#293744] uppercase leading-tight mb-6">
+                                    Final outcome
+                                </h2>
+                                <p className="text-gray-600 font-poppins text-lg leading-relaxed mb-14 max-w-2xl">
+                                    {singleEvent.about?.[singleEvent.about.length - 1] || "An incredible day of building, connecting, and creating real impact for the community."}
+                                </p>
+
+                                {/* Top 3 project cards */}
+                                {singleEvent.tracks && singleEvent.tracks.length > 0 && (
+                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                                        {(singleEvent.tracks as { title: string; description: string }[]).slice(0, 3).map((track, i) => (
+                                            <div key={i}
+                                                className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-purple-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                                                <div className="absolute top-3 right-4 text-6xl font-telaviv text-primary/8 leading-none select-none italic">
+                                                    {i + 1}
+                                                </div>
+                                                <div className="text-2xl mb-2">{["🥇", "🥈", "🥉"][i]}</div>
+                                                <h3 className="text-lg font-black text-[#293744] uppercase font-montserrat tracking-tight mb-2">
+                                                    {track.title}
+                                                </h3>
+                                                <p className="text-gray-500 text-sm leading-relaxed font-light font-poppins">
+                                                    {track.description}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-                {/* Hearts background — xoxo technique: screen blend, bottom-anchored */}
-                <div id="haze"
-                    className="absolute bottom-0 left-0 z-0 pointer-events-none rounded-full bg-[#FEB5FF] transform translate-y-1/2 -translate-x-1/3 h-[70rem] w-[70rem] blur-xl"></div>
+                    {/* Hearts background — xoxo technique: screen blend, bottom-anchored */}
+                    <div id="haze"
+                        className="absolute bottom-0 left-0 z-0 pointer-events-none rounded-full bg-[#FEB5FF] transform translate-y-1/2 -translate-x-1/3 h-[70rem] w-[70rem] blur-xl"></div>
 
-                <div
-                    className="absolute inset-x-0 bottom-0 w-full h-[20rem] pointer-events-none z-10 mix-blend-screen opacity-40"
-                    style={{
-                        filter: 'brightness(100)',
-                        backgroundImage: `url(/assets/hearts.png)`,
-                        backgroundPosition: 'center bottom',
-                        backgroundSize: 'auto auto',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundBlendMode: 'screen',
-                    }}
-                />
+                    <div
+                        className="absolute inset-x-0 bottom-0 w-full h-[20rem] pointer-events-none z-10 mix-blend-screen opacity-40"
+                        style={{
+                            filter: 'brightness(100)',
+                            backgroundImage: `url(/assets/hearts.png)`,
+                            backgroundPosition: 'center bottom',
+                            backgroundSize: 'auto auto',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundBlendMode: 'screen',
+                        }}
+                    />
 
 
-            </section>
-
+                </section>
+            )}
             {/* ═══════════════════════════════════════
                 BOTTOM BACK LINK
             ═══════════════════════════════════════ */}

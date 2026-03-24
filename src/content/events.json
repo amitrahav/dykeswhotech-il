@@ -35,11 +35,11 @@
             "id": "drink-and-dyke",
             "title": "DRINK & DYKE",
             "statue": "/assets/Demeter.png",
-            "description": "Our casual, no-agenda bar nights. These events are all about unwinding, making friends, and enjoying a relaxed evening together.",
+            "description": "Casual, high-impact gatherings designed to foster honest dialogue about the tech industry. From sharing professional setbacks in our Fuckup Nights series to low-pressure networking, these events build a strong professional infrastructure for queer women in tech.",
             "features": [
-                "Social gatherings",
-                "Relaxed atmosphere",
-                "Queer-friendly spaces"
+                "Honest dialogue: Sharing professional setbacks and lessons learned.",
+                "Strategic networking: Connecting women in development, product, and entrepreneurship.",
+                "Knowledge sharing: Building professional infrastructure through real-world experience."
             ]
         }
     ],
@@ -98,29 +98,38 @@
         },
         {
             "id": "drink-n-dyke-2025",
-            "typeId": "drink-n-dyke",
-            "title": "Drink n' Dyke: Fu**Ups",
-            "host": "Topless Bar",
-            "date": "2025-01-01",
+            "typeId": "drink-and-dyke",
+            "title": "Fuckup Nights Edition",
+            "host": "Saffe",
+            "date": "10/09/2025",
             "location": "Tel Aviv",
-            "image": "/assets/Hestia02.png",
-            "description": "",
+            "image": "https://res.cloudinary.com/dhhveerqs/image/upload/v1773309502/WhatsApp_Image_2026-03-10_at_11.21.28_14_mpgrby.jpg",
+            "tagline": "Learning from failure is a critical driver for professional growth.",
+            "aboutTitle": "What happened at Fuckup Nights?",
+            "about": [
+                "Our recent **Drink & Dyke** event at **Saffe** featured a **Fuckup Nights** format, where tech professionals from the community shared personal stories of professional setbacks, product failures, and lessons learned throughout their careers.",
+                "The session was designed to foster an honest and direct dialogue about the challenges of the tech industry, emphasizing that learning from failure is a critical driver for professional growth.",
+                "The event brought together dozens of women in development, product management, and entrepreneurship. Beyond the lightning talks, the evening provided a dedicated space for strategic networking and knowledge sharing. By highlighting real-world experiences and practical insights, the event reinforced our mission to build a strong professional infrastructure for women in the Israeli tech ecosystem."
+            ],
             "galleryTag": "drink-n-dyke-fuckups-2025"
         },
         {
             "id": "psycho-tech-meetup-2024",
             "typeId": "meetups",
-            "title": "Psycho-Tech relations",
+            "title": "Tech, Care, and Creative Coding",
             "date": "27/11/2024",
             "location": "Island Office",
             "address": "Tel Aviv",
-            "image": "/assets/Hestia02.png",
+            "image": "https://res.cloudinary.com/dhhveerqs/image/upload/v1773132549/91_djhc0u.jpg",
+            "galleryTag": "meetup-psychology",
             "tagline": "Where therapy meets technology.",
             "aboutTitle": "What was this meetup about?",
             "about": [
-                "200+ participants were thrilled to hear our 3 amazing women share about psychological and medical therapy alongside high-tech.",
-                "A workshop was held on a coding software that integrates a language model — hands-on, practical, and energizing.",
-                "One of our biggest meetups yet. The community keeps growing."
+                "The **Dykeathon** community returned for a second special meetup, continuing our mission to provide a creative and professional hub for queer women in technology. This session explored the intersection of innovation and social wellness, offering members a unique space to learn, build, and collaborate.",
+                "**Highlights of the Meetup:**",
+                "**Tech & Health:** An insightful session led by **Yali Akat**, Co-founder and CPO of Laguna Health, focusing on the evolving role of technology in modern healthcare.",
+                "**Product Leadership in Mental Health:** A deep dive into product strategy within the mental health space, featuring **Elinor Yaniv**, Product Lead at Mind Guard.",
+                "**Zero-Code App Workshop:** A hands-on technical workshop titled \"Building an App Without Writing a Single Line of Code,\" providing participants with practical tools to launch digital solutions rapidly."
             ],
             "program": [
                 {
@@ -130,13 +139,13 @@
                 },
                 {
                     "time": "19:00",
-                    "title": "Speakers — Therapy Meets Tech",
-                    "description": "3 speakers sharing about psychological and medical therapy alongside high-tech innovation."
+                    "title": "Speakers — Innovation & Social Wellness",
+                    "description": "Featuring Yali Akat (Laguna Health) on Tech & Health, and Elinor Yaniv (Mind Guard) on Product Leadership in Mental Health."
                 },
                 {
                     "time": "20:00",
-                    "title": "Workshop — AI-Integrated Coding",
-                    "description": "Hands-on workshop on a coding software that integrates a language model."
+                    "title": "Workshop — Zero-Code App",
+                    "description": "Building an App Without Writing a Single Line of Code: a hands-on technical workshop."
                 },
                 {
                     "time": "21:00",
@@ -176,17 +185,18 @@
         {
             "id": "women-innovation-at-war-2023",
             "typeId": "meetups",
-            "title": "Women Innovation at War",
+            "title": "Leading Tech Through Crisis",
             "date": "13/12/2023",
             "location": "Pagaya Office",
             "address": "Tel Aviv",
-            "image": "/assets/Hestia02.png",
-            "tagline": "Light, tech, and community.",
+            "image": "https://res.cloudinary.com/dhhveerqs/image/upload/v1773074156/pic254_1_pyzfzl.jpg",
+            "tagline": "Tech at war time",
             "aboutTitle": "What was this meetup about?",
+            "galleryTag": "meetup-war",
             "about": [
-                "Hosted at the Pagaya office, 150 participants were thrilled to hear our four speakers talking about women innovation at war times.",
-                "The evening also served as a teaser for Dykeathon 3.0, coming in April 2024 — with a first look at the challenge tracks and organizations we'd be working with.",
-                "Beer, pizza, and sufganiyot provided. Spots were limited, community was full."
+                "Our community's first official meetup, held in December 2023 at the Pagaya offices, focused on a critical and timely theme: **Leading Tech Through Crisis**. In the midst of the war, we created a dedicated space to provide inspiration and practical tools for entrepreneurship and leadership under extreme uncertainty.",
+                "The event featured a powerful panel of women who led revolutionary technological initiatives that emerged as a direct response to the national crisis. We explored projects ranging from Open-Source Intelligence (OSINT) operations for identifying hostages and missing persons, to platforms managing housing solutions for displaced families, and cyber initiatives helping identify perpetrators of gender-based violence. The gathering highlighted the strength of our professional network and showcased how women in tech are driving meaningful change in the most critical arenas.",
+                "Through lightning talks and strategic networking, the event solidified DykesWhoTech's role as a hub for innovation, social impact, and female leadership in the Israeli tech ecosystem. Featured speakers included: **Almog Zemach** (OSINT Databases), **Tamar Peretz** (Safe Place), **Naama Feichenfeld** (MAIAT), and **Li Shay** (Digital Advocacy)."
             ],
             "program": [
                 {
@@ -196,8 +206,8 @@
                 },
                 {
                     "time": "19:00",
-                    "title": "Panel — Women Innovation at War Times",
-                    "description": "Hear from 4 speakers talking about women innovation at war times — projects that made a difference."
+                    "title": "Panel — Leading Tech Through Crisis",
+                    "description": "Featuring: Almog Zemach (OSINT Databases), Tamar Peretz (Safe Place), Naama Feichenfeld (MAIAT), and Li Shay (Digital Advocacy)."
                 },
                 {
                     "time": "20:00",
