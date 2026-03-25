@@ -6,6 +6,7 @@ import omg from "../assets/omg.png";
 import queen from "../assets/queen.png";
 import { PageHero } from "../components/PageHero";
 import { useContent } from "../contexts/ContentContext";
+import { SEO } from "../components/SEO";
 
 export function About() {
   const { content } = useContent();
@@ -31,6 +32,21 @@ export function About() {
 
   return (
     <div className="w-full bg-[#FFE0F5] relative overflow-hidden flex flex-col">
+      <SEO 
+        title={hero.title}
+        description={hero.description[0]}
+        jsonLd={team.members?.map((member: any) => ({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": member.name,
+          "jobTitle": member.role,
+          "url": member.linkedinUrl,
+          "affiliation": {
+            "@type": "Organization",
+            "name": "Dykes Who Tech IL"
+          }
+        }))}
+      />
       <style>{`
                 @keyframes drawLine {
                     to {

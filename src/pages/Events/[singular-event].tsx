@@ -9,6 +9,7 @@ import { PageHero } from "../../components/PageHero";
 import { CloudinaryGallery } from "../../components/CloudinaryGallery";
 import demeterSwag from "../../assets/Demeter-swag.png";
 import { useOrgLogos } from "../../hooks/useOrgLogos";
+import { SEO } from "../../components/SEO";
 
 
 // ────────────────────────────────────────────────────────────────
@@ -127,6 +128,33 @@ export function EventDetail() {
 
     return (
         <div className="bg-[#F5F5F5] min-h-screen">
+            <SEO 
+                title={singleEvent.title}
+                description={singleEvent.tagline || (Array.isArray(singleEvent.about) ? singleEvent.about[0] : singleEvent.about)}
+                jsonLd={{
+                    "@context": "https://schema.org",
+                    "@type": "Event",
+                    "name": singleEvent.title,
+                    "description": Array.isArray(singleEvent.about) ? singleEvent.about.join(' ') : singleEvent.about,
+                    "startDate": singleEvent.date, // Note: ISO format is preferred, but LLMs handle many formats
+                    "location": {
+                        "@type": "Place",
+                        "name": singleEvent.location,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": singleEvent.address || "Nahmani 36",
+                            "addressLocality": "Tel Aviv",
+                            "addressCountry": "IL"
+                        }
+                    },
+                    "image": singleEvent.image,
+                    "organizer": {
+                        "@type": "Organization",
+                        "name": "Dykes Who Tech IL",
+                        "url": "https://dykeathon.com"
+                    }
+                }}
+            />
 
             {/* ═══════════════════════════════════════
                 TOP LOGO HEADER — rainbow gradient background

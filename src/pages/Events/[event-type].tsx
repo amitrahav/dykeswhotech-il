@@ -10,6 +10,7 @@ import { Button } from "../../components/ui/button";
 import { RegisterModal } from "../../components/RegisterModal";
 import { useOrgLogos } from "../../hooks/useOrgLogos";
 import { useState } from "react";
+import { SEO } from "../../components/SEO";
 
 
 function OrgLogoCarousel({ organizationIds = [], organizations = [], orgLogos = {} }: { organizationIds?: string[], organizations?: any[], orgLogos?: any }) {
@@ -118,6 +119,21 @@ export function EventArchive() {
 
     return (
         <div className="bg-[#FFE0F5] min-h-screen pb-40 relative overflow-hidden">
+            <SEO 
+                title={eventType.title}
+                description={eventType.description}
+                jsonLd={{
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "name": `${eventType.title} Events - Dykes Who Tech`,
+                    "description": eventType.description,
+                    "url": `https://dykeathon.com/events/${eventTypeSlug}`,
+                    "about": {
+                        "@type": "Thing",
+                        "name": eventType.title
+                    }
+                }}
+            />
             <PageHero />
 
             {/* Background Decor: Purple Haze Inlined for control */}

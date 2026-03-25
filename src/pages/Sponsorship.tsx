@@ -4,6 +4,7 @@ import queenGlitch from "../assets/queen-glitch.png";
 import { PageHero } from "../components/PageHero";
 import { useContent } from "../contexts/ContentContext";
 import { TierModal } from "../components/TierModal";
+import { SEO } from "../components/SEO";
 
 // Tier card glassmorphism style (matching Figma exactly)
 const glassBg: React.CSSProperties = {
@@ -105,6 +106,10 @@ export function Sponsorship() {
 
     return (
         <div className="w-full bg-[#8D6BE4] relative overflow-hidden flex flex-col min-h-screen">
+            <SEO 
+                title={hero.title}
+                description={whyJoin.intro}
+            />
             <section ref={containerRef} className="relative w-full overflow-hidden flex-grow flex flex-col">
 
                 {/* Large Background Title */}
