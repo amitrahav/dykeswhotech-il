@@ -7,9 +7,10 @@ export const EVENT_2026_ID    = "2f3949a2-89bd-8069-9d63-cc031e970722";
 
 // ── Tally payload types ─────────────────────────────────────────────────────
 export interface TallyOption { id: string; text: string }
-export interface TallyField  { key: string; label: string; type: string; value: unknown; options?: TallyOption[] }
+export interface TallyField  { key: string; label: string | null; type: string; value: unknown; options?: TallyOption[] }
 export interface TallyPayload {
-  eventType: string;
+  eventType?: string;  // present in older webhook format
+  eventId?: string;    // present in newer webhook format
   data: { createdAt: string; fields: TallyField[] };
 }
 
@@ -21,8 +22,10 @@ type NotionType =
 // Array-based so multiple entries can share the same tallyLabel (e.g. one
 // checkbox group → two Notion properties) or the same Notion target (e.g.
 // two questions that both contribute values to one multi_select column).
+// Use tallyKey (e.g. "question_rKpDGM") for fields with a null label.
 interface FieldMapEntry {
-  tallyLabel: string;
+  tallyLabel?: string;
+  tallyKey?: string;
   notion: string;
   type: NotionType;
   /** Optional transform: given raw Tally value + options array, return the value to store */
@@ -132,15 +135,15 @@ export const REGISTRATION_FIELD_MAP: FieldMapEntry[] = [
     transform: selectedTexts,
   },
 
-  // One Tally checkbox group → two separate Notion boolean columns
+  // One Tally checkbox group (null label, key question_rKpDGM) → two Notion boolean columns
   {
-    tallyLabel: "Untitled checkboxes field",
+    tallyKey: "question_rKpDGM",
     notion: "Allow Broadcast",
     type: "checkbox",
     transform: (value, options) => isOptionSelected("The Dykeathon", value, options),
   },
   {
-    tallyLabel: "Untitled checkboxes field",
+    tallyKey: "question_rKpDGM",
     notion: "Allow SMS",
     type: "checkbox",
     transform: (value, options) => isOptionSelected("המרכז הגאה", value, options),
@@ -150,10 +153,7 @@ export const REGISTRATION_FIELD_MAP: FieldMapEntry[] = [
     tallyLabel: "Job Searching",
     notion: "Is Job Searching",
     type: "checkbox",
-    transform: (value) => {
-      if (typeof value === "string") return value.toLowerCase().includes("looking");
-      return false;
-    },
+    transform: (value, options) => isOptionSelected("looking", value, options),
   },
 
   {
@@ -164,7 +164,7 @@ export const REGISTRATION_FIELD_MAP: FieldMapEntry[] = [
   },
 
   {
-    tallyLabel: "Untitled file upload field",
+    tallyKey: "question_2kZj1p",
     notion: "CV URL",
     type: "url",
     transform: (value) => {
@@ -181,8 +181,9 @@ export const REGISTRATION_FIELD_MAP: FieldMapEntry[] = [
 export function parseFields(fields: TallyField[]): Map<string, TallyField> {
   const map = new Map<string, TallyField>();
   for (const field of fields) {
-    // Tally may emit sub-fields like "Full Name (First)" — index by base label too
-    map.set(field.label, field);
+    if (field.label !== null) map.set(field.label, field);
+    // Also index by key (prefixed) so null-label fields remain reachable
+    map.set(`key:${field.key}`, field);
   }
   return map;
 }
@@ -195,7 +196,8 @@ export function buildProperties(
   const props: Record<string, unknown> = {};
 
   for (const entry of fieldMap) {
-    const field = parsedFields.get(entry.tallyLabel);
+    const lookupKey = entry.tallyKey ? `key:${entry.tallyKey}` : entry.tallyLabel!;
+    const field = parsedFields.get(lookupKey);
     if (!field) continue;
 
     const rawValue = entry.transform

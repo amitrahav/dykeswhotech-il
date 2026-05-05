@@ -29,7 +29,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // ── Parse payload ───────────────────────────────────────────────────────
   const payload = req.body as TallyPayload;
-  if (payload.eventType !== "FORM_RESPONSE") {
+  // Old format has eventType="FORM_RESPONSE"; new format has eventId (no eventType).
+  // Skip only if eventType is explicitly set to something other than FORM_RESPONSE.
+  if (payload.eventType && payload.eventType !== "FORM_RESPONSE") {
+    return res.status(200).json({ ok: true, skipped: true });
+  }
+  if (!payload.data?.fields?.length) {
     return res.status(200).json({ ok: true, skipped: true });
   }
 
